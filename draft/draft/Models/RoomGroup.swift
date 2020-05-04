@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+/// Room group which appears in each tableView section
+struct RoomGroup {
+    var roomGroup: [gameDate: [Room]]
+}
+
