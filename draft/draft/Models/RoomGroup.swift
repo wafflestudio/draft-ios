@@ -10,6 +10,22 @@ import Foundation
 
 /// Room group which appears in each tableView section
 struct RoomGroup {
-    var roomGroup: [gameDate: [Room]]
+    private var roomGroup = [GameDate: [Room]]()
+
+    init() {
+        roomGroup = [sampleDate: [sampleRoom]]
+    }
+    
+    lazy var keys = roomGroup.keys
+
+    subscript(i: GameDate) -> [Room]? {
+        guard let item = roomGroup[i] else { return nil }
+        return item
+    }
 }
+
+// sample data
+private var sampleDate = Date()
+private var sampleRoom = Room(name: "집앞 농구장에서 한 게임 해요" , date: Date(), maxNum: 4)
+
 

@@ -11,11 +11,11 @@ import Foundation
 class Room {
     
     var name: String
-    var date: gameTime
+    var date: GameTime
     var maxNumOfRoom: UInt
     var isClosed: Bool = false
     
-    init(name: String, date: gameTime, maxNum maxNumOfRoom: UInt) {
+    init(name: String, date: GameTime, maxNum maxNumOfRoom: UInt) {
         self.name = name
         self.date = date
         self.maxNumOfRoom = maxNumOfRoom
@@ -23,6 +23,6 @@ class Room {
 }
 
 // 나중에 Dateformat 정해서 바꿔야 함
-typealias gameTime = Date
-typealias gameDate = Date
+typealias GameTime = Date
+typealias GameDate = Date
 
