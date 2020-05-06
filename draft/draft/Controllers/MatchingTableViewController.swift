@@ -10,9 +10,9 @@ import UIKit
 
 class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
-    private var roomGroup: RoomGroup
+    private var roomGroup: RoomGroup?
     
-    lazy var numOfSections: Int? = roomGroup.keys.count
+    lazy var numOfSections: Int? = 1 // 나중에 AllRooms class의 count로 수정
     
     required init?(coder: NSCoder) {
         roomGroup = RoomGroup()
@@ -33,8 +33,7 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let keys = [GameDate](roomGroup.keys)
-        let numOfRooms = roomGroup[keys[section]]?.count
+        let numOfRooms = roomGroup?.count
         
         return numOfRooms ?? 0
     }
@@ -55,17 +54,6 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         return "오늘의 경기"
     }
     
-    // Mark: - add search bar to Navgation Controller
-    
-    //    func addSearchBar() {
-    //        let searchBar = UISearchBar()
-    //        searchBar.showsCancelButton = true
-    //        searchBar.placeholder = "방을 검색해보세요!"
-    //        searchBar.delegate = self
-    //
-    //        self.navigationItem.titleView = searchBar
-    //    }
-    //
     // MARK: - SearchBarController
     func addSearchController(){
         
@@ -73,7 +61,6 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         
         self.navigationItem.searchController = searchBarController
         self.navigationItem.hidesSearchBarWhenScrolling = false
-        
     }
     
     /*
@@ -93,4 +80,20 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
      }
      */
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "createRoomSegue" {
+            
+            if let createRoomViewController = segue.destination as? RoomDetailViewController {
+                createRoomViewController.delegate = self
+                createRoomViewController.roomGroup = roomGroup
+            }
+        }
+    }
+}
+
+extension MatchingTableViewController: RoomDetailViewControllerDelegate {
+    func roomDetailViewController(_ controller: RoomDetailViewController, didFinishAdding item: Room) {
+        tableView.reloadData()
+    }
 }
