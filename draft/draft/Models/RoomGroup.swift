@@ -9,7 +9,7 @@
 import Foundation
 
 /// Room group which appears in each tableView section
-class RoomGroup {
+class RoomGroup: Sequence, IteratorProtocol {
     
     private var rooms = [Room?]()
     private var date: GameDate = GameDate()
@@ -24,21 +24,36 @@ class RoomGroup {
     }
     
     // add room test function
-    func addRoomToFirstGameDate(room: Room) {
+    func addRoom(room: Room) {
         rooms.append(room)
     }
     
     func getDateInString() -> String {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let dateString = dateFormatter.string(from: date)
-        
-        return dateString
+        return date.dateInString
+    }
+    
+    // implement IteratorProtocol protocols to use 'for in RoomGroup'
+    lazy private var _count = count
+    func next() -> Room? {
+        if _count == 0 {
+            _count = count
+            return nil
+        } else {
+            defer { _count -= 1 }
+            return rooms[_count - 1]
+        }
     }
 }
 
 // sample data
 var sampleRoom = Room(name: "집 앞 농구장에서 한 게임 해요" , date: Date(), maxNum: 4)
 
+extension Date {
+    var dateInString: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateString = dateFormatter.string(from: self)
+        return dateString
+    }
+}
 

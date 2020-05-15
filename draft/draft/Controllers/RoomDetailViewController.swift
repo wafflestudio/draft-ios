@@ -25,7 +25,7 @@ class RoomDetailViewController: UIViewController {
     @IBAction func done(_ sender: Any) {
         dismiss(animated: true, completion: nil)
         
-        roomGroup?.addRoomToFirstGameDate(room: sampleRoom)
+        roomGroup?.addRoom(room: sampleRoom)
         
         delegate?.roomDetailViewController(self , didFinishAdding: sampleRoom)
     }

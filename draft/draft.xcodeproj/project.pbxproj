@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		383C9788246EE6390013E6AF /* RoomGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383C9787246EE6390013E6AF /* RoomGroupTests.swift */; };
+		383C978A246EE6840013E6AF /* RoomGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72D1246311FF0099C35E /* RoomGroup.swift */; };
+		383C978B246EEA420013E6AF /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72CF246311F40099C35E /* Room.swift */; };
 		386D72D0246311F40099C35E /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72CF246311F40099C35E /* Room.swift */; };
 		386D72D2246311FF0099C35E /* RoomGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72D1246311FF0099C35E /* RoomGroup.swift */; };
 		386D72D4246312160099C35E /* RoomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72D3246312160099C35E /* RoomDetailViewController.swift */; };
@@ -39,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		383C9787246EE6390013E6AF /* RoomGroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGroupTests.swift; sourceTree = "<group>"; };
 		386D72CF246311F40099C35E /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = draft/Models/Room.swift; sourceTree = SOURCE_ROOT; };
 		386D72D1246311FF0099C35E /* RoomGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomGroup.swift; path = draft/Models/RoomGroup.swift; sourceTree = SOURCE_ROOT; };
 		386D72D3246312160099C35E /* RoomDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 			children = (
 				3897039D24559A4C00FF5077 /* draftTests.swift */,
 				3897039F24559A4C00FF5077 /* Info.plist */,
+				383C9787246EE6390013E6AF /* RoomGroupTests.swift */,
 			);
 			path = draftTests;
 			sourceTree = "<group>";
@@ -309,6 +314,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383C9788246EE6390013E6AF /* RoomGroupTests.swift in Sources */,
+				383C978A246EE6840013E6AF /* RoomGroup.swift in Sources */,
+				383C978B246EEA420013E6AF /* Room.swift in Sources */,
 				3897039E24559A4C00FF5077 /* draftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
