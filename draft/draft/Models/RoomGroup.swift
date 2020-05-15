@@ -12,12 +12,7 @@ import Foundation
 class RoomGroup {
     
     private var rooms = [Room?]()
-    private var date: GameDate
-    
-    init() {
-        self.rooms.append(sampleRoom)
-        self.date = sampleDate
-    }
+    private var date: GameDate = GameDate()
     
     var count: Int {
         get { return rooms.count }
@@ -32,10 +27,18 @@ class RoomGroup {
     func addRoomToFirstGameDate(room: Room) {
         rooms.append(room)
     }
+    
+    func getDateInString() -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateString = dateFormatter.string(from: date)
+        
+        return dateString
+    }
 }
 
 // sample data
-private var sampleDate = Date()
-var sampleRoom = Room(name: "집앞 농구장에서 한 게임 해요" , date: Date(), maxNum: 4)
+var sampleRoom = Room(name: "집 앞 농구장에서 한 게임 해요" , date: Date(), maxNum: 4)
 
 

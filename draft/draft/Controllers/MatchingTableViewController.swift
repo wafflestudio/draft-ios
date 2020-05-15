@@ -41,17 +41,17 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "room identifier", for: indexPath)
 
+        // label sample
+        let index = indexPath.row
+        cell.textLabel?.text = roomGroup?[index]?.name
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        
-        // Header에 뜰 Date format 정하면 사용할 값들
-        // let keys = [GameDate](roomGroup.keys)
-        // let date = keys[section]
-        // let dateString = DateFormatter().string(from: date)
-        return "오늘의 경기"
+        // 나중에 AllRooms model 만들면 수정
+        return roomGroup?.getDateInString()
     }
     
     // MARK: - SearchBarController

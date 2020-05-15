@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Room model 
 class Room {
     
     var name: String

@@ -84,13 +84,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		386D72CE246311DB0099C35E /* New Group1 */ = {
+		386D72CE246311DB0099C35E /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				386D72D1246311FF0099C35E /* RoomGroup.swift */,
 				386D72CF246311F40099C35E /* Room.swift */,
 			);
-			path = "New Group1";
+			path = Models;
 			sourceTree = "<group>";
 		};
 		3897037724559A4900FF5077 = {
@@ -116,7 +116,7 @@
 		3897038224559A4900FF5077 /* draft */ = {
 			isa = PBXGroup;
 			children = (
-				386D72CE246311DB0099C35E /* New Group1 */,
+				386D72CE246311DB0099C35E /* Models */,
 				389703B624559C8C00FF5077 /* Controllers */,
 				389703B724559C9700FF5077 /* Storyboards */,
 				3897038F24559A4C00FF5077 /* Assets.xcassets */,
