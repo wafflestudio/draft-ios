@@ -22,6 +22,9 @@
 		3897039E24559A4C00FF5077 /* draftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897039D24559A4C00FF5077 /* draftTests.swift */; };
 		389703A924559A4C00FF5077 /* draftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389703A824559A4C00FF5077 /* draftUITests.swift */; };
 		389703BD2455A81400FF5077 /* MatchingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389703BC2455A81400FF5077 /* MatchingTableViewController.swift */; };
+		BF7287FB2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
+		BF7287FC2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
+		BF7287FD2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,7 @@
 		389703A824559A4C00FF5077 /* draftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = draftUITests.swift; sourceTree = "<group>"; };
 		389703AA24559A4C00FF5077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		389703BC2455A81400FF5077 /* MatchingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingTableViewController.swift; sourceTree = "<group>"; };
+		BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DraftLaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				3897038924559A4900FF5077 /* Main.storyboard */,
+				BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				3897039324559A4C00FF5077 /* LaunchScreen.storyboard in Resources */,
 				3897039024559A4C00FF5077 /* Assets.xcassets in Resources */,
 				3897038B24559A4900FF5077 /* Main.storyboard in Resources */,
+				BF7287FB2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7287FC2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7287FD2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
