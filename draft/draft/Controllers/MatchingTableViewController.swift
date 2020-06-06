@@ -10,12 +10,12 @@ import UIKit
 
 class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
-    private var roomGroup: RoomGroup?
+    private var roomGroup: RoomsByDate?
     
     lazy var numOfSections: Int? = 1 // 나중에 AllRooms class의 count로 수정
     
     required init?(coder: NSCoder) {
-        roomGroup = RoomGroup()
+        roomGroup = RoomsByDate()
         super.init(coder: coder)
     }
     
