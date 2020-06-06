@@ -9,6 +9,13 @@
 import Foundation
 
 struct RoomGroup {
-    var RoomGroup = [GameDate: RoomsByDate ]
+    var roomGroup: [GameDate: RoomsByDate]
     
+    init() {
+        
+    }
+    
+    func getNumOfRoomDate() -> Int {
+        return roomGroup.keys.count
+    }
 }
