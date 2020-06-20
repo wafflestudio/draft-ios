@@ -8,12 +8,10 @@
 
 import Foundation
 
+
+
 struct RoomGroup {
     var roomGroup: [GameDate: RoomsByDate]
-    
-    init() {
-        
-    }
     
     func getNumOfRoomDate() -> Int {
         return roomGroup.keys.count
