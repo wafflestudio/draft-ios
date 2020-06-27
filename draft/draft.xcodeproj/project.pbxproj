@@ -10,6 +10,7 @@
 		383C9788246EE6390013E6AF /* RoomGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383C9787246EE6390013E6AF /* RoomGroupTests.swift */; };
 		383C978A246EE6840013E6AF /* RoomsByDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72D1246311FF0099C35E /* RoomsByDate.swift */; };
 		383C978B246EEA420013E6AF /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72CF246311F40099C35E /* Room.swift */; };
+		38495BF8249DC22F0077C570 /* Model-utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00C34248B3E7400F50F9B /* Model-utilities.swift */; };
 		386D72D0246311F40099C35E /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72CF246311F40099C35E /* Room.swift */; };
 		386D72D2246311FF0099C35E /* RoomsByDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72D1246311FF0099C35E /* RoomsByDate.swift */; };
 		386D72D4246312160099C35E /* RoomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72D3246312160099C35E /* RoomDetailViewController.swift */; };
@@ -327,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38495BF8249DC22F0077C570 /* Model-utilities.swift in Sources */,
 				383C9788246EE6390013E6AF /* RoomGroupTests.swift in Sources */,
 				383C978A246EE6840013E6AF /* RoomsByDate.swift in Sources */,
 				383C978B246EEA420013E6AF /* Room.swift in Sources */,

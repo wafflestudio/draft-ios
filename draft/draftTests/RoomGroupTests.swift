@@ -19,12 +19,12 @@ class RoomGroupTests: XCTestCase {
     }
     
     // RoomGroup Date와 RoomGroup 안의 Room들 Date가 일치하는지 테스트
-    func testRoomDatesMatched() throws {
-        let roomGroup = RoomGroup()
-        roomGroup.addRoom(room: sampleRoom)
+    func testRoomDatesMatchedInRoomsByDate() throws {
+        let roomsByDate = RoomsByDate()
+        roomsByDate.addRoom(room: sampleRoom)
         
-        let roomGroupDate = roomGroup.getDateInString()
-        for room in roomGroup {
+        let roomGroupDate = roomsByDate.getDateInString()
+        for room in roomsByDate {
             print(room.date)
             let roomDate = room.date.dateInString
             XCTAssertEqual(roomGroupDate, roomDate)
