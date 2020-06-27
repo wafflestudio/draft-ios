@@ -23,11 +23,12 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         
         addSearchController()
+        getAllRoomsFromServer()
     }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
- 
+        
         return numOfSections ?? 0
     }
     
@@ -40,7 +41,7 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "room identifier", for: indexPath)
-
+        
         // label sample
         let index = indexPath.row
         cell.textLabel?.text = roomGroup?[index]?.name
@@ -95,5 +96,45 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
 extension MatchingTableViewController: RoomDetailViewControllerDelegate {
     func roomDetailViewController(_ controller: RoomDetailViewController, didFinishAdding item: Room) {
         tableView.reloadData()
+    }
+}
+
+// MARK:- Call Rest API to get rooms from server
+extension MatchingTableViewController {
+    func getAllRoomsFromServer() {
+        
+        let sampleAuth = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTMyMzk2ODcsImlhdCI6MTU5MzIyODY4NywiZW1haWwiOiJnb2xkQG5hdmVyLmNvbSJ9.NaT4yY3qu9cPKsR0ZaB5cb3ARVqkqaqitFzZU0caxQY"
+        
+        let url = URL(string: "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/room/")
+        
+        
+        var request = URLRequest(url: url!)
+        request.httpMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(sampleAuth, forHTTPHeaderField: "Authentication")
+
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+
+            if let e = error {
+                print("error when URLSession Task \(e)")
+            }
+
+            self.getRoomFromRestAPIResponse(data: data!)
+            
+        }
+        task.resume()
+    }
+    
+    func getRoomFromRestAPIResponse(data: Data?) {
+        do {
+            let object = try JSONSerialization.jsonObject(with: data!, options: []) as? NSDictionary
+            
+            guard let jsonObject = object else { return }
+            
+            print(jsonObject)
+            
+        } catch let e as NSError {
+            print("error when getRoomFromRestAPIResponse : \(e)")
+        }
     }
 }

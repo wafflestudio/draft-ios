@@ -14,6 +14,8 @@
 		386D72D0246311F40099C35E /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72CF246311F40099C35E /* Room.swift */; };
 		386D72D2246311FF0099C35E /* RoomsByDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72D1246311FF0099C35E /* RoomsByDate.swift */; };
 		386D72D4246312160099C35E /* RoomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72D3246312160099C35E /* RoomDetailViewController.swift */; };
+		38969E0E24A6F7D70032F82C /* RoomRestAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38969E0D24A6F7D70032F82C /* RoomRestAPITest.swift */; };
+		38969E0F24A6F7F90032F82C /* MatchingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389703BC2455A81400FF5077 /* MatchingTableViewController.swift */; };
 		3897038424559A4900FF5077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897038324559A4900FF5077 /* AppDelegate.swift */; };
 		3897038624559A4900FF5077 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897038524559A4900FF5077 /* SceneDelegate.swift */; };
 		3897038B24559A4900FF5077 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3897038924559A4900FF5077 /* Main.storyboard */; };
@@ -52,6 +54,7 @@
 		386D72CF246311F40099C35E /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = draft/Models/Room.swift; sourceTree = SOURCE_ROOT; };
 		386D72D1246311FF0099C35E /* RoomsByDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomsByDate.swift; path = draft/Models/RoomsByDate.swift; sourceTree = SOURCE_ROOT; };
 		386D72D3246312160099C35E /* RoomDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailViewController.swift; sourceTree = "<group>"; };
+		38969E0D24A6F7D70032F82C /* RoomRestAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRestAPITest.swift; sourceTree = "<group>"; };
 		3897038024559A4900FF5077 /* draft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = draft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3897038324559A4900FF5077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3897038524559A4900FF5077 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +151,7 @@
 				3897039D24559A4C00FF5077 /* draftTests.swift */,
 				3897039F24559A4C00FF5077 /* Info.plist */,
 				383C9787246EE6390013E6AF /* RoomGroupTests.swift */,
+				38969E0D24A6F7D70032F82C /* RoomRestAPITest.swift */,
 			);
 			path = draftTests;
 			sourceTree = "<group>";
@@ -328,7 +332,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38969E0E24A6F7D70032F82C /* RoomRestAPITest.swift in Sources */,
 				38495BF8249DC22F0077C570 /* Model-utilities.swift in Sources */,
+				38969E0F24A6F7F90032F82C /* MatchingTableViewController.swift in Sources */,
 				383C9788246EE6390013E6AF /* RoomGroupTests.swift in Sources */,
 				383C978A246EE6840013E6AF /* RoomsByDate.swift in Sources */,
 				383C978B246EEA420013E6AF /* Room.swift in Sources */,
