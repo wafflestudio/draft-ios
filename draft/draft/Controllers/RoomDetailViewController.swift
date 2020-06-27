@@ -19,7 +19,7 @@ class RoomDetailViewController: UIViewController {
     }
     // weak로 순환 참조 방지
     weak var delegate: RoomDetailViewControllerDelegate?
-    weak var roomGroup: RoomGroup?
+    weak var roomGroup: RoomsByDate?
     
     // '만들기' 누르면 sampleRoom 추가하기
     @IBAction func done(_ sender: Any) {

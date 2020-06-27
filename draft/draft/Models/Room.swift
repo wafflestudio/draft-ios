@@ -23,7 +23,4 @@ class Room {
     }
 }
 
-// 나중에 Dateformat 정해서 바꿔야 함
-typealias GameTime = Date
-typealias GameDate = Date
 
