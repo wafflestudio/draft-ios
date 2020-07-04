@@ -2,6 +2,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/swift,xcode,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=swift,xcode,macos
 
+#for Draft
+AppDelegate.swift
+Info.plist
+
 ### macOS ###
 # General
 .DS_Store

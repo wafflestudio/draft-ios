@@ -163,15 +163,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQI-Gs-Btq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-439.13043478260875" y="636.83035714285711"/>
+            <point key="canvasLocation" x="-2159" y="642"/>
         </scene>
-        <!--View Controller-->
+        <!--Kakao Signin View Controller-->
         <scene sceneID="yrz-Ik-7VK">
             <objects>
-                <viewController id="O0P-T4-jZE" sceneMemberID="viewController">
+                <viewController id="O0P-T4-jZE" customClass="KakaoSigninViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z7Z-Kl-JSX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTC-i8-fg4">
+                                <rect key="frame" x="25" y="403" width="364" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="kakao_login_large_narrow"/>
+                                <connections>
+                                    <action selector="loginButtonClicked" destination="O0P-T4-jZE" eventType="touchUpInside" id="Wh9-qM-e1l"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Fek-by-cQq"/>
                     </view>
@@ -179,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRK-Wi-LgS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="404.34782608695656" y="1066.7410714285713"/>
+            <point key="canvasLocation" x="-1316" y="1072"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1Jo-tH-kHH">
@@ -195,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbs-yz-2aQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471.01449275362324" y="393.75"/>
+            <point key="canvasLocation" x="-1317" y="383"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6A2-AF-jKl">
@@ -252,7 +262,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nxp-PH-VG1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1349.2753623188407" y="636.83035714285711"/>
+            <point key="canvasLocation" x="-3070" y="642"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kakao_login_large_narrow" width="366" height="90"/>
+    </resources>
 </document>

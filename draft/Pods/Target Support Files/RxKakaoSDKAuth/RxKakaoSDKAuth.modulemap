@@ -1,0 +1,6 @@
+module RxKakaoSDKAuth {
+  umbrella header "RxKakaoSDKAuth-umbrella.h"
+
+  export *
+  module * { export * }
+}

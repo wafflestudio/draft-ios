@@ -1,0 +1,6 @@
+module Pods_draft_draftUITests {
+  umbrella header "Pods-draft-draftUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
