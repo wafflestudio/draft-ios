@@ -8,13 +8,16 @@
 
 import UIKit
 import CoreData
+import KakaoSDKAuth
+import KakaoSDKCommon
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        KakaoSDKCommon.shared.initSDK(appKey: "52f5a0a20ab7c1418e2993f85ca83c29")
         // Override point for customization after application launch.
         return true
     }
@@ -32,7 +35,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+             if AuthController.handleOpenUrl(url: url, options: options) {
+                 return true
+             }
+        return false
+    }
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
