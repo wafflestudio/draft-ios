@@ -20,12 +20,30 @@ class KakaoSigninViewController: UIViewController {
     }
     
     @IBAction func loginButtonClicked() {
+<<<<<<< HEAD
               if (AuthController.isTalkAuthAvailable()) {
                 AuthController.shared.authorizeWithTalk() {(OAuthToken,Error) in
                     print(OAuthToken?.accessToken ?? "defaL")
                 }
             }
         
+=======
+            func loginButtonClicked() {
+              if (AuthController.isTalkAuthAvailable()) {
+                
+                AuthController.shared.authorizeWithTalk { (OAuthToken, Error) in
+                     print(OAuthToken)
+                }
+                
+//                AuthController.shared.authorizeWithTalk()
+//                                            .subscribe(onNext:{ (oauthToken) in
+//                                              print(oauthToken)
+//                                            })
+//                                            .disposed(by: self.disposeBag)
+//                }
+            }
+        }
+>>>>>>> 995e0eb216485803abcf2f35153dd3810622732d
     }
 
     /*
