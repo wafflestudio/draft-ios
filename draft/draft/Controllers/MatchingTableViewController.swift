@@ -30,15 +30,23 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return numOfSections ?? 0
+        //        print("section : \(allRooms?.getNumOfRoomDate())")
+        return allRooms?.getNumOfRoomDate() ?? 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let numOfRooms = roomGroup?.count
+        if let values = allRooms?.roomGroup.values {
+            
+            let roomsByDate = [RoomsByDate](values)
+            let numOfRooms = roomsByDate[section].count
+            
+            return numOfRooms
+            
+        } else {
+            return 0
+        }
         
-        return numOfRooms ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,15 +54,28 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         
         // label sample
         let index = indexPath.row
-        cell.textLabel?.text = roomGroup?[index]?.name
+        let section = indexPath.section
+        
+        if let values = allRooms?.roomGroup.values {
+            //            print(values.count)
+            let roomsByDateArray = [RoomsByDate](values)
+            let name = roomsByDateArray[section][index]?.name
+            cell.textLabel?.text = name
+        }
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        // 나중에 AllRooms model 만들면 수정
-        return roomGroup?.getDateInString()
+        if let keys = allRooms?.roomGroup.keys {
+            let dates = [GameDateString](keys)
+            
+            let date = dates[section]
+            
+            return date
+        } else { return nil }
+        
     }
     
     // MARK: - SearchBarController
@@ -105,7 +126,7 @@ extension MatchingTableViewController: RoomDetailViewControllerDelegate {
 extension MatchingTableViewController {
     func allRoomsAPIRequest() {
         
-        let sampleAuth = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQxMTYzNTgsImlhdCI6MTU5NDEwNTM1OCwiZW1haWwiOiJnb2dvZ29AbmF2ZXIuY29tIn0.Z9hm1GmK3a4a0e7MdM7A3_WHg6IhQJdxajC-Ve3H15Y"
+        let sampleAuth = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQxMjc1MDcsImlhdCI6MTU5NDExNjUwNywiZW1haWwiOiJnb2dvZ29AbmF2ZXIuY29tIn0.t0GAadxTWbqQjF084s7kYtQV4YbL70wV3Jdzz3VCqmQ"
         
         let url = URL(string: "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/room/")
         
@@ -133,10 +154,14 @@ extension MatchingTableViewController {
                 return
             }
             
-            self.parseJSON(roomsData: data)
+            DispatchQueue.main.async {
+                self.parseJSON(roomsData: data)
+            }
             
         }
+        
         task.resume()
+        
     }
     
     func parseJSON(roomsData: Data) {
@@ -144,13 +169,12 @@ extension MatchingTableViewController {
         do {
             let decodedData = try decoder.decode([Room].self, from: roomsData)
             
-            
-//            print(decodedData[0].startTime.stringToDate)
-            
             allRooms = RoomGroup()
             
             allRooms?.arrangeRoomsByDate(rooms: decodedData)
-//            print(allRooms)
+            
+            tableView.reloadData()
+            print("parsing ... ")
         } catch {
             // json parse 시 에러 처리
             print(error)

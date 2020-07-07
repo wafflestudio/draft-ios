@@ -23,13 +23,21 @@ class RoomsByDate: Sequence, IteratorProtocol {
         return item
     }
     
+    init?() {
+        print("init without param")
+    }
+
+    init?(room: Room) {
+        addRoom(room: room)
+    }
+    
     // add room test function
     func addRoom(room: Room) {
         rooms.append(room)
     }
     
     func getDateInString() -> String {
-        return date.dateInString
+        return date.dateToString
     }
     
     // implement IteratorProtocol protocols to use 'for in RoomGroup'
@@ -46,7 +54,7 @@ class RoomsByDate: Sequence, IteratorProtocol {
 }
 
 // sample data
-var sampleRoom = Room(name: "집 앞 농구장에서 한 게임 해요" , date: Date(), maxNum: 4)
+//var sampleRoom = Room(name: "집 앞 농구장에서 한 게임 해요" , date: Date(), maxNum: 4)
 
 
 

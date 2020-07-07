@@ -8,12 +8,30 @@
 
 import Foundation
 
-
-
 struct RoomGroup {
-    var roomGroup: [GameDate: RoomsByDate]
+    var roomGroup = [GameDateString: RoomsByDate]()
     
     func getNumOfRoomDate() -> Int {
-        return roomGroup.keys.count
+        return roomGroup.keys.count 
+    }
+    
+    mutating func arrangeRoomsByDate(rooms: [Room]) {
+        
+        for room in rooms {
+            
+            print(room.startTime)
+            
+            if let gameDay = room.startTime.timeStringToDateString {
+               
+                if let roomsByDate = roomGroup[gameDay] {
+                    roomsByDate.addRoom(room: room)
+                } else {
+                roomGroup[gameDay] = RoomsByDate(room: room)
+                }
+            }
+        }
+        
+        print(roomGroup)
     }
 }
+
