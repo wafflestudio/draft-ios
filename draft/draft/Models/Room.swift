@@ -8,19 +8,17 @@
 
 import Foundation
 
-/// Room model 
-class Room {
+class Room: Decodable {
     
-    var name: String
-    var date: GameTime
-    var maxNumOfRoom: UInt
-    var isClosed: Bool = false
-    
-    init(name: String, date: GameTime, maxNum maxNumOfRoom: UInt) {
-        self.name = name
-        self.date = date
-        self.maxNumOfRoom = maxNumOfRoom
-    }
+    let id: Int
+    let roomStatus: String
+    let startTime: String
+    let endTime: String
+    let createdAt: String
+    let ownerId: Int
+    let name: String
 }
+
+
 
 

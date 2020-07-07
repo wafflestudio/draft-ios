@@ -10,6 +10,8 @@ import UIKit
 
 class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
+    private var allRooms: RoomGroup?
+    
     private var roomGroup: RoomsByDate?
     
     lazy var numOfSections: Int? = 1 // 나중에 AllRooms class의 count로 수정
@@ -23,7 +25,7 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         
         addSearchController()
-        getAllRoomsFromServer()
+        allRoomsAPIRequest()
     }
     
     // MARK: - Table view data source
@@ -101,9 +103,9 @@ extension MatchingTableViewController: RoomDetailViewControllerDelegate {
 
 // MARK:- Call Rest API to get rooms from server
 extension MatchingTableViewController {
-    func getAllRoomsFromServer() {
+    func allRoomsAPIRequest() {
         
-        let sampleAuth = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTMyMzk2ODcsImlhdCI6MTU5MzIyODY4NywiZW1haWwiOiJnb2xkQG5hdmVyLmNvbSJ9.NaT4yY3qu9cPKsR0ZaB5cb3ARVqkqaqitFzZU0caxQY"
+        let sampleAuth = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQxMTYzNTgsImlhdCI6MTU5NDEwNTM1OCwiZW1haWwiOiJnb2dvZ29AbmF2ZXIuY29tIn0.Z9hm1GmK3a4a0e7MdM7A3_WHg6IhQJdxajC-Ve3H15Y"
         
         let url = URL(string: "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/room/")
         
@@ -112,29 +114,48 @@ extension MatchingTableViewController {
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(sampleAuth, forHTTPHeaderField: "Authentication")
-
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-
-            if let e = error {
-                print("error when URLSession Task \(e)")
+        
+        let configuration = URLSessionConfiguration.default
+        configuration.waitsForConnectivity = true
+        let session = URLSession(configuration: configuration)
+        
+        let task = session.dataTask(with: request) { (data, response, error) in
+            
+            guard let httpResponse = response as? HTTPURLResponse,
+                httpResponse.statusCode == 200 else {
+                    // statusCode 200 아닐 때 에러 처리
+                    return
             }
-
-            self.getRoomFromRestAPIResponse(data: data!)
+            
+            guard let data = data else {
+                print (error.debugDescription)
+                // data가 nil이 될 때 에러 처리
+                return
+            }
+            
+            self.parseJSON(roomsData: data)
             
         }
         task.resume()
     }
     
-    func getRoomFromRestAPIResponse(data: Data?) {
+    func parseJSON(roomsData: Data) {
+        let decoder = JSONDecoder()
         do {
-            let object = try JSONSerialization.jsonObject(with: data!, options: []) as? NSDictionary
+            let decodedData = try decoder.decode([Room].self, from: roomsData)
             
-            guard let jsonObject = object else { return }
             
-            print(jsonObject)
+//            print(decodedData[0].startTime.stringToDate)
             
-        } catch let e as NSError {
-            print("error when getRoomFromRestAPIResponse : \(e)")
+            allRooms = RoomGroup()
+            
+            allRooms?.arrangeRoomsByDate(rooms: decodedData)
+//            print(allRooms)
+        } catch {
+            // json parse 시 에러 처리
+            print(error)
         }
+        
     }
+    
 }
