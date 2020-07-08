@@ -10,7 +10,7 @@ import UIKit
 
 class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
-    private var roomGroup: RoomGroup?
+    internal var roomGroup: RoomGroup?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,6 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        //        print("section : \(allRooms?.getNumOfRoomDate())")
         return roomGroup?.getNumOfRoomDate() ?? 0
     }
     
@@ -43,12 +42,11 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "room identifier", for: indexPath)
         
-        // label sample
         let index = indexPath.row
         let section = indexPath.section
         
         if let values = roomGroup?.roomGroup.values {
-            //            print(values.count)
+            
             let roomsByDateArray = [RoomsByDate](values)
             let name = roomsByDateArray[section][index]?.name
             cell.textLabel?.text = name
@@ -95,6 +93,7 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
      }
      */
     
+    // MARK: - Prepare for Room Detail (Create Room as well)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "createRoomSegue" {
@@ -113,64 +112,3 @@ extension MatchingTableViewController: RoomDetailViewControllerDelegate {
     }
 }
 
-// MARK:- Call Rest API to get rooms from server
-extension MatchingTableViewController {
-    func allRoomsAPIRequest() {
-        
-        let sampleAuth = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQxMjc1MDcsImlhdCI6MTU5NDExNjUwNywiZW1haWwiOiJnb2dvZ29AbmF2ZXIuY29tIn0.t0GAadxTWbqQjF084s7kYtQV4YbL70wV3Jdzz3VCqmQ"
-        
-        let url = URL(string: "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/room/")
-        
-        
-        var request = URLRequest(url: url!)
-        request.httpMethod = "GET"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(sampleAuth, forHTTPHeaderField: "Authentication")
-        
-        let configuration = URLSessionConfiguration.default
-        configuration.waitsForConnectivity = true
-        let session = URLSession(configuration: configuration)
-        
-        let task = session.dataTask(with: request) { (data, response, error) in
-            
-            guard let httpResponse = response as? HTTPURLResponse,
-                httpResponse.statusCode == 200 else {
-                    // statusCode 200 아닐 때 에러 처리
-                    return
-            }
-            
-            guard let data = data else {
-                print (error.debugDescription)
-                // data가 nil이 될 때 에러 처리
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self.parseJSON(roomsData: data)
-            }
-            
-        }
-        
-        task.resume()
-        
-    }
-    
-    func parseJSON(roomsData: Data) {
-        let decoder = JSONDecoder()
-        do {
-            let decodedData = try decoder.decode([Room].self, from: roomsData)
-            
-            roomGroup = RoomGroup()
-            
-            roomGroup?.arrangeRoomsByDate(rooms: decodedData)
-            
-            tableView.reloadData()
-            print("parsing ... ")
-        } catch {
-            // json parse 시 에러 처리
-            print(error)
-        }
-        
-    }
-    
-}
