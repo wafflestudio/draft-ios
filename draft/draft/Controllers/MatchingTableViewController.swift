@@ -10,16 +10,7 @@ import UIKit
 
 class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
-    private var allRooms: RoomGroup?
-    
-    private var roomGroup: RoomsByDate?
-    
-    lazy var numOfSections: Int? = 1 // 나중에 AllRooms class의 count로 수정
-    
-    required init?(coder: NSCoder) {
-        roomGroup = RoomsByDate()
-        super.init(coder: coder)
-    }
+    private var roomGroup: RoomGroup?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +22,12 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         //        print("section : \(allRooms?.getNumOfRoomDate())")
-        return allRooms?.getNumOfRoomDate() ?? 0
+        return roomGroup?.getNumOfRoomDate() ?? 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if let values = allRooms?.roomGroup.values {
+        if let values = roomGroup?.roomGroup.values {
             
             let roomsByDate = [RoomsByDate](values)
             let numOfRooms = roomsByDate[section].count
@@ -56,7 +47,7 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         let index = indexPath.row
         let section = indexPath.section
         
-        if let values = allRooms?.roomGroup.values {
+        if let values = roomGroup?.roomGroup.values {
             //            print(values.count)
             let roomsByDateArray = [RoomsByDate](values)
             let name = roomsByDateArray[section][index]?.name
@@ -68,7 +59,7 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        if let keys = allRooms?.roomGroup.keys {
+        if let keys = roomGroup?.roomGroup.keys {
             let dates = [GameDateString](keys)
             
             let date = dates[section]
@@ -110,7 +101,7 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
             
             if let createRoomViewController = segue.destination as? RoomDetailViewController {
                 createRoomViewController.delegate = self
-                createRoomViewController.roomGroup = roomGroup
+//                createRoomViewController.roomGroup = roomGroup
             }
         }
     }
@@ -169,9 +160,9 @@ extension MatchingTableViewController {
         do {
             let decodedData = try decoder.decode([Room].self, from: roomsData)
             
-            allRooms = RoomGroup()
+            roomGroup = RoomGroup()
             
-            allRooms?.arrangeRoomsByDate(rooms: decodedData)
+            roomGroup?.arrangeRoomsByDate(rooms: decodedData)
             
             tableView.reloadData()
             print("parsing ... ")
