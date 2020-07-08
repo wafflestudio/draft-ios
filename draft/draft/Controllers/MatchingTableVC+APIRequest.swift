@@ -12,8 +12,6 @@ import Foundation
 extension MatchingTableViewController {
     func allRoomsAPIRequest() {
         
-        let sampleAuth = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQxOTc3OTIsImlhdCI6MTU5NDE4Njc5MiwiZW1haWwiOiJnb2dvZ29AbmF2ZXIuY29tIn0.bcAdakM-_r8HSMSxVmZ5Ahzol3IkqkXnftWz-kjDhXM"
-        
         let url = URL(string: "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/room/")
         
         var request = URLRequest(url: url!)
@@ -55,10 +53,52 @@ extension MatchingTableViewController {
             roomGroup?.arrangeRoomsByDate(rooms: decodedData)
             
             tableView.reloadData()
-            print("parsing ... ")
+            print("parsing completed ")
         } catch {
             // json parse 시 에러 처리
             print(error)
         }
+    }
+}
+
+// MARK: - API Request for auto login to test RoomVC
+extension MatchingTableViewController {
+    
+    func autoLoginForTest() {
+        let url = URL(string: "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/user/signin/")
+        
+        guard let secret_url = Bundle.main.url(forResource: "secret_login", withExtension: "json"), let loginInfo = try! String(contentsOf: secret_url).data(using: .utf8) else
+        { print("secret_login.json 파일을 불러올 수 없습니다")
+            return
+        }
+        
+        var request = URLRequest(url: url!)
+        request.httpMethod = "Post"
+        request.httpBody = loginInfo
+        
+        let session = URLSession(configuration: .default)
+        
+        let task = session.dataTask(with: request) { (data, response, error) in
+            guard let httpResponse = response as? HTTPURLResponse,
+                httpResponse.statusCode == 204 else {
+                    print("HttpResponse Not Succeded with response : \(String(describing: response))")
+                    // statusCode 204 아닐 때 에러 처리
+                    return
+            }
+            
+            if let httpResponse = response as? HTTPURLResponse  {
+                if let auth = httpResponse.allHeaderFields["Authentication"] as? String {
+                    print(auth)
+                    self.sampleAuth = auth
+                    
+                    self.allRoomsAPIRequest()
+                }
+                
+            } else {
+                print("HTTP Response is not correct")
+            }
+        }
+        
+        task.resume()
     }
 }

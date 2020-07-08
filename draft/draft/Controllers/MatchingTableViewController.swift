@@ -12,11 +12,15 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
     internal var roomGroup: RoomGroup?
     
+    internal var sampleAuth: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addSearchController()
-        allRoomsAPIRequest()
+        
+        // autoLoginForTest() 안에 All rooms Request API 함수 넣어 놨어요
+        self.autoLoginForTest()
     }
     
     // MARK: - Table view data source
@@ -36,7 +40,6 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         } else {
             return 0
         }
-        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,7 +54,6 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
             let name = roomsByDateArray[section][index]?.name
             cell.textLabel?.text = name
         }
-        
         return cell
     }
     
@@ -64,7 +66,6 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
             
             return date
         } else { return nil }
-        
     }
     
     // MARK: - SearchBarController
@@ -92,21 +93,22 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
      // Pass the selected object to the new view controller.
      }
      */
+}
+
+// MARK: - Extension for Room Detail (Create Room as well)
+extension MatchingTableViewController: RoomDetailViewControllerDelegate {
     
-    // MARK: - Prepare for Room Detail (Create Room as well)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "createRoomSegue" {
             
             if let createRoomViewController = segue.destination as? RoomDetailViewController {
                 createRoomViewController.delegate = self
-//                createRoomViewController.roomGroup = roomGroup
+                // createRoomViewController.roomGroup = roomGroup
             }
         }
     }
-}
-
-extension MatchingTableViewController: RoomDetailViewControllerDelegate {
+    
     func roomDetailViewController(_ controller: RoomDetailViewController, didFinishAdding item: Room) {
         tableView.reloadData()
     }
