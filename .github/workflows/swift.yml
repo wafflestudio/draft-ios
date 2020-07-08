@@ -12,6 +12,11 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Add secret_login.json
+      run: |
+          cat << EOF > ./draft/draft/Controllers/secret_login.json
+          ${{ secrets.secret_login }}
+          EOF
     - name: Build
       run: xcodebuild clean build -project draft/draft.xcodeproj -destination "platform=iOS Simulator,name=iPhone 11,OS=13.3" -scheme draft IPHONEOS_DEPLOYMENT_TARGET=13.2
 
