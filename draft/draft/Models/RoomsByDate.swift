@@ -22,7 +22,7 @@ class RoomsByDate: Sequence, IteratorProtocol {
         guard let item = rooms[i] else { return nil }
         return item
     }
-    
+   
     init?() {
         print("init without param")
     }
@@ -30,7 +30,7 @@ class RoomsByDate: Sequence, IteratorProtocol {
     init?(room: Room) {
         addRoom(room: room)
     }
-    
+
     func addRoom(room: Room) {
         rooms.append(room)
     }
@@ -47,5 +47,3 @@ class RoomsByDate: Sequence, IteratorProtocol {
         }
     }
 }
-
-

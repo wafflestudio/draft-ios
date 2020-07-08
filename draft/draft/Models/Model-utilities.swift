@@ -16,6 +16,7 @@ typealias GameDateString = String
 // MARK: Dateformat for section
 extension Date {
     var dateToString: String {
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateString = dateFormatter.string(from: self)
@@ -38,3 +39,4 @@ extension String {
         return dateString
     }
 }
+

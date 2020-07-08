@@ -9,10 +9,11 @@
 import UIKit
 
 class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
-    
+
     internal var roomGroup: RoomGroup?
     
     internal var sampleAuth: String?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         
         // autoLoginForTest() 안에 All rooms Request API 함수 넣어 놨어요
         self.autoLoginForTest()
+
     }
     
     // MARK: - Table view data source
@@ -113,4 +115,3 @@ extension MatchingTableViewController: RoomDetailViewControllerDelegate {
         tableView.reloadData()
     }
 }
-

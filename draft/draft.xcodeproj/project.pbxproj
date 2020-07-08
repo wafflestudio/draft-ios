@@ -335,6 +335,7 @@
 				3897038E24559A4900FF5077 /* draft.xcdatamodeld in Sources */,
 				386D72D2246311FF0099C35E /* RoomsByDate.swift in Sources */,
 				3837B51B24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */,
+
 				386D72D0246311F40099C35E /* Room.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3837B51C24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */,
+
 				38969E0E24A6F7D70032F82C /* RoomRestAPITest.swift in Sources */,
 				38495BF8249DC22F0077C570 /* Model-utilities.swift in Sources */,
 				38969E0F24A6F7F90032F82C /* MatchingTableViewController.swift in Sources */,

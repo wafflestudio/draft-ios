@@ -19,9 +19,10 @@ class RoomDetailViewController: UIViewController {
     }
     // weak로 순환 참조 방지
     weak var delegate: RoomDetailViewControllerDelegate?
-    
+   
     // room Id from server
     let roomId: Int? = nil
+
     
     // '만들기' 누르면 sampleRoom 추가하기
     @IBAction func done(_ sender: Any) {

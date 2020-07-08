@@ -34,4 +34,3 @@ struct RoomGroup {
         print(roomGroup)
     }
 }
-

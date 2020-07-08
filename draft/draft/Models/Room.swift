@@ -18,7 +18,3 @@ class Room: Decodable {
     let ownerId: Int
     let name: String
 }
-
-
-
-
