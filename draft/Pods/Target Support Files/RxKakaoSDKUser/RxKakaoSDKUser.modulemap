@@ -1,0 +1,6 @@
+module RxKakaoSDKUser {
+  umbrella header "RxKakaoSDKUser-umbrella.h"
+
+  export *
+  module * { export * }
+}
