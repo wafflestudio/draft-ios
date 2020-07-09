@@ -9,50 +9,65 @@
 import UIKit
 
 class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
+
+    internal var roomGroup: RoomGroup?
     
-    private var roomGroup: RoomsByDate?
-    
-    lazy var numOfSections: Int? = 1 // 나중에 AllRooms class의 count로 수정
-    
-    required init?(coder: NSCoder) {
-        roomGroup = RoomsByDate()
-        super.init(coder: coder)
-    }
+    internal var sampleAuth: String?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addSearchController()
-        getAllRoomsFromServer()
+        
+        // autoLoginForTest() 안에 All rooms Request API 함수 넣어 놨어요
+        self.autoLoginForTest()
+
     }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return numOfSections ?? 0
+        return roomGroup?.getNumOfRoomDate() ?? 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let numOfRooms = roomGroup?.count
-        
-        return numOfRooms ?? 0
+        if let values = roomGroup?.roomGroup.values {
+            
+            let roomsByDate = [RoomsByDate](values)
+            let numOfRooms = roomsByDate[section].count
+            
+            return numOfRooms
+            
+        } else {
+            return 0
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "room identifier", for: indexPath)
         
-        // label sample
         let index = indexPath.row
-        cell.textLabel?.text = roomGroup?[index]?.name
+        let section = indexPath.section
         
+        if let values = roomGroup?.roomGroup.values {
+            
+            let roomsByDateArray = [RoomsByDate](values)
+            let name = roomsByDateArray[section][index]?.name
+            cell.textLabel?.text = name
+        }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        // 나중에 AllRooms model 만들면 수정
-        return roomGroup?.getDateInString()
+        if let keys = roomGroup?.roomGroup.keys {
+            let dates = [GameDateString](keys)
+            
+            let date = dates[section]
+            
+            return date
+        } else { return nil }
     }
     
     // MARK: - SearchBarController
@@ -80,6 +95,10 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
      // Pass the selected object to the new view controller.
      }
      */
+}
+
+// MARK: - Extension for Room Detail (Create Room as well)
+extension MatchingTableViewController: RoomDetailViewControllerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -87,54 +106,12 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
             
             if let createRoomViewController = segue.destination as? RoomDetailViewController {
                 createRoomViewController.delegate = self
-                createRoomViewController.roomGroup = roomGroup
+                // createRoomViewController.roomGroup = roomGroup
             }
         }
-    }
-}
-
-extension MatchingTableViewController: RoomDetailViewControllerDelegate {
-    func roomDetailViewController(_ controller: RoomDetailViewController, didFinishAdding item: Room) {
-        tableView.reloadData()
-    }
-}
-
-// MARK:- Call Rest API to get rooms from server
-extension MatchingTableViewController {
-    func getAllRoomsFromServer() {
-        
-        let sampleAuth = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTMyMzk2ODcsImlhdCI6MTU5MzIyODY4NywiZW1haWwiOiJnb2xkQG5hdmVyLmNvbSJ9.NaT4yY3qu9cPKsR0ZaB5cb3ARVqkqaqitFzZU0caxQY"
-        
-        let url = URL(string: "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/room/")
-        
-        
-        var request = URLRequest(url: url!)
-        request.httpMethod = "GET"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(sampleAuth, forHTTPHeaderField: "Authentication")
-
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-
-            if let e = error {
-                print("error when URLSession Task \(e)")
-            }
-
-            self.getRoomFromRestAPIResponse(data: data!)
-            
-        }
-        task.resume()
     }
     
-    func getRoomFromRestAPIResponse(data: Data?) {
-        do {
-            let object = try JSONSerialization.jsonObject(with: data!, options: []) as? NSDictionary
-            
-            guard let jsonObject = object else { return }
-            
-            print(jsonObject)
-            
-        } catch let e as NSError {
-            print("error when getRoomFromRestAPIResponse : \(e)")
-        }
+    func roomDetailViewController(_ controller: RoomDetailViewController, didFinishAdding item: Room) {
+        tableView.reloadData()
     }
 }
