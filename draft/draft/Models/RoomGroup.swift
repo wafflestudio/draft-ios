@@ -19,18 +19,21 @@ struct RoomGroup {
         
         for room in rooms {
             
-            print(room.startTime)
-            
-            if let gameDay = room.startTime.timeStringToDateString {
+            if let gameDay = room.startTime?.timeStringToDateString {
                
                 if let roomsByDate = roomGroup[gameDay] {
                     roomsByDate.addRoom(room: room)
                 } else {
                 roomGroup[gameDay] = RoomsByDate(room: room)
                 }
+            } else {
+                print("Start Time is Null of Room(id:\(room.id))")
             }
         }
         
         print(roomGroup)
     }
 }
+
+
+
