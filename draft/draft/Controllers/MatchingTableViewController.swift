@@ -106,12 +106,16 @@ extension MatchingTableViewController: RoomDetailViewControllerDelegate {
             
             if let createRoomViewController = segue.destination as? RoomDetailViewController {
                 createRoomViewController.delegate = self
+                createRoomViewController.sampleAuth = self.sampleAuth
                 // createRoomViewController.roomGroup = roomGroup
             }
         }
     }
     
-    func roomDetailViewController(_ controller: RoomDetailViewController, didFinishAdding item: Room) {
-        tableView.reloadData()
+    func roomDetailViewController(_ controller: RoomDetailViewController) {
+        DispatchQueue.main.async {
+            self.allRoomsAPIRequest()
+            self.tableView.reloadData()
+        }
     }
 }
