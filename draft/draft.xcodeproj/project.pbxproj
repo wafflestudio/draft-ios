@@ -107,6 +107,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		384FA83A24BA084A00FB3CF4 /* RoomDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				386D72D3246312160099C35E /* RoomDetailViewController.swift */,
+				384FA83824B9FC6600FB3CF4 /* RoomDetailVC+APIRequest.swift */,
+			);
+			path = RoomDetailVC;
+			sourceTree = "<group>";
+		};
+		384FA83B24BA086100FB3CF4 /* MatchingTableVC */ = {
+			isa = PBXGroup;
+			children = (
+				389703BC2455A81400FF5077 /* MatchingTableViewController.swift */,
+				3837B51A24B5AF960085E821 /* MatchingTableVC+APIRequest.swift */,
+			);
+			path = MatchingTableVC;
+			sourceTree = "<group>";
+		};
 		386D72CE246311DB0099C35E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,11 +194,9 @@
 		389703B624559C8C00FF5077 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				386D72D3246312160099C35E /* RoomDetailViewController.swift */,
-				389703BC2455A81400FF5077 /* MatchingTableViewController.swift */,
-				3837B51A24B5AF960085E821 /* MatchingTableVC+APIRequest.swift */,
+				384FA83A24BA084A00FB3CF4 /* RoomDetailVC */,
+				384FA83B24BA086100FB3CF4 /* MatchingTableVC */,
 				3837B51D24B5BAAE0085E821 /* secret_login.json */,
-				384FA83824B9FC6600FB3CF4 /* RoomDetailVC+APIRequest.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

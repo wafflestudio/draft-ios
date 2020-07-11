@@ -34,7 +34,7 @@ extension RoomDetailViewController {
         let task = session.dataTask(with: request) { (data, response, error) in
             
             guard let httpResponse = response as? HTTPURLResponse else {
-                print("httpResponse error")
+                print("httpResponse error : \(String(describing: error))")
                 return
             }
             
@@ -45,12 +45,12 @@ extension RoomDetailViewController {
             
             guard let data = data else {
                 print(error.debugDescription)
-                // data가 nil이 될 때 에러 처리
                 return
             }
             
             print("New room created with info : \(data)")
         }
+        
         task.resume()
     }
 }
