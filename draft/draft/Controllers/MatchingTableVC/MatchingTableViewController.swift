@@ -13,15 +13,14 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     internal var roomGroup: RoomGroup?
     
     internal var sampleAuth: String?
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addSearchController()
         
-        // autoLoginForTest() 안에 All rooms Request API 함수 넣어 놨어요
-        self.autoLoginForTest()
+        // autoLoginForTest() contains allRoomsAPIRequest()
+        autoLoginForTest()
 
     }
     
@@ -78,26 +77,9 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         self.navigationItem.searchController = searchBarController
         self.navigationItem.hidesSearchBarWhenScrolling = false
     }
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
 }
 
-// MARK: - Extension for Room Detail (Create Room as well)
+// MARK: - Navitgation to PopUP : Room Detail View(Create Room, edit Room as well)
 extension MatchingTableViewController: RoomDetailViewControllerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -106,12 +88,15 @@ extension MatchingTableViewController: RoomDetailViewControllerDelegate {
             
             if let createRoomViewController = segue.destination as? RoomDetailViewController {
                 createRoomViewController.delegate = self
-                // createRoomViewController.roomGroup = roomGroup
+                createRoomViewController.sampleAuth = self.sampleAuth
             }
         }
     }
     
-    func roomDetailViewController(_ controller: RoomDetailViewController, didFinishAdding item: Room) {
-        tableView.reloadData()
+    func roomDetailViewController(_ controller: RoomDetailViewController) {
+        DispatchQueue.main.async {
+            self.allRoomsAPIRequest()
+            self.tableView.reloadData()
+        }
     }
 }

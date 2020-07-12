@@ -15,6 +15,7 @@
 		383C978A246EE6840013E6AF /* RoomsByDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72D1246311FF0099C35E /* RoomsByDate.swift */; };
 		383C978B246EEA420013E6AF /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72CF246311F40099C35E /* Room.swift */; };
 		38495BF8249DC22F0077C570 /* Model-utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00C34248B3E7400F50F9B /* Model-utilities.swift */; };
+		384FA83924B9FC6600FB3CF4 /* RoomDetailVC+APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384FA83824B9FC6600FB3CF4 /* RoomDetailVC+APIRequest.swift */; };
 		386D72D0246311F40099C35E /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72CF246311F40099C35E /* Room.swift */; };
 		386D72D2246311FF0099C35E /* RoomsByDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72D1246311FF0099C35E /* RoomsByDate.swift */; };
 		386D72D4246312160099C35E /* RoomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72D3246312160099C35E /* RoomDetailViewController.swift */; };
@@ -57,6 +58,7 @@
 		3837B51A24B5AF960085E821 /* MatchingTableVC+APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchingTableVC+APIRequest.swift"; sourceTree = "<group>"; };
 		3837B51D24B5BAAE0085E821 /* secret_login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secret_login.json; sourceTree = "<group>"; };
 		383C9787246EE6390013E6AF /* RoomGroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGroupTests.swift; sourceTree = "<group>"; };
+		384FA83824B9FC6600FB3CF4 /* RoomDetailVC+APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoomDetailVC+APIRequest.swift"; sourceTree = "<group>"; };
 		386D72CF246311F40099C35E /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = draft/Models/Room.swift; sourceTree = SOURCE_ROOT; };
 		386D72D1246311FF0099C35E /* RoomsByDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomsByDate.swift; path = draft/Models/RoomsByDate.swift; sourceTree = SOURCE_ROOT; };
 		386D72D3246312160099C35E /* RoomDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		384FA83A24BA084A00FB3CF4 /* RoomDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				386D72D3246312160099C35E /* RoomDetailViewController.swift */,
+				384FA83824B9FC6600FB3CF4 /* RoomDetailVC+APIRequest.swift */,
+			);
+			path = RoomDetailVC;
+			sourceTree = "<group>";
+		};
+		384FA83B24BA086100FB3CF4 /* MatchingTableVC */ = {
+			isa = PBXGroup;
+			children = (
+				389703BC2455A81400FF5077 /* MatchingTableViewController.swift */,
+				3837B51A24B5AF960085E821 /* MatchingTableVC+APIRequest.swift */,
+			);
+			path = MatchingTableVC;
+			sourceTree = "<group>";
+		};
 		386D72CE246311DB0099C35E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,9 +194,8 @@
 		389703B624559C8C00FF5077 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				386D72D3246312160099C35E /* RoomDetailViewController.swift */,
-				389703BC2455A81400FF5077 /* MatchingTableViewController.swift */,
-				3837B51A24B5AF960085E821 /* MatchingTableVC+APIRequest.swift */,
+				384FA83A24BA084A00FB3CF4 /* RoomDetailVC */,
+				384FA83B24BA086100FB3CF4 /* MatchingTableVC */,
 				3837B51D24B5BAAE0085E821 /* secret_login.json */,
 			);
 			path = Controllers;
@@ -326,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				384FA83924B9FC6600FB3CF4 /* RoomDetailVC+APIRequest.swift in Sources */,
 				3897038424559A4900FF5077 /* AppDelegate.swift in Sources */,
 				386D72D4246312160099C35E /* RoomDetailViewController.swift in Sources */,
 				389703BD2455A81400FF5077 /* MatchingTableViewController.swift in Sources */,
@@ -335,7 +355,6 @@
 				3897038E24559A4900FF5077 /* draft.xcdatamodeld in Sources */,
 				386D72D2246311FF0099C35E /* RoomsByDate.swift in Sources */,
 				3837B51B24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */,
-
 				386D72D0246311F40099C35E /* Room.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +364,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3837B51C24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */,
-
 				38969E0E24A6F7D70032F82C /* RoomRestAPITest.swift in Sources */,
 				38495BF8249DC22F0077C570 /* Model-utilities.swift in Sources */,
 				38969E0F24A6F7F90032F82C /* MatchingTableViewController.swift in Sources */,
