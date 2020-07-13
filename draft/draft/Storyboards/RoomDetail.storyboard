@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwJ-6Q-PS3">
-                                <rect key="frame" x="112" y="300" width="112" height="76"/>
+                                <rect key="frame" x="112" y="300" width="221" height="251"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="방만들기"/>
                                 <connections>
@@ -41,13 +41,127 @@
                     <view key="view" contentMode="scaleToFill" id="GSE-ee-V8V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y97-I2-7PD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Rn-4y-XlY">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="283"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darft_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dOz-TJ-gzN">
+                                                <rect key="frame" x="137" y="40" width="140" height="140"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방을 만들어 농구인들과 게임 약속을 잡으세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eN9-bO-zje">
+                                                <rect key="frame" x="54" y="263" width="306.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJt-0B-I17">
+                                                <rect key="frame" x="144.5" y="210" width="125" height="41"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="YJt-0B-I17" firstAttribute="centerX" secondItem="2Rn-4y-XlY" secondAttribute="centerX" id="2Kc-0O-Hqz"/>
+                                            <constraint firstItem="dOz-TJ-gzN" firstAttribute="top" secondItem="2Rn-4y-XlY" secondAttribute="top" constant="40" id="CEa-HC-J1Y"/>
+                                            <constraint firstItem="YJt-0B-I17" firstAttribute="top" secondItem="dOz-TJ-gzN" secondAttribute="bottom" constant="30" id="Dx4-jT-ckJ"/>
+                                            <constraint firstItem="dOz-TJ-gzN" firstAttribute="centerX" secondItem="2Rn-4y-XlY" secondAttribute="centerX" id="FMy-5D-70x"/>
+                                            <constraint firstItem="eN9-bO-zje" firstAttribute="centerX" secondItem="2Rn-4y-XlY" secondAttribute="centerX" id="KxK-x3-dY7"/>
+                                            <constraint firstItem="eN9-bO-zje" firstAttribute="top" secondItem="YJt-0B-I17" secondAttribute="bottom" constant="12" id="TbH-AB-fTn"/>
+                                        </constraints>
+                                    </view>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nuA-Tg-fcN">
+                                        <rect key="frame" x="0.0" y="283" width="414" height="466"/>
+                                        <connections>
+                                            <segue destination="asB-BH-RMl" kind="embed" id="2y7-2I-v43"/>
+                                        </connections>
+                                    </containerView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yea-g4-bBo">
+                                        <rect key="frame" x="0.0" y="749" width="414" height="59"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOk-3r-o6Y">
+                                                <rect key="frame" x="10" y="0.0" width="394" height="59"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <state key="normal" title="만들기" backgroundImage="create_black">
+                                                    <color key="titleColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="TOk-3r-o6Y" firstAttribute="leading" secondItem="yea-g4-bBo" secondAttribute="leading" constant="10" id="Dd0-MI-OHK"/>
+                                            <constraint firstAttribute="bottom" secondItem="TOk-3r-o6Y" secondAttribute="bottom" id="RbN-Lm-pXH"/>
+                                            <constraint firstItem="TOk-3r-o6Y" firstAttribute="top" secondItem="yea-g4-bBo" secondAttribute="top" id="rN1-aK-bXo"/>
+                                            <constraint firstAttribute="trailing" secondItem="TOk-3r-o6Y" secondAttribute="trailing" constant="10" id="tdy-W1-PnC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nuA-Tg-fcN" secondAttribute="trailing" id="957-b9-lbz"/>
+                                    <constraint firstItem="nuA-Tg-fcN" firstAttribute="top" secondItem="Y97-I2-7PD" secondAttribute="top" constant="283" id="9xG-49-oga"/>
+                                    <constraint firstItem="nuA-Tg-fcN" firstAttribute="top" secondItem="2Rn-4y-XlY" secondAttribute="bottom" id="DOU-UX-xED"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Rn-4y-XlY" secondAttribute="trailing" id="M4H-qh-C6u"/>
+                                    <constraint firstItem="nuA-Tg-fcN" firstAttribute="leading" secondItem="Y97-I2-7PD" secondAttribute="leading" id="OWu-0T-fFe"/>
+                                    <constraint firstItem="yea-g4-bBo" firstAttribute="top" secondItem="nuA-Tg-fcN" secondAttribute="bottom" id="PvS-ER-dRm"/>
+                                    <constraint firstItem="nuA-Tg-fcN" firstAttribute="top" secondItem="2Rn-4y-XlY" secondAttribute="bottom" id="YqA-le-59b"/>
+                                    <constraint firstAttribute="bottom" secondItem="nuA-Tg-fcN" secondAttribute="bottom" constant="59" id="dAC-zC-f5A"/>
+                                    <constraint firstAttribute="trailing" secondItem="yea-g4-bBo" secondAttribute="trailing" id="gAk-2u-NJw"/>
+                                    <constraint firstItem="2Rn-4y-XlY" firstAttribute="top" secondItem="Y97-I2-7PD" secondAttribute="top" id="lPO-Rj-D4F"/>
+                                    <constraint firstItem="yea-g4-bBo" firstAttribute="leading" secondItem="Y97-I2-7PD" secondAttribute="leading" id="sbx-eu-qZS"/>
+                                    <constraint firstItem="2Rn-4y-XlY" firstAttribute="leading" secondItem="Y97-I2-7PD" secondAttribute="leading" id="uHz-JF-XNC"/>
+                                    <constraint firstAttribute="bottom" secondItem="yea-g4-bBo" secondAttribute="bottom" id="vZy-Qp-WZu"/>
+                                    <constraint firstItem="yea-g4-bBo" firstAttribute="top" secondItem="nuA-Tg-fcN" secondAttribute="bottom" id="wne-Cf-HjA"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Y97-I2-7PD" firstAttribute="trailing" secondItem="OoJ-CR-svF" secondAttribute="trailing" id="gQf-Bz-tKs"/>
+                            <constraint firstItem="Y97-I2-7PD" firstAttribute="top" secondItem="GSE-ee-V8V" secondAttribute="top" id="haM-Bq-Hn6"/>
+                            <constraint firstAttribute="bottom" secondItem="Y97-I2-7PD" secondAttribute="bottom" constant="34" id="jRK-5B-aiX"/>
+                            <constraint firstItem="Y97-I2-7PD" firstAttribute="leading" secondItem="OoJ-CR-svF" secondAttribute="leading" id="k2K-CS-10k"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OoJ-CR-svF"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Qq-Mc-0zB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="-608"/>
+            <point key="canvasLocation" x="757.60000000000002" y="-608.54572713643188"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="JQQ-im-TGI">
+            <objects>
+                <tableViewController id="asB-BH-RMl" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fvu-Vx-Xag">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="466"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ko6-ez-tbk">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ko6-ez-tbk" id="Ztw-Dw-59b">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="asB-BH-RMl" id="XtG-Hx-TfO"/>
+                            <outlet property="delegate" destination="asB-BH-RMl" id="PQf-Mm-maC"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5v-9A-thK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1473" y="-665"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="create_black" width="343" height="56"/>
+        <image name="darft_logo" width="140" height="140"/>
+    </resources>
 </document>
