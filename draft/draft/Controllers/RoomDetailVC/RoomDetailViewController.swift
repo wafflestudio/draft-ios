@@ -10,6 +10,9 @@ import UIKit
 
 protocol RoomDetailViewControllerDelegate: class {
     func roomDetailViewController(_ controller: RoomDetailViewController)
+    
+    // Room Detail UI 작업 위해 임시로 만든 메소드
+    func goToRoomDetailVC()
 }
 
 class RoomDetailViewController: UIViewController {
@@ -27,11 +30,13 @@ class RoomDetailViewController: UIViewController {
     
     // '만들기' 누르면 sampleRoom 추가하기
     @IBAction func done(_ sender: Any) {
-        DispatchQueue.main.async {
-            self.createRoomReqeust()
-        }
-        delegate?.roomDetailViewController(self)
+//        DispatchQueue.main.async {
+//            self.createRoomReqeust()
+//        }
+//        delegate?.roomDetailViewController(self)
         dismiss(animated: true, completion: nil)
+        
+        delegate?.goToRoomDetailVC()
     }
-}
 
+}

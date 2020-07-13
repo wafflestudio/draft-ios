@@ -9,7 +9,7 @@
 import UIKit
 
 class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
-
+    
     internal var roomGroup: RoomGroup?
     
     internal var sampleAuth: String?
@@ -21,7 +21,7 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         
         // autoLoginForTest() contains allRoomsAPIRequest()
         autoLoginForTest()
-
+        
     }
     
     // MARK: - Table view data source
@@ -98,5 +98,14 @@ extension MatchingTableViewController: RoomDetailViewControllerDelegate {
             self.allRoomsAPIRequest()
             self.tableView.reloadData()
         }
+    }
+    
+    // MARK: - Move to Room Detail Storyboard
+    // Room Detail UI 작업 위해 임시로 연결
+    func goToRoomDetailVC() {
+        let storyboard = UIStoryboard(name: "RoomDetail", bundle: nil)
+        
+        let viewController = storyboard.instantiateViewController(withIdentifier: "RoomDetail")
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
