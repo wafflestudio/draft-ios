@@ -31,10 +31,10 @@ class RoomDetailViewController: UIViewController {
     
     // '만들기' 누르면 sampleRoom 추가하기
     @IBAction func done(_ sender: Any) {
-//        DispatchQueue.main.async {
-//            self.createRoomReqeust()
-//        }
-//        delegate?.roomDetailViewController(self)
+        //        DispatchQueue.main.async {
+        //            self.createRoomReqeust()
+        //        }
+        //        delegate?.roomDetailViewController(self)
         dismiss(animated: true, completion: nil)
         
         delegate?.goToRoomDetailVC()
@@ -42,5 +42,36 @@ class RoomDetailViewController: UIViewController {
     
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "StartDatePicker" {
+            
+            if let controller = segue.destination as? GameDatePickerViewController {
+                controller.pickerLabelType = .startTime
+                controller.delegate = self
+            }
+            
+        } else if segue.identifier == "EndDatePicker" {
+            if let controller = segue.destination as? GameDatePickerViewController {
+                controller.pickerLabelType = .endTime
+                controller.delegate = self
+            }
+        }
+    }
+    @IBOutlet weak var startTime: UIButton!
+    @IBOutlet weak var endTime: UIButton!
+}
+
+// MARK: - Date Picker Delegate
+extension RoomDetailViewController: GameDatePickerViewControllerDelegate {
+    func gameDatePickerViewController(_ controller: GameDatePickerViewController, date: String, type: StartOrEnd) {
+        switch type {
+        case .startTime:
+            startTime.setTitle(date, for: .normal)
+        case .endTime:
+            endTime.setTitle(date, for: .normal)
+        }
     }
 }

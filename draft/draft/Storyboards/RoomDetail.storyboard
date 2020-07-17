@@ -101,7 +101,7 @@
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <segue destination="NhN-ao-5Ay" kind="presentation" modalPresentationStyle="overCurrentContext" id="zCi-DG-iHg"/>
+                                                                    <segue destination="NhN-ao-5Ay" kind="presentation" identifier="StartDatePicker" modalPresentationStyle="overCurrentContext" id="zCi-DG-iHg"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -128,7 +128,7 @@
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <segue destination="NhN-ao-5Ay" kind="presentation" modalPresentationStyle="overCurrentContext" id="A5S-4P-qTe"/>
+                                                                    <segue destination="NhN-ao-5Ay" kind="presentation" identifier="EndDatePicker" modalPresentationStyle="overCurrentContext" id="A5S-4P-qTe"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -214,6 +214,10 @@
                         <viewLayoutGuide key="safeArea" id="OoJ-CR-svF"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="endTime" destination="6IJ-tk-vQk" id="s5v-jt-Dxm"/>
+                        <outlet property="startTime" destination="l56-F1-Pv9" id="HvB-kO-DRD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Qq-Mc-0zB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -253,9 +257,6 @@
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="10" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="WBv-MC-Jqx">
                                                 <rect key="frame" x="0.0" y="58" width="374" height="216"/>
                                                 <locale key="locale" localeIdentifier="ko"/>
-                                                <connections>
-                                                    <action selector="datePicker:" destination="NhN-ao-5Ay" eventType="valueChanged" id="9t8-3K-iUY"/>
-                                                </connections>
                                             </datePicker>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4R6-qp-d3b">
                                                 <rect key="frame" x="0.0" y="273.5" width="374" height="57.5"/>
@@ -267,6 +268,9 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="77" height="39"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                                 <state key="normal" title="취소하기"/>
+                                                                <connections>
+                                                                    <action selector="cancel:" destination="NhN-ao-5Ay" eventType="touchUpInside" id="oTL-QJ-imb"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdp-mt-On1">
                                                                 <rect key="frame" x="127" y="0.0" width="77" height="39"/>
@@ -309,6 +313,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="agK-dO-Np9"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wjZ-IE-HRx"/>
+                    <connections>
+                        <outlet property="datePicker" destination="WBv-MC-Jqx" id="mSb-bo-G79"/>
+                        <outlet property="pickerLabel" destination="CEb-GC-0B4" id="D8d-WP-sih"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1m-G3-fPz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -316,7 +325,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="A5S-4P-qTe"/>
+        <segue reference="zCi-DG-iHg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="create_black" width="343" height="56"/>
