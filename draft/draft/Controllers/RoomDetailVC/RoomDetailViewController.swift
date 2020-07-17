@@ -21,6 +21,7 @@ class RoomDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Create Room viewDidLoad")
     }
     // weak로 순환 참조 방지
     weak var delegate: RoomDetailViewControllerDelegate?
@@ -38,5 +39,8 @@ class RoomDetailViewController: UIViewController {
         
         delegate?.goToRoomDetailVC()
     }
-
+    
+    @IBAction func cancel(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
 }

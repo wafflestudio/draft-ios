@@ -62,6 +62,9 @@
                                                 <rect key="frame" x="16" y="16" width="52" height="30"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <state key="normal" title="취소하기"/>
+                                                <connections>
+                                                    <action selector="cancel:" destination="e7d-G0-NnV" eventType="touchUpInside" id="GUP-7v-s3a"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -90,6 +93,12 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="OO 코트에서 같이 농구해요" textAlignment="justified" adjustsFontForContentSizeCategory="YES" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="mki-wq-q7t">
+                                                                <rect key="frame" x="122" y="13" width="189" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
