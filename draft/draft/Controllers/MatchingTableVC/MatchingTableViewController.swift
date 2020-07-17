@@ -77,11 +77,15 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         self.navigationItem.searchController = searchBarController
         self.navigationItem.hidesSearchBarWhenScrolling = false
     }
+    
+    @IBAction func createRoomButton(_ sender: Any) {
+        goToRoomDetailVC()
+    }
 }
 
 // MARK: - Navitgation to PopUP : Room Detail View(Create Room, edit Room as well)
 extension MatchingTableViewController: RoomDetailViewControllerDelegate {
-    
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "createRoomSegue" {
@@ -91,7 +95,7 @@ extension MatchingTableViewController: RoomDetailViewControllerDelegate {
                 createRoomViewController.sampleAuth = self.sampleAuth
             }
         }
-    }
+    }*/
     
     func roomDetailViewController(_ controller: RoomDetailViewController) {
         DispatchQueue.main.async {
@@ -106,6 +110,7 @@ extension MatchingTableViewController: RoomDetailViewControllerDelegate {
         let storyboard = UIStoryboard(name: "RoomDetail", bundle: nil)
         
         let viewController = storyboard.instantiateViewController(withIdentifier: "RoomDetail")
-        navigationController?.pushViewController(viewController, animated: true)
+        present(viewController, animated: true)
+        
     }
 }

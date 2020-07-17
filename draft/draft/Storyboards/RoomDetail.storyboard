@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="24K-xk-b82">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e7d-G0-NnV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="erN-CU-5oI">
             <objects>
-                <viewController storyboardIdentifier="RoomDetail" id="24K-xk-b82" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RoomDetail2" id="24K-xk-b82" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lXJ-cN-Ven">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,11 +19,6 @@
                                 <rect key="frame" x="112" y="300" width="221" height="251"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="방만들기"/>
-                                <connections>
-                                    <segue destination="e7d-G0-NnV" kind="popoverPresentation" popoverAnchorView="vwJ-6Q-PS3" id="gJi-W8-S67">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -37,16 +32,16 @@
         <!--Room Detail View Controller-->
         <scene sceneID="QcK-CC-ufO">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="e7d-G0-NnV" customClass="RoomDetailViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RoomDetail" hidesBottomBarWhenPushed="YES" id="e7d-G0-NnV" customClass="RoomDetailViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GSE-ee-V8V">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IHY-ni-1x7">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="828"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Rn-4y-XlY">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="343.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="348"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darft_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dOz-TJ-gzN">
                                                 <rect key="frame" x="137" y="40" width="140" height="140"/>
@@ -64,8 +59,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTi-YM-7X3">
-                                                <rect key="frame" x="16" y="16" width="70" height="36"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <rect key="frame" x="16" y="16" width="52" height="30"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <state key="normal" title="취소하기"/>
                                             </button>
                                         </subviews>
@@ -81,7 +76,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nz-6d-ZDk">
-                                        <rect key="frame" x="0.0" y="343.5" width="414" height="409"/>
+                                        <rect key="frame" x="0.0" y="348" width="414" height="414"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="I2j-jc-6fY">
                                                 <rect key="frame" x="16" y="0.0" width="382" height="240"/>
@@ -164,7 +159,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yea-g4-bBo">
-                                        <rect key="frame" x="0.0" y="752.5" width="414" height="65.5"/>
+                                        <rect key="frame" x="0.0" y="762" width="414" height="66"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOk-3r-o6Y">
                                                 <rect key="frame" x="16" y="5" width="382" height="56"/>
