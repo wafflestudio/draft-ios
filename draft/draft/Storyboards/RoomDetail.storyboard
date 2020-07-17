@@ -232,7 +232,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4br-I0-LC4">
-                                <rect key="frame" x="20" y="224" width="374" height="331"/>
+                                <rect key="frame" x="20" y="282.5" width="374" height="331"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fee-4p-PXZ">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="331"/>
@@ -255,7 +255,7 @@
                                                 </constraints>
                                             </view>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="10" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="WBv-MC-Jqx">
-                                                <rect key="frame" x="0.0" y="58" width="374" height="216"/>
+                                                <rect key="frame" x="0.0" y="57.5" width="374" height="216"/>
                                                 <locale key="locale" localeIdentifier="ko"/>
                                             </datePicker>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4R6-qp-d3b">
@@ -307,7 +307,8 @@
                         </subviews>
                         <color key="backgroundColor" white="0.37844909707160845" alpha="0.74242829623287676" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4br-I0-LC4" firstAttribute="top" secondItem="agK-dO-Np9" secondAttribute="top" constant="180" id="NFo-C7-630"/>
+                            <constraint firstItem="4br-I0-LC4" firstAttribute="centerY" secondItem="REK-Ok-J2m" secondAttribute="centerY" id="ECN-ID-yar"/>
+                            <constraint firstItem="4br-I0-LC4" firstAttribute="centerX" secondItem="REK-Ok-J2m" secondAttribute="centerX" id="Ou7-MT-ARw"/>
                             <constraint firstItem="4br-I0-LC4" firstAttribute="leading" secondItem="agK-dO-Np9" secondAttribute="leading" constant="20" id="YWx-u9-F6j"/>
                             <constraint firstItem="agK-dO-Np9" firstAttribute="trailing" secondItem="4br-I0-LC4" secondAttribute="trailing" constant="20" id="fbS-1l-6O5"/>
                         </constraints>
