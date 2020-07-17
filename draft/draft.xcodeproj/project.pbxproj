@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		380B77C624C214FB00CB1CB2 /* GameDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380B77C524C214FB00CB1CB2 /* GameDatePickerViewController.swift */; };
 		3837B51B24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3837B51A24B5AF960085E821 /* MatchingTableVC+APIRequest.swift */; };
 		3837B51C24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3837B51A24B5AF960085E821 /* MatchingTableVC+APIRequest.swift */; };
 		3837B51E24B5BAAE0085E821 /* secret_login.json in Resources */ = {isa = PBXBuildFile; fileRef = 3837B51D24B5BAAE0085E821 /* secret_login.json */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		380B77C524C214FB00CB1CB2 /* GameDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDatePickerViewController.swift; sourceTree = "<group>"; };
 		3837B51A24B5AF960085E821 /* MatchingTableVC+APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchingTableVC+APIRequest.swift"; sourceTree = "<group>"; };
 		3837B51D24B5BAAE0085E821 /* secret_login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secret_login.json; sourceTree = "<group>"; };
 		383C9787246EE6390013E6AF /* RoomGroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGroupTests.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				384FA83824B9FC6600FB3CF4 /* RoomDetailVC+APIRequest.swift */,
 				388E1C2F24BC68B5008DD24F /* RoomInfoTableVC.swift */,
 				38F89F7224BC8BFC00AB80E8 /* RoomInfoTableViewCell.swift */,
+				380B77C524C214FB00CB1CB2 /* GameDatePickerViewController.swift */,
 			);
 			path = RoomDetailVC;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				38D00C35248B3E7400F50F9B /* Model-utilities.swift in Sources */,
 				3897038624559A4900FF5077 /* SceneDelegate.swift in Sources */,
 				38D00C32248B3D7500F50F9B /* RoomGroup.swift in Sources */,
+				380B77C624C214FB00CB1CB2 /* GameDatePickerViewController.swift in Sources */,
 				3897038E24559A4900FF5077 /* draft.xcdatamodeld in Sources */,
 				386D72D2246311FF0099C35E /* RoomsByDate.swift in Sources */,
 				38F89F7324BC8BFC00AB80E8 /* RoomInfoTableViewCell.swift in Sources */,

@@ -7,28 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="erN-CU-5oI">
-            <objects>
-                <viewController storyboardIdentifier="RoomDetail2" id="24K-xk-b82" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lXJ-cN-Ven">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwJ-6Q-PS3">
-                                <rect key="frame" x="112" y="300" width="221" height="251"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="방만들기"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="kvy-G4-Dhw"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9A-JT-K5c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-420.28985507246381" y="-475.44642857142856"/>
-        </scene>
         <!--Room Detail View Controller-->
         <scene sceneID="QcK-CC-ufO">
             <objects>
@@ -115,6 +93,17 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l56-F1-Pv9">
+                                                                <rect key="frame" x="126" y="15" width="181" height="30"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                                                <state key="normal" title="시작 시간 선택하기">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <segue destination="NhN-ao-5Ay" kind="presentation" modalPresentationStyle="overCurrentContext" id="zCi-DG-iHg"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
@@ -131,6 +120,17 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IJ-tk-vQk">
+                                                                <rect key="frame" x="125" y="14" width="181" height="33"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                                                <state key="normal" title="종료 시간 선택하기">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <segue destination="NhN-ao-5Ay" kind="presentation" modalPresentationStyle="overCurrentContext" id="A5S-4P-qTe"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
@@ -147,6 +147,14 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2s-ko-9JJ">
+                                                                <rect key="frame" x="125" y="13" width="181" height="33"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                                                <state key="normal" title="농구 코트 선택하기">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
@@ -211,52 +219,105 @@
             </objects>
             <point key="canvasLocation" x="524.63768115942037" y="-475.44642857142856"/>
         </scene>
-        <!--Room Info TableVC-->
-        <scene sceneID="JQQ-im-TGI">
+        <!--Game Date Picker View Controller-->
+        <scene sceneID="WRS-Wa-v7k">
             <objects>
-                <tableViewController id="asB-BH-RMl" customClass="RoomInfoTableVC" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="fvu-Vx-Xag">
+                <viewController id="NhN-ao-5Ay" customClass="GameDatePickerViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="REK-Ok-J2m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoomInfo" id="Ko6-ez-tbk" customClass="RoomInfoTableViewCell" customModule="draft" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ko6-ez-tbk" id="Ztw-Dw-59b">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Py-AN-s59">
-                                            <rect key="frame" x="20" y="11" width="42" height="21.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="4Py-AN-s59" firstAttribute="top" secondItem="Ztw-Dw-59b" secondAttribute="topMargin" id="CYI-yb-hry"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="4Py-AN-s59" secondAttribute="bottom" id="Vug-GP-voa"/>
-                                        <constraint firstItem="4Py-AN-s59" firstAttribute="leading" secondItem="Ztw-Dw-59b" secondAttribute="leadingMargin" id="qV2-wq-FdZ"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="label" destination="4Py-AN-s59" id="314-E8-EAf"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="asB-BH-RMl" id="XtG-Hx-TfO"/>
-                            <outlet property="delegate" destination="asB-BH-RMl" id="PQf-Mm-maC"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5v-9A-thK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4br-I0-LC4">
+                                <rect key="frame" x="20" y="224" width="374" height="331"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fee-4p-PXZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="331"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1R6-ju-g8S">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="57.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="게임 시작 시간을 정해 주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEb-GC-0B4">
+                                                        <rect key="frame" x="63.5" y="15.5" width="247.5" height="26.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                        <color key="textColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="CEb-GC-0B4" firstAttribute="top" secondItem="1R6-ju-g8S" secondAttribute="top" constant="15.5" id="IIE-Tk-SbJ"/>
+                                                    <constraint firstItem="CEb-GC-0B4" firstAttribute="centerY" secondItem="1R6-ju-g8S" secondAttribute="centerY" id="cnD-5c-iml"/>
+                                                    <constraint firstItem="CEb-GC-0B4" firstAttribute="centerX" secondItem="1R6-ju-g8S" secondAttribute="centerX" id="gKm-sF-vkf"/>
+                                                </constraints>
+                                            </view>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="10" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="WBv-MC-Jqx">
+                                                <rect key="frame" x="0.0" y="58" width="374" height="216"/>
+                                                <locale key="locale" localeIdentifier="ko"/>
+                                                <connections>
+                                                    <action selector="datePicker:" destination="NhN-ao-5Ay" eventType="valueChanged" id="9t8-3K-iUY"/>
+                                                </connections>
+                                            </datePicker>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4R6-qp-d3b">
+                                                <rect key="frame" x="0.0" y="273.5" width="374" height="57.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="vbC-fg-gN5">
+                                                        <rect key="frame" x="85" y="9.5" width="204" height="39"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="773-5H-dTr">
+                                                                <rect key="frame" x="0.0" y="0.0" width="77" height="39"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                                <state key="normal" title="취소하기"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdp-mt-On1">
+                                                                <rect key="frame" x="127" y="0.0" width="77" height="39"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                                <state key="normal" title="선택하기"/>
+                                                                <connections>
+                                                                    <action selector="choose:" destination="NhN-ao-5Ay" eventType="touchUpInside" id="eZV-jU-mea"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="vbC-fg-gN5" firstAttribute="centerX" secondItem="4R6-qp-d3b" secondAttribute="centerX" id="LTc-4d-EMs"/>
+                                                    <constraint firstItem="vbC-fg-gN5" firstAttribute="centerY" secondItem="4R6-qp-d3b" secondAttribute="centerY" id="UWd-tM-iWe"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WBv-MC-Jqx" firstAttribute="centerY" secondItem="fee-4p-PXZ" secondAttribute="centerY" id="WWe-E3-xbj"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="fee-4p-PXZ" firstAttribute="top" secondItem="4br-I0-LC4" secondAttribute="top" id="AsO-G7-jPE"/>
+                                    <constraint firstAttribute="trailing" secondItem="fee-4p-PXZ" secondAttribute="trailing" id="Pct-Rw-Y6H"/>
+                                    <constraint firstItem="fee-4p-PXZ" firstAttribute="leading" secondItem="4br-I0-LC4" secondAttribute="leading" id="ir4-HI-HgZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="fee-4p-PXZ" secondAttribute="bottom" id="sBR-BD-yG9"/>
+                                    <constraint firstAttribute="height" constant="331" id="udV-8c-ehA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.37844909707160845" alpha="0.74242829623287676" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4br-I0-LC4" firstAttribute="top" secondItem="agK-dO-Np9" secondAttribute="top" constant="180" id="NFo-C7-630"/>
+                            <constraint firstItem="4br-I0-LC4" firstAttribute="leading" secondItem="agK-dO-Np9" secondAttribute="leading" constant="20" id="YWx-u9-F6j"/>
+                            <constraint firstItem="agK-dO-Np9" firstAttribute="trailing" secondItem="4br-I0-LC4" secondAttribute="trailing" constant="20" id="fbS-1l-6O5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="agK-dO-Np9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1m-G3-fPz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1810" y="-645"/>
+            <point key="canvasLocation" x="1434.7826086956522" y="-475.44642857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="A5S-4P-qTe"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="create_black" width="343" height="56"/>
         <image name="darft_logo" width="140" height="140"/>
