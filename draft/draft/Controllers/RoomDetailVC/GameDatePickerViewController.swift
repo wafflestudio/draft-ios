@@ -9,7 +9,7 @@
 import UIKit
 
 protocol GameDatePickerViewControllerDelegate: class {
-    func gameDatePickerViewController(_ controller: GameDatePickerViewController, date: String, type: StartOrEnd)
+    func gameDatePickerViewController(_ controller: GameDatePickerViewController, date: Date, type: StartOrEnd)
 }
 
 class GameDatePickerViewController: UIViewController {
@@ -35,9 +35,7 @@ class GameDatePickerViewController: UIViewController {
     }
     
     @IBAction func choose(_ sender: UIButton) {
-        let date = datePicker.date.dateToStringAsYMDHMS
-        print(date)
-        delegate?.gameDatePickerViewController(self, date: date, type: pickerLabelType!)
+        delegate?.gameDatePickerViewController(self, date: datePicker.date, type: pickerLabelType!)
         dismiss(animated: true)
     }
 }

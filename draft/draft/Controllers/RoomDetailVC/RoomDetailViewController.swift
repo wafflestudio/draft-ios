@@ -31,11 +31,13 @@ class RoomDetailViewController: UIViewController {
     
     private var startTimePlaceHolder: String?
     private var endTimePlaceHolder: String?
+    private var startTimeToAPIRequest: String?
+    private var endTimeToAPIRequest: String?
     
     // MARK: - Creating Room through delegate
     @IBAction func done(_ sender: Any) {
         
-        guard let pickedStartTime = startTime.titleLabel?.text, let pickedEndTime = endTime.titleLabel?.text, let name = nameTextField.text else {
+        guard let pickedStartTime = startTimeToAPIRequest, let pickedEndTime = endTimeToAPIRequest, let name = nameTextField.text else {
             errorAlert(error: .infoError)
             return
         }
@@ -124,12 +126,15 @@ extension RoomDetailViewController {
 
 // MARK: - Date Picker Delegate
 extension RoomDetailViewController: GameDatePickerViewControllerDelegate {
-    func gameDatePickerViewController(_ controller: GameDatePickerViewController, date: String, type: StartOrEnd) {
+    func gameDatePickerViewController(_ controller: GameDatePickerViewController, date: Date, type: StartOrEnd) {
         switch type {
         case .startTime:
-            startTime.setTitle(date, for: .normal)
+            startTime.setTitle(date.dateToStringAsYMDHM, for: .normal)
+            startTimeToAPIRequest = date.dateToStringAsYMDHMS
+            
         case .endTime:
-            endTime.setTitle(date, for: .normal)
+            endTime.setTitle(date.dateToStringAsYMDHM, for: .normal)
+            endTimeToAPIRequest = date.dateToStringAsYMDHMS
         }
     }
 }
