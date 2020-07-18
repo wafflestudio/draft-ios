@@ -85,23 +85,29 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
 
 // MARK: - Navitgation to PopUP : Room Detail View(Create Room, edit Room as well)
 extension MatchingTableViewController: RoomDetailViewControllerDelegate {
+   
     /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "createRoomSegue" {
-            
-            if let createRoomViewController = segue.destination as? RoomDetailViewController {
-                createRoomViewController.delegate = self
-                createRoomViewController.sampleAuth = self.sampleAuth
-            }
-        }
-    }*/
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     
+     if segue.identifier == "createRoomSegue" {
+     
+     if let createRoomViewController = segue.destination as? RoomDetailViewController {
+     createRoomViewController.delegate = self
+     createRoomViewController.sampleAuth = self.sampleAuth
+     }
+     }
+     }*/
+    
+    
     
     func roomDetailViewController(_ controller: RoomDetailViewController) {
+        
+//        closureFromCreatingRoom?()
         DispatchQueue.main.async {
             self.allRoomsAPIRequest()
             self.tableView.reloadData()
         }
+        
     }
     
     // MARK: - Move to Room Detail Storyboard
@@ -109,8 +115,12 @@ extension MatchingTableViewController: RoomDetailViewControllerDelegate {
     func goToRoomDetailVC() {
         let storyboard = UIStoryboard(name: "RoomDetail", bundle: nil)
         
-        let viewController = storyboard.instantiateViewController(withIdentifier: "RoomDetail")
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "RoomDetail") as? RoomDetailViewController else {
+            print("에러 : RoomDetailVC로 갈 수 없습니다")
+            return
+        }
+        viewController.delegate = self
+        viewController.sampleAuth = sampleAuth
         present(viewController, animated: true)
-        
     }
 }

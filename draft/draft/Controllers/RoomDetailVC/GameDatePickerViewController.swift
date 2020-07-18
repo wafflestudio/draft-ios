@@ -35,7 +35,7 @@ class GameDatePickerViewController: UIViewController {
     }
     
     @IBAction func choose(_ sender: UIButton) {
-        let date = datePicker.date.dateToStringAsYMDHM
+        let date = datePicker.date.dateToStringAsYMDHMS
         print(date)
         delegate?.gameDatePickerViewController(self, date: date, type: pickerLabelType!)
         dismiss(animated: true)

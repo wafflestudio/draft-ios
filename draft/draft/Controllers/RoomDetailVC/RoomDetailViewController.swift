@@ -10,9 +10,6 @@ import UIKit
 
 protocol RoomDetailViewControllerDelegate: class {
     func roomDetailViewController(_ controller: RoomDetailViewController)
-    
-    // Room Detail UI 작업 위해 임시로 만든 메소드
-    func goToRoomDetailVC()
 }
 
 class RoomDetailViewController: UIViewController {
@@ -22,22 +19,42 @@ class RoomDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Create Room viewDidLoad")
+        startTimePlaceHolder = startTime.titleLabel?.text
+        endTimePlaceHolder = endTime.titleLabel?.text
     }
+    
     // weak로 순환 참조 방지
     weak var delegate: RoomDetailViewControllerDelegate?
     
     // room Id from server
     let roomId: Int? = nil
     
-    // '만들기' 누르면 sampleRoom 추가하기
+    private var startTimePlaceHolder: String?
+    private var endTimePlaceHolder: String?
+    
+    // MARK: - Creating Room through delegate
     @IBAction func done(_ sender: Any) {
-        //        DispatchQueue.main.async {
-        //            self.createRoomReqeust()
-        //        }
-        //        delegate?.roomDetailViewController(self)
-        dismiss(animated: true, completion: nil)
+        guard let pickedStartTime = startTime.titleLabel?.text, let pickedEndTime = endTime.titleLabel?.text else {
+            errorAlert(error: nil)
+            return
+        }
         
-        delegate?.goToRoomDetailVC()
+        if (pickedStartTime == startTimePlaceHolder) {
+            errorAlert(error: .startTimeEmpty)
+            return
+        }
+        if (pickedEndTime == endTimePlaceHolder) {
+            errorAlert(error: .endTimeEmpty)
+            return
+        }
+        
+        DispatchQueue.main.async {
+            self.createRoomRequest(startTime: pickedStartTime, endTime: pickedEndTime, name: "공대 농구장 3:3", courtId: 1)
+        }
+        
+        self.dismiss(animated: true, completion: {
+            self.delegate?.roomDetailViewController(self)
+        })
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -62,6 +79,31 @@ class RoomDetailViewController: UIViewController {
     }
     @IBOutlet weak var startTime: UIButton!
     @IBOutlet weak var endTime: UIButton!
+}
+
+// MARK: - Private Functions used as utility or module
+extension RoomDetailViewController {
+    
+    private func errorAlert(error: emptyDateError?) {
+        let alert = UIAlertController(title: error?.message() ?? "시간을 입력해 주세요", message: nil, preferredStyle: .alert)
+        let action = UIAlertAction(title: "확인", style: .cancel , handler: nil)
+        alert.addAction(action)
+        present(alert, animated: false, completion: nil)
+    }
+    
+    enum emptyDateError {
+        case startTimeEmpty
+        case endTimeEmpty
+        
+        func message() -> String {
+            switch self {
+            case .startTimeEmpty:
+                return "시작 시간을 정해 주세요"
+            case .endTimeEmpty:
+                return "종료 시간을 정해 주세요"
+            }
+        }
+    }
 }
 
 // MARK: - Date Picker Delegate
