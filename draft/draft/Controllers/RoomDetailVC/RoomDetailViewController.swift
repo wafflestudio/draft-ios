@@ -37,24 +37,24 @@ class RoomDetailViewController: UIViewController {
     // MARK: - Creating Room through delegate
     @IBAction func done(_ sender: Any) {
         
-        guard let pickedStartTime = startTimeToAPIRequest, let pickedEndTime = endTimeToAPIRequest, let name = nameTextField.text else {
-            errorAlert(error: .infoError)
+        guard let name = nameTextField.text else {
+            errorAlert(error: .nameEmpty)
             return
         }
-        
         if (name == "") {
             errorAlert(error: .nameEmpty)
             return
         }
-        
-        if (pickedStartTime == startTimePlaceHolder) {
+        guard let pickedStartTime = startTimeToAPIRequest else {
             errorAlert(error: .startTimeEmpty)
             return
         }
-        if (pickedEndTime == endTimePlaceHolder) {
+        guard let pickedEndTime = endTimeToAPIRequest else {
             errorAlert(error: .endTimeEmpty)
             return
         }
+        
+        
         
         DispatchQueue.main.async {
             self.createRoomRequest(startTime: pickedStartTime, endTime: pickedEndTime, name: name, courtId: 1)
@@ -107,7 +107,6 @@ extension RoomDetailViewController {
         case startTimeEmpty
         case endTimeEmpty
         case nameEmpty
-        case infoError
         
         func message() -> String {
             switch self {
@@ -115,8 +114,6 @@ extension RoomDetailViewController {
                 return "시작 시간을 정해 주세요"
             case .endTimeEmpty:
                 return "종료 시간을 정해 주세요"
-            case .infoError:
-                return "에러: 방 정보 에러"
             case .nameEmpty:
                 return "방 이름을 작성해 주세요"
             }
