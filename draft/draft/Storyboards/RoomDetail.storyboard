@@ -219,6 +219,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="endTime" destination="6IJ-tk-vQk" id="s5v-jt-Dxm"/>
+                        <outlet property="nameTextField" destination="mki-wq-q7t" id="OEC-eM-hGm"/>
                         <outlet property="startTime" destination="l56-F1-Pv9" id="HvB-kO-DRD"/>
                     </connections>
                 </viewController>
@@ -258,7 +259,7 @@
                                                 </constraints>
                                             </view>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="10" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="WBv-MC-Jqx">
-                                                <rect key="frame" x="0.0" y="57.5" width="374" height="216"/>
+                                                <rect key="frame" x="0.0" y="58" width="374" height="216"/>
                                                 <locale key="locale" localeIdentifier="ko"/>
                                             </datePicker>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4R6-qp-d3b">
