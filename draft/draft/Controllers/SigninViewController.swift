@@ -10,13 +10,23 @@ import UIKit
 import KakaoSDKAuth
 import KakaoSDKCommon
 import RxKakaoSDKAuth
+import FBSDKLoginKit
 
 class SigninViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let loginButton = FBLoginButton()
+        loginButton.center = view.center
+        loginButton.permissions = ["email"]
+        view.addSubview(loginButton)
         // Do any additional setup after loading the view.
+        
+        if let token = AccessToken.current, !token.isExpired {
+            // User is logged in, do work such as go to next view controller.
+            
+        }
     }
     
     @IBAction func KakaologinButtonClicked() {

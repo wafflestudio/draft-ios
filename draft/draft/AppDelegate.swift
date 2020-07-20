@@ -10,15 +10,19 @@ import UIKit
 import CoreData
 import KakaoSDKCommon
 import KakaoSDKAuth
+import FBSDKCoreKit
 //import RxKakaoSDKAuth
 //import RxKakaoSDKCommon
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+        
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         KakaoSDKCommon.shared.initSDK(appKey: "52f5a0a20ab7c1418e2993f85ca83c29")
+        
+        ApplicationDelegate.shared.application( application, didFinishLaunchingWithOptions: launchOptions )
         // Override point for customization after application launch.
         return true
     }
@@ -27,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          if AuthController.handleOpenUrl(url: url, options: options) {
              return true
          }
+        
+        ApplicationDelegate.shared.application( app, open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation] )
         return false
     }
     // MARK: UISceneSession Lifecycle

@@ -1,6 +1,16 @@
 PODS:
   - Alamofire (5.2.1)
   - DynamicCodable (1.0)
+  - FBSDKCoreKit (7.1.1):
+    - FBSDKCoreKit/Basics (= 7.1.1)
+    - FBSDKCoreKit/Core (= 7.1.1)
+  - FBSDKCoreKit/Basics (7.1.1)
+  - FBSDKCoreKit/Core (7.1.1):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (7.1.1):
+    - FBSDKLoginKit/Login (= 7.1.1)
+  - FBSDKLoginKit/Login (7.1.1):
+    - FBSDKCoreKit (~> 7.1.1)
   - KakaoSDKAuth (2.0.0-beta.5):
     - KakaoSDKCommon (= 2.0.0-beta.5)
   - KakaoSDKCommon (2.0.0-beta.5):
@@ -29,6 +39,7 @@ PODS:
 
 DEPENDENCIES:
   - DynamicCodable
+  - FBSDKLoginKit
   - RxAlamofire
   - RxCocoa
   - RxKakaoSDKAuth (~> 2.0.0-beta.5)
@@ -39,6 +50,8 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - DynamicCodable
+    - FBSDKCoreKit
+    - FBSDKLoginKit
     - KakaoSDKAuth
     - KakaoSDKCommon
     - RxAlamofire
@@ -51,6 +64,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   DynamicCodable: 2cf558d057b3e6540552943254e1c9eeb706dde2
+  FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
+  FBSDKLoginKit: 1a61d79e2b25e2fc0d03dccab1e34b38bbdf2546
   KakaoSDKAuth: 01f85f9b8c46d795c39d58c008170b5f57be31b3
   KakaoSDKCommon: 39921d78f8bcea46d1cc1235f5fde1708ddd6adb
   RxAlamofire: 22287c710761466d0123504c566a8381520d4d63
@@ -60,6 +75,6 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: b5c7ef71249372e42eb02faebdb07dec6373173d
+PODFILE CHECKSUM: 7c529fb3a226aa003dd415b0d62a2e066162d780
 
 COCOAPODS: 1.9.3
