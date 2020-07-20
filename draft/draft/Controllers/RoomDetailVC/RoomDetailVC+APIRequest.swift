@@ -10,15 +10,16 @@ import Foundation
 
 extension RoomDetailViewController {
     
-    func createRoomReqeust() {
+    func createRoomRequest(startTime: String, endTime: String, name: String, courtId: Int) {
         let url = URL(string: "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/room/")
         
         let sampleRoomBody = [
-            "startTime": "2020-07-08T11:30:00",
-            "endTime":  "2020-07-08T13:30:00",
-            "name": "종강 기념 플레이",
-            "courtId": "1"
-        ]
+            "startTime": startTime,
+            "endTime":  endTime,
+            "name": name,
+            "courtId": courtId
+            ] as [String : Any]
+        
         let data = try? JSONSerialization.data(withJSONObject: sampleRoomBody, options: [])
         
         var request = URLRequest(url: url!)
@@ -39,6 +40,8 @@ extension RoomDetailViewController {
             }
             
             if (httpResponse.statusCode != 201) {
+                
+                
                 print("Request Fail with error \(httpResponse.statusCode)")
                 return
             }
