@@ -9,14 +9,18 @@
 import UIKit
 import KakaoSDKAuth
 import KakaoSDKCommon
-import RxKakaoSDKAuth
 import FBSDKLoginKit
+import Alamofire
 
 class SigninViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        FacebookLogin()
+    }
+    
+    func FacebookLogin(){
         let loginButton = FBLoginButton()
         loginButton.center = view.center
         loginButton.permissions = ["email"]
@@ -25,9 +29,11 @@ class SigninViewController: UIViewController {
         
         if let token = AccessToken.current, !token.isExpired {
             // User is logged in, do work such as go to next view controller.
-            
+            tokenProcessing(Token: token.tokenString, Provider: "FACEBOOK")
         }
     }
+    
+    
     
     @IBAction func KakaologinButtonClicked() {
 //        if(AuthController.isTalkAuthAvailable()){
@@ -39,7 +45,7 @@ class SigninViewController: UIViewController {
 //
         if (AuthController.isTalkAuthAvailable()) {
             AuthController.shared.authorizeWithTalk(completion:{ (token,error) in
-                SdkLog.d("token id ::::: \(token?.accessToken ?? "default val")")
+                self.tokenProcessing(Token: token!.accessToken,Provider: "KAKAO")
             })
         }
     }
@@ -54,4 +60,19 @@ class SigninViewController: UIViewController {
     }
     */
 
+    func tokenProcessing(Token : String, Provider : String){
+        let url = "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/user/signin/"
+        let param : Parameters = [
+            "grantType" : "OAUTH",
+            "authProvider" : Provider,
+            "accessToken" : Token
+        ]
+        
+        let alamo = AF.request(url,method:.post,parameters: param,encoding: URLEncoding.httpBody)
+        
+        alamo.responseJSON(){
+            response in
+            print("JSON : \(response.result)")
+        }
+    }
 }
