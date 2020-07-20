@@ -1,1 +1,0 @@
-../../../KakaoSDKTemplate/sources/KakaoSDKTemplate/KakaoSDKTemplate.h

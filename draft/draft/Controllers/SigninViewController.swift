@@ -8,6 +8,8 @@
 
 import UIKit
 import KakaoSDKAuth
+import KakaoSDKCommon
+import RxKakaoSDKAuth
 
 class SigninViewController: UIViewController {
 
@@ -18,11 +20,17 @@ class SigninViewController: UIViewController {
     }
     
     @IBAction func KakaologinButtonClicked() {
-
-        if (AuthController.isTalkAuthAvailable()){
-            AuthController.shared.authorizeWithTalk() {(OAuthToken,Error) in
-                print("\(String(describing: OAuthToken?.accessToken))")
-            }
+//        if(AuthController.isTalkAuthAvailable()){
+//            let token : OAuthToken
+//            let error : Error
+//            AuthController.shared.authorizeWithTalk(channelPublicIds: <#T##[String]?#>, serviceTerms: <#T##[String]?#>, autoLogin: <#T##Bool?#>, completion: <#T##(OAuthToken?, Error?) -> Void#>)
+//            print(token)
+//        }
+//
+        if (AuthController.isTalkAuthAvailable()) {
+            AuthController.shared.authorizeWithTalk(completion:{ (token,error) in
+                SdkLog.d("token id ::::: \(token?.accessToken ?? "default val")")
+            })
         }
     }
 

@@ -1,6 +1,0 @@
-module RxKakaoSDKStory {
-  umbrella header "RxKakaoSDKStory-umbrella.h"
-
-  export *
-  module * { export * }
-}

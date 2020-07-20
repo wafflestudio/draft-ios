@@ -60,6 +60,7 @@
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>kakao52f5a0a20ab7c1418e2993f85ca83c29</string>
 		<string>kakaokompassauth</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>

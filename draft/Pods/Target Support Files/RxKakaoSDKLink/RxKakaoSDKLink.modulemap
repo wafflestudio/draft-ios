@@ -1,6 +1,0 @@
-module RxKakaoSDKLink {
-  umbrella header "RxKakaoSDKLink-umbrella.h"
-
-  export *
-  module * { export * }
-}

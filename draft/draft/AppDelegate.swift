@@ -9,19 +9,26 @@
 import UIKit
 import CoreData
 import KakaoSDKCommon
+import KakaoSDKAuth
+//import RxKakaoSDKAuth
+//import RxKakaoSDKCommon
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        KakaoSDKCommon.shared.initSDK(appKey: "")
+        KakaoSDKCommon.shared.initSDK(appKey: "52f5a0a20ab7c1418e2993f85ca83c29")
         // Override point for customization after application launch.
         return true
     }
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+         if AuthController.handleOpenUrl(url: url, options: options) {
+             return true
+         }
+        return false
+    }
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
