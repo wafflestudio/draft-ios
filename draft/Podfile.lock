@@ -38,9 +38,9 @@ PODS:
   - RxSwift (5.1.1)
 
 DEPENDENCIES:
+  - Alamofire
   - DynamicCodable
   - FBSDKLoginKit
-  - RxAlamofire
   - RxCocoa
   - RxKakaoSDKAuth (~> 2.0.0-beta.5)
   - RxKakaoSDKCommon (~> 2.0.0-beta.5)
@@ -75,6 +75,6 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 7c529fb3a226aa003dd415b0d62a2e066162d780
+PODFILE CHECKSUM: 798d12af591ca22dc8dc133b4cd570c8431343e0
 
 COCOAPODS: 1.9.3

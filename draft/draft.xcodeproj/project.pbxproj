@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,12 +34,18 @@
 		38D00C35248B3E7400F50F9B /* Model-utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00C34248B3E7400F50F9B /* Model-utilities.swift */; };
 		6A2FDB5B38AC925B6A42E9AE /* libPods-draft-draftUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C62BEB071A8D5521D2058783 /* libPods-draft-draftUITests.a */; };
 		774DCA1B23422A4964093870 /* libPods-draft-draftTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62035EAA47454F943E3FBF28 /* libPods-draft-draftTests.a */; };
+		BF5401C524C853EB00D73368 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5401C424C853EB00D73368 /* SignUpViewController.swift */; };
+		BF5401C624C853EB00D73368 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5401C424C853EB00D73368 /* SignUpViewController.swift */; };
+		BF5401C724C853EB00D73368 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5401C424C853EB00D73368 /* SignUpViewController.swift */; };
 		BF7287FB2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
 		BF7287FC2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
 		BF7287FD2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
 		BF9CF84724B7692500FEEC5E /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CF84624B7692500FEEC5E /* SigninViewController.swift */; };
 		BF9CF84824B7692500FEEC5E /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CF84624B7692500FEEC5E /* SigninViewController.swift */; };
 		BF9CF84924B7692500FEEC5E /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CF84624B7692500FEEC5E /* SigninViewController.swift */; };
+		BFBE4D1B24C6F9B4005D2D32 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE4D1A24C6F9B4005D2D32 /* User.swift */; };
+		BFBE4D1C24C6F9B4005D2D32 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE4D1A24C6F9B4005D2D32 /* User.swift */; };
+		BFBE4D1D24C6F9B4005D2D32 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE4D1A24C6F9B4005D2D32 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,8 +95,10 @@
 		38D00C34248B3E7400F50F9B /* Model-utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model-utilities.swift"; sourceTree = "<group>"; };
 		62035EAA47454F943E3FBF28 /* libPods-draft-draftTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-draft-draftTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75548024EAC7FD133914D067 /* Pods-draft-draftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-draft-draftTests.debug.xcconfig"; path = "Target Support Files/Pods-draft-draftTests/Pods-draft-draftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF5401C424C853EB00D73368 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DraftLaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF9CF84624B7692500FEEC5E /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		BFBE4D1A24C6F9B4005D2D32 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C5667709BEC8DB2B8A59C05F /* Pods-draft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-draft.release.xcconfig"; path = "Target Support Files/Pods-draft/Pods-draft.release.xcconfig"; sourceTree = "<group>"; };
 		C62BEB071A8D5521D2058783 /* libPods-draft-draftUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-draft-draftUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7695165929E2F965AFB29EC /* Pods-draft-draftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-draft-draftUITests.release.xcconfig"; path = "Target Support Files/Pods-draft-draftUITests/Pods-draft-draftUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +139,7 @@
 				386D72CF246311F40099C35E /* Room.swift */,
 				38D00C31248B3D7500F50F9B /* RoomGroup.swift */,
 				38D00C34248B3E7400F50F9B /* Model-utilities.swift */,
+				BFBE4D1A24C6F9B4005D2D32 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +209,7 @@
 				3837B51A24B5AF960085E821 /* MatchingTableVC+APIRequest.swift */,
 				3837B51D24B5BAAE0085E821 /* secret_login.json */,
 				BF9CF84624B7692500FEEC5E /* SigninViewController.swift */,
+				BF5401C424C853EB00D73368 /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -505,8 +515,10 @@
 				3897038624559A4900FF5077 /* SceneDelegate.swift in Sources */,
 				38D00C32248B3D7500F50F9B /* RoomGroup.swift in Sources */,
 				3897038E24559A4900FF5077 /* draft.xcdatamodeld in Sources */,
+				BFBE4D1B24C6F9B4005D2D32 /* User.swift in Sources */,
 				386D72D2246311FF0099C35E /* RoomsByDate.swift in Sources */,
 				3837B51B24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */,
+				BF5401C524C853EB00D73368 /* SignUpViewController.swift in Sources */,
 				386D72D0246311F40099C35E /* Room.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,10 +533,12 @@
 				38969E0F24A6F7F90032F82C /* MatchingTableViewController.swift in Sources */,
 				383C9788246EE6390013E6AF /* RoomGroupTests.swift in Sources */,
 				383C978A246EE6840013E6AF /* RoomsByDate.swift in Sources */,
+				BF5401C624C853EB00D73368 /* SignUpViewController.swift in Sources */,
 				BF9CF84824B7692500FEEC5E /* SigninViewController.swift in Sources */,
 				383C978B246EEA420013E6AF /* Room.swift in Sources */,
 				3897039E24559A4C00FF5077 /* draftTests.swift in Sources */,
 				38D00C33248B3D7500F50F9B /* RoomGroup.swift in Sources */,
+				BFBE4D1C24C6F9B4005D2D32 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +548,8 @@
 			files = (
 				BF9CF84924B7692500FEEC5E /* SigninViewController.swift in Sources */,
 				389703A924559A4C00FF5077 /* draftUITests.swift in Sources */,
+				BF5401C724C853EB00D73368 /* SignUpViewController.swift in Sources */,
+				BFBE4D1D24C6F9B4005D2D32 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

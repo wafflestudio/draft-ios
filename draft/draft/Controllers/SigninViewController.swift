@@ -16,39 +16,59 @@ class SigninViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
 
-        FacebookLogin()
-    }
-    
-    func FacebookLogin(){
-        let loginButton = FBLoginButton()
-        loginButton.center = view.center
-        loginButton.permissions = ["email"]
-        view.addSubview(loginButton)
-        // Do any additional setup after loading the view.
+    @IBAction func PasswordLogin(){
+        let url = "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/user/signin/"
+        struct Param : Encodable {
+            let grantType : String
+            let email : String
+            let password : String
+        }
         
-        if let token = AccessToken.current, !token.isExpired {
-            // User is logged in, do work such as go to next view controller.
-            tokenProcessing(Token: token.tokenString, Provider: "FACEBOOK")
+        let param = Param(grantType: "PASSWORD",email: emailTextField.text!, password: passwordTextField.text!)
+//        let header : HTTPHeader = [
+//        ]
+
+        AF.request(url,method:.post,parameters: param,encoder: JSONParameterEncoder.default).validate().responseJSON(){
+            response in
+            print(response)
         }
     }
     
-    
-    
-    @IBAction func KakaologinButtonClicked() {
-//        if(AuthController.isTalkAuthAvailable()){
-//            let token : OAuthToken
-//            let error : Error
-//            AuthController.shared.authorizeWithTalk(channelPublicIds: <#T##[String]?#>, serviceTerms: <#T##[String]?#>, autoLogin: <#T##Bool?#>, completion: <#T##(OAuthToken?, Error?) -> Void#>)
-//            print(token)
+//    func FacebookLogin(){
+//        let loginButton = FBLoginButton()
+//        loginButton.center = view.center
+//        loginButton.permissions = ["email"]
+//        view.addSubview(loginButton)
+//        // Do any additional setup after loading the view.
+//        
+//        if let token = AccessToken.current, !token.isExpired {
+//            // User is logged in, do work such as go to next view controller.
+//            tokenProcessing(Token: token.tokenString, Provider: "FACEBOOK")
 //        }
-//
-        if (AuthController.isTalkAuthAvailable()) {
-            AuthController.shared.authorizeWithTalk(completion:{ (token,error) in
-                self.tokenProcessing(Token: token!.accessToken,Provider: "KAKAO")
-            })
-        }
-    }
+//    }
+    
+    
+    
+//    @IBAction func KakaologinButtonClicked() {
+////        if(AuthController.isTalkAuthAvailable()){
+////            let token : OAuthToken
+////            let error : Error
+////            AuthController.shared.authorizeWithTalk(channelPublicIds: <#T##[String]?#>, serviceTerms: <#T##[String]?#>, autoLogin: <#T##Bool?#>, completion: <#T##(OAuthToken?, Error?) -> Void#>)
+////            print(token)
+////        }
+////
+//        if (AuthController.isTalkAuthAvailable()) {
+//            AuthController.shared.authorizeWithTalk(completion:{ (token,error) in
+//                self.tokenProcessing(Token: token!.accessToken,Provider: "KAKAO")
+//            })
+//        }
+//    }
 
     /*
     // MARK: - Navigation
@@ -68,11 +88,13 @@ class SigninViewController: UIViewController {
             "accessToken" : Token
         ]
         
-        let alamo = AF.request(url,method:.post,parameters: param,encoding: URLEncoding.httpBody)
+        let alamo = AF.request(url,method:.post,parameters: param)
         
         alamo.responseJSON(){
             response in
-            print("JSON : \(response.result)")
+            print("JSON : \(response.description)")
         }
     }
+    
+    
 }
