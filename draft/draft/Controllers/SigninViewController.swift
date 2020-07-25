@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import KakaoSDKAuth
-import KakaoSDKCommon
+//import KakaoSDKAuth
+//import KakaoSDKCommon
 import FBSDKLoginKit
 import Alamofire
 
@@ -96,5 +96,18 @@ class SigninViewController: UIViewController {
         }
     }
     
+    // MARK: - Detail Storyboard로 연결 (지금은 임시로 버튼 연결)
+    @IBAction func goToDetailStorybaord(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "RoomDetail", bundle: nil)
+        
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "RoomDetail") as? UITabBarController else {
+            print("에러 : RoomDetailVC로 갈 수 없습니다")
+            return
+        }
+        viewController.modalPresentationStyle = .fullScreen
+        present(viewController, animated: true)
+        
+    }
     
 }

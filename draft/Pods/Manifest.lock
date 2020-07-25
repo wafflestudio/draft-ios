@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (5.2.1)
-  - DynamicCodable (1.0)
   - FBSDKCoreKit (7.1.1):
     - FBSDKCoreKit/Basics (= 7.1.1)
     - FBSDKCoreKit/Core (= 7.1.1)
@@ -11,70 +10,22 @@ PODS:
     - FBSDKLoginKit/Login (= 7.1.1)
   - FBSDKLoginKit/Login (7.1.1):
     - FBSDKCoreKit (~> 7.1.1)
-  - KakaoSDKAuth (2.0.0-beta.5):
-    - KakaoSDKCommon (= 2.0.0-beta.5)
-  - KakaoSDKCommon (2.0.0-beta.5):
-    - Alamofire (~> 5.1)
-    - DynamicCodable (~> 1.0)
-  - RxAlamofire (5.5.0):
-    - RxAlamofire/Core (= 5.5.0)
-  - RxAlamofire/Core (5.5.0):
-    - Alamofire (~> 5.1)
-    - RxSwift (~> 5.1)
-  - RxCocoa (5.1.1):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxKakaoSDKAuth (2.0.0-beta.5):
-    - KakaoSDKAuth (= 2.0.0-beta.5)
-    - RxKakaoSDKCommon (= 2.0.0-beta.5)
-  - RxKakaoSDKCommon (2.0.0-beta.5):
-    - DynamicCodable (~> 1.0)
-    - KakaoSDKCommon (= 2.0.0-beta.5)
-    - RxAlamofire (~> 5.2)
-    - RxCocoa
-    - RxSwift
-  - RxRelay (5.1.1):
-    - RxSwift (~> 5)
-  - RxSwift (5.1.1)
 
 DEPENDENCIES:
   - Alamofire
-  - DynamicCodable
   - FBSDKLoginKit
-  - RxCocoa
-  - RxKakaoSDKAuth (~> 2.0.0-beta.5)
-  - RxKakaoSDKCommon (~> 2.0.0-beta.5)
-  - RxSwift
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - DynamicCodable
     - FBSDKCoreKit
     - FBSDKLoginKit
-    - KakaoSDKAuth
-    - KakaoSDKCommon
-    - RxAlamofire
-    - RxCocoa
-    - RxKakaoSDKAuth
-    - RxKakaoSDKCommon
-    - RxRelay
-    - RxSwift
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
-  DynamicCodable: 2cf558d057b3e6540552943254e1c9eeb706dde2
   FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
   FBSDKLoginKit: 1a61d79e2b25e2fc0d03dccab1e34b38bbdf2546
-  KakaoSDKAuth: 01f85f9b8c46d795c39d58c008170b5f57be31b3
-  KakaoSDKCommon: 39921d78f8bcea46d1cc1235f5fde1708ddd6adb
-  RxAlamofire: 22287c710761466d0123504c566a8381520d4d63
-  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
-  RxKakaoSDKAuth: 9c13fb0841a12c971877ed76cea4fd4e97fe9c61
-  RxKakaoSDKCommon: 87cf940e4741a762bdeb182bcb562fdb578a5e91
-  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
-  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 798d12af591ca22dc8dc133b4cd570c8431343e0
+PODFILE CHECKSUM: 5c8681896ef5094ae48246fcf394ecca5094f633
 
 COCOAPODS: 1.9.3
