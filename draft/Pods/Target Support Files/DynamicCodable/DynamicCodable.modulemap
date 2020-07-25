@@ -1,6 +1,0 @@
-module DynamicCodable {
-  umbrella header "DynamicCodable-umbrella.h"
-
-  export *
-  module * { export * }
-}
