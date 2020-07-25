@@ -41,8 +41,12 @@ extension RoomDetailViewController {
             
             if (httpResponse.statusCode != 201) {
                 
+                print("Request Fail with error code: \(httpResponse.statusCode)")
                 
-                print("Request Fail with error \(httpResponse.statusCode)")
+                if let body = data {
+                    print("error description: \(String(data: body, encoding: .utf8)!)")
+                }
+                
                 return
             }
             
