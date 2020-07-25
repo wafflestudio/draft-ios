@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build-and-test:
+  build:
 
     runs-on: macos-latest
     steps:
@@ -17,13 +17,13 @@ jobs:
           cat << EOF > ./draft/draft/Controllers/secret_login.json
           ${{ secrets.secret_login }}
           EOF
-    - name: Build
-      run: xcodebuild clean build -project draft/draft.xcodeproj -destination "platform=iOS Simulator,name=iPhone 11,OS=13.3" -scheme draft IPHONEOS_DEPLOYMENT_TARGET=13.2
+    - name: Build Workspace (Xcode 11.5 & iOS 13.1)
+      run: xcodebuild clean build -workspace draft/draft.xcworkspace -destination "platform=iOS Simulator,name=iPhone 11,OS=13.1" -scheme draft IPHONEOS_DEPLOYMENT_TARGET=13.1
 
       env:
-          DEVELOPER_DIR: /Applications/Xcode_11.3.app/Contents/Developer
+          DEVELOPER_DIR: /Applications/Xcode_11.5.app/Contents/Developer
 #     - name: Run tests
 #       run: xcodebuild clean test -project draft/draft.xcodeproj -destination "platform=iOS Simulator,name=iPhone 11,OS=13.3" -scheme draft IPHONEOS_DEPLOYMENT_TARGET=13.2
 
 #       env:
-#           DEVELOPER_DIR: /Applications/Xcode_11.3.app/Contents/Developer
+#           DEVELOPER_DIR: /Applications/Xcode_11.5.app/Contents/Developer
