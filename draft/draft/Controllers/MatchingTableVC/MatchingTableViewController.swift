@@ -9,20 +9,19 @@
 import UIKit
 
 class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
-
+    
     internal var roomGroup: RoomGroup?
     
     internal var sampleAuth: String?
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addSearchController()
         
-        // autoLoginForTest() 안에 All rooms Request API 함수 넣어 놨어요
-        self.autoLoginForTest()
-
+        // autoLoginForTest() contains allRoomsAPIRequest()
+        autoLoginForTest()
+        
     }
     
     // MARK: - Table view data source
@@ -79,39 +78,49 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         self.navigationItem.hidesSearchBarWhenScrolling = false
     }
     
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    @IBAction func createRoomButton(_ sender: Any) {
+        goToRoomDetailVC()
+    }
 }
 
-// MARK: - Extension for Room Detail (Create Room as well)
+// MARK: - Navitgation to PopUP : Room Detail View(Create Room, edit Room as well)
 extension MatchingTableViewController: RoomDetailViewControllerDelegate {
+   
+    /*
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     
+     if segue.identifier == "createRoomSegue" {
+     
+     if let createRoomViewController = segue.destination as? RoomDetailViewController {
+     createRoomViewController.delegate = self
+     createRoomViewController.sampleAuth = self.sampleAuth
+     }
+     }
+     }*/
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    
+    func roomDetailViewController(_ controller: RoomDetailViewController) {
         
-        if segue.identifier == "createRoomSegue" {
-            
-            if let createRoomViewController = segue.destination as? RoomDetailViewController {
-                createRoomViewController.delegate = self
-                // createRoomViewController.roomGroup = roomGroup
-            }
+//        closureFromCreatingRoom?()
+        DispatchQueue.main.async {
+            self.allRoomsAPIRequest()
+            self.tableView.reloadData()
         }
+        
     }
     
-    func roomDetailViewController(_ controller: RoomDetailViewController, didFinishAdding item: Room) {
-        tableView.reloadData()
+    // MARK: - Move to Room Detail Storyboard
+    // Room Detail UI 작업 위해 임시로 연결
+    func goToRoomDetailVC() {
+        let storyboard = UIStoryboard(name: "RoomDetail", bundle: nil)
+        
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "RoomDetail") as? RoomDetailViewController else {
+            print("에러 : RoomDetailVC로 갈 수 없습니다")
+            return
+        }
+        viewController.delegate = self
+        viewController.sampleAuth = sampleAuth
+        present(viewController, animated: true)
     }
 }
