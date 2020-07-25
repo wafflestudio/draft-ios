@@ -2,7 +2,7 @@ name: Swift
 
 on:
   push:
-    branches: [ master, feature/#22/modify-GithubAction ]
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
@@ -17,7 +17,7 @@ jobs:
           cat << EOF > ./draft/draft/Controllers/secret_login.json
           ${{ secrets.secret_login }}
           EOF
-    - name: Build Workspace (Xcode 11.5 & iOS 13.1)
+    - name: Build Workspace (Xcode 11.5 & iOS 13.5 & iPhone 11)
       run: xcodebuild clean build -workspace draft/draft.xcworkspace -destination "platform=iOS Simulator,name=iPhone 11,OS=13.5" -scheme draft IPHONEOS_DEPLOYMENT_TARGET=13.5
 
       env:
