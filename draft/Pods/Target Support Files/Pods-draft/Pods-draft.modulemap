@@ -1,0 +1,6 @@
+module Pods_draft {
+  umbrella header "Pods-draft-umbrella.h"
+
+  export *
+  module * { export * }
+}
