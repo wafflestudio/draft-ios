@@ -161,9 +161,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Sign Up"/>
-                                <connections>
-                                    <action selector="PasswordLogin" destination="7e7-9z-7uu" eventType="touchUpInside" id="U8S-gD-csS"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQe-Jd-diV">
                                 <rect key="frame" x="157" y="295" width="100" height="50"/>
@@ -171,7 +168,6 @@
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <action selector="PasswordLogin" destination="7e7-9z-7uu" eventType="touchUpInside" id="gbr-s3-l0T"/>
                                     <segue destination="1Zk-RZ-mvr" kind="show" id="CTu-F7-Lg6"/>
                                 </connections>
                             </button>
@@ -236,7 +232,6 @@
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="완료"/>
                                 <connections>
-                                    <action selector="PasswordLogin" destination="7e7-9z-7uu" eventType="touchUpInside" id="auZ-fd-2Xo"/>
                                     <action selector="onClickSignUp" destination="1Zk-RZ-mvr" eventType="touchUpInside" id="6Or-jq-Dq9"/>
                                 </connections>
                             </button>

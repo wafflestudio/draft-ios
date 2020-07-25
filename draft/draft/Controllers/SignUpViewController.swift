@@ -33,10 +33,17 @@ class SignUpViewController: UIViewController {
         
         let param = Param(grantType: "PASSWORD",email: newEmailTextField.text!, password: newPasswordTextField.text!, username: newUsernameTextField.text!)
 
+        //contentType: ["application/json"]
         AF.request(url,method:.post,parameters: param,encoder: JSONParameterEncoder.default).validate().responseJSON(){
             response in
             
-            print("Response : \(response)")
+            switch response.result {
+            case .success:
+                print("Validation Successful")
+                print("RES : \(response)")
+            case let .failure(error):
+                print("ERR : \(error)")
+            }
         }
     }
     

@@ -36,7 +36,7 @@ class SigninViewController: UIViewController {
 
         AF.request(url,method:.post,parameters: param,encoder: JSONParameterEncoder.default).validate().responseJSON(){
             response in
-            print(response)
+            print(response.response?.headers.sorted())
         }
     }
     
