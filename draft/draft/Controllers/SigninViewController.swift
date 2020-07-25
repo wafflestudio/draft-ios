@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import KakaoSDKAuth
-import KakaoSDKCommon
+//import KakaoSDKAuth
+//import KakaoSDKCommon
 import FBSDKLoginKit
 import Alamofire
 

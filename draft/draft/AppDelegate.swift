@@ -8,8 +8,8 @@
 
 import UIKit
 import CoreData
-import KakaoSDKCommon
-import KakaoSDKAuth
+//import KakaoSDKCommon
+//import KakaoSDKAuth
 import FBSDKCoreKit
 //import RxKakaoSDKAuth
 //import RxKakaoSDKCommon
