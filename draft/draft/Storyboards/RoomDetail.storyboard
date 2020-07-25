@@ -390,7 +390,7 @@
                     <navigationItem key="navigationItem" title="Draft" id="JzW-y1-8vQ">
                         <barButtonItem key="rightBarButtonItem" title="방만들기" id="Vf6-dd-r7p">
                             <connections>
-                                <segue destination="e7d-G0-NnV" kind="presentation" id="EpP-G6-1K2"/>
+                                <segue destination="e7d-G0-NnV" kind="presentation" identifier="createRoomSegue" id="EpP-G6-1K2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
