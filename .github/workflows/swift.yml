@@ -18,7 +18,7 @@ jobs:
           ${{ secrets.secret_login }}
           EOF
     - name: Build Workspace (Xcode 11.5 & iOS 13.1)
-      run: xcodebuild clean build -workspace draft/draft.xcworkspace -destination "platform=iOS Simulator,name=iPhone 11,OS=13.1" -scheme draft IPHONEOS_DEPLOYMENT_TARGET=13.1
+      run: xcodebuild clean build -workspace draft/draft.xcworkspace -destination "platform=iOS Simulator,name=iPhone 11,OS=13.5" -scheme draft IPHONEOS_DEPLOYMENT_TARGET=13.5
 
       env:
           DEVELOPER_DIR: /Applications/Xcode_11.5.app/Contents/Developer
