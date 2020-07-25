@@ -2,7 +2,7 @@ name: Swift
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, feature/#22/modify-GithubAction ]
   pull_request:
     branches: [ master ]
 
