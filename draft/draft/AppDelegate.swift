@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
         NotificationCenter.default.post(
         name: Notification.Name(rawValue: "ToggleAuthUINotification"),
         object: nil,
-        userInfo: ["statusText": "Signed in user:\n\(fullName!)"])
+        userInfo: ["statusText": "Signed in user:\n\(fullName!)","token": idToken])
         // [END_EXCLUDE]
     }
     

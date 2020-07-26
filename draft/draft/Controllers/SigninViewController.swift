@@ -26,26 +26,29 @@ class SigninViewController: UIViewController {
     @IBOutlet weak var disconnectButton: UIButton!
     @IBOutlet weak var statusText: UILabel!
     // [END viewcontroller_vars]
-    // [START viewdidload]
+    
     override func viewDidLoad() {
       super.viewDidLoad()
 
-      GIDSignIn.sharedInstance()?.presentingViewController = self
-
-      // Automatically sign in the user.
-      GIDSignIn.sharedInstance()?.restorePreviousSignIn()
-
-      // [START_EXCLUDE]
-      NotificationCenter.default.addObserver(self,
-          selector: #selector(SigninViewController.receiveToggleAuthUINotification(_:)),
-          name: NSNotification.Name(rawValue: "ToggleAuthUINotification"),
-          object: nil)
-
-      statusText.text = "Initialized Swift app..."
-      toggleAuthUI()
-      // [END_EXCLUDE]
+      googleSignIn()
     }
-    // [END viewdidload]
+    
+    func googleSignIn(){
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+
+        // Automatically sign in the user.
+        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+
+        // [START_EXCLUDE]
+        NotificationCenter.default.addObserver(self,
+            selector: #selector(SigninViewController.receiveToggleAuthUINotification(_:)),
+            name: NSNotification.Name(rawValue: "ToggleAuthUINotification"),
+            object: nil)
+
+        statusText.text = "Initialized Swift app..."
+        toggleAuthUI()
+    }
+    
     // [START signout_tapped]
     @IBAction func didTapSignOut(_ sender: AnyObject) {
       GIDSignIn.sharedInstance().signOut()
@@ -89,13 +92,16 @@ class SigninViewController: UIViewController {
     }
 
     @objc func receiveToggleAuthUINotification(_ notification: NSNotification) {
-      if notification.name.rawValue == "ToggleAuthUINotification" {
-        self.toggleAuthUI()
-        if notification.userInfo != nil {
-          guard let userInfo = notification.userInfo as? [String:String] else { return }
-          self.statusText.text = userInfo["statusText"]!
+        if notification.name.rawValue == "ToggleAuthUINotification" {
+            self.toggleAuthUI()
+            
+            if notification.userInfo != nil {
+                guard let userInfo = notification.userInfo as? [String:String] else { return }
+
+                print("Token : \(userInfo["token"] ?? "default")")
+                self.statusText.text = userInfo["statusText"]!
+            }
         }
-      }
     }
     
     @IBOutlet weak var emailTextField: UITextField!
