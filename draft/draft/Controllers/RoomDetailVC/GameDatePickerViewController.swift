@@ -47,7 +47,7 @@ enum StartOrEnd: String {
     func label() -> String {
         switch self {
         case .startTime:
-            return "게임 시작 시작을 정해 주세요"
+            return "게임 시작 시간을 정해 주세요"
         case .endTime:
             return "게임 종료 시간을 정해 주세요"
         }

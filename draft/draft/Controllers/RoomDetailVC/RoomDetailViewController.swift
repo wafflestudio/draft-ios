@@ -21,6 +21,8 @@ class RoomDetailViewController: UIViewController {
         print("Create Room viewDidLoad")
         startTimePlaceHolder = startTime.titleLabel?.text
         endTimePlaceHolder = endTime.titleLabel?.text
+        
+        nameTextField.delegate = self
     }
     
     // weak로 순환 참조 방지
@@ -54,8 +56,6 @@ class RoomDetailViewController: UIViewController {
             return
         }
         
-        
-        
         DispatchQueue.main.async {
             self.createRoomRequest(startTime: pickedStartTime, endTime: pickedEndTime, name: name, courtId: 1)
         }
@@ -72,7 +72,6 @@ class RoomDetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "StartDatePicker" {
-            
             if let controller = segue.destination as? GameDatePickerViewController {
                 controller.pickerLabelType = .startTime
                 controller.delegate = self
@@ -133,5 +132,24 @@ extension RoomDetailViewController: GameDatePickerViewControllerDelegate {
             endTime.setTitle(date.dateToStringAsYMDHM, for: .normal)
             endTimeToAPIRequest = date.dateToStringAsYMDHMS
         }
+    }
+}
+
+// MARK: - UITextField Delegate
+extension RoomDetailViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        return false
+    }
+    
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        
+        guard let text = textField.text else { return true }
+        let newLength = text.count + string.count - range.length
+        
+        print("textField count : \(textField.text?.count)")
+        return newLength <= 20
     }
 }
