@@ -63,7 +63,10 @@ extension RoomDetailViewController {
     }
     
     // MARK: - Room Detail
-    func getRoomApiRequest(roomId: Int, userAuth: String) {
+    func getRoomApiRequest(roomId: Int, userAuth: String, completion: @escaping (Room?) -> Void) {
+        
+        var resultOfAPIRequest: Room?
+        
         let url = URL(string: "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/room/\(roomId)")
         
         var request = URLRequest(url: url!)
@@ -97,24 +100,29 @@ extension RoomDetailViewController {
                 print(error.debugDescription)
                 return
             }
-            parseJSON(roomsData: data)
+            DispatchQueue.main.async {
+                resultOfAPIRequest = self.parseJSON(roomsData: data)
+                completion(resultOfAPIRequest)
+            }
+             // Parse nil 뜰 시 에러용 Room도 만들어 줄 것
         }
         
         task.resume()
-        
-        func parseJSON(roomsData: Data) -> Room? {
-            let decoder = JSONDecoder()
-            do {
-                let decodedData = try decoder.decode(Room.self, from: roomsData)
-                print("parsing completed ")
-                print("Room data : \(decodedData)")
-                return decodedData
-                
-            } catch {
-                // json parse 시 에러 처리 코드 추가할 것
-                print(error)
-                return nil
-            }
+//        return resultOfAPIRequest
+    }
+    
+    func parseJSON(roomsData: Data) -> Room? {
+        let decoder = JSONDecoder()
+        do {
+            let decodedData = try decoder.decode(Room.self, from: roomsData)
+            print("parsing completed ")
+            print("Room data : \(decodedData)")
+            return decodedData
+            
+        } catch {
+            // json parse 시 에러 처리 코드 추가할 것
+            print(error)
+            return nil
         }
     }
 }

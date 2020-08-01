@@ -30,8 +30,12 @@ class RoomDetailViewController: UIViewController {
         if (createOrDetail == .detail) {
             guard let auth = userAuth else {
                 print("error: userAuth is nil")
-                return }
-            getRoomApiRequest(roomId: roomId!, userAuth: auth)
+                return
+            }
+            
+            getRoomApiRequest(roomId: roomId!, userAuth: auth) { thisRoom in
+                self.setRoomDetailInfo(thisRoom: thisRoom)
+            }
         }
         
         nameTextField.delegate = self
@@ -51,6 +55,14 @@ class RoomDetailViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
+    // MARK: - Room Detail
+    private var roomName: String?
+    private var roomStatus: String?
+    private var createAt: String?
+    private var startAt: String?
+    private var endAt: String?
+    private var courdId: Int?
+    private var ownerId: Int?
     
     
     // MARK: - Create Room
@@ -75,7 +87,30 @@ class RoomDetailViewController: UIViewController {
         }
     }
     
-    func createRoom() {
+    // MARK: - IBOutlets - TextField & StartTime & EndTime
+    @IBOutlet weak var startTime: UIButton! {
+        didSet {
+            if createOrDetail == .detail { startTime.isEnabled = false }
+        }
+    }
+    @IBOutlet weak var endTime: UIButton! {
+        didSet {
+            if createOrDetail == .detail { endTime.isEnabled = false }
+        }
+    }
+    
+    @IBOutlet weak var nameTextField: UITextField! {
+        didSet {
+            if createOrDetail == .detail { nameTextField.isEnabled = false }
+        }
+    }
+    
+}
+
+// MARK: - Private Methods used as utility or module
+extension RoomDetailViewController {
+    
+    private func createRoom() {
         guard let name = nameTextField.text else {
             errorAlert(error: .nameEmpty)
             return
@@ -105,15 +140,21 @@ class RoomDetailViewController: UIViewController {
         })
     }
     
-    // MARK: - IBOutlets - TextField & StartTime & EndTime
-    @IBOutlet weak var startTime: UIButton!
-    @IBOutlet weak var endTime: UIButton!
-    @IBOutlet weak var nameTextField: UITextField!
+    private func setRoomDetailInfo(thisRoom: Room?) {
+        self.roomName = thisRoom?.name
+        self.roomStatus = thisRoom?.roomStatus
+        self.createAt = thisRoom?.createdAt
+        self.startAt = thisRoom?.startTime
+        self.endAt = thisRoom?.endTime
+        self.courdId = thisRoom?.courtId
+        self.ownerId = thisRoom?.ownerId
+        print("after room api : \(String(describing: thisRoom?.startTime))")
+        
+        self.nameTextField.text = self.roomName
+        self.startTime.titleLabel?.text = self.startAt?.timeStringToDateString
+        self.endTime.titleLabel?.text = self.endAt?.timeStringToDateString
+    }
     
-}
-
-// MARK: - Private Functions used as utility or module
-extension RoomDetailViewController {
     
     private func errorAlert(error: emptyDateError?) {
         let alert = UIAlertController(title: error?.message(), message: nil, preferredStyle: .alert)
