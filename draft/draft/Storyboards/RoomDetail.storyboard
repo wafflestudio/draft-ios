@@ -226,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Qq-Mc-0zB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="-554"/>
+            <point key="canvasLocation" x="4036" y="-102"/>
         </scene>
         <!--Game Date Picker View Controller-->
         <scene sceneID="WRS-Wa-v7k">
@@ -327,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1m-G3-fPz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957" y="-599"/>
+            <point key="canvasLocation" x="4916" y="-362"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="e4S-cQ-yOA">
@@ -378,7 +378,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="VPc-DD-92v" kind="presentation" trigger="accessoryAction" id="3a4-P4-Xwg"/>
+                                    <segue destination="e7d-G0-NnV" kind="presentation" identifier="roomDetail" trigger="accessoryAction" id="g3e-uB-tH5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -397,14 +397,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INf-bd-l73" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3001.449275362319" y="143.97321428571428"/>
+            <point key="canvasLocation" x="2732" y="63"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qwO-io-Ged">
             <objects>
                 <viewController id="VPc-DD-92v" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QcL-TO-8sL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JSO-hd-ELV"/>
@@ -412,7 +412,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVb-bl-a9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3894" y="646"/>
+            <point key="canvasLocation" x="4128" y="700"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="AyD-fd-aXZ">
@@ -456,6 +456,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="zCi-DG-iHg"/>
+        <segue reference="g3e-uB-tH5"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="create_black" width="343" height="56"/>

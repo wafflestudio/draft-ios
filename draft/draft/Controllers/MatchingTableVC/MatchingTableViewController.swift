@@ -88,6 +88,9 @@ extension MatchingTableViewController: RoomDetailViewControllerDelegate {
                 createRoomViewController.delegate = self
                 createRoomViewController.sampleAuth = self.sampleAuth
             }
+        } else if segue.identifier == "roomDetail" {
+            if let roomDetailViewController = segue.destination as? RoomDetailViewController {
+            }
         }
     }
     
