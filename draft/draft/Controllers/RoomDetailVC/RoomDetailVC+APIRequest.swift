@@ -10,7 +10,8 @@ import Foundation
 
 extension RoomDetailViewController {
     
-    func createRoomRequest(startTime: String, endTime: String, name: String, courtId: Int) {
+    // MARK: - Create Room
+    func createRoomRequest(startTime: String, endTime: String, name: String, courtId: Int, userAuth: String) {
         let url = URL(string: "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/room/")
         
         let sampleRoomBody = [
@@ -25,7 +26,7 @@ extension RoomDetailViewController {
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(sampleAuth, forHTTPHeaderField: "Authentication")
+        request.setValue(userAuth, forHTTPHeaderField: "Authentication")
         request.httpBody = data
         
         let configuration = URLSessionConfiguration.default
@@ -56,6 +57,48 @@ extension RoomDetailViewController {
             }
             
             print("New room created with info : \(data)")
+        }
+        
+        task.resume()
+    }
+    
+    // MARK: - Room Detail
+    func getRoomApiRequest(roomId: Int, userAuth: String) {
+        let url = URL(string: "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/room/\(roomId)")
+        
+        var request = URLRequest(url: url!)
+        request.httpMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(userAuth, forHTTPHeaderField: "Authentication")
+        
+        let configuration = URLSessionConfiguration.default
+        configuration.waitsForConnectivity = true
+        let session = URLSession(configuration: configuration)
+        
+        let task = session.dataTask(with: request) { (data, response, error) in
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                print("httpResponse error : \(String(describing: error))")
+                return
+            }
+            
+            if (httpResponse.statusCode != 200) {
+                
+                print("Request Fail with error code: \(httpResponse.statusCode)")
+                
+                if let body = data {
+                    print("error description: \(String(data: body, encoding: .utf8)!)")
+                }
+                
+                return
+            }
+            
+            guard let data = data else {
+                print(error.debugDescription)
+                return
+            }
+            
+            print("You participated in this game room. Info : \(data)")
         }
         
         task.resume()

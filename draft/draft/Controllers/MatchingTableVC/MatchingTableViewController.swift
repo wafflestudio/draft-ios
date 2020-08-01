@@ -24,6 +24,10 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return roomGroup?.getNumOfRoomDate() ?? 0
@@ -85,19 +89,26 @@ extension MatchingTableViewController: RoomDetailViewControllerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "createRoomSegue" {
             if let createRoomViewController = segue.destination as? RoomDetailViewController {
+                createRoomViewController.createOrDetail = .create
                 createRoomViewController.delegate = self
-                createRoomViewController.sampleAuth = self.sampleAuth
+                createRoomViewController.userAuth = self.sampleAuth
             }
         } else if segue.identifier == "roomDetail" {
             if let roomDetailViewController = segue.destination as? RoomDetailViewController {
+                roomDetailViewController.createOrDetail = .detail
+                
+                
+                let selectedRoomRow = tableView.indexPathForSelectedRow?.row ?? -1
+                roomDetailViewController.roomId = selectedRoomRow
+                roomDetailViewController.userAuth = self.sampleAuth
             }
         }
     }
+
     
     func roomDetailViewController(_ controller: RoomDetailViewController) {
         DispatchQueue.main.async {
             self.allRoomsAPIRequest()
-            self.tableView.reloadData()
         }
     }
 }

@@ -14,13 +14,25 @@ protocol RoomDetailViewControllerDelegate: class {
 
 class RoomDetailViewController: UIViewController {
     
-    internal var sampleAuth: String?
+    internal var userAuth: String?
+    internal var createOrDetail: CreateOrDetail?
+    internal var roomId: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Create Room viewDidLoad")
-        startTimePlaceHolder = startTime.titleLabel?.text
-        endTimePlaceHolder = endTime.titleLabel?.text
+        
+        if (createOrDetail == .create) {
+            startTimePlaceHolder = startTime.titleLabel?.text
+            endTimePlaceHolder = endTime.titleLabel?.text
+        }
+        
+        if (createOrDetail == .detail) {
+            guard let auth = userAuth else {
+                print("error: userAuth is nil")
+                return }
+            getRoomApiRequest(roomId: roomId!, userAuth: auth)
+        }
         
         nameTextField.delegate = self
     }
@@ -28,17 +40,42 @@ class RoomDetailViewController: UIViewController {
     // weak로 순환 참조 방지
     weak var delegate: RoomDetailViewControllerDelegate?
     
-    // room Id from server
-    let roomId: Int? = nil
     
+    @IBAction func done(_ sender: Any) {
+        if (createOrDetail == .create) {
+            createRoom()
+        }
+    }
+    
+    @IBAction func cancel(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
+    
+    
+    // MARK: - Create Room
     private var startTimePlaceHolder: String?
     private var endTimePlaceHolder: String?
     private var startTimeToAPIRequest: String?
     private var endTimeToAPIRequest: String?
     
-    // MARK: - Creating Room through delegate
-    @IBAction func done(_ sender: Any) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        if segue.identifier == "StartDatePicker" {
+            if let controller = segue.destination as? GameDatePickerViewController {
+                controller.pickerLabelType = .startTime
+                controller.delegate = self
+            }
+            
+        } else if segue.identifier == "EndDatePicker" {
+            if let controller = segue.destination as? GameDatePickerViewController {
+                controller.pickerLabelType = .endTime
+                controller.delegate = self
+            }
+        }
+    }
+    
+    func createRoom() {
         guard let name = nameTextField.text else {
             errorAlert(error: .nameEmpty)
             return
@@ -57,32 +94,15 @@ class RoomDetailViewController: UIViewController {
         }
         
         DispatchQueue.main.async {
-            self.createRoomRequest(startTime: pickedStartTime, endTime: pickedEndTime, name: name, courtId: 1)
+            guard let auth = self.userAuth else {
+                print("error: userAuth is nil")
+                return }
+            self.createRoomRequest(startTime: pickedStartTime, endTime: pickedEndTime, name: name, courtId: 1, userAuth: auth)
         }
         
         self.dismiss(animated: true, completion: {
             self.delegate?.roomDetailViewController(self)
         })
-    }
-    
-    @IBAction func cancel(_ sender: Any) {
-        self.dismiss(animated: true)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "StartDatePicker" {
-            if let controller = segue.destination as? GameDatePickerViewController {
-                controller.pickerLabelType = .startTime
-                controller.delegate = self
-            }
-            
-        } else if segue.identifier == "EndDatePicker" {
-            if let controller = segue.destination as? GameDatePickerViewController {
-                controller.pickerLabelType = .endTime
-                controller.delegate = self
-            }
-        }
     }
     
     // MARK: - IBOutlets - TextField & StartTime & EndTime
@@ -149,7 +169,12 @@ extension RoomDetailViewController: UITextFieldDelegate {
         guard let text = textField.text else { return true }
         let newLength = text.count + string.count - range.length
         
-        print("textField count : \(textField.text?.count)")
+        print("textField count : \(String(describing: textField.text?.count))")
         return newLength <= 20
     }
+}
+
+enum CreateOrDetail {
+    case create
+    case detail
 }
