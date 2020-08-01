@@ -97,10 +97,24 @@ extension RoomDetailViewController {
                 print(error.debugDescription)
                 return
             }
-            
-            print("You participated in this game room. Info : \(data)")
+            parseJSON(roomsData: data)
         }
         
         task.resume()
+        
+        func parseJSON(roomsData: Data) -> Room? {
+            let decoder = JSONDecoder()
+            do {
+                let decodedData = try decoder.decode(Room.self, from: roomsData)
+                print("parsing completed ")
+                print("Room data : \(decodedData)")
+                return decodedData
+                
+            } catch {
+                // json parse 시 에러 처리 코드 추가할 것
+                print(error)
+                return nil
+            }
+        }
     }
 }
