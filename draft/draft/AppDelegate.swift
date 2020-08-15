@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
         NotificationCenter.default.post(
         name: Notification.Name(rawValue: "ToggleAuthUINotification"),
         object: nil,
-        userInfo: ["statusText": "Signed in user:\n\(fullName!)","token": idToken])
+        userInfo: ["statusText": "Signed in user:\n\(fullName!)","token": idToken!,"username": fullName!])
         // [END_EXCLUDE]
     }
     
@@ -59,7 +59,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
         // [END_EXCLUDE]
     }
     
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+        let deviceTokenString: String = deviceToken.map { String(format: "%02x", $0) }.joined()
+
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "DeviceToken"), object: nil, userInfo: ["deviceToken": deviceTokenString])
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // For device token
+        UIApplication.shared.registerForRemoteNotifications()
+        
+        
+        
         GIDSignIn.sharedInstance().clientID = "1012204765167-g31h7ml5t3o8nk8isvur6q5s90q7omug.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
 //        KakaoSDKCommon.shared.initSDK(appKey: "52f5a0a20ab7c1418e2993f85ca83c29") KaKao

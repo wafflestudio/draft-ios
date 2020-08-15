@@ -98,8 +98,17 @@ class SigninViewController: UIViewController {
             if notification.userInfo != nil {
                 guard let userInfo = notification.userInfo as? [String:String] else { return }
 
-                print("Token : \(userInfo["token"] ?? "default")")
                 self.statusText.text = userInfo["statusText"]!
+                
+                guard let token = userInfo["token"] else { return }
+                
+                print("Token : \(token)")
+                let flag = tokenSignIn(Token: token, Provider: "GOOGLE")
+                
+                if flag == false{
+                    tokenSignUp(Token: token, Provider: "GOOGLE", Username: userInfo["username"]!)
+                    tokenSignIn(Token: token, Provider: "GOOGLE")
+                }
             }
         }
     }
@@ -166,20 +175,77 @@ class SigninViewController: UIViewController {
     }
     */
 
-    func tokenProcessing(Token : String, Provider : String){
+    func tokenSignIn(Token : String, Provider : String) -> Bool {
         let url = "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/user/signin/"
-        let param : Parameters = [
-            "grantType" : "OAUTH",
-            "authProvider" : Provider,
-            "accessToken" : Token
-        ]
         
-        let alamo = AF.request(url,method:.post,parameters: param)
-        
-        alamo.responseJSON(){
-            response in
-            print("JSON : \(response.description)")
+        struct Param : Encodable {
+            let grantType : String
+            let authProvider : String
+            let accessToken : String
         }
+        
+        let param = Param(grantType: "OAUTH",authProvider: Provider, accessToken: Token)
+        
+        AF.request(url,method:.post,parameters: param,encoder: JSONParameterEncoder.default).validate().responseJSON(){
+            response in
+            print("Sign In Header : \(response.response?.headers.dictionary["Authentication"] ?? "No Header")")
+            //let userToken = response.response?.headers.dictionary["Authentication"] // 이게 user header
+            
+//            NotificationCenter.default.addObserver(self, selector: #selector(SigninViewController.sendDeviceToken(_:)), name: NSNotification.Name(rawValue: "DeviceToken"), object: nil)
+            // DeviceToken 전달 부분 보완 필요
+        }
+        
+        return false
+    }
+    
+    @objc func sendDeviceToken(_ notification: NSNotification) {
+        if notification.name.rawValue == "DeviceToken" {
+            
+            if notification.userInfo != nil {
+                guard let userInfo = notification.userInfo as? [String:String] else { return }
+
+                guard let deviceToken = userInfo["Devicetoken"] else { return }
+                
+                print("DeviceToken : \(deviceToken)")
+                               
+                let url = "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/user/device/"
+                
+                struct Param : Encodable {
+                    let deviceToken : String
+                }
+                
+                let param = Param(deviceToken: deviceToken)
+                
+                AF.request(url,method:.post,parameters: param,encoder: JSONParameterEncoder.default).responseJSON(){
+                    response in
+                    print("DeviceToken: \(response)")
+                }
+                
+            }
+        }
+    }
+    
+    func tokenSignUp(Token : String, Provider : String, Username : String) -> Bool {
+        let url = "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/user/signup/"
+        
+        struct Param : Encodable {
+            let grantType : String
+            let authProvider : String
+            let accessToken : String
+            let username : String
+        }
+        
+        let param = Param(grantType: "OAUTH",authProvider: Provider, accessToken: Token, username: Username)
+        
+        let result = AF.request(url,method:.post,parameters: param,encoder: JSONParameterEncoder.default).validate().responseJSON(){
+            response in
+            print("Sign Up: \(response)")
+            
+//            NotificationCenter.default.addObserver(self, selector: #selector(SigninViewController.sendDeviceToken(_:)), name: NSNotification.Name(rawValue: "DeviceToken"), object: nil)
+            // DeviceToken 전달 부분 보완 필요
+        }
+        
+        return result.isFinished
     }
     
     // MARK: - Detail Storyboard로 연결 (지금은 임시로 버튼 연결)
