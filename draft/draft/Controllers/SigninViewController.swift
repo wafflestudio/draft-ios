@@ -47,20 +47,26 @@ class SigninViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     @IBAction func PasswordLogin() {
-        let url = "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/user/signin/"
+        let url = APIUrl.signinUrl
+        
         struct Param : Encodable {
             let grantType : String
             let email : String
             let password : String
         }
         
-        let param = Param(grantType: "PASSWORD",email: emailTextField.text!, password: passwordTextField.text!)
+        let param = Param(grantType: GrantType.PASSWORD ,email: emailTextField.text! , password: passwordTextField.text!)
         //        let header : HTTPHeader = [
         //        ]
         
-        AF.request(url,method:.post,parameters: param,encoder: JSONParameterEncoder.default).validate().responseJSON(){
-            response in
-            print(response.response?.headers.sorted())
+        AF.request(url,
+                   method: .post,
+                   parameters: param,
+                   encoder: JSONParameterEncoder.default).validate().responseJSON()
+                    {
+                        response in
+                        
+                        print(response.response?.headers.sorted())
         }
     }
 }
@@ -68,7 +74,7 @@ class SigninViewController: UIViewController {
 // MARK: Signin To Server
 extension SigninViewController {
     func tokenSignIn(token : String, provider : String, email: String) -> Bool {
-        let url = "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/user/signin/"
+        let url = APIUrl.signinUrl 
         
         struct Param : Encodable {
             let grantType : String
@@ -76,31 +82,33 @@ extension SigninViewController {
             let accessToken : String
         }
         
-        let param = Param(grantType: "OAUTH", authProvider: provider, accessToken: token)
+        let param = Param(grantType: GrantType.OAUTH, authProvider: provider, accessToken: token)
         
-        AF.request(url, method: .post, parameters: param, encoder:  JSONParameterEncoder.default).validate().responseJSON() {
-            response in
-            
-            if (response.response?.statusCode == 204) {
-                
-                if let jwtToken = response.response?.headers.dictionary["Authentication"] {
+        AF.request(url,
+                   method: .post,
+                   parameters: param,
+                   encoder: JSONParameterEncoder.default).validate().responseJSON() {
+                    response in
                     
-                    User.shared.setJwtToken(jwtToken)
-                    User.shared.setUserEmail(email)
-                    self.goToDetailView()
-                }
-            }
-            
-            if (response.response?.statusCode == 401) {
-                // token이 vaild 하지 않음
-            }
-            
-            if (response.response?.statusCode == 404) {
-                // token이 valid 하므로 signup view로 이동
-            }
-            
-            //            NotificationCenter.default.addObserver(self, selector: #selector(SigninViewController.sendDeviceToken(_:)), name: NSNotification.Name(rawValue: "DeviceToken"), object: nil)
-            // DeviceToken 전달 부분 보완 필요
+                    if (response.response?.statusCode == 204) {
+                        
+                        if let jwtToken = response.response?.headers.dictionary["Authentication"] {
+                            
+                            User.shared.setJwtToken(jwtToken)
+                            User.shared.setUserEmail(email)
+                            self.goToDetailView()
+                        }
+                    }
+                    
+                    if (response.response?.statusCode == 404) {
+                        // token이 valid 하나 user data가 없으므로 signup view로 이동
+                    }
+                    
+                    if (response.response?.statusCode == 401) {
+                        // token이 vaild 하지 않음
+                    }
+                    //            NotificationCenter.default.addObserver(self, selector: #selector(SigninViewController.sendDeviceToken(_:)), name: NSNotification.Name(rawValue: "DeviceToken"), object: nil)
+                    // DeviceToken 전달 부분 보완 필요
         }
         
         return false
@@ -129,8 +137,8 @@ extension SigninViewController: GIDSignInDelegate {
         let email = user.profile.email
         
         if let token = idToken {
-            tokenSignIn(token: token, provider: "KAKAO", email: email!)
-            print(token)
+            tokenSignIn(token: token, provider: "Google", email: email!)
+            print("token : \(token)")
         }
     }
 }
@@ -166,7 +174,7 @@ extension SigninViewController {
                 
                 print("DeviceToken : \(deviceToken)")
                 
-                let url = "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/user/device/"
+                let url = APIUrl.deviceRegisterUrl
                 
                 struct Param : Encodable {
                     let deviceToken : String

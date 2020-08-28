@@ -31,6 +31,7 @@
 		3897039E24559A4C00FF5077 /* draftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897039D24559A4C00FF5077 /* draftTests.swift */; };
 		389703A924559A4C00FF5077 /* draftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389703A824559A4C00FF5077 /* draftUITests.swift */; };
 		389703BD2455A81400FF5077 /* MatchingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389703BC2455A81400FF5077 /* MatchingTableViewController.swift */; };
+		38B0347D24F8F9F8005E759A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B0347C24F8F9F8005E759A /* Constants.swift */; };
 		38D00C32248B3D7500F50F9B /* RoomGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00C31248B3D7500F50F9B /* RoomGroup.swift */; };
 		38D00C33248B3D7500F50F9B /* RoomGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00C31248B3D7500F50F9B /* RoomGroup.swift */; };
 		38D00C35248B3E7400F50F9B /* Model-utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00C34248B3E7400F50F9B /* Model-utilities.swift */; };
@@ -95,6 +96,7 @@
 		389703A824559A4C00FF5077 /* draftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = draftUITests.swift; sourceTree = "<group>"; };
 		389703AA24559A4C00FF5077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		389703BC2455A81400FF5077 /* MatchingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingTableViewController.swift; sourceTree = "<group>"; };
+		38B0347C24F8F9F8005E759A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		38D00C31248B3D7500F50F9B /* RoomGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGroup.swift; sourceTree = "<group>"; };
 		38D00C34248B3E7400F50F9B /* Model-utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model-utilities.swift"; sourceTree = "<group>"; };
 		62035EAA47454F943E3FBF28 /* libPods-draft-draftTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-draft-draftTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +201,7 @@
 				3897038324559A4900FF5077 /* AppDelegate.swift */,
 				3897039424559A4C00FF5077 /* Info.plist */,
 				3897038C24559A4900FF5077 /* draft.xcdatamodeld */,
+				38B0347C24F8F9F8005E759A /* Constants.swift */,
 			);
 			path = draft;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				386D72D4246312160099C35E /* RoomDetailViewController.swift in Sources */,
 				BF9CF84724B7692500FEEC5E /* SigninViewController.swift in Sources */,
 				389703BD2455A81400FF5077 /* MatchingTableViewController.swift in Sources */,
+				38B0347D24F8F9F8005E759A /* Constants.swift in Sources */,
 				38D00C35248B3E7400F50F9B /* Model-utilities.swift in Sources */,
 				38D00C32248B3D7500F50F9B /* RoomGroup.swift in Sources */,
 				380B77C624C214FB00CB1CB2 /* GameDatePickerViewController.swift in Sources */,
