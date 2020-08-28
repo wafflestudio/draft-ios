@@ -73,7 +73,7 @@ class SigninViewController: UIViewController {
 
 // MARK: Signin To Server
 extension SigninViewController {
-    func tokenSignIn(token : String, provider : String, email: String) -> Bool {
+    func tokenSignIn(token : String, provider : String, email: String) {
         let url = APIUrl.signinUrl 
         
         struct Param : Encodable {
@@ -101,8 +101,9 @@ extension SigninViewController {
                     }
                     
                     if (response.response?.statusCode == 404) {
-                        self.goToOAuthSignUpView()
                         // token이 valid 하나 user data가 없으므로 signup view로 이동
+                        self.goToOAuthSignUpView(token: token, provider: provider)
+                        
                     }
                     
                     if (response.response?.statusCode == 401) {
@@ -111,8 +112,6 @@ extension SigninViewController {
                     //            NotificationCenter.default.addObserver(self, selector: #selector(SigninViewController.sendDeviceToken(_:)), name: NSNotification.Name(rawValue: "DeviceToken"), object: nil)
                     // DeviceToken 전달 부분 보완 필요
         }
-        
-        return false
     }
 }
 
@@ -134,12 +133,11 @@ extension SigninViewController: GIDSignInDelegate {
             }
             return
         }
-        let idToken = user.authentication.idToken // Safe to send to the server
+        let idToken = user.authentication.idToken
         let email = user.profile.email
         
         if let token = idToken {
-            tokenSignIn(token: token, provider: "Google", email: email!)
-            print("token : \(token)")
+            tokenSignIn(token: token, provider: OAuthProvider.GOOGLE, email: email!)
         }
     }
 }
@@ -165,12 +163,15 @@ extension SigninViewController {
 
 // MARK: - OAuth SignUp View로 연결
 extension SigninViewController {
-    func goToOAuthSignUpView() {
+    func goToOAuthSignUpView(token: String, provider: String) {
         
-        guard let oAuthSignUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "OAuthSignUp")
+        guard let oAuthSignUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "OAuthSignUp") as? OAuthSignUpViewController
             else {
                 return
         }
+        
+        oAuthSignUpViewController.setAccessToken(token)
+        oAuthSignUpViewController.setProvider(provider)
         
         navigationController?.pushViewController(oAuthSignUpViewController, animated: true)
     }

@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="-1431.8840579710145" y="676.33928571428567"/>
         </scene>
-        <!--Auth SignUP View Controller-->
+        <!--Auth Sign Up View Controller-->
         <scene sceneID="RT8-sN-Nb8">
             <objects>
-                <viewController storyboardIdentifier="OAuthSignUp" id="5iw-fW-IAs" customClass="OAuthSignUPViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OAuthSignUp" id="5iw-fW-IAs" customClass="OAuthSignUpViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QVz-gq-ljb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,17 +133,33 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ga-51-3a1">
+                                <rect key="frame" x="90" y="749" width="234" height="53"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <state key="normal" title="가입하기">
+                                    <color key="titleColor" red="0.078431372550000003" green="0.69803921570000005" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="oAuthSignUp:" destination="5iw-fW-IAs" eventType="touchUpInside" id="GkT-s5-mrM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Laj-x3-hs1" firstAttribute="trailing" secondItem="4ga-51-3a1" secondAttribute="trailing" constant="90" id="4W8-27-q1x"/>
                             <constraint firstItem="Ywq-LI-jz3" firstAttribute="centerX" secondItem="QVz-gq-ljb" secondAttribute="centerX" id="8dY-xe-azI"/>
                             <constraint firstItem="RDi-f0-dxz" firstAttribute="leading" secondItem="Laj-x3-hs1" secondAttribute="leading" constant="40" id="F7j-eB-nWG"/>
                             <constraint firstItem="RDi-f0-dxz" firstAttribute="top" secondItem="Ywq-LI-jz3" secondAttribute="bottom" constant="30" id="FMc-6u-dgV"/>
+                            <constraint firstItem="Laj-x3-hs1" firstAttribute="bottom" secondItem="4ga-51-3a1" secondAttribute="bottom" constant="60" id="Gif-mA-UsL"/>
+                            <constraint firstItem="4ga-51-3a1" firstAttribute="leading" secondItem="Laj-x3-hs1" secondAttribute="leading" constant="90" id="J5I-8T-zMf"/>
                             <constraint firstAttribute="trailing" secondItem="RDi-f0-dxz" secondAttribute="trailing" constant="40" id="rl6-WN-3zr"/>
                             <constraint firstItem="Ywq-LI-jz3" firstAttribute="centerY" secondItem="QVz-gq-ljb" secondAttribute="centerY" constant="-70" id="twG-I6-qiA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Laj-x3-hs1"/>
                     </view>
+                    <connections>
+                        <outlet property="usernameTextField" destination="RDi-f0-dxz" id="qbg-wh-66B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Te3-oY-cXC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
