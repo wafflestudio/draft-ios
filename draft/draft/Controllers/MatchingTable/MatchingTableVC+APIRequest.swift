@@ -17,7 +17,7 @@ extension MatchingTableViewController {
         var request = URLRequest(url: url!)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(sampleAuth, forHTTPHeaderField: "Authentication")
+        request.setValue(jwtToken, forHTTPHeaderField: "Authentication")
         
         let configuration = URLSessionConfiguration.default
         configuration.waitsForConnectivity = true

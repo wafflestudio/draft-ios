@@ -12,7 +12,7 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
     internal var roomGroup: RoomGroup?
     
-    internal var sampleAuth = User.shared.jwtToken
+    internal var jwtToken = User.shared.jwtToken
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +87,7 @@ extension MatchingTableViewController: RoomDetailViewControllerDelegate {
         if segue.identifier == "createRoomSegue" {
             if let createRoomViewController = segue.destination as? RoomDetailViewController {
                 createRoomViewController.delegate = self
-                createRoomViewController.sampleAuth = self.sampleAuth
+                createRoomViewController.sampleAuth = self.jwtToken
             }
         }
     }

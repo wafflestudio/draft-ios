@@ -80,7 +80,6 @@ extension OAuthSignUpViewController {
                         if let jwtToken = response.response?.headers.dictionary["Authentication"] {
                             
                             User.shared.setJwtToken(jwtToken)
-                            print("회원가입 성공! : \(response.response!)")
                             self.goToDetailView()
                         }
                     }
@@ -93,13 +92,13 @@ extension OAuthSignUpViewController {
     }
 }
 
-// MARK: - Go To Detail View
+// MARK: - Go To MatchingTable View
 extension OAuthSignUpViewController {
     func goToDetailView() {
-        let storyboard = UIStoryboard(name: "RoomDetail", bundle: nil)
+        let storyboard = UIStoryboard(name: "MatchingTable", bundle: nil)
         
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "RoomDetail") as? UITabBarController else {
-            print("에러 : RoomDetailVC로 갈 수 없습니다")
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "MatchingTable") as? UITabBarController else {
+            print("에러 : MatchingTable로 갈 수 없습니다")
             return
         }
         

@@ -130,13 +130,13 @@ extension SignInViewController: GIDSignInDelegate {
     }
 }
 
-// MARK: - Go To RoomDetail View
+// MARK: - Go To MatchingTable View
 extension SignInViewController {
     func goToDetailView() {
-        let storyboard = UIStoryboard(name: "RoomDetail", bundle: nil)
+        let storyboard = UIStoryboard(name: "MatchingTable", bundle: nil)
         
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "RoomDetail") as? UITabBarController else {
-            print("에러 : RoomDetailVC로 갈 수 없습니다")
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "MatchingTable") as? UITabBarController else {
+            print("에러 : MatchingTableVC로 갈 수 없습니다")
             return
         }
         
