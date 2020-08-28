@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_draft_draftTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_draft_draftTestsVersionString[];
+FOUNDATION_EXPORT double KeychainAccessVersionNumber;
+FOUNDATION_EXPORT const unsigned char KeychainAccessVersionString[];
 

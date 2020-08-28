@@ -15,15 +15,6 @@ target 'draft' do
   # pod 'DynamicCodable' #, '1.0'
   pod 'GoogleSignIn'
   pod 'FBSDKLoginKit'
-  
-  target 'draftTests' do
-    # inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'draftUITests' do
-    # Pods for testing
-  end
-
+  pod 'KeychainAccess', '~> 4.2'
   
 end
