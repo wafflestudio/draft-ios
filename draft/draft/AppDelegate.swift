@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // For device token
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge]) { (granted, error) in }
         
+        // Google SignIn
         GIDSignIn.sharedInstance().clientID = "1012204765167-g31h7ml5t3o8nk8isvur6q5s90q7omug.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
         //        KakaoSDKCommon.shared.initSDK(appKey: "52f5a0a20ab7c1418e2993f85ca83c29") KaKao
@@ -59,9 +60,8 @@ extension AppDelegate: GIDSignInDelegate {
             }
             return
         }
-        let userId = user.userID  // For client-side use only!
+        
         let idToken = user.authentication.idToken // Safe to send to the server
-        let fullName = user.profile.name
         let email = user.profile.email
         
         print(idToken)

@@ -25,7 +25,6 @@
 		38969E0E24A6F7D70032F82C /* RoomRestAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38969E0D24A6F7D70032F82C /* RoomRestAPITest.swift */; };
 		38969E0F24A6F7F90032F82C /* MatchingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389703BC2455A81400FF5077 /* MatchingTableViewController.swift */; };
 		3897038424559A4900FF5077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897038324559A4900FF5077 /* AppDelegate.swift */; };
-		3897038624559A4900FF5077 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897038524559A4900FF5077 /* SceneDelegate.swift */; };
 		3897038B24559A4900FF5077 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3897038924559A4900FF5077 /* Main.storyboard */; };
 		3897038E24559A4900FF5077 /* draft.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3897038C24559A4900FF5077 /* draft.xcdatamodeld */; };
 		3897039024559A4C00FF5077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3897038F24559A4C00FF5077 /* Assets.xcassets */; };
@@ -85,7 +84,6 @@
 		38969E0D24A6F7D70032F82C /* RoomRestAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRestAPITest.swift; sourceTree = "<group>"; };
 		3897038024559A4900FF5077 /* draft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = draft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3897038324559A4900FF5077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3897038524559A4900FF5077 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3897038A24559A4900FF5077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3897038D24559A4900FF5077 /* draft.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = draft.xcdatamodel; sourceTree = "<group>"; };
 		3897038F24559A4C00FF5077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -199,7 +197,6 @@
 				389703B724559C9700FF5077 /* Storyboards */,
 				3897038F24559A4C00FF5077 /* Assets.xcassets */,
 				3897038324559A4900FF5077 /* AppDelegate.swift */,
-				3897038524559A4900FF5077 /* SceneDelegate.swift */,
 				3897039424559A4C00FF5077 /* Info.plist */,
 				3897038C24559A4900FF5077 /* draft.xcdatamodeld */,
 			);
@@ -539,7 +536,6 @@
 				BF9CF84724B7692500FEEC5E /* SigninViewController.swift in Sources */,
 				389703BD2455A81400FF5077 /* MatchingTableViewController.swift in Sources */,
 				38D00C35248B3E7400F50F9B /* Model-utilities.swift in Sources */,
-				3897038624559A4900FF5077 /* SceneDelegate.swift in Sources */,
 				38D00C32248B3D7500F50F9B /* RoomGroup.swift in Sources */,
 				380B77C624C214FB00CB1CB2 /* GameDatePickerViewController.swift in Sources */,
 				3897038E24559A4900FF5077 /* draft.xcdatamodeld in Sources */,
@@ -729,7 +725,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZHQQM4M49J;
+				DEVELOPMENT_TEAM = M974BXPS92;
 				INFOPLIST_FILE = draft/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -8,6 +8,26 @@
 
 import Foundation
 
-struct User{
-    let auth: String
+struct User {
+    
+    static var shared = User()
+    
+    private init() {}
+    
+    private(set) var jwtToken: String?
+    private(set) var userName: String?
+    private(set) var userEmail: String?
+    
+    mutating func setJwtToken(_ jwtToken: String) {
+        self.jwtToken = jwtToken
+    }
+    
+    mutating func setUserName(_ userName: String) {
+        self.userName = userName
+    }
+    
+    mutating func setUserEmail(_ userEmail: String) {
+        self.userEmail = userEmail
+    }
 }
+
