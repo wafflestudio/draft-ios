@@ -29,7 +29,6 @@ extension SigninViewController: ASAuthorizationControllerDelegate {
         switch authorization.credential {
         case let appleIDCredential as ASAuthorizationAppleIDCredential:
             
-            
             let userIdentifier = appleIDCredential.user
             let email = appleIDCredential.email
             let identifyToken = appleIDCredential.identityToken
@@ -47,6 +46,7 @@ extension SigninViewController: ASAuthorizationControllerDelegate {
             KeychainAccess.shared.saveAppleLoginUserIdentifier(identifier: userIdentifier)
             KeychainAccess.shared.saveAppleLoginAccessToken(accessToken: token)
             
+            print("tokeninstirng: \(tokenInString)")
             tokenSignIn(token: tokenInString, provider: OAuthProvider.APPLE, email: email!)
             
         default:

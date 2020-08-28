@@ -51,63 +51,91 @@
                                     <segue destination="1Zk-RZ-mvr" kind="show" id="CTu-F7-Lg6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ty-lV-B4o">
-                                <rect key="frame" x="127" y="742" width="162" height="139"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="RoomDetail로 이동"/>
-                                <connections>
-                                    <action selector="goToDetailStorybaord:" destination="7e7-9z-7uu" eventType="touchUpInside" id="NHL-Ve-pvr"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Umu-ZY-sio" customClass="GIDSignInButton">
-                                <rect key="frame" x="47" y="384" width="321" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUp-uk-yWq">
+                                <rect key="frame" x="40" y="702" width="334" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White Logo Square" translatesAutoresizingMaskIntoConstraints="NO" id="cSA-1M-TQF">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="pqc-DD-072"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4U6-o3-j5A">
+                                        <rect key="frame" x="60" y="0.0" width="274" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="25"/>
+                                        <state key="normal" title="Sign in with Apple  ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="appleSignIn:" destination="7e7-9z-7uu" eventType="touchUpInside" id="SSs-Bm-3FM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="4U6-o3-j5A" secondAttribute="bottom" id="FhL-5u-7Vj"/>
+                                    <constraint firstItem="cSA-1M-TQF" firstAttribute="top" secondItem="AUp-uk-yWq" secondAttribute="top" id="GTZ-Iw-RSS"/>
+                                    <constraint firstItem="4U6-o3-j5A" firstAttribute="leading" secondItem="cSA-1M-TQF" secondAttribute="trailing" id="NpL-4O-1mc"/>
+                                    <constraint firstAttribute="trailing" secondItem="4U6-o3-j5A" secondAttribute="trailing" id="VGD-sD-xcW"/>
+                                    <constraint firstItem="4U6-o3-j5A" firstAttribute="top" secondItem="AUp-uk-yWq" secondAttribute="top" id="W0j-f9-qGH"/>
+                                    <constraint firstAttribute="height" constant="60" id="fnO-eX-FPF"/>
+                                    <constraint firstItem="cSA-1M-TQF" firstAttribute="leading" secondItem="AUp-uk-yWq" secondAttribute="leading" id="jjx-vn-AOg"/>
+                                    <constraint firstAttribute="bottom" secondItem="cSA-1M-TQF" secondAttribute="bottom" id="pqQ-ST-wKM"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4d-wV-F6E">
-                                <rect key="frame" x="93" y="587" width="99" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Sign Out"/>
-                                <connections>
-                                    <action selector="didTapSignOut:" destination="7e7-9z-7uu" eventType="touchUpInside" id="cq7-BQ-4C7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2b-j3-F1p">
-                                <rect key="frame" x="230" y="587" width="99" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Disconnect"/>
-                                <connections>
-                                    <action selector="didTapDisconnect:" destination="7e7-9z-7uu" eventType="touchUpInside" id="Qxw-kO-yJY"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVv-XN-nBC">
-                                <rect key="frame" x="20" y="662" width="374" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Label">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="label" size="17"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlL-Vy-DUW">
+                                <rect key="frame" x="40" y="612" width="334" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_google_light_normal_ios" translatesAutoresizingMaskIntoConstraints="NO" id="Cep-Hg-2OP">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="HBG-fY-zGQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WX-8z-M1g">
+                                        <rect key="frame" x="60" y="0.0" width="274" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="25"/>
+                                        <state key="normal" title="Sign in with Google">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="googleSignIn:" destination="7e7-9z-7uu" eventType="touchUpInside" id="XYl-5t-Not"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2WX-8z-M1g" secondAttribute="bottom" id="1Ga-Vn-of2"/>
+                                    <constraint firstItem="2WX-8z-M1g" firstAttribute="leading" secondItem="Cep-Hg-2OP" secondAttribute="trailing" id="9FN-yi-e7K"/>
+                                    <constraint firstAttribute="height" constant="60" id="KDg-hd-wrh"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cep-Hg-2OP" secondAttribute="bottom" id="ULp-NT-jH3"/>
+                                    <constraint firstAttribute="trailing" secondItem="2WX-8z-M1g" secondAttribute="trailing" id="fWD-g6-fne"/>
+                                    <constraint firstItem="Cep-Hg-2OP" firstAttribute="leading" secondItem="KlL-Vy-DUW" secondAttribute="leading" id="r3x-d6-tkI"/>
+                                    <constraint firstItem="Cep-Hg-2OP" firstAttribute="top" secondItem="KlL-Vy-DUW" secondAttribute="top" id="tOm-Yj-BYU"/>
+                                    <constraint firstItem="2WX-8z-M1g" firstAttribute="top" secondItem="KlL-Vy-DUW" secondAttribute="top" id="yCa-Gj-IQH"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SPi-hN-qM5" firstAttribute="bottom" secondItem="AUp-uk-yWq" secondAttribute="bottom" constant="100" id="AXZ-9C-vK4"/>
+                            <constraint firstItem="AUp-uk-yWq" firstAttribute="top" secondItem="KlL-Vy-DUW" secondAttribute="bottom" constant="30" id="Ehe-1S-vlJ"/>
+                            <constraint firstItem="AUp-uk-yWq" firstAttribute="leading" secondItem="SPi-hN-qM5" secondAttribute="leading" constant="40" id="VqT-gZ-T12"/>
+                            <constraint firstItem="KlL-Vy-DUW" firstAttribute="leading" secondItem="SPi-hN-qM5" secondAttribute="leading" constant="40" id="pkK-sh-Hp3"/>
+                            <constraint firstItem="SPi-hN-qM5" firstAttribute="trailing" secondItem="KlL-Vy-DUW" secondAttribute="trailing" constant="40" id="so1-fR-NKs"/>
+                            <constraint firstItem="SPi-hN-qM5" firstAttribute="trailing" secondItem="AUp-uk-yWq" secondAttribute="trailing" constant="40" id="xJP-36-dwH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SPi-hN-qM5"/>
                     </view>
                     <navigationItem key="navigationItem" id="YUl-te-uqn"/>
                     <connections>
-                        <outlet property="disconnectButton" destination="t2b-j3-F1p" id="5jy-UX-THL"/>
                         <outlet property="emailTextField" destination="bKi-UC-vUd" id="fnq-4h-OX9"/>
                         <outlet property="loginButton" destination="CLw-xR-xnF" id="beR-Jq-4Nt"/>
                         <outlet property="passwordTextField" destination="NT9-wy-OsP" id="bxP-Vd-F6e"/>
-                        <outlet property="signInButton" destination="Umu-ZY-sio" id="KPc-rD-t0y"/>
-                        <outlet property="signOutButton" destination="g4d-wV-F6E" id="Wdz-6E-BcQ"/>
-                        <outlet property="statusText" destination="gVv-XN-nBC" id="3SF-qW-Te5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yiA-7e-A0f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -324,4 +352,8 @@
             <point key="canvasLocation" x="-2342.0289855072465" y="676.33928571428567"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="White Logo Square" width="56" height="56"/>
+        <image name="btn_google_light_normal_ios" width="48" height="48"/>
+    </resources>
 </document>

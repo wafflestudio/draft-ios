@@ -16,30 +16,19 @@ import GoogleSignIn
 
 class SigninViewController: UIViewController {
     
-    @IBOutlet weak var signInButton: GIDSignInButton!
-    @IBOutlet weak var signOutButton: UIButton!
-    @IBOutlet weak var disconnectButton: UIButton!
-    @IBOutlet weak var statusText: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         googleSignInSetup()
     }
     
-    @IBAction func didTapSignOut(_ sender: AnyObject) {
-        GIDSignIn.sharedInstance().signOut()
-        // [START_EXCLUDE silent]
-        statusText.text = "Signed out."
-        // [END_EXCLUDE]
+    @IBAction func googleSignIn(_ sender: UIButton) {
+        GIDSignIn.sharedInstance()?.signIn()
     }
-    // [END signout_tapped]
-    // [START disconnect_tapped]
-    @IBAction func didTapDisconnect(_ sender: AnyObject) {
-        GIDSignIn.sharedInstance().disconnect()
-        // [START_EXCLUDE silent]
-        statusText.text = "Disconnecting."
-        // [END_EXCLUDE]
+    
+    
+    @IBAction func appleSignIn(_ sender: UIButton) {
+        handleAuthorizationAppleIDButtonPress()
     }
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -142,12 +131,8 @@ extension SigninViewController: GIDSignInDelegate {
     }
 }
 
-// MARK: - Detail Storyboard로 연결 (지금은 임시로 버튼 연결)
+// MARK: - Go To RoomDetail View
 extension SigninViewController {
-    @IBAction func goToDetailStorybaord(_ sender: UIButton) {
-        goToDetailView()
-    }
-    
     func goToDetailView() {
         let storyboard = UIStoryboard(name: "RoomDetail", bundle: nil)
         
