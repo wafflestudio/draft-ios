@@ -12,15 +12,16 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
     internal var roomGroup: RoomGroup?
     
-    internal var sampleAuth: String?
+    internal var sampleAuth = User.shared.jwtToken
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addSearchController()
         
+        allRoomsAPIRequest()
         // autoLoginForTest() contains allRoomsAPIRequest()
-        autoLoginForTest()
+//        autoLoginForTest()
         
     }
     

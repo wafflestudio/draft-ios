@@ -26,9 +26,8 @@ class SignInViewController: UIViewController {
         GIDSignIn.sharedInstance()?.signIn()
     }
     
-    
     @IBAction func appleSignIn(_ sender: UIButton) {
-        handleAuthorizationAppleIDButtonPress()
+        appleSignIn()
     }
     
     @IBOutlet weak var emailTextField: UITextField!

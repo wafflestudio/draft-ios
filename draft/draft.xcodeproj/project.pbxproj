@@ -135,23 +135,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		384FA83A24BA084A00FB3CF4 /* RoomDetailVC */ = {
+		380ABC8E24F9714D00B212F0 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				BF9CF84624B7692500FEEC5E /* SignInViewController.swift */,
+				380ABC8924F9621400B212F0 /* SignInViewController+appleSignIn.swift */,
+				BF5401C424C853EB00D73368 /* SignUpViewController.swift */,
+				38B0347E24F946EE005E759A /* OAuthSignUpViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		384FA83A24BA084A00FB3CF4 /* RoomDetail */ = {
 			isa = PBXGroup;
 			children = (
 				386D72D3246312160099C35E /* RoomDetailViewController.swift */,
 				384FA83824B9FC6600FB3CF4 /* RoomDetailVC+APIRequest.swift */,
 				380B77C524C214FB00CB1CB2 /* GameDatePickerViewController.swift */,
 			);
-			path = RoomDetailVC;
+			path = RoomDetail;
 			sourceTree = "<group>";
 		};
-		384FA83B24BA086100FB3CF4 /* MatchingTableVC */ = {
+		384FA83B24BA086100FB3CF4 /* MatchingTable */ = {
 			isa = PBXGroup;
 			children = (
 				389703BC2455A81400FF5077 /* MatchingTableViewController.swift */,
 				3837B51A24B5AF960085E821 /* MatchingTableVC+APIRequest.swift */,
 			);
-			path = MatchingTableVC;
+			path = MatchingTable;
 			sourceTree = "<group>";
 		};
 		386D72CE246311DB0099C35E /* Models */ = {
@@ -228,13 +239,10 @@
 		389703B624559C8C00FF5077 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				384FA83A24BA084A00FB3CF4 /* RoomDetailVC */,
-				384FA83B24BA086100FB3CF4 /* MatchingTableVC */,
+				384FA83A24BA084A00FB3CF4 /* RoomDetail */,
+				384FA83B24BA086100FB3CF4 /* MatchingTable */,
+				380ABC8E24F9714D00B212F0 /* SignIn */,
 				3837B51D24B5BAAE0085E821 /* secret_login.json */,
-				BF9CF84624B7692500FEEC5E /* SignInViewController.swift */,
-				380ABC8924F9621400B212F0 /* SignInViewController+appleSignIn.swift */,
-				BF5401C424C853EB00D73368 /* SignUpViewController.swift */,
-				38B0347E24F946EE005E759A /* OAuthSignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

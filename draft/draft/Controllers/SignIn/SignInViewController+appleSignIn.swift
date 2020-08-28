@@ -10,8 +10,7 @@ import AuthenticationServices
 
 extension SignInViewController: ASAuthorizationControllerDelegate {
     
-    @objc
-    func handleAuthorizationAppleIDButtonPress() {
+    func appleSignIn() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.fullName, .email]
