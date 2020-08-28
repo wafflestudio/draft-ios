@@ -101,6 +101,7 @@ extension SigninViewController {
                     }
                     
                     if (response.response?.statusCode == 404) {
+                        self.goToOAuthSignUpView()
                         // token이 valid 하나 user data가 없으므로 signup view로 이동
                     }
                     
@@ -159,6 +160,19 @@ extension SigninViewController {
         
         viewController.modalPresentationStyle = .fullScreen
         present(viewController, animated: true)
+    }
+}
+
+// MARK: - OAuth SignUp View로 연결
+extension SigninViewController {
+    func goToOAuthSignUpView() {
+        
+        guard let oAuthSignUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "OAuthSignUp")
+            else {
+                return
+        }
+        
+        navigationController?.pushViewController(oAuthSignUpViewController, animated: true)
     }
 }
 

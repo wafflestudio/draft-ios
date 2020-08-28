@@ -32,6 +32,7 @@
 		389703A924559A4C00FF5077 /* draftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389703A824559A4C00FF5077 /* draftUITests.swift */; };
 		389703BD2455A81400FF5077 /* MatchingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389703BC2455A81400FF5077 /* MatchingTableViewController.swift */; };
 		38B0347D24F8F9F8005E759A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B0347C24F8F9F8005E759A /* Constants.swift */; };
+		38B0347F24F946EE005E759A /* OAuthSignUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B0347E24F946EE005E759A /* OAuthSignUPViewController.swift */; };
 		38D00C32248B3D7500F50F9B /* RoomGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00C31248B3D7500F50F9B /* RoomGroup.swift */; };
 		38D00C33248B3D7500F50F9B /* RoomGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00C31248B3D7500F50F9B /* RoomGroup.swift */; };
 		38D00C35248B3E7400F50F9B /* Model-utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00C34248B3E7400F50F9B /* Model-utilities.swift */; };
@@ -97,6 +98,7 @@
 		389703AA24559A4C00FF5077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		389703BC2455A81400FF5077 /* MatchingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingTableViewController.swift; sourceTree = "<group>"; };
 		38B0347C24F8F9F8005E759A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		38B0347E24F946EE005E759A /* OAuthSignUPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthSignUPViewController.swift; sourceTree = "<group>"; };
 		38D00C31248B3D7500F50F9B /* RoomGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGroup.swift; sourceTree = "<group>"; };
 		38D00C34248B3E7400F50F9B /* Model-utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model-utilities.swift"; sourceTree = "<group>"; };
 		62035EAA47454F943E3FBF28 /* libPods-draft-draftTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-draft-draftTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +236,7 @@
 				3837B51D24B5BAAE0085E821 /* secret_login.json */,
 				BF9CF84624B7692500FEEC5E /* SigninViewController.swift */,
 				BF5401C424C853EB00D73368 /* SignUpViewController.swift */,
+				38B0347E24F946EE005E759A /* OAuthSignUPViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B0347F24F946EE005E759A /* OAuthSignUPViewController.swift in Sources */,
 				384FA83924B9FC6600FB3CF4 /* RoomDetailVC+APIRequest.swift in Sources */,
 				3897038424559A4900FF5077 /* AppDelegate.swift in Sources */,
 				386D72D4246312160099C35E /* RoomDetailViewController.swift in Sources */,
