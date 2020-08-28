@@ -14,7 +14,7 @@ import Alamofire
 import AuthenticationServices
 import GoogleSignIn
 
-class SigninViewController: UIViewController {
+class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +61,7 @@ class SigninViewController: UIViewController {
 }
 
 // MARK: Signin To Server
-extension SigninViewController {
+extension SignInViewController {
     func tokenSignIn(token : String, provider : String, email: String) {
         let url = APIUrl.signinUrl 
         
@@ -105,7 +105,7 @@ extension SigninViewController {
 }
 
 // MARK: Google Signin
-extension SigninViewController: GIDSignInDelegate {
+extension SignInViewController: GIDSignInDelegate {
     func googleSignInSetup() {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.delegate = self
@@ -132,7 +132,7 @@ extension SigninViewController: GIDSignInDelegate {
 }
 
 // MARK: - Go To RoomDetail View
-extension SigninViewController {
+extension SignInViewController {
     func goToDetailView() {
         let storyboard = UIStoryboard(name: "RoomDetail", bundle: nil)
         
@@ -147,7 +147,7 @@ extension SigninViewController {
 }
 
 // MARK: - OAuth SignUp View로 연결
-extension SigninViewController {
+extension SignInViewController {
     func goToOAuthSignUpView(token: String, provider: String) {
         
         guard let oAuthSignUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "OAuthSignUp") as? OAuthSignUpViewController
@@ -163,7 +163,7 @@ extension SigninViewController {
 }
 
 // MARK: - About Device Token
-extension SigninViewController {
+extension SignInViewController {
     @objc func sendDeviceToken(_ notification: NSNotification) {
         if notification.name.rawValue == "DeviceToken" {
             

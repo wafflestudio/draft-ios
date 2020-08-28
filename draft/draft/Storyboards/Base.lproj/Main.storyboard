@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Signin View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="FhX-VQ-0js">
             <objects>
-                <viewController id="7e7-9z-7uu" customClass="SigninViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7e7-9z-7uu" customClass="SignInViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZBe-dy-b3O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

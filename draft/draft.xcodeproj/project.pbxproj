@@ -44,9 +44,9 @@
 		BF7287FB2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
 		BF7287FC2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
 		BF7287FD2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
-		BF9CF84724B7692500FEEC5E /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CF84624B7692500FEEC5E /* SigninViewController.swift */; };
-		BF9CF84824B7692500FEEC5E /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CF84624B7692500FEEC5E /* SigninViewController.swift */; };
-		BF9CF84924B7692500FEEC5E /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CF84624B7692500FEEC5E /* SigninViewController.swift */; };
+		BF9CF84724B7692500FEEC5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CF84624B7692500FEEC5E /* SignInViewController.swift */; };
+		BF9CF84824B7692500FEEC5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CF84624B7692500FEEC5E /* SignInViewController.swift */; };
+		BF9CF84924B7692500FEEC5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CF84624B7692500FEEC5E /* SignInViewController.swift */; };
 		BFBE4D1B24C6F9B4005D2D32 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE4D1A24C6F9B4005D2D32 /* User.swift */; };
 		BFBE4D1C24C6F9B4005D2D32 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE4D1A24C6F9B4005D2D32 /* User.swift */; };
 		BFBE4D1D24C6F9B4005D2D32 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE4D1A24C6F9B4005D2D32 /* User.swift */; };
@@ -104,7 +104,7 @@
 		38D00C34248B3E7400F50F9B /* Model-utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model-utilities.swift"; sourceTree = "<group>"; };
 		BF5401C424C853EB00D73368 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DraftLaunchScreen.storyboard; sourceTree = "<group>"; };
-		BF9CF84624B7692500FEEC5E /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		BF9CF84624B7692500FEEC5E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		BFBE4D1A24C6F9B4005D2D32 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C5667709BEC8DB2B8A59C05F /* Pods-draft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-draft.release.xcconfig"; path = "Target Support Files/Pods-draft/Pods-draft.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,7 +231,7 @@
 				384FA83A24BA084A00FB3CF4 /* RoomDetailVC */,
 				384FA83B24BA086100FB3CF4 /* MatchingTableVC */,
 				3837B51D24B5BAAE0085E821 /* secret_login.json */,
-				BF9CF84624B7692500FEEC5E /* SigninViewController.swift */,
+				BF9CF84624B7692500FEEC5E /* SignInViewController.swift */,
 				380ABC8924F9621400B212F0 /* SignInViewController+appleSignIn.swift */,
 				BF5401C424C853EB00D73368 /* SignUpViewController.swift */,
 				38B0347E24F946EE005E759A /* OAuthSignUpViewController.swift */,
@@ -450,7 +450,7 @@
 				384FA83924B9FC6600FB3CF4 /* RoomDetailVC+APIRequest.swift in Sources */,
 				3897038424559A4900FF5077 /* AppDelegate.swift in Sources */,
 				386D72D4246312160099C35E /* RoomDetailViewController.swift in Sources */,
-				BF9CF84724B7692500FEEC5E /* SigninViewController.swift in Sources */,
+				BF9CF84724B7692500FEEC5E /* SignInViewController.swift in Sources */,
 				380ABC8A24F9621400B212F0 /* SignInViewController+appleSignIn.swift in Sources */,
 				389703BD2455A81400FF5077 /* MatchingTableViewController.swift in Sources */,
 				380ABC8C24F9645B00B212F0 /* KeychainAccess.swift in Sources */,
@@ -478,7 +478,7 @@
 				383C9788246EE6390013E6AF /* RoomGroupTests.swift in Sources */,
 				383C978A246EE6840013E6AF /* RoomsByDate.swift in Sources */,
 				BF5401C624C853EB00D73368 /* SignUpViewController.swift in Sources */,
-				BF9CF84824B7692500FEEC5E /* SigninViewController.swift in Sources */,
+				BF9CF84824B7692500FEEC5E /* SignInViewController.swift in Sources */,
 				383C978B246EEA420013E6AF /* Room.swift in Sources */,
 				3897039E24559A4C00FF5077 /* draftTests.swift in Sources */,
 				38D00C33248B3D7500F50F9B /* RoomGroup.swift in Sources */,
@@ -490,7 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF9CF84924B7692500FEEC5E /* SigninViewController.swift in Sources */,
+				BF9CF84924B7692500FEEC5E /* SignInViewController.swift in Sources */,
 				389703A924559A4C00FF5077 /* draftUITests.swift in Sources */,
 				BF5401C724C853EB00D73368 /* SignUpViewController.swift in Sources */,
 				BFBE4D1D24C6F9B4005D2D32 /* User.swift in Sources */,

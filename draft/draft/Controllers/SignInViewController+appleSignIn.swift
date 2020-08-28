@@ -8,7 +8,7 @@
 
 import AuthenticationServices
 
-extension SigninViewController: ASAuthorizationControllerDelegate {
+extension SignInViewController: ASAuthorizationControllerDelegate {
     
     @objc
     func handleAuthorizationAppleIDButtonPress() {
@@ -46,8 +46,7 @@ extension SigninViewController: ASAuthorizationControllerDelegate {
             KeychainAccess.shared.saveAppleLoginUserIdentifier(identifier: userIdentifier)
             KeychainAccess.shared.saveAppleLoginAccessToken(accessToken: token)
             
-            print("tokeninstirng: \(tokenInString)")
-            tokenSignIn(token: tokenInString, provider: OAuthProvider.APPLE, email: email!)
+            tokenSignIn(token: tokenInString, provider: OAuthProvider.APPLE, email: email ?? "")
             
         default:
             break
@@ -60,7 +59,7 @@ extension SigninViewController: ASAuthorizationControllerDelegate {
     }
 }
 
-extension SigninViewController: ASAuthorizationControllerPresentationContextProviding {
+extension SignInViewController: ASAuthorizationControllerPresentationContextProviding {
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return self.view.window!
     }
