@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7e7-9z-7uu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cVS-Qq-rS1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Signin View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="FhX-VQ-0js">
             <objects>
-                <viewController id="7e7-9z-7uu" customClass="SigninViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7e7-9z-7uu" customClass="SignInViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZBe-dy-b3O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,67 +51,147 @@
                                     <segue destination="1Zk-RZ-mvr" kind="show" id="CTu-F7-Lg6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ty-lV-B4o">
-                                <rect key="frame" x="127" y="742" width="162" height="139"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="RoomDetail로 이동"/>
-                                <connections>
-                                    <action selector="goToDetailStorybaord:" destination="7e7-9z-7uu" eventType="touchUpInside" id="NHL-Ve-pvr"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Umu-ZY-sio" customClass="GIDSignInButton">
-                                <rect key="frame" x="47" y="384" width="321" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUp-uk-yWq">
+                                <rect key="frame" x="40" y="702" width="334" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White Logo Square" translatesAutoresizingMaskIntoConstraints="NO" id="cSA-1M-TQF">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="pqc-DD-072"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4U6-o3-j5A">
+                                        <rect key="frame" x="60" y="0.0" width="274" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="25"/>
+                                        <state key="normal" title="Sign in with Apple  ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="appleSignIn:" destination="7e7-9z-7uu" eventType="touchUpInside" id="SSs-Bm-3FM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="4U6-o3-j5A" secondAttribute="bottom" id="FhL-5u-7Vj"/>
+                                    <constraint firstItem="cSA-1M-TQF" firstAttribute="top" secondItem="AUp-uk-yWq" secondAttribute="top" id="GTZ-Iw-RSS"/>
+                                    <constraint firstItem="4U6-o3-j5A" firstAttribute="leading" secondItem="cSA-1M-TQF" secondAttribute="trailing" id="NpL-4O-1mc"/>
+                                    <constraint firstAttribute="trailing" secondItem="4U6-o3-j5A" secondAttribute="trailing" id="VGD-sD-xcW"/>
+                                    <constraint firstItem="4U6-o3-j5A" firstAttribute="top" secondItem="AUp-uk-yWq" secondAttribute="top" id="W0j-f9-qGH"/>
+                                    <constraint firstAttribute="height" constant="60" id="fnO-eX-FPF"/>
+                                    <constraint firstItem="cSA-1M-TQF" firstAttribute="leading" secondItem="AUp-uk-yWq" secondAttribute="leading" id="jjx-vn-AOg"/>
+                                    <constraint firstAttribute="bottom" secondItem="cSA-1M-TQF" secondAttribute="bottom" id="pqQ-ST-wKM"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4d-wV-F6E">
-                                <rect key="frame" x="93" y="587" width="99" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Sign Out"/>
-                                <connections>
-                                    <action selector="didTapSignOut:" destination="7e7-9z-7uu" eventType="touchUpInside" id="cq7-BQ-4C7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2b-j3-F1p">
-                                <rect key="frame" x="230" y="587" width="99" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Disconnect"/>
-                                <connections>
-                                    <action selector="didTapDisconnect:" destination="7e7-9z-7uu" eventType="touchUpInside" id="Qxw-kO-yJY"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVv-XN-nBC">
-                                <rect key="frame" x="20" y="662" width="374" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Label">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="system" size="17"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlL-Vy-DUW">
+                                <rect key="frame" x="40" y="612" width="334" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_google_light_normal_ios" translatesAutoresizingMaskIntoConstraints="NO" id="Cep-Hg-2OP">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="HBG-fY-zGQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WX-8z-M1g">
+                                        <rect key="frame" x="60" y="0.0" width="274" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="25"/>
+                                        <state key="normal" title="Sign in with Google">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="googleSignIn:" destination="7e7-9z-7uu" eventType="touchUpInside" id="XYl-5t-Not"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2WX-8z-M1g" secondAttribute="bottom" id="1Ga-Vn-of2"/>
+                                    <constraint firstItem="2WX-8z-M1g" firstAttribute="leading" secondItem="Cep-Hg-2OP" secondAttribute="trailing" id="9FN-yi-e7K"/>
+                                    <constraint firstAttribute="height" constant="60" id="KDg-hd-wrh"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cep-Hg-2OP" secondAttribute="bottom" id="ULp-NT-jH3"/>
+                                    <constraint firstAttribute="trailing" secondItem="2WX-8z-M1g" secondAttribute="trailing" id="fWD-g6-fne"/>
+                                    <constraint firstItem="Cep-Hg-2OP" firstAttribute="leading" secondItem="KlL-Vy-DUW" secondAttribute="leading" id="r3x-d6-tkI"/>
+                                    <constraint firstItem="Cep-Hg-2OP" firstAttribute="top" secondItem="KlL-Vy-DUW" secondAttribute="top" id="tOm-Yj-BYU"/>
+                                    <constraint firstItem="2WX-8z-M1g" firstAttribute="top" secondItem="KlL-Vy-DUW" secondAttribute="top" id="yCa-Gj-IQH"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SPi-hN-qM5" firstAttribute="bottom" secondItem="AUp-uk-yWq" secondAttribute="bottom" constant="100" id="AXZ-9C-vK4"/>
+                            <constraint firstItem="AUp-uk-yWq" firstAttribute="top" secondItem="KlL-Vy-DUW" secondAttribute="bottom" constant="30" id="Ehe-1S-vlJ"/>
+                            <constraint firstItem="AUp-uk-yWq" firstAttribute="leading" secondItem="SPi-hN-qM5" secondAttribute="leading" constant="40" id="VqT-gZ-T12"/>
+                            <constraint firstItem="KlL-Vy-DUW" firstAttribute="leading" secondItem="SPi-hN-qM5" secondAttribute="leading" constant="40" id="pkK-sh-Hp3"/>
+                            <constraint firstItem="SPi-hN-qM5" firstAttribute="trailing" secondItem="KlL-Vy-DUW" secondAttribute="trailing" constant="40" id="so1-fR-NKs"/>
+                            <constraint firstItem="SPi-hN-qM5" firstAttribute="trailing" secondItem="AUp-uk-yWq" secondAttribute="trailing" constant="40" id="xJP-36-dwH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SPi-hN-qM5"/>
                     </view>
+                    <navigationItem key="navigationItem" id="YUl-te-uqn"/>
                     <connections>
-                        <outlet property="disconnectButton" destination="t2b-j3-F1p" id="5jy-UX-THL"/>
                         <outlet property="emailTextField" destination="bKi-UC-vUd" id="fnq-4h-OX9"/>
                         <outlet property="loginButton" destination="CLw-xR-xnF" id="beR-Jq-4Nt"/>
                         <outlet property="passwordTextField" destination="NT9-wy-OsP" id="bxP-Vd-F6e"/>
-                        <outlet property="signInButton" destination="Umu-ZY-sio" id="KPc-rD-t0y"/>
-                        <outlet property="signOutButton" destination="g4d-wV-F6E" id="Wdz-6E-BcQ"/>
-                        <outlet property="statusText" destination="gVv-XN-nBC" id="3SF-qW-Te5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yiA-7e-A0f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2342.0289855072465" y="676.33928571428567"/>
+            <point key="canvasLocation" x="-1431.8840579710145" y="676.33928571428567"/>
+        </scene>
+        <!--Auth Sign Up View Controller-->
+        <scene sceneID="RT8-sN-Nb8">
+            <objects>
+                <viewController storyboardIdentifier="OAuthSignUp" id="5iw-fW-IAs" customClass="OAuthSignUpViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QVz-gq-ljb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름을 입력해 주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywq-LI-jz3">
+                                <rect key="frame" x="67.5" y="357.5" width="279.5" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex) 강백호" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RDi-f0-dxz">
+                                <rect key="frame" x="40" y="428.5" width="334" height="50.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ga-51-3a1">
+                                <rect key="frame" x="90" y="749" width="234" height="53"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <state key="normal" title="가입하기">
+                                    <color key="titleColor" red="0.078431372550000003" green="0.69803921570000005" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="oAuthSignUp:" destination="5iw-fW-IAs" eventType="touchUpInside" id="GkT-s5-mrM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Laj-x3-hs1" firstAttribute="trailing" secondItem="4ga-51-3a1" secondAttribute="trailing" constant="90" id="4W8-27-q1x"/>
+                            <constraint firstItem="Ywq-LI-jz3" firstAttribute="centerX" secondItem="QVz-gq-ljb" secondAttribute="centerX" id="8dY-xe-azI"/>
+                            <constraint firstItem="RDi-f0-dxz" firstAttribute="leading" secondItem="Laj-x3-hs1" secondAttribute="leading" constant="40" id="F7j-eB-nWG"/>
+                            <constraint firstItem="RDi-f0-dxz" firstAttribute="top" secondItem="Ywq-LI-jz3" secondAttribute="bottom" constant="30" id="FMc-6u-dgV"/>
+                            <constraint firstItem="Laj-x3-hs1" firstAttribute="bottom" secondItem="4ga-51-3a1" secondAttribute="bottom" constant="60" id="Gif-mA-UsL"/>
+                            <constraint firstItem="4ga-51-3a1" firstAttribute="leading" secondItem="Laj-x3-hs1" secondAttribute="leading" constant="90" id="J5I-8T-zMf"/>
+                            <constraint firstAttribute="trailing" secondItem="RDi-f0-dxz" secondAttribute="trailing" constant="40" id="rl6-WN-3zr"/>
+                            <constraint firstItem="Ywq-LI-jz3" firstAttribute="centerY" secondItem="QVz-gq-ljb" secondAttribute="centerY" constant="-70" id="twG-I6-qiA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Laj-x3-hs1"/>
+                    </view>
+                    <connections>
+                        <outlet property="usernameTextField" destination="RDi-f0-dxz" id="qbg-wh-66B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Te3-oY-cXC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449.27536231884062" y="1265.625"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AM6-q3-zUi">
@@ -180,14 +260,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HdG-R3-cbO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1949.2753623188407" y="1386.8303571428571"/>
+            <point key="canvasLocation" x="615.94202898550725" y="762.72321428571422"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="otA-Fe-k94">
             <objects>
                 <viewController id="1Zk-RZ-mvr" customClass="SignUpViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YlP-Eg-5fT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9Z-dP-o5y">
@@ -251,7 +331,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DgM-Qc-mzP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1371.0144927536232" y="678.34821428571422"/>
+            <point key="canvasLocation" x="-449.27536231884062" y="578.57142857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cqu-TK-Fwc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cVS-Qq-rS1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pPq-j5-MZE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7e7-9z-7uu" kind="relationship" relationship="rootViewController" id="u7Z-t6-ZKp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1IU-27-u5L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2342.0289855072465" y="676.33928571428567"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="White Logo Square" width="56" height="56"/>
+        <image name="btn_google_light_normal_ios" width="48" height="48"/>
+    </resources>
 </document>
