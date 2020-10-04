@@ -28,10 +28,10 @@
 		38969E0F24A6F7F90032F82C /* MatchingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389703BC2455A81400FF5077 /* MatchingTableViewController.swift */; };
 		3897038424559A4900FF5077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897038324559A4900FF5077 /* AppDelegate.swift */; };
 		3897038B24559A4900FF5077 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3897038924559A4900FF5077 /* Main.storyboard */; };
-		3897038E24559A4900FF5077 /* draft.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3897038C24559A4900FF5077 /* draft.xcdatamodeld */; };
+		3897038E24559A4900FF5077 /* Draft.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3897038C24559A4900FF5077 /* Draft.xcdatamodeld */; };
 		3897039024559A4C00FF5077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3897038F24559A4C00FF5077 /* Assets.xcassets */; };
-		3897039E24559A4C00FF5077 /* draftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897039D24559A4C00FF5077 /* draftTests.swift */; };
-		389703A924559A4C00FF5077 /* draftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389703A824559A4C00FF5077 /* draftUITests.swift */; };
+		3897039E24559A4C00FF5077 /* DraftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897039D24559A4C00FF5077 /* DraftTests.swift */; };
+		389703A924559A4C00FF5077 /* DraftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389703A824559A4C00FF5077 /* DraftUITests.swift */; };
 		389703BD2455A81400FF5077 /* MatchingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389703BC2455A81400FF5077 /* MatchingTableViewController.swift */; };
 		38B0347D24F8F9F8005E759A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B0347C24F8F9F8005E759A /* Constants.swift */; };
 		38B0347F24F946EE005E759A /* OAuthSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B0347E24F946EE005E759A /* OAuthSignUpViewController.swift */; };
@@ -74,7 +74,7 @@
 		34B4473BB53A25D973349FFE /* libPods-draft.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-draft.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		380ABC8924F9621400B212F0 /* SignInViewController+appleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewController+appleSignIn.swift"; sourceTree = "<group>"; };
 		380ABC8B24F9645B00B212F0 /* KeychainAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
-		380ABC8D24F96E6300B212F0 /* draft.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = draft.entitlements; sourceTree = "<group>"; };
+		380ABC8D24F96E6300B212F0 /* Draft.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Draft.entitlements; sourceTree = "<group>"; };
 		380B77C524C214FB00CB1CB2 /* GameDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDatePickerViewController.swift; sourceTree = "<group>"; };
 		3837B51A24B5AF960085E821 /* MatchingTableVC+APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchingTableVC+APIRequest.swift"; sourceTree = "<group>"; };
 		3837B51D24B5BAAE0085E821 /* secret_login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secret_login.json; sourceTree = "<group>"; };
@@ -85,17 +85,17 @@
 		386D72D3246312160099C35E /* RoomDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailViewController.swift; sourceTree = "<group>"; };
 		388E1C2D24BC5BEB008DD24F /* MatchingTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MatchingTable.storyboard; sourceTree = "<group>"; };
 		38969E0D24A6F7D70032F82C /* RoomRestAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRestAPITest.swift; sourceTree = "<group>"; };
-		3897038024559A4900FF5077 /* draft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = draft.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3897038024559A4900FF5077 /* Draft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Draft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3897038324559A4900FF5077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3897038A24559A4900FF5077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3897038D24559A4900FF5077 /* draft.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = draft.xcdatamodel; sourceTree = "<group>"; };
+		3897038D24559A4900FF5077 /* Draft.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Draft.xcdatamodel; sourceTree = "<group>"; };
 		3897038F24559A4C00FF5077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3897039424559A4C00FF5077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3897039924559A4C00FF5077 /* draftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = draftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3897039D24559A4C00FF5077 /* draftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = draftTests.swift; sourceTree = "<group>"; };
+		3897039924559A4C00FF5077 /* DraftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DraftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3897039D24559A4C00FF5077 /* DraftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftTests.swift; sourceTree = "<group>"; };
 		3897039F24559A4C00FF5077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		389703A424559A4C00FF5077 /* draftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = draftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		389703A824559A4C00FF5077 /* draftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = draftUITests.swift; sourceTree = "<group>"; };
+		389703A424559A4C00FF5077 /* DraftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DraftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		389703A824559A4C00FF5077 /* DraftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftUITests.swift; sourceTree = "<group>"; };
 		389703AA24559A4C00FF5077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		389703BC2455A81400FF5077 /* MatchingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingTableViewController.swift; sourceTree = "<group>"; };
 		38B0347C24F8F9F8005E759A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -180,9 +180,9 @@
 		3897037724559A4900FF5077 = {
 			isa = PBXGroup;
 			children = (
-				3897038224559A4900FF5077 /* draft */,
-				3897039C24559A4C00FF5077 /* draftTests */,
-				389703A724559A4C00FF5077 /* draftUITests */,
+				3897038224559A4900FF5077 /* Draft */,
+				3897039C24559A4C00FF5077 /* DraftTests */,
+				389703A724559A4C00FF5077 /* DraftUITests */,
 				3897038124559A4900FF5077 /* Products */,
 				7404BCC716FD2D435C65CFDF /* Pods */,
 				E89FC6366113833467F61057 /* Frameworks */,
@@ -192,48 +192,48 @@
 		3897038124559A4900FF5077 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3897038024559A4900FF5077 /* draft.app */,
-				3897039924559A4C00FF5077 /* draftTests.xctest */,
-				389703A424559A4C00FF5077 /* draftUITests.xctest */,
+				3897038024559A4900FF5077 /* Draft.app */,
+				3897039924559A4C00FF5077 /* DraftTests.xctest */,
+				389703A424559A4C00FF5077 /* DraftUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3897038224559A4900FF5077 /* draft */ = {
+		3897038224559A4900FF5077 /* Draft */ = {
 			isa = PBXGroup;
 			children = (
-				380ABC8D24F96E6300B212F0 /* draft.entitlements */,
+				380ABC8D24F96E6300B212F0 /* Draft.entitlements */,
 				386D72CE246311DB0099C35E /* Models */,
 				389703B624559C8C00FF5077 /* Controllers */,
 				389703B724559C9700FF5077 /* Storyboards */,
 				3897038F24559A4C00FF5077 /* Assets.xcassets */,
 				3897038324559A4900FF5077 /* AppDelegate.swift */,
 				3897039424559A4C00FF5077 /* Info.plist */,
-				3897038C24559A4900FF5077 /* draft.xcdatamodeld */,
+				3897038C24559A4900FF5077 /* Draft.xcdatamodeld */,
 				38B0347C24F8F9F8005E759A /* Constants.swift */,
 				380ABC8B24F9645B00B212F0 /* KeychainAccess.swift */,
 			);
-			path = draft;
+			path = Draft;
 			sourceTree = "<group>";
 		};
-		3897039C24559A4C00FF5077 /* draftTests */ = {
+		3897039C24559A4C00FF5077 /* DraftTests */ = {
 			isa = PBXGroup;
 			children = (
-				3897039D24559A4C00FF5077 /* draftTests.swift */,
+				3897039D24559A4C00FF5077 /* DraftTests.swift */,
 				3897039F24559A4C00FF5077 /* Info.plist */,
 				383C9787246EE6390013E6AF /* RoomGroupTests.swift */,
 				38969E0D24A6F7D70032F82C /* RoomRestAPITest.swift */,
 			);
-			path = draftTests;
+			path = DraftTests;
 			sourceTree = "<group>";
 		};
-		389703A724559A4C00FF5077 /* draftUITests */ = {
+		389703A724559A4C00FF5077 /* DraftUITests */ = {
 			isa = PBXGroup;
 			children = (
-				389703A824559A4C00FF5077 /* draftUITests.swift */,
+				389703A824559A4C00FF5077 /* DraftUITests.swift */,
 				389703AA24559A4C00FF5077 /* Info.plist */,
 			);
-			path = draftUITests;
+			path = DraftUITests;
 			sourceTree = "<group>";
 		};
 		389703B624559C8C00FF5077 /* Controllers */ = {
@@ -277,9 +277,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3897037F24559A4900FF5077 /* draft */ = {
+		3897037F24559A4900FF5077 /* Draft */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 389703AD24559A4C00FF5077 /* Build configuration list for PBXNativeTarget "draft" */;
+			buildConfigurationList = 389703AD24559A4C00FF5077 /* Build configuration list for PBXNativeTarget "Draft" */;
 			buildPhases = (
 				9422003225A05D24844305BF /* [CP] Check Pods Manifest.lock */,
 				3897037C24559A4900FF5077 /* Sources */,
@@ -291,14 +291,14 @@
 			);
 			dependencies = (
 			);
-			name = draft;
+			name = Draft;
 			productName = draft;
-			productReference = 3897038024559A4900FF5077 /* draft.app */;
+			productReference = 3897038024559A4900FF5077 /* Draft.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3897039824559A4C00FF5077 /* draftTests */ = {
+		3897039824559A4C00FF5077 /* DraftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 389703B024559A4C00FF5077 /* Build configuration list for PBXNativeTarget "draftTests" */;
+			buildConfigurationList = 389703B024559A4C00FF5077 /* Build configuration list for PBXNativeTarget "DraftTests" */;
 			buildPhases = (
 				3897039524559A4C00FF5077 /* Sources */,
 				3897039624559A4C00FF5077 /* Frameworks */,
@@ -309,14 +309,14 @@
 			dependencies = (
 				3897039B24559A4C00FF5077 /* PBXTargetDependency */,
 			);
-			name = draftTests;
+			name = DraftTests;
 			productName = draftTests;
-			productReference = 3897039924559A4C00FF5077 /* draftTests.xctest */;
+			productReference = 3897039924559A4C00FF5077 /* DraftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		389703A324559A4C00FF5077 /* draftUITests */ = {
+		389703A324559A4C00FF5077 /* DraftUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 389703B324559A4C00FF5077 /* Build configuration list for PBXNativeTarget "draftUITests" */;
+			buildConfigurationList = 389703B324559A4C00FF5077 /* Build configuration list for PBXNativeTarget "DraftUITests" */;
 			buildPhases = (
 				389703A024559A4C00FF5077 /* Sources */,
 				389703A124559A4C00FF5077 /* Frameworks */,
@@ -327,9 +327,9 @@
 			dependencies = (
 				389703A624559A4C00FF5077 /* PBXTargetDependency */,
 			);
-			name = draftUITests;
+			name = DraftUITests;
 			productName = draftUITests;
-			productReference = 389703A424559A4C00FF5077 /* draftUITests.xctest */;
+			productReference = 389703A424559A4C00FF5077 /* DraftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -355,7 +355,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3897037B24559A4900FF5077 /* Build configuration list for PBXProject "draft" */;
+			buildConfigurationList = 3897037B24559A4900FF5077 /* Build configuration list for PBXProject "Draft" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -368,9 +368,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3897037F24559A4900FF5077 /* draft */,
-				3897039824559A4C00FF5077 /* draftTests */,
-				389703A324559A4C00FF5077 /* draftUITests */,
+				3897037F24559A4900FF5077 /* Draft */,
+				3897039824559A4C00FF5077 /* DraftTests */,
+				389703A324559A4C00FF5077 /* DraftUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -466,7 +466,7 @@
 				38D00C35248B3E7400F50F9B /* Model-utilities.swift in Sources */,
 				38D00C32248B3D7500F50F9B /* RoomGroup.swift in Sources */,
 				380B77C624C214FB00CB1CB2 /* GameDatePickerViewController.swift in Sources */,
-				3897038E24559A4900FF5077 /* draft.xcdatamodeld in Sources */,
+				3897038E24559A4900FF5077 /* Draft.xcdatamodeld in Sources */,
 				BFBE4D1B24C6F9B4005D2D32 /* User.swift in Sources */,
 				386D72D2246311FF0099C35E /* RoomsByDate.swift in Sources */,
 				3837B51B24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */,
@@ -488,7 +488,7 @@
 				BF5401C624C853EB00D73368 /* SignUpViewController.swift in Sources */,
 				BF9CF84824B7692500FEEC5E /* SignInViewController.swift in Sources */,
 				383C978B246EEA420013E6AF /* Room.swift in Sources */,
-				3897039E24559A4C00FF5077 /* draftTests.swift in Sources */,
+				3897039E24559A4C00FF5077 /* DraftTests.swift in Sources */,
 				38D00C33248B3D7500F50F9B /* RoomGroup.swift in Sources */,
 				BFBE4D1C24C6F9B4005D2D32 /* User.swift in Sources */,
 			);
@@ -499,7 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF9CF84924B7692500FEEC5E /* SignInViewController.swift in Sources */,
-				389703A924559A4C00FF5077 /* draftUITests.swift in Sources */,
+				389703A924559A4C00FF5077 /* DraftUITests.swift in Sources */,
 				BF5401C724C853EB00D73368 /* SignUpViewController.swift in Sources */,
 				BFBE4D1D24C6F9B4005D2D32 /* User.swift in Sources */,
 			);
@@ -510,12 +510,12 @@
 /* Begin PBXTargetDependency section */
 		3897039B24559A4C00FF5077 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3897037F24559A4900FF5077 /* draft */;
+			target = 3897037F24559A4900FF5077 /* Draft */;
 			targetProxy = 3897039A24559A4C00FF5077 /* PBXContainerItemProxy */;
 		};
 		389703A624559A4C00FF5077 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3897037F24559A4900FF5077 /* draft */;
+			target = 3897037F24559A4900FF5077 /* Draft */;
 			targetProxy = 389703A524559A4C00FF5077 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -709,7 +709,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/draft.app/draft";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Draft.app/Draft";
 			};
 			name = Debug;
 		};
@@ -730,7 +730,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/draft.app/draft";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Draft.app/Draft";
 			};
 			name = Release;
 		};
@@ -775,7 +775,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3897037B24559A4900FF5077 /* Build configuration list for PBXProject "draft" */ = {
+		3897037B24559A4900FF5077 /* Build configuration list for PBXProject "Draft" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				389703AB24559A4C00FF5077 /* Debug */,
@@ -784,7 +784,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		389703AD24559A4C00FF5077 /* Build configuration list for PBXNativeTarget "draft" */ = {
+		389703AD24559A4C00FF5077 /* Build configuration list for PBXNativeTarget "Draft" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				389703AE24559A4C00FF5077 /* Debug */,
@@ -793,7 +793,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		389703B024559A4C00FF5077 /* Build configuration list for PBXNativeTarget "draftTests" */ = {
+		389703B024559A4C00FF5077 /* Build configuration list for PBXNativeTarget "DraftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				389703B124559A4C00FF5077 /* Debug */,
@@ -802,7 +802,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		389703B324559A4C00FF5077 /* Build configuration list for PBXNativeTarget "draftUITests" */ = {
+		389703B324559A4C00FF5077 /* Build configuration list for PBXNativeTarget "DraftUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				389703B424559A4C00FF5077 /* Debug */,
@@ -814,13 +814,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3897038C24559A4900FF5077 /* draft.xcdatamodeld */ = {
+		3897038C24559A4900FF5077 /* Draft.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3897038D24559A4900FF5077 /* draft.xcdatamodel */,
+				3897038D24559A4900FF5077 /* Draft.xcdatamodel */,
 			);
-			currentVersion = 3897038D24559A4900FF5077 /* draft.xcdatamodel */;
-			path = draft.xcdatamodeld;
+			currentVersion = 3897038D24559A4900FF5077 /* Draft.xcdatamodel */;
+			path = Draft.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
