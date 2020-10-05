@@ -10,8 +10,8 @@ import UIKit
 import CoreData
 
 import GoogleSignIn
-//import KakaoSDKCommon
-//import KakaoSDKAuth
+import KakaoSDKCommon
+import KakaoSDKAuth
 //import FBSDKCoreKit
 //import RxKakaoSDKAuth
 //import RxKakaoSDKCommon
@@ -29,19 +29,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Google SignIn
         GIDSignIn.sharedInstance().clientID =  "1012204765167-g31h7ml5t3o8nk8isvur6q5s90q7omug.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
-        //        KakaoSDKCommon.shared.initSDK(appKey: "52f5a0a20ab7c1418e2993f85ca83c29") KaKao
-        //
+        
+        KakaoSDKCommon.initSDK(appKey: "52f5a0a20ab7c1418e2993f85ca83c29")
+        
         //        ApplicationDelegate.shared.application( application, didFinishLaunchingWithOptions: launchOptions ) Facebook
         // Override point for customization after application launch.
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        if (AuthApi.isKakaoTalkLoginUrl(url)) {
+            return AuthController.handleOpenUrl(url: url)
+        }
+        
         return GIDSignIn.sharedInstance().handle(url)
-        //         if AuthController.handleOpenUrl(url: url, options: options) {
-        //             return true
-        //         } Kakao
-        //
+        
         //        return ApplicationDelegate.shared.application( app, open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation] ) facebook
     }
 }

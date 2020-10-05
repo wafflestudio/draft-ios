@@ -119,11 +119,22 @@
                                     <constraint firstItem="2WX-8z-M1g" firstAttribute="top" secondItem="KlL-Vy-DUW" secondAttribute="top" id="yCa-Gj-IQH"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ds-js-K0Q">
+                                <rect key="frame" x="40" y="532" width="334" height="50"/>
+                                <state key="normal" backgroundImage="kakao_login_medium_wide"/>
+                                <connections>
+                                    <action selector="KakaologinButtonClicked" destination="7e7-9z-7uu" eventType="touchUpInside" id="Uzp-0P-qby"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SPi-hN-qM5" firstAttribute="bottom" secondItem="AUp-uk-yWq" secondAttribute="bottom" constant="100" id="AXZ-9C-vK4"/>
+                            <constraint firstItem="KlL-Vy-DUW" firstAttribute="top" secondItem="5Ds-js-K0Q" secondAttribute="bottom" constant="30" id="DSM-Pd-SLR"/>
+                            <constraint firstItem="5Ds-js-K0Q" firstAttribute="leading" secondItem="SPi-hN-qM5" secondAttribute="leading" constant="40" id="Dbt-E5-T79"/>
                             <constraint firstItem="AUp-uk-yWq" firstAttribute="top" secondItem="KlL-Vy-DUW" secondAttribute="bottom" constant="30" id="Ehe-1S-vlJ"/>
+                            <constraint firstItem="SPi-hN-qM5" firstAttribute="trailing" secondItem="5Ds-js-K0Q" secondAttribute="trailing" constant="40" id="GIH-Pc-Dm9"/>
+                            <constraint firstItem="5Ds-js-K0Q" firstAttribute="height" secondItem="ZBe-dy-b3O" secondAttribute="height" multiplier="0.0558036" id="SdH-ij-bD7"/>
                             <constraint firstItem="AUp-uk-yWq" firstAttribute="leading" secondItem="SPi-hN-qM5" secondAttribute="leading" constant="40" id="VqT-gZ-T12"/>
                             <constraint firstItem="KlL-Vy-DUW" firstAttribute="leading" secondItem="SPi-hN-qM5" secondAttribute="leading" constant="40" id="pkK-sh-Hp3"/>
                             <constraint firstItem="SPi-hN-qM5" firstAttribute="trailing" secondItem="KlL-Vy-DUW" secondAttribute="trailing" constant="40" id="so1-fR-NKs"/>
@@ -355,5 +366,6 @@
     <resources>
         <image name="White Logo Square" width="56" height="56"/>
         <image name="btn_google_light_normal_ios" width="48" height="48"/>
+        <image name="kakao_login_medium_wide" width="300" height="45"/>
     </resources>
 </document>

@@ -26,6 +26,14 @@
 				<string>com.googleusercontent.apps.1012204765167-g31h7ml5t3o8nk8isvur6q5s90q7omug</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kakao52f5a0a20ab7c1418e2993f85ca83c29</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
@@ -35,21 +43,8 @@
 	<string>Draft</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>fbapi</string>
-		<string>fbapi20130214</string>
-		<string>fbapi20130410</string>
-		<string>fbapi20130702</string>
-		<string>fbapi20131010</string>
-		<string>fbapi20131219</string>
-		<string>fbapi20140410</string>
-		<string>fbapi20140116</string>
-		<string>fbapi20150313</string>
-		<string>fbapi20150629</string>
-		<string>fbapi20160328</string>
-		<string>fbauth</string>
-		<string>fb-messenger-share-api</string>
-		<string>fbauth2</string>
-		<string>fbshareextension</string>
+		<string>kakaokompassauth</string>
+		<string>kakaolink</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

@@ -7,8 +7,9 @@
 //
 
 import UIKit
-//import KakaoSDKAuth
-//import KakaoSDKCommon
+import KakaoSDKAuth
+import KakaoSDKCommon
+import KakaoSDKUser
 //import FBSDKLoginKit
 import Alamofire
 import AuthenticationServices
@@ -130,6 +131,43 @@ extension SignInViewController: GIDSignInDelegate {
     }
 }
 
+// MARK: Kakao Signin
+
+extension SignInViewController {
+    @IBAction func KakaologinButtonClicked() {
+        if (AuthApi.isKakaoTalkLoginAvailable()) {
+            AuthApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoTalk() success.")
+
+                    guard let token = oauthToken?.accessToken else {
+                        print("No Kakao Access Token from oauthToken")
+                        return
+                    }
+                    
+                    UserApi.shared.me { (user, error) in
+                        if let error = error {
+                            print(error)
+                            self.tokenSignIn(token: token, provider: "KAKAO", email: "")
+                        }
+                        else {
+                            guard let email = user?.kakaoAccount?.email else {
+                                print("No Kakao Account Email from User")
+                                self.tokenSignIn(token: token, provider: "KAKAO", email: "")
+                                return
+                            }
+                            self.tokenSignIn(token: token, provider: "KAKAO", email: email)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 // MARK: - Go To MatchingTable View
 extension SignInViewController {
     func goToDetailView() {
@@ -204,20 +242,4 @@ extension SignInViewController {
 //        }
 //    }
 
-
-
-//    @IBAction func KakaologinButtonClicked() {
-////        if(AuthController.isTalkAuthAvailable()){
-////            let token : OAuthToken
-////            let error : Error
-////            AuthController.shared.authorizeWithTalk(channelPublicIds: <#T##[String]?#>, serviceTerms: <#T##[String]?#>, autoLogin: <#T##Bool?#>, completion: <#T##(OAuthToken?, Error?) -> Void#>)
-////            print(token)
-////        }
-////
-//        if (AuthController.isTalkAuthAvailable()) {
-//            AuthController.shared.authorizeWithTalk(completion:{ (token,error) in
-//                self.tokenProcessing(Token: token!.accessToken,Provider: "KAKAO")
-//            })
-//        }
-//    }
 

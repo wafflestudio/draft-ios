@@ -6,15 +6,16 @@ target 'draft' do
   # use_frameworks!
 
   # Pods for draft
-  # pod 'RxKakaoSDKAuth', '~> 2.0.0-beta.5'
-  # pod 'RxKakaoSDKCommon', '~> 2.0.0-beta.5'
+  pod 'KakaoSDKAuth'
+  pod 'KakaoSDKCommon'
+  pod 'KakaoSDKUser'
   # pod 'Alamofire', '~> 5.2'
   pod 'Alamofire'
   # pod 'RxSwift' #, '~> 5'
   # pod 'RxCocoa' #, '~> 5'
-  # pod 'DynamicCodable' #, '1.0'
+  pod 'DynamicCodable' #, '1.0'
   pod 'GoogleSignIn'
-  pod 'FBSDKLoginKit'
+  #pod 'FBSDKLoginKit'
   pod 'KeychainAccess', '~> 4.2'
   
 end
