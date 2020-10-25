@@ -7,14 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25291D11D701DF31C5D5DB8E /* libPods-draft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B4473BB53A25D973349FFE /* libPods-draft.a */; };
 		380ABC8A24F9621400B212F0 /* SignInViewController+appleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8924F9621400B212F0 /* SignInViewController+appleSignIn.swift */; };
 		380ABC8C24F9645B00B212F0 /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8B24F9645B00B212F0 /* KeychainAccess.swift */; };
 		380B77C624C214FB00CB1CB2 /* GameDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380B77C524C214FB00CB1CB2 /* GameDatePickerViewController.swift */; };
 		3837B51B24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3837B51A24B5AF960085E821 /* MatchingTableVC+APIRequest.swift */; };
 		3837B51C24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3837B51A24B5AF960085E821 /* MatchingTableVC+APIRequest.swift */; };
-		3837B51E24B5BAAE0085E821 /* secret_login.json in Resources */ = {isa = PBXBuildFile; fileRef = 3837B51D24B5BAAE0085E821 /* secret_login.json */; };
-		3837B51F24B5BAAE0085E821 /* secret_login.json in Resources */ = {isa = PBXBuildFile; fileRef = 3837B51D24B5BAAE0085E821 /* secret_login.json */; };
 		383C9788246EE6390013E6AF /* RoomGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383C9787246EE6390013E6AF /* RoomGroupTests.swift */; };
 		383C978A246EE6840013E6AF /* RoomsByDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72D1246311FF0099C35E /* RoomsByDate.swift */; };
 		383C978B246EEA420013E6AF /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72CF246311F40099C35E /* Room.swift */; };
@@ -38,12 +35,16 @@
 		38D00C32248B3D7500F50F9B /* RoomGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00C31248B3D7500F50F9B /* RoomGroup.swift */; };
 		38D00C33248B3D7500F50F9B /* RoomGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00C31248B3D7500F50F9B /* RoomGroup.swift */; };
 		38D00C35248B3E7400F50F9B /* Model-utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00C34248B3E7400F50F9B /* Model-utilities.swift */; };
+		BEF9C970342B3B1918B91A5D /* libPods-Draft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A7F0B294B87CAD1689B0A4 /* libPods-Draft.a */; };
 		BF5401C524C853EB00D73368 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5401C424C853EB00D73368 /* SignUpViewController.swift */; };
 		BF5401C624C853EB00D73368 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5401C424C853EB00D73368 /* SignUpViewController.swift */; };
 		BF5401C724C853EB00D73368 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5401C424C853EB00D73368 /* SignUpViewController.swift */; };
 		BF7287FB2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
 		BF7287FC2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
 		BF7287FD2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
+		BF97A7C525456373003597FB /* AppKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97A7C425456373003597FB /* AppKeys.swift */; };
+		BF97A7C625456373003597FB /* AppKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97A7C425456373003597FB /* AppKeys.swift */; };
+		BF97A7C725456373003597FB /* AppKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97A7C425456373003597FB /* AppKeys.swift */; };
 		BF9CF84724B7692500FEEC5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CF84624B7692500FEEC5E /* SignInViewController.swift */; };
 		BF9CF84824B7692500FEEC5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CF84624B7692500FEEC5E /* SignInViewController.swift */; };
 		BF9CF84924B7692500FEEC5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CF84624B7692500FEEC5E /* SignInViewController.swift */; };
@@ -70,14 +71,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07773BE7A08C0D41BC81B968 /* Pods-Draft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Draft.release.xcconfig"; path = "Target Support Files/Pods-Draft/Pods-Draft.release.xcconfig"; sourceTree = "<group>"; };
 		20E9DFAA2D02F041ACFEC8F2 /* Pods-draft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-draft.debug.xcconfig"; path = "Target Support Files/Pods-draft/Pods-draft.debug.xcconfig"; sourceTree = "<group>"; };
-		34B4473BB53A25D973349FFE /* libPods-draft.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-draft.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		231252D2B1B9A2E0A0F90C73 /* Pods-Draft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Draft.debug.xcconfig"; path = "Target Support Files/Pods-Draft/Pods-Draft.debug.xcconfig"; sourceTree = "<group>"; };
 		380ABC8924F9621400B212F0 /* SignInViewController+appleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewController+appleSignIn.swift"; sourceTree = "<group>"; };
 		380ABC8B24F9645B00B212F0 /* KeychainAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
 		380ABC8D24F96E6300B212F0 /* Draft.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Draft.entitlements; sourceTree = "<group>"; };
 		380B77C524C214FB00CB1CB2 /* GameDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDatePickerViewController.swift; sourceTree = "<group>"; };
 		3837B51A24B5AF960085E821 /* MatchingTableVC+APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchingTableVC+APIRequest.swift"; sourceTree = "<group>"; };
-		3837B51D24B5BAAE0085E821 /* secret_login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secret_login.json; sourceTree = "<group>"; };
 		383C9787246EE6390013E6AF /* RoomGroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGroupTests.swift; sourceTree = "<group>"; };
 		384FA83824B9FC6600FB3CF4 /* RoomDetailVC+APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoomDetailVC+APIRequest.swift"; sourceTree = "<group>"; };
 		386D72CF246311F40099C35E /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = draft/Models/Room.swift; sourceTree = SOURCE_ROOT; };
@@ -104,9 +105,11 @@
 		38D00C34248B3E7400F50F9B /* Model-utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model-utilities.swift"; sourceTree = "<group>"; };
 		BF5401C424C853EB00D73368 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DraftLaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF97A7C425456373003597FB /* AppKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKeys.swift; sourceTree = "<group>"; };
 		BF9CF84624B7692500FEEC5E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		BFBE4D1A24C6F9B4005D2D32 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C5667709BEC8DB2B8A59C05F /* Pods-draft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-draft.release.xcconfig"; path = "Target Support Files/Pods-draft/Pods-draft.release.xcconfig"; sourceTree = "<group>"; };
+		C6A7F0B294B87CAD1689B0A4 /* libPods-Draft.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Draft.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25291D11D701DF31C5D5DB8E /* libPods-draft.a in Frameworks */,
+				BEF9C970342B3B1918B91A5D /* libPods-Draft.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +205,7 @@
 		3897038224559A4900FF5077 /* Draft */ = {
 			isa = PBXGroup;
 			children = (
+				BF97A7C325456342003597FB /* Util */,
 				380ABC8D24F96E6300B212F0 /* Draft.entitlements */,
 				386D72CE246311DB0099C35E /* Models */,
 				389703B624559C8C00FF5077 /* Controllers */,
@@ -242,7 +246,6 @@
 				384FA83A24BA084A00FB3CF4 /* RoomDetail */,
 				384FA83B24BA086100FB3CF4 /* MatchingTable */,
 				380ABC8E24F9714D00B212F0 /* SignIn */,
-				3837B51D24B5BAAE0085E821 /* secret_login.json */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -262,14 +265,24 @@
 			children = (
 				20E9DFAA2D02F041ACFEC8F2 /* Pods-draft.debug.xcconfig */,
 				C5667709BEC8DB2B8A59C05F /* Pods-draft.release.xcconfig */,
+				231252D2B1B9A2E0A0F90C73 /* Pods-Draft.debug.xcconfig */,
+				07773BE7A08C0D41BC81B968 /* Pods-Draft.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BF97A7C325456342003597FB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BF97A7C425456373003597FB /* AppKeys.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		E89FC6366113833467F61057 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				34B4473BB53A25D973349FFE /* libPods-draft.a */,
+				C6A7F0B294B87CAD1689B0A4 /* libPods-Draft.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -384,7 +397,6 @@
 				3897038B24559A4900FF5077 /* Main.storyboard in Resources */,
 				388E1C2E24BC5BEB008DD24F /* MatchingTable.storyboard in Resources */,
 				BF7287FB2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */,
-				3837B51E24B5BAAE0085E821 /* secret_login.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +405,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7287FC2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */,
-				3837B51F24B5BAAE0085E821 /* secret_login.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +434,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-draft-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Draft-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -436,15 +447,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-draft/Pods-draft-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Draft/Pods-Draft-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-draft/Pods-draft-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Draft/Pods-Draft-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-draft/Pods-draft-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Draft/Pods-Draft-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -469,6 +480,7 @@
 				3897038E24559A4900FF5077 /* Draft.xcdatamodeld in Sources */,
 				BFBE4D1B24C6F9B4005D2D32 /* User.swift in Sources */,
 				386D72D2246311FF0099C35E /* RoomsByDate.swift in Sources */,
+				BF97A7C525456373003597FB /* AppKeys.swift in Sources */,
 				3837B51B24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */,
 				BF5401C524C853EB00D73368 /* SignUpViewController.swift in Sources */,
 				386D72D0246311F40099C35E /* Room.swift in Sources */,
@@ -481,6 +493,7 @@
 			files = (
 				3837B51C24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */,
 				38969E0E24A6F7D70032F82C /* RoomRestAPITest.swift in Sources */,
+				BF97A7C625456373003597FB /* AppKeys.swift in Sources */,
 				38495BF8249DC22F0077C570 /* Model-utilities.swift in Sources */,
 				38969E0F24A6F7F90032F82C /* MatchingTableViewController.swift in Sources */,
 				383C9788246EE6390013E6AF /* RoomGroupTests.swift in Sources */,
@@ -501,6 +514,7 @@
 				BF9CF84924B7692500FEEC5E /* SignInViewController.swift in Sources */,
 				389703A924559A4C00FF5077 /* DraftUITests.swift in Sources */,
 				BF5401C724C853EB00D73368 /* SignUpViewController.swift in Sources */,
+				BF97A7C725456373003597FB /* AppKeys.swift in Sources */,
 				BFBE4D1D24C6F9B4005D2D32 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,7 +596,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -636,7 +650,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -648,12 +662,12 @@
 		};
 		389703AE24559A4C00FF5077 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20E9DFAA2D02F041ACFEC8F2 /* Pods-draft.debug.xcconfig */;
+			baseConfigurationReference = 231252D2B1B9A2E0A0F90C73 /* Pods-Draft.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = draft/draft.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = M974BXPS92;
 				INFOPLIST_FILE = Draft/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -663,7 +677,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.draft.waffle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Han Sanghyeon Draft";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -671,12 +685,12 @@
 		};
 		389703AF24559A4C00FF5077 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5667709BEC8DB2B8A59C05F /* Pods-draft.release.xcconfig */;
+			baseConfigurationReference = 07773BE7A08C0D41BC81B968 /* Pods-Draft.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = draft/draft.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = M974BXPS92;
 				INFOPLIST_FILE = Draft/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -686,7 +700,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.draft.waffle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Han Sanghyeon Draft";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

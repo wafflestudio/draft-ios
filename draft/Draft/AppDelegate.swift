@@ -10,11 +10,9 @@ import UIKit
 import CoreData
 
 import GoogleSignIn
-//import KakaoSDKCommon
-//import KakaoSDKAuth
+import KakaoSDKCommon
+import KakaoSDKAuth
 //import FBSDKCoreKit
-//import RxKakaoSDKAuth
-//import RxKakaoSDKCommon
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,10 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // For device token
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge]) { (granted, error) in }
         
+        // Kakao SignIn
+        KakaoSDKCommon.initSDK(appKey: Appkeys.shared.kakaoAppkey)
+        
         // Google SignIn
-        GIDSignIn.sharedInstance().clientID =  "1012204765167-g31h7ml5t3o8nk8isvur6q5s90q7omug.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = Appkeys.shared.googleAppkey
         GIDSignIn.sharedInstance().delegate = self
-        //        KakaoSDKCommon.shared.initSDK(appKey: "52f5a0a20ab7c1418e2993f85ca83c29") KaKao
+        
         //
         //        ApplicationDelegate.shared.application( application, didFinishLaunchingWithOptions: launchOptions ) Facebook
         // Override point for customization after application launch.
@@ -37,10 +38,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        // Kakao SignIn
+        if (AuthApi.isKakaoTalkLoginUrl(url)) {
+            return AuthController.handleOpenUrl(url: url)
+        }
+        
+        // Google SignIn
         return GIDSignIn.sharedInstance().handle(url)
-        //         if AuthController.handleOpenUrl(url: url, options: options) {
-        //             return true
-        //         } Kakao
+                 
         //
         //        return ApplicationDelegate.shared.application( app, open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation] ) facebook
     }
