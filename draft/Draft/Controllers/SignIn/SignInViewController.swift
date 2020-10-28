@@ -7,8 +7,9 @@
 //
 
 import UIKit
-//import KakaoSDKAuth
-//import KakaoSDKCommon
+import KakaoSDKAuth
+import KakaoSDKCommon
+import KakaoSDKUser
 //import FBSDKLoginKit
 import Alamofire
 import AuthenticationServices
@@ -126,6 +127,43 @@ extension SignInViewController: GIDSignInDelegate {
         
         if let token = idToken {
             tokenSignIn(token: token, provider: OAuthProvider.GOOGLE, email: email!)
+        }
+    }
+}
+
+extension SignInViewController {
+    @IBAction func KakaologinButtonClicked() {
+        if (AuthApi.isKakaoTalkLoginAvailable()) {
+            
+            AuthApi.shared.loginWithKakaoAccount(authType: .Reauthenticate) {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoTalk() success.")
+
+                    guard let token = oauthToken?.accessToken else {
+                        print("No Kakao Access Token from oauthToken")
+                        return
+                    }
+
+                    UserApi.shared.me { (user, error) in
+                        if let error = error {
+                            print(error)
+                            self.tokenSignIn(token: token, provider: "KAKAO", email: "")
+                        }
+                        else {
+                            guard let email = user?.kakaoAccount?.email else {
+                                print("No Kakao Account Email from User")
+                                self.tokenSignIn(token: token, provider: "KAKAO", email: "")
+                                return
+                            }
+                            
+                            self.tokenSignIn(token: token, provider: "KAKAO", email: email)
+                        }
+                    }
+                }
+            }
         }
     }
 }

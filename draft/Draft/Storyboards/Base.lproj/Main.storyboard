@@ -10,7 +10,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="FhX-VQ-0js">
             <objects>
-                <viewController id="7e7-9z-7uu" customClass="SignInViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7e7-9z-7uu" customClass="SignInViewController" customModule="Draft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZBe-dy-b3O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,6 +36,13 @@
                                     <action selector="PasswordLogin" destination="7e7-9z-7uu" eventType="touchUpInside" id="0qZ-0p-F9J"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZj-Jg-fmm">
+                                <rect key="frame" x="40" y="531" width="333" height="50"/>
+                                <state key="normal" backgroundImage="kakao_login_medium_wide"/>
+                                <connections>
+                                    <action selector="KakaologinButtonClicked" destination="7e7-9z-7uu" eventType="touchUpInside" id="LZG-BR-gdA"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oun-x0-I1x">
                                 <rect key="frame" x="157" y="295" width="100" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -51,40 +58,6 @@
                                     <segue destination="1Zk-RZ-mvr" kind="show" id="CTu-F7-Lg6"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUp-uk-yWq">
-                                <rect key="frame" x="40" y="702" width="334" height="60"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White Logo Square" translatesAutoresizingMaskIntoConstraints="NO" id="cSA-1M-TQF">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="pqc-DD-072"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4U6-o3-j5A">
-                                        <rect key="frame" x="60" y="0.0" width="274" height="60"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="25"/>
-                                        <state key="normal" title="Sign in with Apple  ">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="appleSignIn:" destination="7e7-9z-7uu" eventType="touchUpInside" id="SSs-Bm-3FM"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="4U6-o3-j5A" secondAttribute="bottom" id="FhL-5u-7Vj"/>
-                                    <constraint firstItem="cSA-1M-TQF" firstAttribute="top" secondItem="AUp-uk-yWq" secondAttribute="top" id="GTZ-Iw-RSS"/>
-                                    <constraint firstItem="4U6-o3-j5A" firstAttribute="leading" secondItem="cSA-1M-TQF" secondAttribute="trailing" id="NpL-4O-1mc"/>
-                                    <constraint firstAttribute="trailing" secondItem="4U6-o3-j5A" secondAttribute="trailing" id="VGD-sD-xcW"/>
-                                    <constraint firstItem="4U6-o3-j5A" firstAttribute="top" secondItem="AUp-uk-yWq" secondAttribute="top" id="W0j-f9-qGH"/>
-                                    <constraint firstAttribute="height" constant="60" id="fnO-eX-FPF"/>
-                                    <constraint firstItem="cSA-1M-TQF" firstAttribute="leading" secondItem="AUp-uk-yWq" secondAttribute="leading" id="jjx-vn-AOg"/>
-                                    <constraint firstAttribute="bottom" secondItem="cSA-1M-TQF" secondAttribute="bottom" id="pqQ-ST-wKM"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlL-Vy-DUW">
                                 <rect key="frame" x="40" y="612" width="334" height="60"/>
                                 <subviews>
@@ -119,15 +92,53 @@
                                     <constraint firstItem="2WX-8z-M1g" firstAttribute="top" secondItem="KlL-Vy-DUW" secondAttribute="top" id="yCa-Gj-IQH"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUp-uk-yWq">
+                                <rect key="frame" x="40" y="702" width="334" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White Logo Square" translatesAutoresizingMaskIntoConstraints="NO" id="cSA-1M-TQF">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="pqc-DD-072"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4U6-o3-j5A">
+                                        <rect key="frame" x="60" y="0.0" width="274" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="25"/>
+                                        <state key="normal" title="Sign in with Apple  ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="appleSignIn:" destination="7e7-9z-7uu" eventType="touchUpInside" id="SSs-Bm-3FM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="4U6-o3-j5A" secondAttribute="bottom" id="FhL-5u-7Vj"/>
+                                    <constraint firstItem="cSA-1M-TQF" firstAttribute="top" secondItem="AUp-uk-yWq" secondAttribute="top" id="GTZ-Iw-RSS"/>
+                                    <constraint firstItem="4U6-o3-j5A" firstAttribute="leading" secondItem="cSA-1M-TQF" secondAttribute="trailing" id="NpL-4O-1mc"/>
+                                    <constraint firstAttribute="trailing" secondItem="4U6-o3-j5A" secondAttribute="trailing" id="VGD-sD-xcW"/>
+                                    <constraint firstItem="4U6-o3-j5A" firstAttribute="top" secondItem="AUp-uk-yWq" secondAttribute="top" id="W0j-f9-qGH"/>
+                                    <constraint firstAttribute="height" constant="60" id="fnO-eX-FPF"/>
+                                    <constraint firstItem="cSA-1M-TQF" firstAttribute="leading" secondItem="AUp-uk-yWq" secondAttribute="leading" id="jjx-vn-AOg"/>
+                                    <constraint firstAttribute="bottom" secondItem="cSA-1M-TQF" secondAttribute="bottom" id="pqQ-ST-wKM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="KlL-Vy-DUW" firstAttribute="top" secondItem="gZj-Jg-fmm" secondAttribute="bottom" constant="31" id="8pq-J4-0j3"/>
                             <constraint firstItem="SPi-hN-qM5" firstAttribute="bottom" secondItem="AUp-uk-yWq" secondAttribute="bottom" constant="100" id="AXZ-9C-vK4"/>
                             <constraint firstItem="AUp-uk-yWq" firstAttribute="top" secondItem="KlL-Vy-DUW" secondAttribute="bottom" constant="30" id="Ehe-1S-vlJ"/>
+                            <constraint firstItem="gZj-Jg-fmm" firstAttribute="centerX" secondItem="SPi-hN-qM5" secondAttribute="centerX" id="M2M-LM-NYZ"/>
                             <constraint firstItem="AUp-uk-yWq" firstAttribute="leading" secondItem="SPi-hN-qM5" secondAttribute="leading" constant="40" id="VqT-gZ-T12"/>
                             <constraint firstItem="KlL-Vy-DUW" firstAttribute="leading" secondItem="SPi-hN-qM5" secondAttribute="leading" constant="40" id="pkK-sh-Hp3"/>
+                            <constraint firstItem="gZj-Jg-fmm" firstAttribute="width" secondItem="ZBe-dy-b3O" secondAttribute="width" multiplier="0.804348" id="qbk-sc-xSH"/>
                             <constraint firstItem="SPi-hN-qM5" firstAttribute="trailing" secondItem="KlL-Vy-DUW" secondAttribute="trailing" constant="40" id="so1-fR-NKs"/>
                             <constraint firstItem="SPi-hN-qM5" firstAttribute="trailing" secondItem="AUp-uk-yWq" secondAttribute="trailing" constant="40" id="xJP-36-dwH"/>
+                            <constraint firstItem="gZj-Jg-fmm" firstAttribute="height" secondItem="ZBe-dy-b3O" secondAttribute="height" multiplier="0.0558036" id="y9m-KM-698"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SPi-hN-qM5"/>
                     </view>
@@ -145,7 +156,7 @@
         <!--Auth Sign Up View Controller-->
         <scene sceneID="RT8-sN-Nb8">
             <objects>
-                <viewController storyboardIdentifier="OAuthSignUp" id="5iw-fW-IAs" customClass="OAuthSignUpViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OAuthSignUp" id="5iw-fW-IAs" customClass="OAuthSignUpViewController" customModule="Draft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QVz-gq-ljb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -265,7 +276,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="otA-Fe-k94">
             <objects>
-                <viewController id="1Zk-RZ-mvr" customClass="SignUpViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1Zk-RZ-mvr" customClass="SignUpViewController" customModule="Draft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YlP-Eg-5fT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -355,5 +366,6 @@
     <resources>
         <image name="White Logo Square" width="56" height="56"/>
         <image name="btn_google_light_normal_ios" width="48" height="48"/>
+        <image name="kakao_login_medium_wide" width="300" height="45"/>
     </resources>
 </document>

@@ -5,16 +5,7 @@ PODS:
     - AppAuth/ExternalUserAgent (= 1.4.0)
   - AppAuth/Core (1.4.0)
   - AppAuth/ExternalUserAgent (1.4.0)
-  - FBSDKCoreKit (7.1.1):
-    - FBSDKCoreKit/Basics (= 7.1.1)
-    - FBSDKCoreKit/Core (= 7.1.1)
-  - FBSDKCoreKit/Basics (7.1.1)
-  - FBSDKCoreKit/Core (7.1.1):
-    - FBSDKCoreKit/Basics
-  - FBSDKLoginKit (7.1.1):
-    - FBSDKLoginKit/Login (= 7.1.1)
-  - FBSDKLoginKit/Login (7.1.1):
-    - FBSDKCoreKit (~> 7.1.1)
+  - DynamicCodable (1.0)
   - GoogleSignIn (5.0.2):
     - AppAuth (~> 1.2)
     - GTMAppAuth (~> 1.0)
@@ -27,35 +18,49 @@ PODS:
   - GTMSessionFetcher/Core (1.4.0)
   - GTMSessionFetcher/Full (1.4.0):
     - GTMSessionFetcher/Core (= 1.4.0)
+  - KakaoSDKAuth (2.0.4):
+    - KakaoSDKCommon (= 2.0.4)
+  - KakaoSDKCommon (2.0.4):
+    - Alamofire (~> 5.1)
+  - KakaoSDKUser (2.0.4):
+    - KakaoSDKAuth (= 2.0.4)
+    - KakaoSDKCommon (= 2.0.4)
   - KeychainAccess (4.2.0)
 
 DEPENDENCIES:
   - Alamofire
-  - FBSDKLoginKit
+  - DynamicCodable
   - GoogleSignIn
+  - KakaoSDKAuth
+  - KakaoSDKCommon
+  - KakaoSDKUser
   - KeychainAccess (~> 4.2)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AppAuth
-    - FBSDKCoreKit
-    - FBSDKLoginKit
+    - DynamicCodable
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
+    - KakaoSDKAuth
+    - KakaoSDKCommon
+    - KakaoSDKUser
     - KeychainAccess
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
-  FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
-  FBSDKLoginKit: 1a61d79e2b25e2fc0d03dccab1e34b38bbdf2546
+  DynamicCodable: 2cf558d057b3e6540552943254e1c9eeb706dde2
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  KakaoSDKAuth: 3a88e4a110243f8c6b9948c5ec85670c7acaebf6
+  KakaoSDKCommon: 070472d0638ea6b28684a23c195e47015349e51b
+  KakaoSDKUser: 7951e09f9e6de3908ae2d7f8486290c8607c217a
   KeychainAccess: 3f760109aa99b05d0f231e28b22642da7153e38a
 
-PODFILE CHECKSUM: 85446e57c0fcc899c31457bee78f63ee2f058cb6
+PODFILE CHECKSUM: 943f3d001b38c655828dd27fc9086744a1151ffe
 
 COCOAPODS: 1.9.3
