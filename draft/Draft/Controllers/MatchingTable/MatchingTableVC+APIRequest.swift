@@ -10,53 +10,18 @@ import Foundation
 
 // MARK:- Call Rest API to get rooms from server
 extension MatchingTableViewController {
-    func allRoomsAPIRequest() {
-        
-        let url = URL(string: "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/room/")
-        
-        var request = URLRequest(url: url!)
-        request.httpMethod = "GET"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(jwtToken, forHTTPHeaderField: "Authentication")
-        
-        let configuration = URLSessionConfiguration.default
-        configuration.waitsForConnectivity = true
-        let session = URLSession(configuration: configuration)
-        
-        let task = session.dataTask(with: request) { (data, response, error) in
-            
-            guard let httpResponse = response as? HTTPURLResponse,
-                httpResponse.statusCode == 200 else {
-                    // statusCode 200 아닐 때 에러 처리
-                    return
-            }
-            
+    func getRoomsByRegion() {
+        APIRequests.shared.request(param: nil, requestType: .getRoomsByRegion) { data in
             guard let data = data else {
-                print (error.debugDescription)
-                // data가 nil이 될 때 에러 처리
                 return
             }
-            DispatchQueue.main.async {
-                self.parseJSON(roomsData: data)
+            do {
+                let decodedData = try JSONDecoder().decode(Array<GetRoomByRegionResponseData>.self, from: data)
+                self.roomGroup = RoomGroup(rooms: decodedData[0].rooms)
+            } catch {
+                #warning("TODO: 에러 처리")
             }
-        }
-        task.resume()
-    }
-    
-    func parseJSON(roomsData: Data) {
-        let decoder = JSONDecoder()
-        do {
-            let decodedData = try decoder.decode([Room].self, from: roomsData)
-            
-            roomGroup = RoomGroup()
-            
-            roomGroup?.arrangeRoomsByDate(rooms: decodedData)
-            
-            tableView.reloadData()
-            print("parsing completed ")
-        } catch {
-            // json parse 시 에러 처리
-            print(error)
+            self.tableView.reloadData()
         }
     }
 }

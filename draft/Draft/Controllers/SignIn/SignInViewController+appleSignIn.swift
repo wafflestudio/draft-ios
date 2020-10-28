@@ -37,15 +37,14 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
                 return
             }
             
-            guard let tokenInString = String(data: token, encoding: .utf8) else {
-                print("cannot convert token to string")
-                return
-            }
-            
             KeychainAccess.shared.saveAppleLoginUserIdentifier(identifier: userIdentifier)
             KeychainAccess.shared.saveAppleLoginAccessToken(accessToken: token)
             
-            tokenSignIn(token: tokenInString, provider: OAuthProvider.APPLE, email: email ?? "")
+            let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: OAuthProvider.APPLE, accessToken: String(data: token, encoding: .utf8), username: "test name", email: email)
+            
+            APIRequests.shared.request(param: param, requestType: .signIn) { _ in
+                self.goToDetailView()
+            }
             
         default:
             break
@@ -53,7 +52,6 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print("WithError")
         print(error)
     }
 }

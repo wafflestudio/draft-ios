@@ -19,7 +19,7 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         
         addSearchController()
         
-        allRoomsAPIRequest()
+        getRoomsByRegion()
         // autoLoginForTest() contains allRoomsAPIRequest()
 //        autoLoginForTest()
         
@@ -94,7 +94,7 @@ extension MatchingTableViewController: RoomDetailViewControllerDelegate {
     
     func roomDetailViewController(_ controller: RoomDetailViewController) {
         DispatchQueue.main.async {
-            self.allRoomsAPIRequest()
+            self.getRoomsByRegion()
             self.tableView.reloadData()
         }
     }

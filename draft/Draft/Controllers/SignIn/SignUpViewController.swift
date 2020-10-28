@@ -21,9 +21,7 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onClickSignUp(){
-        let url = "http://ec2-15-165-158-156.ap-northeast-2.compute.amazonaws.com/api/v1/user/signup/"
-        
+    @IBAction func onClickSignUp() {
         struct Param : Encodable {
             let grantType : String
             let email : String
@@ -33,8 +31,7 @@ class SignUpViewController: UIViewController {
         
         let param = Param(grantType: "PASSWORD",email: newEmailTextField.text!, password: newPasswordTextField.text!, username: newUsernameTextField.text!)
 
-        //contentType: ["application/json"]
-        AF.request(url,method:.post,parameters: param,encoder: JSONParameterEncoder.default).validate().responseJSON(){
+        AF.request(APIUrl.signupUrl,method:.post,parameters: param,encoder: JSONParameterEncoder.default).validate().responseJSON(){
             response in
             
             switch response.result {

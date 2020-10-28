@@ -22,7 +22,7 @@ class RoomRestAPITest: XCTestCase {
 //        let roomTableVC = MatchingTableViewController()
 //        roomTableVC.getAllRoomsFromServer()
     }
-
+                
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {

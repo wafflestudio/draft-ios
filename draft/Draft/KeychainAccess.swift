@@ -66,9 +66,8 @@ class KeychainAccess {
 
 struct Key {
     
-    static let AppleLoginAccessToken = "AppleLoginAccessTokenForGom"
-    static let AppleLoginUserIdentifier = "AppleLoginUserIdentifierForGom"
-    
+    static let AppleLoginAccessToken = "AppleLoginAccessTokenForDraft"
+    static let AppleLoginUserIdentifier = "AppleLoginUserIdentifierForDraft"
     static let AppleLoginAccessTokenValueNotFound = "ValueNotFound"
 }
 
