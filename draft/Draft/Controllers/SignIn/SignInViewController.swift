@@ -74,11 +74,8 @@ extension SignInViewController: GIDSignInDelegate {
             }
             return
         }
-        let idToken = user.authentication.idToken
-        let email = user.profile.email
-        
-        guard let token = idToken else {
-            print("can't get token")
+        guard let token = user.authentication.idToken, let identifier = user.authentication.clientID, let email = user.profile.email else {
+            print("Cannot get google access authorization")
             return
         }
         
@@ -87,6 +84,9 @@ extension SignInViewController: GIDSignInDelegate {
         APIRequests.shared.request(param: param, requestType: .signIn) { _ in
             self.goToDetailView()
         }
+        
+        KeychainAccess.shared.saveOAuthInKeychain(identifier: identifier, accessToken: Data(token.utf8), type: .googleOAuth)
+        
     }
 }
 

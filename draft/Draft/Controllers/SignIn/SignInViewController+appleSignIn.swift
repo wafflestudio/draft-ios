@@ -19,7 +19,6 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
         
         authorizationController.delegate = self
         authorizationController.presentationContextProvider = self
-        
         authorizationController.performRequests()
     }
     
@@ -30,29 +29,26 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
             
             let userIdentifier = appleIDCredential.user
             let email = appleIDCredential.email
-            let identifyToken = appleIDCredential.identityToken
-            
-            guard let token = identifyToken else {
-                print("error: identity token is nil")
+            guard let token = appleIDCredential.identityToken else {
+                print("Cannot get apple access token")
                 return
             }
             
-            KeychainAccess.shared.saveAppleLoginUserIdentifier(identifier: userIdentifier)
-            KeychainAccess.shared.saveAppleLoginAccessToken(accessToken: token)
+            KeychainAccess.shared.saveOAuthInKeychain(identifier: userIdentifier, accessToken: token, type: .appleOAuth)
             
-            let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: OAuthProvider.APPLE, accessToken: String(data: token, encoding: .utf8), username: "test name", email: email)
+            let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: OAuthProvider.APPLE, accessToken: String(decoding: token, as: UTF8.self), username: "test name", email: email)
             
             APIRequests.shared.request(param: param, requestType: .signIn) { _ in
                 self.goToDetailView()
             }
-            
         default:
             break
         }
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print(error)
+        debugPrint(error)
+        #warning("TODO: 에러 처리")
     }
 }
 

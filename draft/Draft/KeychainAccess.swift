@@ -8,71 +8,103 @@
 
 import KeychainAccess
 
-/// Use KeychainAccess library by singleton class
 class KeychainAccess {
     
     static let shared = KeychainAccess()
-    
     private init() {}
-    
     private let keychain = Keychain(service: "com.draft.waffle")
     
-    func saveAppleLoginUserIdentifier(identifier: String) {
+    func saveOAuthInKeychain(identifier: String, accessToken: Data, type: OAuthType) {
+        let identifierKey = type.generateIdentifierKey().rawValue
+        let accessTokenKey = type.generateAccessTokenKey().rawValue
+        
+        saveUserIdentifier(identifier: identifier, key: identifierKey)
+        saveAccessToken(accessToken: accessToken, key: accessTokenKey)
+    }
+    
+    private func saveUserIdentifier(identifier: String, key: String) {
         do {
-            try keychain.set(identifier, key: Key.AppleLoginUserIdentifier)
+            try keychain.set(identifier, key: key)
         } catch let error {
-            print("keychain.set failed. Reson below :")
-            print(error)
-            
+            debugPrint(error)
         }
     }
     
-    func saveAppleLoginAccessToken(accessToken: Data) {
+    private func saveAccessToken(accessToken: Data, key: String) {
         do {
-            try keychain.set(accessToken, key: Key.AppleLoginAccessToken)
+            try keychain.set(accessToken, key: key)
         } catch let error {
-            print("keychain.set failed. Reson below :")
-            print(error)
-            
+            debugPrint(error)
         }
     }
     
-    func getAppleLoginUserIdentifier() -> String {
+    func getUserIdentifier(type: OAuthType) -> (identfier: String?, error: KeychainError?) {
+        let key = type.generateIdentifierKey().rawValue
         do {
-            if let identifier = try keychain.get(Key.AppleLoginUserIdentifier) {
-                return identifier
+            if let identifier = try keychain.get(key) {
+                return (identifier, nil)
             } else {
-                return KeychainError.ValueNotFound
+                return (nil, KeychainError.ValueNotFound)
             }
         } catch let error {
-            print("error: \(error)")
-            return KeychainError.CannotGetKeychain
+            debugPrint(error)
+            return (nil, KeychainError.CannotGetKeychain)
         }
     }
     
-    func getAppleLoginAccessToken() -> String {
+    func getAccessToken(type: OAuthType) -> String {
+        let key = type.generateAccessTokenKey().rawValue
         do {
-            if let identifier = try keychain.get(Key.AppleLoginAccessToken) {
+            if let identifier = try keychain.get(key) {
                 return identifier
             } else {
-                return KeychainError.ValueNotFound
+                return KeychainError.ValueNotFound.rawValue
             }
         } catch let error {
-            print("error: \(error)")
-            return KeychainError.CannotGetKeychain
+            debugPrint(error)
+            return KeychainError.CannotGetKeychain.rawValue
         }
     }
 }
 
-struct Key {
+enum OAuthType {
+    case appleOAuth
+    case googleOAuth
+    case kakaoOAuth
     
-    static let AppleLoginAccessToken = "AppleLoginAccessTokenForDraft"
-    static let AppleLoginUserIdentifier = "AppleLoginUserIdentifierForDraft"
-    static let AppleLoginAccessTokenValueNotFound = "ValueNotFound"
+    func generateAccessTokenKey() -> KeyType {
+        switch self {
+        case .appleOAuth:
+            return KeyType.appleAccessToken
+        case .googleOAuth:
+            return KeyType.googleAccessToken
+        case .kakaoOAuth:
+            return KeyType.kakaoAccessToken
+        }
+    }
+        
+    func generateIdentifierKey() -> KeyType {
+        switch self {
+        case .appleOAuth:
+            return KeyType.appleUserIdentifier
+        case .googleOAuth:
+            return KeyType.googleUserIdentifier
+        case .kakaoOAuth:
+            return KeyType.kakaoUserIdentifier
+        }
+    }
 }
 
-struct KeychainError {
-    
-    static let ValueNotFound = "ValueNotFound"
-    static let CannotGetKeychain = "CannotGetKeychain"
+enum KeyType: String {
+    case appleAccessToken = "AppleAccessTokenForDraft"
+    case googleAccessToken = "GoogleAccessTokenForDraft"
+    case kakaoAccessToken = "KakaoAccessTokenForDraft"
+    case appleUserIdentifier = "AppleUserIdentifierForDraft"
+    case googleUserIdentifier = "GoogleUserIdentifierForDraft"
+    case kakaoUserIdentifier = "KakaoUserIdentifierForDraft"
+}
+
+enum KeychainError: String {
+    case ValueNotFound = "ValueNotFound"
+    case CannotGetKeychain = "CannotGetKeychain"
 }
