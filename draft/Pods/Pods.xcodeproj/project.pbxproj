@@ -9,335 +9,335 @@
 /* Begin PBXAggregateTarget section */
 		CAD3534FC55B0333104E5117C0A9A324 /* GoogleSignIn */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 7F982436D96A9F7AAE7AE29D12E88120 /* Build configuration list for PBXAggregateTarget "GoogleSignIn" */;
+			buildConfigurationList = B0030D626B503D8EB0EA00BB772D6396 /* Build configuration list for PBXAggregateTarget "GoogleSignIn" */;
 			buildPhases = (
 			);
 			dependencies = (
-				2B9FCE8535E82F4668D2AAA18D02C1C0 /* PBXTargetDependency */,
-				C8A21648FFE7779E4A20C4694F3B4BD5 /* PBXTargetDependency */,
-				8235AE4259B6B6898F456649C1D925C4 /* PBXTargetDependency */,
+				2857566728641F74273DD7DA9E370771 /* PBXTargetDependency */,
+				314A9E36FBEA4C73491669F15EA30E5F /* PBXTargetDependency */,
+				74F3D34B7F14020AE0A57D83A7889F98 /* PBXTargetDependency */,
 			);
 			name = GoogleSignIn;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		000D88970E061109E1EEFF29F677197B /* OAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ACE9FA47C41A5ED64277488005177C /* OAuthToken.swift */; };
+		006B3C94D0FD0431C9B56BFEC43C280F /* SdkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C04E055B5E13DFA18C72079B8ECE5D /* SdkError.swift */; };
+		0197D29CA9367975F79F64C9E7FBE2C2 /* GTMReadMonitorInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9A45C86CEB6DBB96407F9E6294306F /* GTMReadMonitorInputStream.m */; };
 		03B7A4F856BB76F856C6CDCFC6EFDA80 /* OIDTokenUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E098DBC8ABF30857879819A1819C4BE /* OIDTokenUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		04825B3CE40BA4BCB66F17C78AD5C2A9 /* OIDExternalUserAgentRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = CCFAB1D4742577CEDBEA53CAB85BFEA5 /* OIDExternalUserAgentRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		04913510C525DD60946D740751550C88 /* OIDServiceConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D938B7DFB9597B69E037F8A6D761160 /* OIDServiceConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0624F9F469C1A35824EB3F7741FE174A /* OIDTokenUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D12D2C9BDAA0E8BF3974D644C687521 /* OIDTokenUtilities.m */; };
 		06DE60F33DE9056DADEDEC33BF9D5498 /* OIDGrantTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8417FEBB3FFCEAF9DED0A99B245A00 /* OIDGrantTypes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0879D59CAE9AFC8E9E839ED3CDCA3C0B /* OIDURLQueryComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D2ADEE2F4295B34B2E06148374AC72 /* OIDURLQueryComponent.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0A91D5BF4DBC5F415F0DB522132ACA89 /* GTMSessionUploadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = CA23D1BBD1147889614C387B2D218DDC /* GTMSessionUploadFetcher.m */; };
 		0B2CBF5336CA0E6DFB0B3FE7C7FE0C50 /* OIDURLSessionProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = E52B91332552C62245B942B42D0CD2D0 /* OIDURLSessionProvider.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0C6FC61D74E0A157A9EAE39C92C8A363 /* URLRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBAA35C281480B796F2427E88F9078C /* URLRequest+Alamofire.swift */; };
 		0CB7FAF3F9DC9A4C0D5CA9665F132AA6 /* OIDIDToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D0353B8E95745C947D10997FB0EEA57 /* OIDIDToken.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0D45D18AEE451FA1632315B3370D7334 /* OIDAuthorizationService+IOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 14FB08CFD80FBC39234B3AC652238D1A /* OIDAuthorizationService+IOS.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		106ABDD69E646EA720CD4C035E601D73 /* GTMOAuth2KeychainCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A842B031E94013FF6CCE5C561329721 /* GTMOAuth2KeychainCompatibility.m */; };
-		108B654C433FAEC287C1686A5AFE4050 /* AccessTokenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C0538A7721BC3653927B6CC68B1127 /* AccessTokenInfo.swift */; };
+		0F450C3FD65B2B0070981FC07C9FA738 /* GTMAppAuthFetcherAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3904D991860FECE3E8AA45C33F07FE /* GTMAppAuthFetcherAuthorization.m */; };
+		10FC8B0A3AF6F8EC1453D853E7456970 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127581167A5E566BF97169451619BF4A /* Urls.swift */; };
 		1255CBE034B69E80AD732378AEE371C1 /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F0A55798F80B8000E2D62A32D1E371 /* MultipartUpload.swift */; };
+		127D0694CA2E2BC52D6AF8E421FC41C3 /* SdkCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EF68F0E1A501B28F4A3B2AA73A8F62 /* SdkCoder.swift */; };
+		12C507D32F40867BB4708A19F808A57A /* URL+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CCDC299A76E3812C477182F42C97BA /* URL+Utils.swift */; };
 		1606ECAEB6760A69E5CF0141386EDB4A /* OIDAuthState.m in Sources */ = {isa = PBXBuildFile; fileRef = C64842319F148B6CC83DE9CB425B7D9C /* OIDAuthState.m */; };
 		1671743E7AA6CF77D163251E4631E864 /* OIDDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = C0FA4677FAFFCCC54C829E0192FC3FEC /* OIDDefines.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		16A80CC55825A6234AE971429BB3FAEF /* OIDEndSessionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F604A53EB6025353A24DEFCE6436301F /* OIDEndSessionResponse.m */; };
-		1754182082DF3B9BFD11B698D5EF8D4C /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127581167A5E566BF97169451619BF4A /* Urls.swift */; };
+		16CDDC98F377D88E0A6D65DA91088F0E /* AuthRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576FDE982B4E69911D956B58BB72743 /* AuthRequestAdapter.swift */; };
 		1924CD7C3BA15FB8E1C856A84115518F /* OIDTokenResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C44D62CE474C1F67F63B5BB8F96F6236 /* OIDTokenResponse.m */; };
+		19E71B3A48E5FB7422AB3BD0F7DEFA5F /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BFC91F9925F7AC90BE84D14E6C69EB /* AuthController.swift */; };
 		1A0C2922DEA653A19E6EA54BD4180914 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE633002997432FC02B65CFF12460269 /* RequestInterceptor.swift */; };
 		1A5844E7A98D86EEA22FA2D8FF80CEA1 /* Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCFB4751C2E152D7660B1CC9536DBF3 /* Combine.swift */; };
-		1B23E1B550C9B86863278CD665D815BC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964276B21BEDEE5BA35C47D481C80E37 /* Constants.swift */; };
+		1ABA3ABA530411283001334E90E61CDF /* GTMReadMonitorInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 61F5685FF9D79E5B14572209B9A02B95 /* GTMReadMonitorInputStream.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1CBAC840CEC1F207490446BBC49F8925 /* GTMMIMEDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 179A3612E75C51F7B8448F538186E5E1 /* GTMMIMEDocument.m */; };
 		1D9B644655C651B0930782505670A9BD /* OIDTokenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D744B1BB31919039411D17480C0EE2 /* OIDTokenRequest.m */; };
-		1DB27652012E198BCC89EE4FEB8683B9 /* GTMKeychain_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92E0120AD51088B16BB339A6279D0 /* GTMKeychain_iOS.m */; };
-		1F6B5A7C8B235FABB3F5E002365CDCE0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694246CEBEBC2AA53876F7199D8B8B8C /* User.swift */; };
+		20450DE72DB74A7297C47C8474EE69D5 /* KakaoSDKCommon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAFA16EB5EBBF92467431B8CCFAA3BF /* KakaoSDKCommon-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2140A1AF42F2D0C570E605C2B98FB4F1 /* OIDAuthorizationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6ABE9151D2E2D448F463572F56D00 /* OIDAuthorizationService.m */; };
 		2257E70F8125FC555A61049596AD3A61 /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E576BDE077638E764A0F9DB5F38EA3F /* Protected.swift */; };
 		236E7F2B216E90EC6090DC918D8F3FDE /* OIDScopeUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CD239BF9F289ACE625BAB762105EAF7E /* OIDScopeUtilities.m */; };
-		271CC81F6E1B15D0718C8A428600B8C5 /* AuthRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576FDE982B4E69911D956B58BB72743 /* AuthRequestAdapter.swift */; };
+		2521EAB35390A194A9CC88B065B8C14D /* KakaoSDKUser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 347E424DA3D7C26BCD56D6017A78E588 /* KakaoSDKUser-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		277C64427D086ABACEA3A78BFA7B5FB2 /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0A1F7A6C6FFEC7448E65895DAA0310 /* GTMSessionFetcher.m */; };
+		2AC865A58D0B05F1CB19EE96AC65A053 /* UserShippingAddresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7014976F6CA3CDB8EBAF46C5C72DDF4 /* UserShippingAddresses.swift */; };
 		2B58A4ECE824BA3F68891E5412C4A97F /* URLEncodedFormEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5385282D33DDE9D2E693AF1EED113340 /* URLEncodedFormEncoder.swift */; };
-		2B5AE04168E2B77EA383700A36385947 /* GTMOAuth2KeychainCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = C78C1B97B94F42C22BCFD64AAAEE5AC0 /* GTMOAuth2KeychainCompatibility.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2BEE7AA647C7CD67256E34EBD2AEA2DD /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A6F2955F0E63EC56A0577C03E74435 /* Notifications.swift */; };
 		2C4CCBF465EFF163FCA8D4D56C93A425 /* OIDScopes.h in Headers */ = {isa = PBXBuildFile; fileRef = 31D18E232F7A31ACE8A995E2BA7F21F6 /* OIDScopes.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2EA92AD60ECD4C056681EFF3C6E89A8E /* Pods-Draft-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8037F01CD4ECD21602F86C3E36C945FC /* Pods-Draft-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2E205741E7D7E7D0C92C69EF35F4BF61 /* SdkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01B5E21517E6F45E870EB90A5097D1 /* SdkLog.swift */; };
 		2F7808F68DD5B246C773EFFB45C102C0 /* OIDEndSessionRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 91B36EF8D785B854E6A95DFCF6AFF3C8 /* OIDEndSessionRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		343BFB425DC447950E00D938521798BE /* MigrateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8589C77716F49408A48D0B1DBD070B6 /* MigrateManager.swift */; };
-		35E6D8C102296376C42D3EA59AEBC7ED /* AuthRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A273E0EAAE94D89EC855924BA8991C /* AuthRequestRetrier.swift */; };
-		364925E15DD77C1D1A74C230056A947E /* KakaoSDKCommon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAFA16EB5EBBF92467431B8CCFAA3BF /* KakaoSDKCommon-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		30846928D515A31D381300E2B47412FC /* GTMSessionUploadFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 57DF6DE44FE5A3EDCE74EF48FEA0B42B /* GTMSessionUploadFetcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		369B03AE48C3DE968E85057E510E3475 /* OIDAuthorizationService.h in Headers */ = {isa = PBXBuildFile; fileRef = ED51005E0FCCAC4D65636BBA23702490 /* OIDAuthorizationService.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		37881D2D4EAA3A1B218BC4D819EE2451 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1416D1AEEF90D68AF6091C3B700FE000 /* ParameterEncoder.swift */; };
-		39EB4C8E9019D5A41CA1DB07CD1690D7 /* KakaoSDKUser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCB7B891BFD2DFE907FFD232FE2A36 /* KakaoSDKUser-dummy.m */; };
-		3A35732F6EA507960E93F5950A06BB1D /* GTMAppAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 66ABCD615D5F134A0DE752D2BA3B97CA /* GTMAppAuth.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3ADA9E0F629BC7AB2DD196644E0377F7 /* GTMMIMEDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 179A3612E75C51F7B8448F538186E5E1 /* GTMMIMEDocument.m */; };
+		37D10A3AB30849224E26F56C90B7AE72 /* Pods-Draft-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8037F01CD4ECD21602F86C3E36C945FC /* Pods-Draft-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3A3C7DD7DB8738573FB066023780FE0F /* SdkCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD7B245060730C8AA5C5237319B43FF /* SdkCrypto.swift */; };
 		3B70C2AD3AEBD202AB3737264810E7B5 /* OIDResponseTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3BD5AE7A66C30C0C8A6073C6D07462 /* OIDResponseTypes.m */; };
+		3BCC19E51809677B704560479FD7451C /* GTMSessionFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2DB6AD2B1EEA7901E43422986ECB2 /* GTMSessionFetcherLogging.m */; };
+		3BE4F697CEA0E003E686BDC65EE9ADC0 /* KakaoSDKAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B710899CEBF564E5BA1CC1C9070DB86 /* KakaoSDKAuth-dummy.m */; };
+		3C4458F23052B73B1437A435F97906A9 /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ED5028A50E815A042A322CE6D6B46D /* Array+Utils.swift */; };
 		3E67855FF3FDA08CA8D0B0D3E5304C99 /* DynamicCodable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C2CA410D7D470DFDD5E6B2F8854BC /* DynamicCodable-dummy.m */; };
 		3EB93FA6FAE2916553E5B0083A429979 /* OIDURLSessionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C94DFC5553E77E86CDE95869E3A8C381 /* OIDURLSessionProvider.m */; };
 		3F0C33300782EEACF1061252C46CB6BC /* OIDServiceDiscovery.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A014918194EE8E0816424D5EDF10CA /* OIDServiceDiscovery.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3FA7AB7CB95DD28F1879F8A11D3E7586 /* KakaoSDKCommon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE34FC6FBBEC8354A626BF9BA9306F5F /* KakaoSDKCommon-dummy.m */; };
+		40782DCC7AA39E0E984416B602A576D0 /* GTMKeychain_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92E0120AD51088B16BB339A6279D0 /* GTMKeychain_iOS.m */; };
 		444259C8407E1C43F65E9D6E5203C128 /* ServerTrustEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81953D6F9524981501E89337C3CEFA48 /* ServerTrustEvaluation.swift */; };
-		4486808D884D3F8B64D2E0FBEFD11DED /* URL+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CCDC299A76E3812C477182F42C97BA /* URL+Utils.swift */; };
-		46947C4046D55037D214CB109B365767 /* GTMGatherInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 755BC7F1C75BA6D7411E72EC9BE95E76 /* GTMGatherInputStream.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		44DD1CDA4C76B9260B5EF3A237FF5540 /* GTMGatherInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 755BC7F1C75BA6D7411E72EC9BE95E76 /* GTMGatherInputStream.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		46DBF5CA4D4A82B24DA1B2605CD4CE50 /* OIDAuthStateChangeDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DA22756730D2891F0AA60DE6149E9DEE /* OIDAuthStateChangeDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4A72E0ACC9CF578E868D78FABE2F6536 /* EncodingContainer+AnyCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329D5D9CE48534321065C6304555D0C6 /* EncodingContainer+AnyCollection.swift */; };
-		4BE5E232667C47B5BEF0D6C79A9B93E6 /* Data+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5896F04F3ED56A27F1C74CAC9F3A81C /* Data+Utils.swift */; };
-		4DD52BF1F6DCD5123F1ED811392AE1A1 /* KakaoSDKCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8D6FEDC6BA16406A785B3DA1CCA738 /* KakaoSDKCommon.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		471563F0370350874BDE9EEA85965235 /* AuthErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCCD5A964E3E6C08E9DD720AC9B7F99 /* AuthErrorInfo.swift */; };
+		47D4A0CF2F68666B50A27C225C80135C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964276B21BEDEE5BA35C47D481C80E37 /* Constants.swift */; };
+		4CAF7518B2F66EE4810B049902BE3D6F /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF151F7CB062B508E0F36C19CD7CE71 /* Auth.swift */; };
 		4DE9608AAFAB271A14618FFC07150F80 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A95577CB1DD129B252BDABE93AEBF3 /* NetworkReachabilityManager.swift */; };
+		4E25A7014259878A3B2C90D487869416 /* GTMAppAuthFetcherAuthorization+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B17911142A27F558F84FD5A8E7F1CF /* GTMAppAuthFetcherAuthorization+Keychain.m */; };
 		4F2F5139FD511381AC0C9DB9A1100842 /* CachedResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6E93E9BAFAF24A7A679A4C85C23F26 /* CachedResponseHandler.swift */; };
-		4FFCF8193929D74E5747E539EE7799A1 /* Pods-Draft-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F124CAE48E71D50CDCE4EA4A099561C /* Pods-Draft-dummy.m */; };
+		4F3FE96F15D915A01153C4974EA23085 /* ApiRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7523EC7CB2101867C5EFE2FC6FBA78 /* ApiRequestAdapter.swift */; };
 		50FBF532BFA3A51BC1E85D827ADDD5BE /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767CCE08BDFCD5A0DBB09E7D7D7DDF5F /* RetryPolicy.swift */; };
+		51BE38D41C3014605B92906EDA871568 /* Pods-Draft-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F124CAE48E71D50CDCE4EA4A099561C /* Pods-Draft-dummy.m */; };
 		525EEDE738EB2B98AFE5D91452397CB4 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA3489305F627F806FB4C698AD49B1D /* Alamofire-dummy.m */; };
-		556338111910FFB0C4770F0E3CF71FB7 /* GTMReadMonitorInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 61F5685FF9D79E5B14572209B9A02B95 /* GTMReadMonitorInputStream.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5B97C81FC4057EB4F9057C0A89893865 /* SdkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01B5E21517E6F45E870EB90A5097D1 /* SdkLog.swift */; };
+		53A2E561EBE4954AB400C91AAD979D66 /* KakaoSDKCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B356E62A513BFDB36A7AA85C3137273 /* KakaoSDKCommon.swift */; };
+		57100782F0660313E8470BE449A8CE49 /* EncodingContainer+AnyCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329D5D9CE48534321065C6304555D0C6 /* EncodingContainer+AnyCollection.swift */; };
 		5C61C20C49A098136CDF00938865E1D7 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23076525E8A12394569F971694859FE2 /* Request.swift */; };
-		5DA9BF935A8D475D9DAF265EC14A9645 /* GTMAppAuthFetcherAuthorization.h in Headers */ = {isa = PBXBuildFile; fileRef = B1EDF51190E91F157A3FA84018231EA5 /* GTMAppAuthFetcherAuthorization.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5E61E0110D933B612B062A2306078655 /* AccessTokenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C0538A7721BC3653927B6CC68B1127 /* AccessTokenInfo.swift */; };
+		604B859563FA43A6098DF6F67554D656 /* KakaoSDKCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8D6FEDC6BA16406A785B3DA1CCA738 /* KakaoSDKCommon.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		63D9167E1827C072400F013F704103D2 /* OIDAuthorizationResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = C84F937E14E7C8FF8AEB647339D858DE /* OIDAuthorizationResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		63DB894317F0469AAC1631553C13D97D /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20584E532E40BC07D4D09EBAFE51E10 /* TokenManager.swift */; };
 		63F61D3B356AF12008043F32110C318C /* OIDGrantTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = E0739B6ED82AB4DCBA014A1D2D5181B5 /* OIDGrantTypes.m */; };
 		642F56683AD49800EA4CEABDF96E1746 /* OIDScopeUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD089D7A6BB3D9333CD699230C36FA0 /* OIDScopeUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6464EA0CBFC6947D4DC279520DE8D856 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDC95B5D4F078D19A3F483A8D9089CC /* Session.swift */; };
 		65870397A8785198CF6D812814A88B5E /* EncodingContainer+AnyCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E9FB6355CADB2EA5C8466BE0F7D514 /* EncodingContainer+AnyCollection.swift */; };
-		6679221EBADA282DA4A78C5AA79DDE1F /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F09A6D1123F1C01E999357D435B0D4 /* UserApi.swift */; };
-		688BD6A2DDE9700C6A4770E8FE124ABF /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BFC91F9925F7AC90BE84D14E6C69EB /* AuthController.swift */; };
-		68D92C1DB4640784DC17873107C0811A /* GTMAppAuthFetcherAuthorization+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = F07EAD6DA56F1901C25D66F6D2A0F93F /* GTMAppAuthFetcherAuthorization+Keychain.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		67508E4BC79BA30FCA9DF8664F4F8461 /* GTMSessionFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 034CC0728BC64F56F5B00E5CCF37EF76 /* GTMSessionFetcherService.m */; };
+		6814689C9618A41B064AE0587092BE1D /* GTMGatherInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = B942738761BFE2BFE46F6DF063AD55B6 /* GTMGatherInputStream.m */; };
+		686A4A9D353604B91C0FE8B0B8FC60E2 /* GTMSessionFetcher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A906C791220E4E0F3BC953FF3B02341 /* GTMSessionFetcher-dummy.m */; };
 		692FFCF1C8E1A9FB4054B4402B027845 /* OIDTokenRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = F917D52B0EE0A956A4B32E5E12E54702 /* OIDTokenRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		69ECD6A2AD213507523A47BB4C73F649 /* OIDExternalUserAgentIOSCustomBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EE8F2CDAA89419995C1C8471E3E8F8F /* OIDExternalUserAgentIOSCustomBrowser.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6A277F68132C47E8192C40E22536304B /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE58674481D3D50A073A10FC74D4D23 /* Api.swift */; };
+		6A845D85EA598AF9BD81A670BCF0B3AA /* UserServiceTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D522B0FE8AD994757EBF04235541FE /* UserServiceTerms.swift */; };
 		6AA4C6C92E294E2DFB6C7C03B6B7E3B6 /* AppAuthCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FC246216946F9C79BE7683EAEE85717 /* AppAuthCore.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6ACCCF234CBB808484D8EAB986A86E96 /* OIDFieldMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = CF7F4CC246810649E79C0710D8E68E6F /* OIDFieldMapping.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6C088CBEBD93C7E968C0A33F8B8C57AE /* GTMMIMEDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 081E398C6E47598A6CF15E78198A1570 /* GTMMIMEDocument.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6FBC4559A4C58C099D7F8267A2AAC403 /* MigrateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8589C77716F49408A48D0B1DBD070B6 /* MigrateManager.swift */; };
 		6FFF1E8A8B66FF01ED0CFCF541E142D0 /* AppAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 442E016B400166E58352538076B3E111 /* AppAuth-dummy.m */; };
-		70020AB02D2779C076BFA11F79CC1E20 /* KakaoSDKAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D82BF62BAF918734C257F1D17BC101 /* KakaoSDKAuth-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		70BE6C16BFBDEFB124E0E477EE1007DA /* OIDExternalUserAgentCatalyst.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A70E719AB853E74A12FDD6B05E2E9A0 /* OIDExternalUserAgentCatalyst.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		71C52EFD707E4E386B4C35FBBCF7BB87 /* OIDExternalUserAgentIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = C229BC924D0C97AFB367118DB3B47222 /* OIDExternalUserAgentIOS.m */; };
-		733D499FB50B7F0B6E2F92FE4085A645 /* GTMSessionFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2DB6AD2B1EEA7901E43422986ECB2 /* GTMSessionFetcherLogging.m */; };
+		728041B6CCAB782342F6114F46788340 /* GTMAppAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 66ABCD615D5F134A0DE752D2BA3B97CA /* GTMAppAuth.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		746AC8C3C5FE2D7AFBF645E8027D3E4C /* AppAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F274434ABB460BA8D8DA7A7581E63D0 /* AppAuth.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		74B84B2D17B3B3581993F053A743C2CD /* OIDAuthorizationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 523C9F43BC049915AF2C9488011766A1 /* OIDAuthorizationRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		75DF96C877D8D518D7F97CD3D377ECD6 /* KakaoSDKAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D82BF62BAF918734C257F1D17BC101 /* KakaoSDKAuth-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		78E7D000C688ACD472BBC78DEEFB501C /* OIDEndSessionResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A1506CF1D93F004B51465E6D5A2565 /* OIDEndSessionResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7964D838ED177D7C1676F14A093A5982 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF151F7CB062B508E0F36C19CD7CE71 /* Auth.swift */; };
 		7ADF429D32EE67AF1056C48DD7124B7C /* OIDError.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B20927F9A39ECE9C2DD19A999395A9 /* OIDError.m */; };
+		7B004EFF5E0369DB2D498B21F9A67C52 /* GTMAppAuthFetcherAuthorization+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = F07EAD6DA56F1901C25D66F6D2A0F93F /* GTMAppAuthFetcherAuthorization+Keychain.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7B73F4D262527915040969166BC047AD /* OIDFieldMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C095F18B5E33145E5BCDC6A5D3238C /* OIDFieldMapping.m */; };
 		7F90042AFCD560FC0478C6FEDDFA9EC6 /* OIDErrorUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 36DB2C256AE0543F6E0507A3F0D5B1A2 /* OIDErrorUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7FFC6602AC91E7B1FC7D106313EB91BA /* GTMSessionFetcherService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6117BDBF68E550CE67CF06FC603E8EE6 /* GTMSessionFetcherService.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		80490649A6A1E18BF86190F53665DF4B /* GTMSessionFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 034CC0728BC64F56F5B00E5CCF37EF76 /* GTMSessionFetcherService.m */; };
-		80BF867A394182582BA5528F802192C1 /* GTMKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2FFD70277AD7DF1A9BB8F2602F19AE /* GTMKeychain.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		803D1DD273F47E3F09B4FC7F75A3B195 /* GTMMIMEDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 081E398C6E47598A6CF15E78198A1570 /* GTMMIMEDocument.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8091F02C6737991C7FB05C73145CD209 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F09A6D1123F1C01E999357D435B0D4 /* UserApi.swift */; };
+		81B5157C48906D29424CCFCDFC9A0DB8 /* TokenManagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27D65F2451A4E34143BF7206FD9A87 /* TokenManagable.swift */; };
 		820DDD7AD7BF209FEDC9E80273B81855 /* URLConvertible+URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C1521CA4FC93816DE5CAA6CEBA2C94 /* URLConvertible+URLRequestConvertible.swift */; };
 		84317B1950759ABD0F8C4EF6163FA4F1 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387C1EAFB499D89375EF8703CA6812BF /* SessionDelegate.swift */; };
 		89EF737ECEE7D67122B917FB250651EF /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028EBF8F870C1F6ED1AFE32BC9EAE69D /* ParameterEncoding.swift */; };
 		8A086B657EA44A93C4C669FF966C5582 /* AnyCodable.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AAFC8DE4E7F1D878B8766FAD115FB74 /* AnyCodable.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8A5BDB2C46E7DFBFB56BD77A595D038E /* OIDURLQueryComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C28B20AE4E012644D8467D43FD3F30 /* OIDURLQueryComponent.m */; };
-		8AD8E63D65E430D0809E0318DB6A233D /* GTMAppAuthFetcherAuthorization+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B17911142A27F558F84FD5A8E7F1CF /* GTMAppAuthFetcherAuthorization+Keychain.m */; };
 		8D14AC9FFC8DDDB67090270076A9417E /* OIDExternalUserAgentIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BE3D7CCF580A717775E4AB5E60B3E78 /* OIDExternalUserAgentIOS.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		911D116BC0627AD422F77B6CE1DAE4D2 /* Dictionary+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965790016AEEB028F305A35E78224026 /* Dictionary+Utils.swift */; };
+		8FF13B739891E3A41E8F2C1AF0045300 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA6279B147C1D1A2B4BEF0CEBE338F2 /* ErrorInfo.swift */; };
+		90F746C285B0567933E2B81347A454CD /* GTMAppAuthFetcherAuthorization.h in Headers */ = {isa = PBXBuildFile; fileRef = B1EDF51190E91F157A3FA84018231EA5 /* GTMAppAuthFetcherAuthorization.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		91D7EAC885C2F906980495700238DA35 /* OIDRegistrationResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = BC7E40B1AB7EF37BF3C2ED261805C408 /* OIDRegistrationResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		92F8DE5883C48DE271C38FE151E7DF15 /* OAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ACE9FA47C41A5ED64277488005177C /* OAuthToken.swift */; };
+		932DFBE82888E3A89719BE2899D5A3EC /* GTMSessionFetcherService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6117BDBF68E550CE67CF06FC603E8EE6 /* GTMSessionFetcherService.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		933752F38D070BD138C35C48B9B68E90 /* OIDExternalUserAgentIOSCustomBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = A80F85BDDF4C3667E2FB44A4C61C30E0 /* OIDExternalUserAgentIOSCustomBrowser.m */; };
-		95C51E80173DF8C30C3196052CADEDFC /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE58674481D3D50A073A10FC74D4D23 /* Api.swift */; };
+		97A7416EA8428AC635E0E182F8EEFB6D /* KakaoSDKAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EBF0B8C7A14446EB6A51913C4EFEBB3 /* KakaoSDKAuth.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		97F5E3E258E920C6B5D2325F487BE6FC /* OIDAuthorizationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1425A751B0E06DEF25D9C61B2BFF2DFC /* OIDAuthorizationRequest.m */; };
 		9A8E4B489D1E914828C6E73811EAF6A7 /* DynamicCodable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E8D5AFB43E9F3E8E5AC99255562512 /* DynamicCodable-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9ACEF98E69C45B29504921BD372D5510 /* OIDResponseTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = B16E5AAFC4650328280C8FF442525F6C /* OIDResponseTypes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9CB578FE1466D91152CD3A26773B2FC9 /* OIDRegistrationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F015AD7AB455B1FCA7E16F739B0D28 /* OIDRegistrationRequest.m */; };
-		9E003BF6D71EC7C067836C07CE107269 /* KakaoSDKCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B356E62A513BFDB36A7AA85C3137273 /* KakaoSDKCommon.swift */; };
+		9D7CA7F38403C770CAD0389E88DDD96E /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7B5CFD4C256EF8ED6128421E2015C4 /* Properties.swift */; };
 		9E5AE4AC9609E6AF88D2141E5CF1F767 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6692BB7D94449A6831F7E2CE3ADBA26 /* DispatchQueue+Alamofire.swift */; };
 		9F5C142B5C99B39BF970EBD1EB0C5BCD /* OIDAuthState.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CF3E6CD6D5345689C7B26FE1C066A26 /* OIDAuthState.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A17B63F3360399C51F0F359083CE0F1C /* OIDScopes.m in Sources */ = {isa = PBXBuildFile; fileRef = 9268984DA0DBFDC42FEE8EE48936B9AE /* OIDScopes.m */; };
 		A21971664C94D7E9EE57B6335008438B /* OIDClientMetadataParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = 9598357C2D3C43770C79FD056C3AC3A2 /* OIDClientMetadataParameters.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A28EFDECC326F7582251A77983272BE0 /* GTMSessionFetcherLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 44CE8DF87361878EB5F3A748439B6ACB /* GTMSessionFetcherLogging.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A21F86796F3B89E82EF7EDD192B1630D /* GTMKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2FFD70277AD7DF1A9BB8F2602F19AE /* GTMKeychain.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A3D7043154F557EA3B933A9F6ABE2EB1 /* OIDTokenResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F0D67630945D9AEB491BD3FB73D2C11 /* OIDTokenResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A44F6B29C26CCA2BBB804D64AE8C9EAE /* KakaoSDKUser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 347E424DA3D7C26BCD56D6017A78E588 /* KakaoSDKUser-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A53B1A1A0775A67B42547503CFF0DC33 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 025BBFC3EA7CABE043749BDE98394A59 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A595B1408588022C92AA7BA5E4090D2B /* OIDExternalUserAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = A96B1F3E4662F0B7900DD31F1B7009E3 /* OIDExternalUserAgent.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A63EE619C3EB24F068B2EE7289369696 /* OIDErrorUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221EAE0503B5F2081059A2DE8DF2279 /* OIDErrorUtilities.m */; };
 		A84513509640C9B6BEC45AB4E9BE9F59 /* OperationQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E319BA9961E7021D826222F75224720 /* OperationQueue+Alamofire.swift */; };
-		A920423D54A0E8E2F28C434124CB10E0 /* SdkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9350BC3D9845B22D23440A4CE8806 /* SdkUtils.swift */; };
-		AC4FA3E44FB9476855A65C7290F796F8 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7B5CFD4C256EF8ED6128421E2015C4 /* Properties.swift */; };
+		A9FB11B2528A3B821FDBDCE12BE49196 /* AuthRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A273E0EAAE94D89EC855924BA8991C /* AuthRequestRetrier.swift */; };
 		AD3A9B50B9EA0E9BB31C4C7D38FBF9D3 /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387C3FF2471A2C76B5BBB80171743C73 /* AlamofireExtended.swift */; };
-		AF528621E33D79CEC2954CEAE208AB6A /* GTMSessionUploadFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 57DF6DE44FE5A3EDCE74EF48FEA0B42B /* GTMSessionUploadFetcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B0F5F725C37B55A477980031FC4A3845 /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09617AD3A029DAAE1AACF025C91BE42 /* AuthApi.swift */; };
+		AD52DB97E85ABF89C72C8A6485A9A125 /* Data+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5896F04F3ED56A27F1C74CAC9F3A81C /* Data+Utils.swift */; };
+		AF33FD538D0A7AE82CFA6B31043E5FC0 /* GTMOAuth2KeychainCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = C78C1B97B94F42C22BCFD64AAAEE5AC0 /* GTMOAuth2KeychainCompatibility.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B103A47847C7421AB893A587FDA69E38 /* OIDServiceConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E38E5E4ADFCCE9F5F705F98752F200 /* OIDServiceConfiguration.m */; };
 		B155DAF287362FF7C394D1F41DC9EC21 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4512EC15EF5F38BDB0D383414B904897 /* AFError.swift */; };
-		B2D3BA134D8B5721F4043D1C84006D02 /* ApiRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7523EC7CB2101867C5EFE2FC6FBA78 /* ApiRequestAdapter.swift */; };
-		B43BC6E735D798DCB2B8E4DA6045765C /* DecodingContainer+AnyCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F3D63E1B3E194F9C8C34F9B1419955 /* DecodingContainer+AnyCollection.swift */; };
-		B5958779ED599553F594A285E9A1F511 /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ED5028A50E815A042A322CE6D6B46D /* Array+Utils.swift */; };
-		B7CD618731BF74D9F9D02B66F56D3146 /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0A1F7A6C6FFEC7448E65895DAA0310 /* GTMSessionFetcher.m */; };
-		BAE90C3EC93874CBDF29BE423B919560 /* SdkCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD7B245060730C8AA5C5237319B43FF /* SdkCrypto.swift */; };
+		B9EDDB6D80C036CE374BA6AA1285FF13 /* DecodingContainer+AnyCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F3D63E1B3E194F9C8C34F9B1419955 /* DecodingContainer+AnyCollection.swift */; };
 		BBA7506B8E2BD4EDD14DC11020ACE0BB /* OIDIDToken.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE933673E57964C4E7B6056AB270E01 /* OIDIDToken.m */; };
 		BC43436B7A389099FB30A0648616EAB0 /* OIDClientMetadataParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D2977E3DF0F692364B1549AAD79AE /* OIDClientMetadataParameters.m */; };
 		BE70DF984E25E3445AC3837C7753A6A1 /* OIDAuthorizationService+IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 801D3B3453473BFCCA4708F87B9952B9 /* OIDAuthorizationService+IOS.m */; };
 		BEF49C52D880BC7C4F4F9F7018D0AA81 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8CDBFD2DACF5D71AA607ABE7262ECA /* Alamofire.swift */; };
 		C2AB210CCCCF5A4A5CF5CCCC7B557B1A /* OIDAuthState+IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 50707763248D3FD00D816096F507FFAE /* OIDAuthState+IOS.m */; };
+		C2CA81D56C7ED218C77DCEB32314B9A9 /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09617AD3A029DAAE1AACF025C91BE42 /* AuthApi.swift */; };
 		C34C2F686B95B019B68BF7998A87DECC /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD76B8A491B3BFA19CD476FC03B3633 /* RedirectHandler.swift */; };
 		C420912AC6F87B891F7183D7FFE1A7BF /* OIDExternalUserAgentCatalyst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4821E9CCAC2A8BA163C616337A12F8 /* OIDExternalUserAgentCatalyst.m */; };
 		C6C2A1D08298FF5150BAA5295213BC89 /* OIDRegistrationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 396C042F5AEAFA15BCD6D9EB9CC18E63 /* OIDRegistrationResponse.m */; };
-		C6EFFDEB1D0746D1BD58AEDD57867DC3 /* KakaoSDKAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EBF0B8C7A14446EB6A51913C4EFEBB3 /* KakaoSDKAuth.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CAD6A75DF762FCA0616F90A40BB83D90 /* GTMAppAuthFetcherAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3904D991860FECE3E8AA45C33F07FE /* GTMAppAuthFetcherAuthorization.m */; };
-		CDD290E4721424230A9B76DA5113C872 /* KakaoSDKUser.h in Headers */ = {isa = PBXBuildFile; fileRef = A126B61240B682CE614C04E8505167F7 /* KakaoSDKUser.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C8CD7261C5C02EAB47BCCB218D62ECDC /* SdkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9350BC3D9845B22D23440A4CE8806 /* SdkUtils.swift */; };
+		C9FF025064A6E30CAF9621C17BB6973F /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20584E532E40BC07D4D09EBAFE51E10 /* TokenManager.swift */; };
+		CD8B32EE7981F00D7081C5F52B7B6ECA /* GTMAppAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E191E8EDA39349C5CEF5E148CB753593 /* GTMAppAuth-dummy.m */; };
+		CE99F997CD58EC2E030DDE497C440741 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694246CEBEBC2AA53876F7199D8B8B8C /* User.swift */; };
 		CF42E1D7A8758799FBF00D34E98E52F8 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F812DA31ABEECE2E4EC55B898221C4 /* Keychain.swift */; };
-		D1AA490DCE61C75CC03144C3D9D52BDA /* GTMSessionFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A896D8BCC805D27B1D18997F33C1538 /* GTMSessionFetcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D333B5BC0F56F6615251C0630EF16CAA /* Result+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F2D990E5BD79A17B8568F3D5FBC7E3 /* Result+Alamofire.swift */; };
 		D6C5A6C0F9250B47ABADD330CBC65AA8 /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2444174F1382D9BFF3E4C77286F5F893 /* URLSessionConfiguration+Alamofire.swift */; };
-		D731FFBC2D91915D8DA9BDFCC849CD03 /* SdkCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EF68F0E1A501B28F4A3B2AA73A8F62 /* SdkCoder.swift */; };
 		D7E87819A8E2076492F9CD746F5EE95D /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F014FE7571B78A41BEF97F19C93080 /* Validation.swift */; };
 		D8ABB3B6F580342E5449ED1437B7C383 /* KeychainAccess-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BE9DA91641B399F54DF9C3F95515EE /* KeychainAccess-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DD23DE9068A0E05673C5B65933C027CC /* GTMAppAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E191E8EDA39349C5CEF5E148CB753593 /* GTMAppAuth-dummy.m */; };
 		DE2A0551BE59ECDCA12BA66D54B0D58E /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DA98F3347F71C8AA5BD86BAD7BA9E3 /* MultipartFormData.swift */; };
 		DFDB0C281B5F2EF334D964410E4EDE37 /* OIDAuthState+IOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DBB6AA4BD6D9ACB7C741634DFD13A0 /* OIDAuthState+IOS.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E0B4614A5775A8AD90FF2243E7C111DC /* GTMSessionFetcher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A906C791220E4E0F3BC953FF3B02341 /* GTMSessionFetcher-dummy.m */; };
 		E19FE5E6B35A4A84720EF2A057A3F27E /* DecodingContainer+AnyCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D72EC0FD00A39CED5FBF379F2D2A6 /* DecodingContainer+AnyCollection.swift */; };
-		E65BEEFDA87AE8175560A165C558FB53 /* UserShippingAddresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7014976F6CA3CDB8EBAF46C5C72DDF4 /* UserShippingAddresses.swift */; };
-		E8EB5F3E2A80AF55E26E9A86821691CA /* KakaoSDKAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B710899CEBF564E5BA1CC1C9070DB86 /* KakaoSDKAuth-dummy.m */; };
-		EA9A09E689C0A41D22881A0AC90FB679 /* UserServiceTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D522B0FE8AD994757EBF04235541FE /* UserServiceTerms.swift */; };
+		E816C6B60E477A61347A9EE940A6BBB0 /* Dictionary+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965790016AEEB028F305A35E78224026 /* Dictionary+Utils.swift */; };
+		E83A50563E2422FFF7A3D7E52B68BBAA /* GTMSessionUploadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = CA23D1BBD1147889614C387B2D218DDC /* GTMSessionUploadFetcher.m */; };
+		E87525B8A52FFDDB937B7C979C587B4E /* KakaoSDKUser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCB7B891BFD2DFE907FFD232FE2A36 /* KakaoSDKUser-dummy.m */; };
 		EAB6B9DD3E2921651FA40FC13F801BF2 /* AuthenticationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0B7A4583BFE088F7A0D11BF29E16BC /* AuthenticationInterceptor.swift */; };
 		EB0130DE2CCDBCEF82B488A1AC22DD7D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BA1DC1BDCB9C2966137262B673DDC2 /* HTTPMethod.swift */; };
 		EB1E11481602D27F58B4F3A5A977F49E /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D6C605B3494CB04B7DB1A07400C4D /* HTTPHeaders.swift */; };
-		ECCAC70E4D5BFC5A396D308312E97DF4 /* AuthErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCCD5A964E3E6C08E9DD720AC9B7F99 /* AuthErrorInfo.swift */; };
-		ED723E0A2A53271737E21F1A82C4B7DD /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA6279B147C1D1A2B4BEF0CEBE338F2 /* ErrorInfo.swift */; };
+		EC85A02F2A6328F814522E0EEC14E68A /* KakaoSDKCommon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE34FC6FBBEC8354A626BF9BA9306F5F /* KakaoSDKCommon-dummy.m */; };
 		EEE2BC49D6F6FDD6011DCC4D119F6E71 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78084D17BB561394A6FFD46F857E7B3E /* EventMonitor.swift */; };
+		EF43B17BFB471608ABEF9D543051F247 /* GTMSessionFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A896D8BCC805D27B1D18997F33C1538 /* GTMSessionFetcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EF651E5664A2BEB28D3D630E4A8AFAA3 /* GTMOAuth2KeychainCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A842B031E94013FF6CCE5C561329721 /* GTMOAuth2KeychainCompatibility.m */; };
 		F05579894D4080B89BB2513AB27E5BEE /* OIDRegistrationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = DE9AC9F277DBAE51E59C20B9DC67163B /* OIDRegistrationRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F0AB19120B8DDDD1F17DE90618D69F26 /* StringEncoding+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD3FBF8A0E1ECDF101FF8C3AE44F748 /* StringEncoding+Alamofire.swift */; };
 		F0C619F94CCF5C3C9B34AB1F32586B6C /* OIDAuthStateErrorDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 84704BBAB3F508AF6C1D989487F22C90 /* OIDAuthStateErrorDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F0F6DF0BF119D59C677B38A6D73D1B4F /* OIDAuthorizationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B1C08EB3C1A0F6DC10E56E8F8AE042 /* OIDAuthorizationResponse.m */; };
 		F1E5F3CE6D6323FBF24C233C4D83D305 /* OIDExternalUserAgentSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7581A8BCE928D3E0F11D849DBE4F21 /* OIDExternalUserAgentSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F3C486DA149BE0094A9911120D55B3B0 /* GTMReadMonitorInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9A45C86CEB6DBB96407F9E6294306F /* GTMReadMonitorInputStream.m */; };
-		F63AC5EAD012FC1D56EAC7C76473EB0C /* SdkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C04E055B5E13DFA18C72079B8ECE5D /* SdkError.swift */; };
+		F647D3475AC7A908D39592BD86D8C6DB /* KakaoSDKUser.h in Headers */ = {isa = PBXBuildFile; fileRef = A126B61240B682CE614C04E8505167F7 /* KakaoSDKUser.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F69276A2ECB2DBE67F27C9E40721BB76 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6577E61AC77B1B2CE874440F015051E5 /* ResponseSerialization.swift */; };
 		F6DBE5BE2124A2DD2C94C18A0AC65E5D /* OIDError.h in Headers */ = {isa = PBXBuildFile; fileRef = 53E769297AF1F65DC7ABA289A47D3C83 /* OIDError.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F809068D34F7639A3B29092E895E1B79 /* OIDEndSessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E84ABAA05C325AE16601780D762C40F /* OIDEndSessionRequest.m */; };
-		FA5FD12022CA34DE0FECC513AB753E94 /* TokenManagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27D65F2451A4E34143BF7206FD9A87 /* TokenManagable.swift */; };
 		FB57A0F0F2910735FF27F1FA34DE864C /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9155F4269F64E8AB2522B315198FE4 /* RequestTaskMap.swift */; };
+		FBAC3945C3C35BA221A473A74FAE780C /* GTMSessionFetcherLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 44CE8DF87361878EB5F3A748439B6ACB /* GTMSessionFetcherLogging.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		FBBA2435EA0C30174F07806BD2F59954 /* OIDServiceDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2DA3FF36E59F00B21AE040C1527B6 /* OIDServiceDiscovery.m */; };
 		FD7AEB4BA83C6A7513C8E92D661A0BA1 /* KeychainAccess-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9DD574CEDC18193E42C39A4101631D /* KeychainAccess-dummy.m */; };
 		FF00E3E2EC1A1160B3F8DC38EB219D20 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF339C97CAE2AAD6F1353A1A29C9B76 /* Response.swift */; };
-		FF79D2DDC5764AD448861B6E0F59CEAD /* GTMGatherInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = B942738761BFE2BFE46F6DF063AD55B6 /* GTMGatherInputStream.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		020F758636D5E7BFB97D3B727AF54DF2 /* PBXContainerItemProxy */ = {
+		081F692BFA303E1A12FC2280806BC59B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D676E21115185671D7258A56944ABE98;
-			remoteInfo = GTMSessionFetcher;
+			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
+			remoteInfo = AppAuth;
 		};
-		101665881678D6080742FB0E578F045B /* PBXContainerItemProxy */ = {
+		085ADDFE8675DAFBC0FEC40CCBF23F88 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 205D6EF1B8DCC8419E2F53266F6ADCDC;
 			remoteInfo = KakaoSDKCommon;
 		};
-		1A235A005B4572B873138C0A58447743 /* PBXContainerItemProxy */ = {
+		255C113C5B8CEBDE5DFD4788BBC6FC4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D676E21115185671D7258A56944ABE98;
+			remoteInfo = GTMSessionFetcher;
+		};
+		3024AFF6528D17F5E4D4F5BE2F08F20C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83CA882AD877ED964BDF66235E416BC1;
+			remoteInfo = KakaoSDKAuth;
+		};
+		3115F3C006DD5BC189F6296043623FC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
+			remoteInfo = AppAuth;
+		};
+		41595E0C2EE05A58FE54A80AF3C4C8F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D676E21115185671D7258A56944ABE98;
+			remoteInfo = GTMSessionFetcher;
+		};
+		457F22B75FED0E6B02E7C8D874C82023 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8627999EF1D5E93E13DAFF580DA8CDCF;
+			remoteInfo = GTMAppAuth;
+		};
+		619380F3B2F5E9BE7439064D9CECB0C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAD3534FC55B0333104E5117C0A9A324;
+			remoteInfo = GoogleSignIn;
+		};
+		78A205A11DC5E5BF7A093A27A2F83D5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 205D6EF1B8DCC8419E2F53266F6ADCDC;
 			remoteInfo = KakaoSDKCommon;
 		};
-		1A2E19E4DCEEAAC2C5FD4B16C933BE4E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
-			remoteInfo = AppAuth;
-		};
-		1F43CE751C9DFE24254431FAFD79F8DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
-			remoteInfo = AppAuth;
-		};
-		264DF291BA5CBC9972F855A4D1FC2B2C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8627999EF1D5E93E13DAFF580DA8CDCF;
-			remoteInfo = GTMAppAuth;
-		};
-		3652921B48C8371C467304AD8A401488 /* PBXContainerItemProxy */ = {
+		848C022ACA1A5BF4B149A0541ECA8D4A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D676E21115185671D7258A56944ABE98;
 			remoteInfo = GTMSessionFetcher;
 		};
-		37C8AE1A01B0C03B251E20E2C5554004 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 83CA882AD877ED964BDF66235E416BC1;
-			remoteInfo = KakaoSDKAuth;
-		};
-		39CC662C5BEB5386AE63BBFEFE0C4CB5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
-			remoteInfo = Alamofire;
-		};
-		3B421C7EF3E080AA651216A73D391855 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 615C831BCE925ED486B225B87E44926D;
-			remoteInfo = KeychainAccess;
-		};
-		411D94AE421B096133138674FF085E12 /* PBXContainerItemProxy */ = {
+		96C4B52CEBD25FE7612CDFAC4EBB56D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
 			remoteInfo = AppAuth;
 		};
-		8EA939F9246D7B37DD7D73605CABEB14 /* PBXContainerItemProxy */ = {
+		9998D5B2493CA3CBC84617D63F94BE5D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
 			remoteInfo = Alamofire;
 		};
-		97704B93763F05A4CEEAB54A54BD8217 /* PBXContainerItemProxy */ = {
+		9D502D4E6C893A57652D3471C0C2B481 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3F7BF367078951B6E8BC95B3DA89967A;
-			remoteInfo = KakaoSDKUser;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
 		};
-		A777C0E1789DBFC0EDF3F12DA096C086 /* PBXContainerItemProxy */ = {
+		A35335C1CC102F974A40569AF4A6078F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D676E21115185671D7258A56944ABE98;
-			remoteInfo = GTMSessionFetcher;
+			remoteGlobalIDString = 205D6EF1B8DCC8419E2F53266F6ADCDC;
+			remoteInfo = KakaoSDKCommon;
 		};
-		ABF5C94FE009ED37C9BE8CB370E0EF5D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 83CA882AD877ED964BDF66235E416BC1;
-			remoteInfo = KakaoSDKAuth;
-		};
-		C382CCE3A8C2DFA5A3B47EE5D1028143 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8627999EF1D5E93E13DAFF580DA8CDCF;
-			remoteInfo = GTMAppAuth;
-		};
-		D8029E8A673043D695FB2FE635140366 /* PBXContainerItemProxy */ = {
+		A4007DD0DE3F2F70DF632CD53B99DCD2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5C123093641D5304AC8B5BF40A3373AE;
 			remoteInfo = DynamicCodable;
 		};
-		DAC866B4CD1EDC53F7573BE7BAB28EB9 /* PBXContainerItemProxy */ = {
+		A7A1B10039B03280B74677278DE24368 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 205D6EF1B8DCC8419E2F53266F6ADCDC;
-			remoteInfo = KakaoSDKCommon;
+			remoteGlobalIDString = 615C831BCE925ED486B225B87E44926D;
+			remoteInfo = KeychainAccess;
 		};
-		DC77D2007A22AD181837DE1E2C101333 /* PBXContainerItemProxy */ = {
+		A962DDEB8619842B63AFA1C815455521 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CAD3534FC55B0333104E5117C0A9A324;
-			remoteInfo = GoogleSignIn;
+			remoteGlobalIDString = 3F7BF367078951B6E8BC95B3DA89967A;
+			remoteInfo = KakaoSDKUser;
+		};
+		CFBE3CB2F286EF0D95A2ACDEBE0C1014 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8627999EF1D5E93E13DAFF580DA8CDCF;
+			remoteInfo = GTMAppAuth;
+		};
+		F0BDBB965AC1EFADA19D3B8EEA5A6E4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83CA882AD877ED964BDF66235E416BC1;
+			remoteInfo = KakaoSDKAuth;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -580,6 +580,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0EBA6F5740E0717552A5D1D5F9D1327C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1340352915582BD87B7A6AA358663BCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -587,14 +594,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A360602D64270665F467369E0C4B53E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5A28ED1DB3A9FAEDA2642A0DCE563DFF /* Frameworks */ = {
+		38BB83F22FFC6FE88D75C4A7A49F53E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -608,14 +608,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		879EA7F4B4EC6D77292AEDC8BCE128F2 /* Frameworks */ = {
+		621C2EBE4DF7DFC35424304FD3FFF61B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AF7D9AE49191F1A4A72C310E59DAA2C /* Frameworks */ = {
+		682A4D8B047E96A494B7E3319B5FD19A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2052CD1CB28525B7DF7A3BECE2C7948 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -629,13 +636,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C69D05386B23A1E05EA42F93205C6549 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E118682940AB6011568CC75C8463DA98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -643,7 +643,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F4F983F8E51410B88FC8E698EF1B7A24 /* Frameworks */ = {
+		E2F7B4139B43DCCB2C5C7DE638C19AEE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1175,26 +1175,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		06E12425534E540BD7B986107BB82F54 /* Headers */ = {
+		11EE82E6CC5F9CBB25E136ACD1AB620D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A44F6B29C26CCA2BBB804D64AE8C9EAE /* KakaoSDKUser-umbrella.h in Headers */,
-				CDD290E4721424230A9B76DA5113C872 /* KakaoSDKUser.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		07AA7BBB5A076CD80FFA4EFC5703850D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46947C4046D55037D214CB109B365767 /* GTMGatherInputStream.h in Headers */,
-				6C088CBEBD93C7E968C0A33F8B8C57AE /* GTMMIMEDocument.h in Headers */,
-				556338111910FFB0C4770F0E3CF71FB7 /* GTMReadMonitorInputStream.h in Headers */,
-				D1AA490DCE61C75CC03144C3D9D52BDA /* GTMSessionFetcher.h in Headers */,
-				A28EFDECC326F7582251A77983272BE0 /* GTMSessionFetcherLogging.h in Headers */,
-				7FFC6602AC91E7B1FC7D106313EB91BA /* GTMSessionFetcherService.h in Headers */,
-				AF528621E33D79CEC2954CEAE208AB6A /* GTMSessionUploadFetcher.h in Headers */,
+				37D10A3AB30849224E26F56C90B7AE72 /* Pods-Draft-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1206,12 +1191,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5074D39CC163A4F19D082780B50B7DFD /* Headers */ = {
+		2349CE616CD6419DBD7DCBA5AAFEABBC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70020AB02D2779C076BFA11F79CC1E20 /* KakaoSDKAuth-umbrella.h in Headers */,
-				C6EFFDEB1D0746D1BD58AEDD57867DC3 /* KakaoSDKAuth.h in Headers */,
+				75DF96C877D8D518D7F97CD3D377ECD6 /* KakaoSDKAuth-umbrella.h in Headers */,
+				97A7416EA8428AC635E0E182F8EEFB6D /* KakaoSDKAuth.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340E5B3B0D711472484B7C35FA753790 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20450DE72DB74A7297C47C8474EE69D5 /* KakaoSDKCommon-umbrella.h in Headers */,
+				604B859563FA43A6098DF6F67554D656 /* KakaoSDKCommon.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		692DE8E55D02E62C82D26768B619B949 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44DD1CDA4C76B9260B5EF3A237FF5540 /* GTMGatherInputStream.h in Headers */,
+				803D1DD273F47E3F09B4FC7F75A3B195 /* GTMMIMEDocument.h in Headers */,
+				1ABA3ABA530411283001334E90E61CDF /* GTMReadMonitorInputStream.h in Headers */,
+				EF43B17BFB471608ABEF9D543051F247 /* GTMSessionFetcher.h in Headers */,
+				FBAC3945C3C35BA221A473A74FAE780C /* GTMSessionFetcherLogging.h in Headers */,
+				932DFBE82888E3A89719BE2899D5A3EC /* GTMSessionFetcherService.h in Headers */,
+				30846928D515A31D381300E2B47412FC /* GTMSessionUploadFetcher.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1259,15 +1267,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC4E790C8804CB921B845CF41443ED72 /* Headers */ = {
+		D20BCFDFC424D08898AFB20835D0996D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A35732F6EA507960E93F5950A06BB1D /* GTMAppAuth.h in Headers */,
-				68D92C1DB4640784DC17873107C0811A /* GTMAppAuthFetcherAuthorization+Keychain.h in Headers */,
-				5DA9BF935A8D475D9DAF265EC14A9645 /* GTMAppAuthFetcherAuthorization.h in Headers */,
-				80BF867A394182582BA5528F802192C1 /* GTMKeychain.h in Headers */,
-				2B5AE04168E2B77EA383700A36385947 /* GTMOAuth2KeychainCompatibility.h in Headers */,
+				728041B6CCAB782342F6114F46788340 /* GTMAppAuth.h in Headers */,
+				7B004EFF5E0369DB2D498B21F9A67C52 /* GTMAppAuthFetcherAuthorization+Keychain.h in Headers */,
+				90F746C285B0567933E2B81347A454CD /* GTMAppAuthFetcherAuthorization.h in Headers */,
+				A21F86796F3B89E82EF7EDD192B1630D /* GTMKeychain.h in Headers */,
+				AF33FD538D0A7AE82CFA6B31043E5FC0 /* GTMOAuth2KeychainCompatibility.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1279,20 +1287,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DBF97DC7DE28B8767BD855E00D51C251 /* Headers */ = {
+		EC65F413D164893383991023FDFF6F9B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EA92AD60ECD4C056681EFF3C6E89A8E /* Pods-Draft-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE31CDBEC2A66EEA0E4D79912C09C0C8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				364925E15DD77C1D1A74C230056A947E /* KakaoSDKCommon-umbrella.h in Headers */,
-				4DD52BF1F6DCD5123F1ED811392AE1A1 /* KakaoSDKCommon.h in Headers */,
+				2521EAB35390A194A9CC88B065B8C14D /* KakaoSDKUser-umbrella.h in Headers */,
+				F647D3475AC7A908D39592BD86D8C6DB /* KakaoSDKUser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1301,17 +1301,17 @@
 /* Begin PBXNativeTarget section */
 		205D6EF1B8DCC8419E2F53266F6ADCDC /* KakaoSDKCommon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 962002154E38C62632B7E525AB581B40 /* Build configuration list for PBXNativeTarget "KakaoSDKCommon" */;
+			buildConfigurationList = 125D23098092A17E2B0793F8E1045338 /* Build configuration list for PBXNativeTarget "KakaoSDKCommon" */;
 			buildPhases = (
-				DE31CDBEC2A66EEA0E4D79912C09C0C8 /* Headers */,
-				374BEDBCC12FF376C7BFA5D4D03D7E88 /* Sources */,
-				3A360602D64270665F467369E0C4B53E /* Frameworks */,
-				843477245993EBDDBDBFF71418DA8E91 /* Copy generated compatibility header */,
+				340E5B3B0D711472484B7C35FA753790 /* Headers */,
+				351C80A3D571DA01709257346D9A93B6 /* Sources */,
+				38BB83F22FFC6FE88D75C4A7A49F53E3 /* Frameworks */,
+				4B8065471822B5160A14FCFEAE118F44 /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8CFC2DAE0A71DF564AB6B4E43FFA09CA /* PBXTargetDependency */,
+				C8895244C48963965EFE79EDD927E78E /* PBXTargetDependency */,
 			);
 			name = KakaoSDKCommon;
 			productName = KakaoSDKCommon;
@@ -1320,18 +1320,18 @@
 		};
 		3F7BF367078951B6E8BC95B3DA89967A /* KakaoSDKUser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDE713249681DAA4C24EE42E528290F6 /* Build configuration list for PBXNativeTarget "KakaoSDKUser" */;
+			buildConfigurationList = 00E186CAA4B62E37F02C03756F5450FC /* Build configuration list for PBXNativeTarget "KakaoSDKUser" */;
 			buildPhases = (
-				06E12425534E540BD7B986107BB82F54 /* Headers */,
-				A4840D2C7624CCB849829F2E797CC380 /* Sources */,
-				9AF7D9AE49191F1A4A72C310E59DAA2C /* Frameworks */,
-				9615E0D1E46F6895BE483409DE8AEF72 /* Copy generated compatibility header */,
+				EC65F413D164893383991023FDFF6F9B /* Headers */,
+				33702549DCA680E2701EC8253BF5262E /* Sources */,
+				621C2EBE4DF7DFC35424304FD3FFF61B /* Frameworks */,
+				4ABE6D48F264ABD40C7D44260B72A32D /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				725CFFD3268D049118A8C8606658DCDE /* PBXTargetDependency */,
-				0032C99D830D19044D2CFA86F7634EFA /* PBXTargetDependency */,
+				A0ACB95BCC3B91841FFDDAFE2810FB27 /* PBXTargetDependency */,
+				DE944CCA78D95A3825B39728FFB3B300 /* PBXTargetDependency */,
 			);
 			name = KakaoSDKUser;
 			productName = KakaoSDKUser;
@@ -1393,17 +1393,17 @@
 		};
 		83CA882AD877ED964BDF66235E416BC1 /* KakaoSDKAuth */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7747C2DC26D976E5627058DD22952A4C /* Build configuration list for PBXNativeTarget "KakaoSDKAuth" */;
+			buildConfigurationList = 71169A848150B102F193C8E9EBD04768 /* Build configuration list for PBXNativeTarget "KakaoSDKAuth" */;
 			buildPhases = (
-				5074D39CC163A4F19D082780B50B7DFD /* Headers */,
-				A825063C2B6849268A470D1CF0C40A00 /* Sources */,
-				C69D05386B23A1E05EA42F93205C6549 /* Frameworks */,
-				2A369FFC9A31BFC55DF8F64631EC4FC9 /* Copy generated compatibility header */,
+				2349CE616CD6419DBD7DCBA5AAFEABBC /* Headers */,
+				AEC4D507BAF30DE217CFEFFEF2DAE635 /* Sources */,
+				E2F7B4139B43DCCB2C5C7DE638C19AEE /* Frameworks */,
+				76FC2B75BE0D01317DA63E1721A48EA3 /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C34B26362923B9864CF11D47994944BF /* PBXTargetDependency */,
+				311D506A15CE284BB804D7E6E88E10CC /* PBXTargetDependency */,
 			);
 			name = KakaoSDKAuth;
 			productName = KakaoSDKAuth;
@@ -1412,17 +1412,17 @@
 		};
 		8627999EF1D5E93E13DAFF580DA8CDCF /* GTMAppAuth */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D60B5E75D4BA30794AB032B0CFB7F65 /* Build configuration list for PBXNativeTarget "GTMAppAuth" */;
+			buildConfigurationList = ABD08A6CBE116F9D9AADCEAE8F53B7E6 /* Build configuration list for PBXNativeTarget "GTMAppAuth" */;
 			buildPhases = (
-				CC4E790C8804CB921B845CF41443ED72 /* Headers */,
-				3A29216A5E5424D4B37D634ABC765F5D /* Sources */,
-				879EA7F4B4EC6D77292AEDC8BCE128F2 /* Frameworks */,
+				D20BCFDFC424D08898AFB20835D0996D /* Headers */,
+				F1C7C704F535E73C101BFB679D53D567 /* Sources */,
+				682A4D8B047E96A494B7E3319B5FD19A /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6A4A0BC2A3BC35FCDF9ACDF6265A5D36 /* PBXTargetDependency */,
-				29410D9D112CD772C5E381EFE3F6EE58 /* PBXTargetDependency */,
+				17F95C18E3EFF34AD53094C236880907 /* PBXTargetDependency */,
+				E89E0382D716E97612D73AB1423F3C40 /* PBXTargetDependency */,
 			);
 			name = GTMAppAuth;
 			productName = GTMAppAuth;
@@ -1431,25 +1431,25 @@
 		};
 		B59BAD892D3C52E1C87928E06E5E995B /* Pods-Draft */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFA13544D4EDE61A361403DEAA8886BA /* Build configuration list for PBXNativeTarget "Pods-Draft" */;
+			buildConfigurationList = FBED78DB93203252386B60C29F762D5D /* Build configuration list for PBXNativeTarget "Pods-Draft" */;
 			buildPhases = (
-				DBF97DC7DE28B8767BD855E00D51C251 /* Headers */,
-				B16734013E6D4E96D8507866A7323021 /* Sources */,
-				F4F983F8E51410B88FC8E698EF1B7A24 /* Frameworks */,
+				11EE82E6CC5F9CBB25E136ACD1AB620D /* Headers */,
+				A0AF4D6A17E3DB009B8FC40CD03BA83B /* Sources */,
+				A2052CD1CB28525B7DF7A3BECE2C7948 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8870060597931D9A713383D045B7CA76 /* PBXTargetDependency */,
-				0691ED75F37180A0E9A82DFD8BE231F0 /* PBXTargetDependency */,
-				4EE61BF63951A097EC2A2A1C47C967DD /* PBXTargetDependency */,
-				3F93C2753E67B0C329AC1A5D1BABE466 /* PBXTargetDependency */,
-				11329EA3C6E874C67E35EC8DD950BB6F /* PBXTargetDependency */,
-				D68BA1DFD438993AC67BB9CF9757EE4F /* PBXTargetDependency */,
-				5D15DE0AF2D3571A3715757BA07E6095 /* PBXTargetDependency */,
-				EBC5F9FD6892E6A1A255AB06EEBC4581 /* PBXTargetDependency */,
-				CAAD2C2ECF1CDD355D0DB074877BC05A /* PBXTargetDependency */,
-				6779A2D9C1FEF67FC5AADCF1487CD9BD /* PBXTargetDependency */,
+				BBA6F116E13DFF6258A899EDC3A9D77D /* PBXTargetDependency */,
+				834BA84AACBAD76C537BD60C1AA9427F /* PBXTargetDependency */,
+				01B933918FD4744D6FD09EE96C5E52A1 /* PBXTargetDependency */,
+				0B3F07ED59837F5E0C6189E4171842EA /* PBXTargetDependency */,
+				B89582C8090B16D552921647D8828EFE /* PBXTargetDependency */,
+				8676EE0D67D837FE19A565D2688345DD /* PBXTargetDependency */,
+				F044E55467C90858E4D3DB33727888E5 /* PBXTargetDependency */,
+				761C1FD177EAC4F654FA457EFE0DEF72 /* PBXTargetDependency */,
+				B8B8DFCE8D9FFC00C0B8398295C3AEE2 /* PBXTargetDependency */,
+				CB1BAFB2BCC1F94CF15C70548310E9DE /* PBXTargetDependency */,
 			);
 			name = "Pods-Draft";
 			productName = "Pods-Draft";
@@ -1458,11 +1458,11 @@
 		};
 		D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE196079CFA222A83A383EF74B5DDFCA /* Build configuration list for PBXNativeTarget "GTMSessionFetcher" */;
+			buildConfigurationList = 4EF1993CF7086726E525D7DFE80C98DC /* Build configuration list for PBXNativeTarget "GTMSessionFetcher" */;
 			buildPhases = (
-				07AA7BBB5A076CD80FFA4EFC5703850D /* Headers */,
-				540CFBCEA50C82911896707DB63EA04A /* Sources */,
-				5A28ED1DB3A9FAEDA2642A0DCE563DFF /* Frameworks */,
+				692DE8E55D02E62C82D26768B619B949 /* Headers */,
+				E12610D2EB3FA99C807711C5868BBEFA /* Sources */,
+				0EBA6F5740E0717552A5D1D5F9D1327C /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1529,30 +1529,6 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A369FFC9A31BFC55DF8F64631EC4FC9 /* Copy generated compatibility header */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/KakaoSDKAuth/KakaoSDKAuth.modulemap",
-				"${PODS_ROOT}/Headers/Public/KakaoSDKAuth/KakaoSDKAuth-umbrella.h",
-			);
-			name = "Copy generated compatibility header";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/KakaoSDKAuth-umbrella.h",
-				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KakaoSDKAuth/KakaoSDKAuth.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KakaoSDKAuth/KakaoSDKAuth-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-		};
 		2D7AEC047875CAE5695168B11F0F8EF7 /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1577,7 +1553,31 @@
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/DynamicCodable/DynamicCodable.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/DynamicCodable/DynamicCodable-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
-		843477245993EBDDBDBFF71418DA8E91 /* Copy generated compatibility header */ = {
+		4ABE6D48F264ABD40C7D44260B72A32D /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/KakaoSDKUser/KakaoSDKUser.modulemap",
+				"${PODS_ROOT}/Headers/Public/KakaoSDKUser/KakaoSDKUser-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/KakaoSDKUser-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KakaoSDKUser/KakaoSDKUser.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KakaoSDKUser/KakaoSDKUser-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+		4B8065471822B5160A14FCFEAE118F44 /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1601,7 +1601,7 @@
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KakaoSDKCommon/KakaoSDKCommon.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KakaoSDKCommon/KakaoSDKCommon-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
-		9615E0D1E46F6895BE483409DE8AEF72 /* Copy generated compatibility header */ = {
+		76FC2B75BE0D01317DA63E1721A48EA3 /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1610,20 +1610,20 @@
 			);
 			inputPaths = (
 				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/KakaoSDKUser/KakaoSDKUser.modulemap",
-				"${PODS_ROOT}/Headers/Public/KakaoSDKUser/KakaoSDKUser-umbrella.h",
+				"${PODS_ROOT}/Headers/Public/KakaoSDKAuth/KakaoSDKAuth.modulemap",
+				"${PODS_ROOT}/Headers/Public/KakaoSDKAuth/KakaoSDKAuth-umbrella.h",
 			);
 			name = "Copy generated compatibility header";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/KakaoSDKUser-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/KakaoSDKAuth-umbrella.h",
 				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KakaoSDKUser/KakaoSDKUser.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KakaoSDKUser/KakaoSDKUser-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KakaoSDKAuth/KakaoSDKAuth.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KakaoSDKAuth/KakaoSDKAuth-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
 		988325A8CBAFED81E123BA351205C202 /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1676,57 +1676,43 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		374BEDBCC12FF376C7BFA5D4D03D7E88 /* Sources */ = {
+		33702549DCA680E2701EC8253BF5262E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95C51E80173DF8C30C3196052CADEDFC /* Api.swift in Sources */,
-				B2D3BA134D8B5721F4043D1C84006D02 /* ApiRequestAdapter.swift in Sources */,
-				B5958779ED599553F594A285E9A1F511 /* Array+Utils.swift in Sources */,
-				ECCAC70E4D5BFC5A396D308312E97DF4 /* AuthErrorInfo.swift in Sources */,
-				1B23E1B550C9B86863278CD665D815BC /* Constants.swift in Sources */,
-				4BE5E232667C47B5BEF0D6C79A9B93E6 /* Data+Utils.swift in Sources */,
-				B43BC6E735D798DCB2B8E4DA6045765C /* DecodingContainer+AnyCollection.swift in Sources */,
-				911D116BC0627AD422F77B6CE1DAE4D2 /* Dictionary+Utils.swift in Sources */,
-				4A72E0ACC9CF578E868D78FABE2F6536 /* EncodingContainer+AnyCollection.swift in Sources */,
-				ED723E0A2A53271737E21F1A82C4B7DD /* ErrorInfo.swift in Sources */,
-				3FA7AB7CB95DD28F1879F8A11D3E7586 /* KakaoSDKCommon-dummy.m in Sources */,
-				9E003BF6D71EC7C067836C07CE107269 /* KakaoSDKCommon.swift in Sources */,
-				AC4FA3E44FB9476855A65C7290F796F8 /* Properties.swift in Sources */,
-				D731FFBC2D91915D8DA9BDFCC849CD03 /* SdkCoder.swift in Sources */,
-				BAE90C3EC93874CBDF29BE423B919560 /* SdkCrypto.swift in Sources */,
-				F63AC5EAD012FC1D56EAC7C76473EB0C /* SdkError.swift in Sources */,
-				5B97C81FC4057EB4F9057C0A89893865 /* SdkLog.swift in Sources */,
-				A920423D54A0E8E2F28C434124CB10E0 /* SdkUtils.swift in Sources */,
-				4486808D884D3F8B64D2E0FBEFD11DED /* URL+Utils.swift in Sources */,
-				1754182082DF3B9BFD11B698D5EF8D4C /* Urls.swift in Sources */,
+				5E61E0110D933B612B062A2306078655 /* AccessTokenInfo.swift in Sources */,
+				E87525B8A52FFDDB937B7C979C587B4E /* KakaoSDKUser-dummy.m in Sources */,
+				CE99F997CD58EC2E030DDE497C440741 /* User.swift in Sources */,
+				8091F02C6737991C7FB05C73145CD209 /* UserApi.swift in Sources */,
+				6A845D85EA598AF9BD81A670BCF0B3AA /* UserServiceTerms.swift in Sources */,
+				2AC865A58D0B05F1CB19EE96AC65A053 /* UserShippingAddresses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A29216A5E5424D4B37D634ABC765F5D /* Sources */ = {
+		351C80A3D571DA01709257346D9A93B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD23DE9068A0E05673C5B65933C027CC /* GTMAppAuth-dummy.m in Sources */,
-				8AD8E63D65E430D0809E0318DB6A233D /* GTMAppAuthFetcherAuthorization+Keychain.m in Sources */,
-				CAD6A75DF762FCA0616F90A40BB83D90 /* GTMAppAuthFetcherAuthorization.m in Sources */,
-				1DB27652012E198BCC89EE4FEB8683B9 /* GTMKeychain_iOS.m in Sources */,
-				106ABDD69E646EA720CD4C035E601D73 /* GTMOAuth2KeychainCompatibility.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		540CFBCEA50C82911896707DB63EA04A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FF79D2DDC5764AD448861B6E0F59CEAD /* GTMGatherInputStream.m in Sources */,
-				3ADA9E0F629BC7AB2DD196644E0377F7 /* GTMMIMEDocument.m in Sources */,
-				F3C486DA149BE0094A9911120D55B3B0 /* GTMReadMonitorInputStream.m in Sources */,
-				E0B4614A5775A8AD90FF2243E7C111DC /* GTMSessionFetcher-dummy.m in Sources */,
-				B7CD618731BF74D9F9D02B66F56D3146 /* GTMSessionFetcher.m in Sources */,
-				733D499FB50B7F0B6E2F92FE4085A645 /* GTMSessionFetcherLogging.m in Sources */,
-				80490649A6A1E18BF86190F53665DF4B /* GTMSessionFetcherService.m in Sources */,
-				0A91D5BF4DBC5F415F0DB522132ACA89 /* GTMSessionUploadFetcher.m in Sources */,
+				6A277F68132C47E8192C40E22536304B /* Api.swift in Sources */,
+				4F3FE96F15D915A01153C4974EA23085 /* ApiRequestAdapter.swift in Sources */,
+				3C4458F23052B73B1437A435F97906A9 /* Array+Utils.swift in Sources */,
+				471563F0370350874BDE9EEA85965235 /* AuthErrorInfo.swift in Sources */,
+				47D4A0CF2F68666B50A27C225C80135C /* Constants.swift in Sources */,
+				AD52DB97E85ABF89C72C8A6485A9A125 /* Data+Utils.swift in Sources */,
+				B9EDDB6D80C036CE374BA6AA1285FF13 /* DecodingContainer+AnyCollection.swift in Sources */,
+				E816C6B60E477A61347A9EE940A6BBB0 /* Dictionary+Utils.swift in Sources */,
+				57100782F0660313E8470BE449A8CE49 /* EncodingContainer+AnyCollection.swift in Sources */,
+				8FF13B739891E3A41E8F2C1AF0045300 /* ErrorInfo.swift in Sources */,
+				EC85A02F2A6328F814522E0EEC14E68A /* KakaoSDKCommon-dummy.m in Sources */,
+				53A2E561EBE4954AB400C91AAD979D66 /* KakaoSDKCommon.swift in Sources */,
+				9D7CA7F38403C770CAD0389E88DDD96E /* Properties.swift in Sources */,
+				127D0694CA2E2BC52D6AF8E421FC41C3 /* SdkCoder.swift in Sources */,
+				3A3C7DD7DB8738573FB066023780FE0F /* SdkCrypto.swift in Sources */,
+				006B3C94D0FD0431C9B56BFEC43C280F /* SdkError.swift in Sources */,
+				2E205741E7D7E7D0C92C69EF35F4BF61 /* SdkLog.swift in Sources */,
+				C8CD7261C5C02EAB47BCCB218D62ECDC /* SdkUtils.swift in Sources */,
+				12C507D32F40867BB4708A19F808A57A /* URL+Utils.swift in Sources */,
+				10FC8B0A3AF6F8EC1453D853E7456970 /* Urls.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1810,41 +1796,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A4840D2C7624CCB849829F2E797CC380 /* Sources */ = {
+		A0AF4D6A17E3DB009B8FC40CD03BA83B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				108B654C433FAEC287C1686A5AFE4050 /* AccessTokenInfo.swift in Sources */,
-				39EB4C8E9019D5A41CA1DB07CD1690D7 /* KakaoSDKUser-dummy.m in Sources */,
-				1F6B5A7C8B235FABB3F5E002365CDCE0 /* User.swift in Sources */,
-				6679221EBADA282DA4A78C5AA79DDE1F /* UserApi.swift in Sources */,
-				EA9A09E689C0A41D22881A0AC90FB679 /* UserServiceTerms.swift in Sources */,
-				E65BEEFDA87AE8175560A165C558FB53 /* UserShippingAddresses.swift in Sources */,
+				51BE38D41C3014605B92906EDA871568 /* Pods-Draft-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A825063C2B6849268A470D1CF0C40A00 /* Sources */ = {
+		AEC4D507BAF30DE217CFEFFEF2DAE635 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7964D838ED177D7C1676F14A093A5982 /* Auth.swift in Sources */,
-				B0F5F725C37B55A477980031FC4A3845 /* AuthApi.swift in Sources */,
-				688BD6A2DDE9700C6A4770E8FE124ABF /* AuthController.swift in Sources */,
-				271CC81F6E1B15D0718C8A428600B8C5 /* AuthRequestAdapter.swift in Sources */,
-				35E6D8C102296376C42D3EA59AEBC7ED /* AuthRequestRetrier.swift in Sources */,
-				E8EB5F3E2A80AF55E26E9A86821691CA /* KakaoSDKAuth-dummy.m in Sources */,
-				343BFB425DC447950E00D938521798BE /* MigrateManager.swift in Sources */,
-				92F8DE5883C48DE271C38FE151E7DF15 /* OAuthToken.swift in Sources */,
-				FA5FD12022CA34DE0FECC513AB753E94 /* TokenManagable.swift in Sources */,
-				63DB894317F0469AAC1631553C13D97D /* TokenManager.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B16734013E6D4E96D8507866A7323021 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4FFCF8193929D74E5747E539EE7799A1 /* Pods-Draft-dummy.m in Sources */,
+				4CAF7518B2F66EE4810B049902BE3D6F /* Auth.swift in Sources */,
+				C2CA81D56C7ED218C77DCEB32314B9A9 /* AuthApi.swift in Sources */,
+				19E71B3A48E5FB7422AB3BD0F7DEFA5F /* AuthController.swift in Sources */,
+				16CDDC98F377D88E0A6D65DA91088F0E /* AuthRequestAdapter.swift in Sources */,
+				A9FB11B2528A3B821FDBDCE12BE49196 /* AuthRequestRetrier.swift in Sources */,
+				3BE4F697CEA0E003E686BDC65EE9ADC0 /* KakaoSDKAuth-dummy.m in Sources */,
+				6FBC4559A4C58C099D7F8267A2AAC403 /* MigrateManager.swift in Sources */,
+				000D88970E061109E1EEFF29F677197B /* OAuthToken.swift in Sources */,
+				81B5157C48906D29424CCFCDFC9A0DB8 /* TokenManagable.swift in Sources */,
+				C9FF025064A6E30CAF9621C17BB6973F /* TokenManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1867,122 +1840,149 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E12610D2EB3FA99C807711C5868BBEFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6814689C9618A41B064AE0587092BE1D /* GTMGatherInputStream.m in Sources */,
+				1CBAC840CEC1F207490446BBC49F8925 /* GTMMIMEDocument.m in Sources */,
+				0197D29CA9367975F79F64C9E7FBE2C2 /* GTMReadMonitorInputStream.m in Sources */,
+				686A4A9D353604B91C0FE8B0B8FC60E2 /* GTMSessionFetcher-dummy.m in Sources */,
+				277C64427D086ABACEA3A78BFA7B5FB2 /* GTMSessionFetcher.m in Sources */,
+				3BCC19E51809677B704560479FD7451C /* GTMSessionFetcherLogging.m in Sources */,
+				67508E4BC79BA30FCA9DF8664F4F8461 /* GTMSessionFetcherService.m in Sources */,
+				E83A50563E2422FFF7A3D7E52B68BBAA /* GTMSessionUploadFetcher.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1C7C704F535E73C101BFB679D53D567 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8B32EE7981F00D7081C5F52B7B6ECA /* GTMAppAuth-dummy.m in Sources */,
+				4E25A7014259878A3B2C90D487869416 /* GTMAppAuthFetcherAuthorization+Keychain.m in Sources */,
+				0F450C3FD65B2B0070981FC07C9FA738 /* GTMAppAuthFetcherAuthorization.m in Sources */,
+				40782DCC7AA39E0E984416B602A576D0 /* GTMKeychain_iOS.m in Sources */,
+				EF651E5664A2BEB28D3D630E4A8AFAA3 /* GTMOAuth2KeychainCompatibility.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0032C99D830D19044D2CFA86F7634EFA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KakaoSDKCommon;
-			target = 205D6EF1B8DCC8419E2F53266F6ADCDC /* KakaoSDKCommon */;
-			targetProxy = 101665881678D6080742FB0E578F045B /* PBXContainerItemProxy */;
-		};
-		0691ED75F37180A0E9A82DFD8BE231F0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AppAuth;
-			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
-			targetProxy = 1F43CE751C9DFE24254431FAFD79F8DC /* PBXContainerItemProxy */;
-		};
-		11329EA3C6E874C67E35EC8DD950BB6F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GTMSessionFetcher;
-			target = D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */;
-			targetProxy = A777C0E1789DBFC0EDF3F12DA096C086 /* PBXContainerItemProxy */;
-		};
-		29410D9D112CD772C5E381EFE3F6EE58 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GTMSessionFetcher;
-			target = D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */;
-			targetProxy = 3652921B48C8371C467304AD8A401488 /* PBXContainerItemProxy */;
-		};
-		2B9FCE8535E82F4668D2AAA18D02C1C0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AppAuth;
-			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
-			targetProxy = 411D94AE421B096133138674FF085E12 /* PBXContainerItemProxy */;
-		};
-		3F93C2753E67B0C329AC1A5D1BABE466 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GTMAppAuth;
-			target = 8627999EF1D5E93E13DAFF580DA8CDCF /* GTMAppAuth */;
-			targetProxy = C382CCE3A8C2DFA5A3B47EE5D1028143 /* PBXContainerItemProxy */;
-		};
-		4EE61BF63951A097EC2A2A1C47C967DD /* PBXTargetDependency */ = {
+		01B933918FD4744D6FD09EE96C5E52A1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DynamicCodable;
 			target = 5C123093641D5304AC8B5BF40A3373AE /* DynamicCodable */;
-			targetProxy = D8029E8A673043D695FB2FE635140366 /* PBXContainerItemProxy */;
+			targetProxy = A4007DD0DE3F2F70DF632CD53B99DCD2 /* PBXContainerItemProxy */;
 		};
-		5D15DE0AF2D3571A3715757BA07E6095 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KakaoSDKAuth;
-			target = 83CA882AD877ED964BDF66235E416BC1 /* KakaoSDKAuth */;
-			targetProxy = ABF5C94FE009ED37C9BE8CB370E0EF5D /* PBXContainerItemProxy */;
-		};
-		6779A2D9C1FEF67FC5AADCF1487CD9BD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KeychainAccess;
-			target = 615C831BCE925ED486B225B87E44926D /* KeychainAccess */;
-			targetProxy = 3B421C7EF3E080AA651216A73D391855 /* PBXContainerItemProxy */;
-		};
-		6A4A0BC2A3BC35FCDF9ACDF6265A5D36 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AppAuth;
-			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
-			targetProxy = 1A2E19E4DCEEAAC2C5FD4B16C933BE4E /* PBXContainerItemProxy */;
-		};
-		725CFFD3268D049118A8C8606658DCDE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KakaoSDKAuth;
-			target = 83CA882AD877ED964BDF66235E416BC1 /* KakaoSDKAuth */;
-			targetProxy = 37C8AE1A01B0C03B251E20E2C5554004 /* PBXContainerItemProxy */;
-		};
-		8235AE4259B6B6898F456649C1D925C4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GTMSessionFetcher;
-			target = D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */;
-			targetProxy = 020F758636D5E7BFB97D3B727AF54DF2 /* PBXContainerItemProxy */;
-		};
-		8870060597931D9A713383D045B7CA76 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
-			targetProxy = 39CC662C5BEB5386AE63BBFEFE0C4CB5 /* PBXContainerItemProxy */;
-		};
-		8CFC2DAE0A71DF564AB6B4E43FFA09CA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
-			targetProxy = 8EA939F9246D7B37DD7D73605CABEB14 /* PBXContainerItemProxy */;
-		};
-		C34B26362923B9864CF11D47994944BF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KakaoSDKCommon;
-			target = 205D6EF1B8DCC8419E2F53266F6ADCDC /* KakaoSDKCommon */;
-			targetProxy = 1A235A005B4572B873138C0A58447743 /* PBXContainerItemProxy */;
-		};
-		C8A21648FFE7779E4A20C4694F3B4BD5 /* PBXTargetDependency */ = {
+		0B3F07ED59837F5E0C6189E4171842EA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GTMAppAuth;
 			target = 8627999EF1D5E93E13DAFF580DA8CDCF /* GTMAppAuth */;
-			targetProxy = 264DF291BA5CBC9972F855A4D1FC2B2C /* PBXContainerItemProxy */;
+			targetProxy = 457F22B75FED0E6B02E7C8D874C82023 /* PBXContainerItemProxy */;
 		};
-		CAAD2C2ECF1CDD355D0DB074877BC05A /* PBXTargetDependency */ = {
+		17F95C18E3EFF34AD53094C236880907 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = KakaoSDKUser;
-			target = 3F7BF367078951B6E8BC95B3DA89967A /* KakaoSDKUser */;
-			targetProxy = 97704B93763F05A4CEEAB54A54BD8217 /* PBXContainerItemProxy */;
+			name = AppAuth;
+			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
+			targetProxy = 081F692BFA303E1A12FC2280806BC59B /* PBXContainerItemProxy */;
 		};
-		D68BA1DFD438993AC67BB9CF9757EE4F /* PBXTargetDependency */ = {
+		2857566728641F74273DD7DA9E370771 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = GoogleSignIn;
-			target = CAD3534FC55B0333104E5117C0A9A324 /* GoogleSignIn */;
-			targetProxy = DC77D2007A22AD181837DE1E2C101333 /* PBXContainerItemProxy */;
+			name = AppAuth;
+			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
+			targetProxy = 96C4B52CEBD25FE7612CDFAC4EBB56D6 /* PBXContainerItemProxy */;
 		};
-		EBC5F9FD6892E6A1A255AB06EEBC4581 /* PBXTargetDependency */ = {
+		311D506A15CE284BB804D7E6E88E10CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KakaoSDKCommon;
 			target = 205D6EF1B8DCC8419E2F53266F6ADCDC /* KakaoSDKCommon */;
-			targetProxy = DAC866B4CD1EDC53F7573BE7BAB28EB9 /* PBXContainerItemProxy */;
+			targetProxy = 085ADDFE8675DAFBC0FEC40CCBF23F88 /* PBXContainerItemProxy */;
+		};
+		314A9E36FBEA4C73491669F15EA30E5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMAppAuth;
+			target = 8627999EF1D5E93E13DAFF580DA8CDCF /* GTMAppAuth */;
+			targetProxy = CFBE3CB2F286EF0D95A2ACDEBE0C1014 /* PBXContainerItemProxy */;
+		};
+		74F3D34B7F14020AE0A57D83A7889F98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMSessionFetcher;
+			target = D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */;
+			targetProxy = 255C113C5B8CEBDE5DFD4788BBC6FC4B /* PBXContainerItemProxy */;
+		};
+		761C1FD177EAC4F654FA457EFE0DEF72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KakaoSDKCommon;
+			target = 205D6EF1B8DCC8419E2F53266F6ADCDC /* KakaoSDKCommon */;
+			targetProxy = 78A205A11DC5E5BF7A093A27A2F83D5C /* PBXContainerItemProxy */;
+		};
+		834BA84AACBAD76C537BD60C1AA9427F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppAuth;
+			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
+			targetProxy = 3115F3C006DD5BC189F6296043623FC6 /* PBXContainerItemProxy */;
+		};
+		8676EE0D67D837FE19A565D2688345DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleSignIn;
+			target = CAD3534FC55B0333104E5117C0A9A324 /* GoogleSignIn */;
+			targetProxy = 619380F3B2F5E9BE7439064D9CECB0C5 /* PBXContainerItemProxy */;
+		};
+		A0ACB95BCC3B91841FFDDAFE2810FB27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KakaoSDKAuth;
+			target = 83CA882AD877ED964BDF66235E416BC1 /* KakaoSDKAuth */;
+			targetProxy = F0BDBB965AC1EFADA19D3B8EEA5A6E4B /* PBXContainerItemProxy */;
+		};
+		B89582C8090B16D552921647D8828EFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMSessionFetcher;
+			target = D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */;
+			targetProxy = 848C022ACA1A5BF4B149A0541ECA8D4A /* PBXContainerItemProxy */;
+		};
+		B8B8DFCE8D9FFC00C0B8398295C3AEE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KakaoSDKUser;
+			target = 3F7BF367078951B6E8BC95B3DA89967A /* KakaoSDKUser */;
+			targetProxy = A962DDEB8619842B63AFA1C815455521 /* PBXContainerItemProxy */;
+		};
+		BBA6F116E13DFF6258A899EDC3A9D77D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = 9D502D4E6C893A57652D3471C0C2B481 /* PBXContainerItemProxy */;
+		};
+		C8895244C48963965EFE79EDD927E78E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = 9998D5B2493CA3CBC84617D63F94BE5D /* PBXContainerItemProxy */;
+		};
+		CB1BAFB2BCC1F94CF15C70548310E9DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeychainAccess;
+			target = 615C831BCE925ED486B225B87E44926D /* KeychainAccess */;
+			targetProxy = A7A1B10039B03280B74677278DE24368 /* PBXContainerItemProxy */;
+		};
+		DE944CCA78D95A3825B39728FFB3B300 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KakaoSDKCommon;
+			target = 205D6EF1B8DCC8419E2F53266F6ADCDC /* KakaoSDKCommon */;
+			targetProxy = A35335C1CC102F974A40569AF4A6078F /* PBXContainerItemProxy */;
+		};
+		E89E0382D716E97612D73AB1423F3C40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMSessionFetcher;
+			target = D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */;
+			targetProxy = 41595E0C2EE05A58FE54A80AF3C4C8F4 /* PBXContainerItemProxy */;
+		};
+		F044E55467C90858E4D3DB33727888E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KakaoSDKAuth;
+			target = 83CA882AD877ED964BDF66235E416BC1 /* KakaoSDKAuth */;
+			targetProxy = 3024AFF6528D17F5E4D4F5BE2F08F20C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2012,35 +2012,9 @@
 			};
 			name = Debug;
 		};
-		111273143C62B4538C5A716DDC3B913E /* Debug */ = {
+		142385210A4564D63C0457F5E6E6C30B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27B399121C14968017D9F076D25BB4A7 /* KakaoSDKAuth.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/KakaoSDKAuth/KakaoSDKAuth-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MODULEMAP_FILE = Headers/Public/KakaoSDKAuth/KakaoSDKAuth.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = KakaoSDKAuth;
-				PRODUCT_NAME = KakaoSDKAuth;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		2C016BDBD7E3DC1560DEBE038B0463CC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A1AF2ED28D656006DC570059E6C0F84 /* Pods-Draft.release.xcconfig */;
+			baseConfigurationReference = 8428C134E9D07A9688DA025906DF4439 /* Pods-Draft.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2057,6 +2031,32 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B27FE4D9668B43B3CF81D71F0989CB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE3617319902E5F8CA12707CC3237526 /* KakaoSDKCommon.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/KakaoSDKCommon/KakaoSDKCommon-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = Headers/Public/KakaoSDKCommon/KakaoSDKCommon.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KakaoSDKCommon;
+				PRODUCT_NAME = KakaoSDKCommon;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2088,32 +2088,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		35A0E0C4FE12BECB559EAFA957EAE2EF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FDA146B982D7D283B68F43BA73E64B4 /* KakaoSDKUser.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/KakaoSDKUser/KakaoSDKUser-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MODULEMAP_FILE = Headers/Public/KakaoSDKUser/KakaoSDKUser.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = KakaoSDKUser;
-				PRODUCT_NAME = KakaoSDKUser;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		510B057D2E9F059C50D52DA5D90F3ACF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2175,7 +2149,7 @@
 			};
 			name = Release;
 		};
-		588E26448CCF31CD7DACB0963F4EC644 /* Debug */ = {
+		67F8D4F8DD26D5EC07F205DCD12199FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CEC94E22E2128F70740BF6674CAFE5D2 /* GoogleSignIn.debug.xcconfig */;
 			buildSettings = {
@@ -2190,23 +2164,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
-		};
-		5BC260C4CC5FE065F8E130FAD45D46D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3722914C17A8ECBC19D3B08783FA7938 /* GoogleSignIn.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
 		};
 		6AB74E5DF26EC2DBB67152690CE4F3A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2233,6 +2190,23 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		725AF7BEC3A726CB2863C829AA3EFF70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3722914C17A8ECBC19D3B08783FA7938 /* GoogleSignIn.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		804E13245C9FBBE6A340C555CA8B2B4C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2298,32 +2272,80 @@
 			};
 			name = Debug;
 		};
-		91DD14BCA6FBE601810BF7A5F9617F0B /* Release */ = {
+		8A800AC0D816BB20A96A52A47FCA2611 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CFE1FBB09ED6715569FABD2ECAA3861 /* KakaoSDKAuth.release.xcconfig */;
+			baseConfigurationReference = 892887589BFD705965DD6E1AE735CD0E /* KakaoSDKCommon.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/KakaoSDKAuth/KakaoSDKAuth-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/KakaoSDKCommon/KakaoSDKCommon-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MODULEMAP_FILE = Headers/Public/KakaoSDKAuth/KakaoSDKAuth.modulemap;
+				MODULEMAP_FILE = Headers/Public/KakaoSDKCommon/KakaoSDKCommon.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = KakaoSDKAuth;
-				PRODUCT_NAME = KakaoSDKAuth;
+				PRODUCT_MODULE_NAME = KakaoSDKCommon;
+				PRODUCT_NAME = KakaoSDKCommon;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9305569702E4BA98CCAC3C6952672484 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 435355F4A8AC428F9A5536BAFDAF37AB /* GTMAppAuth.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GTMAppAuth/GTMAppAuth-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GTMAppAuth;
+				PRODUCT_NAME = GTMAppAuth;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		932729CAF21EB1A954329863FE200A17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00290E908DB927431836050911961D96 /* GTMSessionFetcher.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GTMSessionFetcher/GTMSessionFetcher-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GTMSessionFetcher;
+				PRODUCT_NAME = GTMSessionFetcher;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		9E71DC94075DFB5BE52DB7AB016E4DF8 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2351,53 +2373,25 @@
 			};
 			name = Release;
 		};
-		AA59745E804330968608BE576018B502 /* Release */ = {
+		9EE44DB8DD51D7E126881F30128E9775 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE3617319902E5F8CA12707CC3237526 /* KakaoSDKCommon.release.xcconfig */;
+			baseConfigurationReference = 1A1AF2ED28D656006DC570059E6C0F84 /* Pods-Draft.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/KakaoSDKCommon/KakaoSDKCommon-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MODULEMAP_FILE = Headers/Public/KakaoSDKCommon/KakaoSDKCommon.modulemap;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Draft/Pods-Draft.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = KakaoSDKCommon;
-				PRODUCT_NAME = KakaoSDKCommon;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		ABC908D64DEEC92B421F33295801844A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 435355F4A8AC428F9A5536BAFDAF37AB /* GTMAppAuth.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/GTMAppAuth/GTMAppAuth-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = GTMAppAuth;
-				PRODUCT_NAME = GTMAppAuth;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2428,7 +2422,32 @@
 			};
 			name = Release;
 		};
-		B70C2DAFCAC2745D72609C39A5F20888 /* Debug */ = {
+		C469EC303EDB2CEC73A56C9085CE78DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 200792C98DAD4279DD55145531B8C538 /* GTMSessionFetcher.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GTMSessionFetcher/GTMSessionFetcher-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GTMSessionFetcher;
+				PRODUCT_NAME = GTMSessionFetcher;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6E93D7690AE1AE99DAE769FE69610FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 835DE647FCBB3D676A6F64B5A4C7AEE4 /* GTMAppAuth.debug.xcconfig */;
 			buildSettings = {
@@ -2443,56 +2462,6 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_MODULE_NAME = GTMAppAuth;
 				PRODUCT_NAME = GTMAppAuth;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B877FE358DE8430F8EF7278C8F8C5BE3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 892887589BFD705965DD6E1AE735CD0E /* KakaoSDKCommon.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/KakaoSDKCommon/KakaoSDKCommon-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MODULEMAP_FILE = Headers/Public/KakaoSDKCommon/KakaoSDKCommon.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = KakaoSDKCommon;
-				PRODUCT_NAME = KakaoSDKCommon;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		CAF9E7851E4A6A4CFEFFBE97717FD7D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00290E908DB927431836050911961D96 /* GTMSessionFetcher.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/GTMSessionFetcher/GTMSessionFetcher-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = GTMSessionFetcher;
-				PRODUCT_NAME = GTMSessionFetcher;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2527,7 +2496,33 @@
 			};
 			name = Debug;
 		};
-		E0F5ACBAFDE06C6C953FC23939E5705D /* Release */ = {
+		CECB9152D4785680DFFAD54FB4EFF70E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FDA146B982D7D283B68F43BA73E64B4 /* KakaoSDKUser.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/KakaoSDKUser/KakaoSDKUser-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = Headers/Public/KakaoSDKUser/KakaoSDKUser.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KakaoSDKUser;
+				PRODUCT_NAME = KakaoSDKUser;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D79287F3FC12A9F32A8E5E921FF5F561 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 37043816D26AAFC611BE3F4CEDF0B027 /* KakaoSDKUser.release.xcconfig */;
 			buildSettings = {
@@ -2580,30 +2575,31 @@
 			};
 			name = Release;
 		};
-		E2425F90B23475F7CE6E9476B44D090A /* Release */ = {
+		F002ED1F6EA8BDD038D74B40ACB21746 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 200792C98DAD4279DD55145531B8C538 /* GTMSessionFetcher.release.xcconfig */;
+			baseConfigurationReference = 27B399121C14968017D9F076D25BB4A7 /* KakaoSDKAuth.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/GTMSessionFetcher/GTMSessionFetcher-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				GCC_PREFIX_HEADER = "Target Support Files/KakaoSDKAuth/KakaoSDKAuth-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = Headers/Public/KakaoSDKAuth/KakaoSDKAuth.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = GTMSessionFetcher;
-				PRODUCT_NAME = GTMSessionFetcher;
+				PRODUCT_MODULE_NAME = KakaoSDKAuth;
+				PRODUCT_NAME = KakaoSDKAuth;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		F1923C4307B7623FF59C959306F79E43 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2629,46 +2625,59 @@
 			};
 			name = Debug;
 		};
-		FA0E9F8D68DDA431102910DBAA518EF1 /* Debug */ = {
+		F515E8C813AFA86A04314ED084DB2F15 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8428C134E9D07A9688DA025906DF4439 /* Pods-Draft.debug.xcconfig */;
+			baseConfigurationReference = 6CFE1FBB09ED6715569FABD2ECAA3861 /* KakaoSDKAuth.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Draft/Pods-Draft.modulemap";
+				GCC_PREFIX_HEADER = "Target Support Files/KakaoSDKAuth/KakaoSDKAuth-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = Headers/Public/KakaoSDKAuth/KakaoSDKAuth.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KakaoSDKAuth;
+				PRODUCT_NAME = KakaoSDKAuth;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		00E186CAA4B62E37F02C03756F5450FC /* Build configuration list for PBXNativeTarget "KakaoSDKUser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECB9152D4785680DFFAD54FB4EFF70E /* Debug */,
+				D79287F3FC12A9F32A8E5E921FF5F561 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		125D23098092A17E2B0793F8E1045338 /* Build configuration list for PBXNativeTarget "KakaoSDKCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A800AC0D816BB20A96A52A47FCA2611 /* Debug */,
+				2B27FE4D9668B43B3CF81D71F0989CB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1D06F0F56CC7BB25D0F0253E62A35541 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AB74E5DF26EC2DBB67152690CE4F3A2 /* Debug */,
 				3124AE689E55C905A6E3BD239058289B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3D60B5E75D4BA30794AB032B0CFB7F65 /* Build configuration list for PBXNativeTarget "GTMAppAuth" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B70C2DAFCAC2745D72609C39A5F20888 /* Debug */,
-				ABC908D64DEEC92B421F33295801844A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2682,11 +2691,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7747C2DC26D976E5627058DD22952A4C /* Build configuration list for PBXNativeTarget "KakaoSDKAuth" */ = {
+		4EF1993CF7086726E525D7DFE80C98DC /* Build configuration list for PBXNativeTarget "GTMSessionFetcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				111273143C62B4538C5A716DDC3B913E /* Debug */,
-				91DD14BCA6FBE601810BF7A5F9617F0B /* Release */,
+				932729CAF21EB1A954329863FE200A17 /* Debug */,
+				C469EC303EDB2CEC73A56C9085CE78DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71169A848150B102F193C8E9EBD04768 /* Build configuration list for PBXNativeTarget "KakaoSDKAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F002ED1F6EA8BDD038D74B40ACB21746 /* Debug */,
+				F515E8C813AFA86A04314ED084DB2F15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2696,24 +2714,6 @@
 			buildConfigurations = (
 				F1923C4307B7623FF59C959306F79E43 /* Debug */,
 				B3AC04A859AB41AF93F45A9C2554DDB5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7F982436D96A9F7AAE7AE29D12E88120 /* Build configuration list for PBXAggregateTarget "GoogleSignIn" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				588E26448CCF31CD7DACB0963F4EC644 /* Debug */,
-				5BC260C4CC5FE065F8E130FAD45D46D4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		962002154E38C62632B7E525AB581B40 /* Build configuration list for PBXNativeTarget "KakaoSDKCommon" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B877FE358DE8430F8EF7278C8F8C5BE3 /* Debug */,
-				AA59745E804330968608BE576018B502 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2736,29 +2736,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE196079CFA222A83A383EF74B5DDFCA /* Build configuration list for PBXNativeTarget "GTMSessionFetcher" */ = {
+		ABD08A6CBE116F9D9AADCEAE8F53B7E6 /* Build configuration list for PBXNativeTarget "GTMAppAuth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CAF9E7851E4A6A4CFEFFBE97717FD7D0 /* Debug */,
-				E2425F90B23475F7CE6E9476B44D090A /* Release */,
+				C6E93D7690AE1AE99DAE769FE69610FF /* Debug */,
+				9305569702E4BA98CCAC3C6952672484 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFA13544D4EDE61A361403DEAA8886BA /* Build configuration list for PBXNativeTarget "Pods-Draft" */ = {
+		B0030D626B503D8EB0EA00BB772D6396 /* Build configuration list for PBXAggregateTarget "GoogleSignIn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA0E9F8D68DDA431102910DBAA518EF1 /* Debug */,
-				2C016BDBD7E3DC1560DEBE038B0463CC /* Release */,
+				67F8D4F8DD26D5EC07F205DCD12199FD /* Debug */,
+				725AF7BEC3A726CB2863C829AA3EFF70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDE713249681DAA4C24EE42E528290F6 /* Build configuration list for PBXNativeTarget "KakaoSDKUser" */ = {
+		FBED78DB93203252386B60C29F762D5D /* Build configuration list for PBXNativeTarget "Pods-Draft" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				35A0E0C4FE12BECB559EAFA957EAE2EF /* Debug */,
-				E0F5ACBAFDE06C6C953FC23939E5705D /* Release */,
+				142385210A4564D63C0457F5E6E6C30B /* Debug */,
+				9EE44DB8DD51D7E126881F30128E9775 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

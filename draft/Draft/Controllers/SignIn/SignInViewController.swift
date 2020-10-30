@@ -7,12 +7,7 @@
 //
 
 import UIKit
-import KakaoSDKAuth
-import KakaoSDKCommon
-import KakaoSDKUser
-//import FBSDKLoginKit
 import Alamofire
-import AuthenticationServices
 import GoogleSignIn
 
 class SignInViewController: UIViewController {
@@ -45,8 +40,6 @@ class SignInViewController: UIViewController {
         }
         
         let param = Param(grantType: GrantType.PASSWORD ,email: emailTextField.text! , password: passwordTextField.text!)
-        //        let header : HTTPHeader = [
-        //        ]
         
         AF.request(url,
                    method: .post,
@@ -54,116 +47,7 @@ class SignInViewController: UIViewController {
                    encoder: JSONParameterEncoder.default).validate().responseJSON()
                     {
                         response in
-                        
                         print(response.response?.headers.sorted())
-        }
-    }
-}
-
-// MARK: Signin To Server
-extension SignInViewController {
-    func tokenSignIn(token : String, provider : String, email: String) {
-        let url = APIUrl.signinUrl 
-        
-        struct Param : Encodable {
-            let grantType : String
-            let authProvider : String
-            let accessToken : String
-        }
-        
-        let param = Param(grantType: GrantType.OAUTH, authProvider: provider, accessToken: token)
-        
-        AF.request(url,
-                   method: .post,
-                   parameters: param,
-                   encoder: JSONParameterEncoder.default).validate().responseJSON() {
-                    response in
-                    
-                    if (response.response?.statusCode == 204) {
-                        
-                        if let jwtToken = response.response?.headers.dictionary["Authentication"] {
-                            
-                            User.shared.setJwtToken(jwtToken)
-                            User.shared.setUserEmail(email)
-                            self.goToDetailView()
-                        }
-                    }
-                    
-                    if (response.response?.statusCode == 404) {
-                        // token이 valid 하나 user data가 없으므로 signup view로 이동
-                        self.goToOAuthSignUpView(token: token, provider: provider)
-                        
-                    }
-                    
-                    if (response.response?.statusCode == 401) {
-                        // token이 vaild 하지 않음
-                    }
-                    //            NotificationCenter.default.addObserver(self, selector: #selector(SigninViewController.sendDeviceToken(_:)), name: NSNotification.Name(rawValue: "DeviceToken"), object: nil)
-                    // DeviceToken 전달 부분 보완 필요
-        }
-    }
-}
-
-// MARK: Google Signin
-extension SignInViewController: GIDSignInDelegate {
-    func googleSignInSetup() {
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance()?.delegate = self
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
-              withError error: Error!) {
-        if let error = error {
-            if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
-                print("The user has not signed in before or they have since signed out.")
-            }
-            else {
-                print("\(error.localizedDescription)")
-            }
-            return
-        }
-        let idToken = user.authentication.idToken
-        let email = user.profile.email
-        
-        if let token = idToken {
-            tokenSignIn(token: token, provider: OAuthProvider.GOOGLE, email: email!)
-        }
-    }
-}
-
-extension SignInViewController {
-    @IBAction func KakaologinButtonClicked() {
-        if (AuthApi.isKakaoTalkLoginAvailable()) {
-            
-            AuthApi.shared.loginWithKakaoAccount(authType: .Reauthenticate) {(oauthToken, error) in
-                if let error = error {
-                    print(error)
-                }
-                else {
-                    print("loginWithKakaoTalk() success.")
-
-                    guard let token = oauthToken?.accessToken else {
-                        print("No Kakao Access Token from oauthToken")
-                        return
-                    }
-
-                    UserApi.shared.me { (user, error) in
-                        if let error = error {
-                            print(error)
-                            self.tokenSignIn(token: token, provider: "KAKAO", email: "")
-                        }
-                        else {
-                            guard let email = user?.kakaoAccount?.email else {
-                                print("No Kakao Account Email from User")
-                                self.tokenSignIn(token: token, provider: "KAKAO", email: "")
-                                return
-                            }
-                            
-                            self.tokenSignIn(token: token, provider: "KAKAO", email: email)
-                        }
-                    }
-                }
-            }
         }
     }
 }
@@ -194,7 +78,6 @@ extension SignInViewController {
         
         oAuthSignUpViewController.setAccessToken(token)
         oAuthSignUpViewController.setProvider(provider)
-        
         navigationController?.pushViewController(oAuthSignUpViewController, animated: true)
     }
 }
@@ -223,39 +106,7 @@ extension SignInViewController {
                     response in
                     print("DeviceToken: \(response)")
                 }
-                
             }
         }
     }
 }
-
-//    func FacebookLogin(){
-//        let loginButton = FBLoginButton()
-//        loginButton.center = view.center
-//        loginButton.permissions = ["email"]
-//        view.addSubview(loginButton)
-//        // Do any additional setup after loading the view.
-//
-//        if let token = AccessToken.current, !token.isExpired {
-//            // User is logged in, do work such as go to next view controller.
-//            tokenProcessing(Token: token.tokenString, Provider: "FACEBOOK")
-//        }
-//    }
-
-
-
-//    @IBAction func KakaologinButtonClicked() {
-////        if(AuthController.isTalkAuthAvailable()){
-////            let token : OAuthToken
-////            let error : Error
-////            AuthController.shared.authorizeWithTalk(channelPublicIds: <#T##[String]?#>, serviceTerms: <#T##[String]?#>, autoLogin: <#T##Bool?#>, completion: <#T##(OAuthToken?, Error?) -> Void#>)
-////            print(token)
-////        }
-////
-//        if (AuthController.isTalkAuthAvailable()) {
-//            AuthController.shared.authorizeWithTalk(completion:{ (token,error) in
-//                self.tokenProcessing(Token: token!.accessToken,Provider: "KAKAO")
-//            })
-//        }
-//    }
-

@@ -11,16 +11,9 @@ import Foundation
 struct RoomGroup {
     var roomGroup = [GameDateString: RoomsByDate]()
     
-    func getNumOfRoomDate() -> Int {
-        return roomGroup.keys.count 
-    }
-    
-    mutating func arrangeRoomsByDate(rooms: [Room]) {
-        
+    init?(rooms: [Room]) {
         for room in rooms {
-            
-            if let gameDay = room.startTime?.timeStringToDateString {
-               
+            if let gameDay = room.startTime.timeStringToDateString {
                 if let roomsByDate = roomGroup[gameDay] {
                     roomsByDate.addRoom(room: room)
                 } else {
@@ -30,10 +23,9 @@ struct RoomGroup {
                 print("Start Time is Null of Room(id:\(room.id))")
             }
         }
-        
-        print(roomGroup)
+    }
+    
+    func getNumOfRoomDate() -> Int {
+        return roomGroup.keys.count 
     }
 }
-
-
-
