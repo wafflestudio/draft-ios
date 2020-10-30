@@ -7,11 +7,7 @@
 //
 
 import UIKit
-import KakaoSDKAuth
-import KakaoSDKCommon
-import KakaoSDKUser
 import Alamofire
-import AuthenticationServices
 import GoogleSignIn
 
 class SignInViewController: UIViewController {
@@ -56,74 +52,6 @@ class SignInViewController: UIViewController {
     }
 }
 
-// MARK: Google Signin
-extension SignInViewController: GIDSignInDelegate {
-    func googleSignInSetup() {
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance()?.delegate = self
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
-              withError error: Error!) {
-        if let error = error {
-            if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
-                print("The user has not signed in before or they have since signed out.")
-            }
-            else {
-                print("\(error.localizedDescription)")
-            }
-            return
-        }
-        guard let token = user.authentication.idToken, let identifier = user.authentication.clientID, let email = user.profile.email else {
-            print("Cannot get google access authorization")
-            return
-        }
-        
-        let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: OAuthProvider.GOOGLE, accessToken: token, username: nil, email: email)
-        
-        APIRequests.shared.request(param: param, requestType: .signIn) { _ in
-            self.goToDetailView()
-        }
-        
-        KeychainAccess.shared.saveOAuthInKeychain(identifier: identifier, accessToken: Data(token.utf8), type: .googleOAuth)
-        
-    }
-}
-
-extension SignInViewController {
-    @IBAction func KakaologinButtonClicked() {
-        if (AuthApi.isKakaoTalkLoginAvailable()) {
-            
-            AuthApi.shared.loginWithKakaoAccount(authType: .Reauthenticate) {(oauthToken, error) in
-                if let error = error {
-                    print(error)
-                }
-                else {
-                    print("loginWithKakaoTalk() success.")
-
-                    guard let token = oauthToken?.accessToken else {
-                        print("No Kakao Access Token from oauthToken")
-                        return
-                    }
-
-                    UserApi.shared.me { (user, error) in
-                        if let error = error {
-                            print(error)
-                        }
-                        else {
-                            let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: OAuthProvider.KAKAO, accessToken: token, username: "test name", email: user?.kakaoAccount?.email)
-                            
-                            APIRequests.shared.request(param: param, requestType: .signIn) { _ in
-                                self.goToDetailView()
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 // MARK: - Go To MatchingTable View
 extension SignInViewController {
     func goToDetailView() {
@@ -150,7 +78,6 @@ extension SignInViewController {
         
         oAuthSignUpViewController.setAccessToken(token)
         oAuthSignUpViewController.setProvider(provider)
-        
         navigationController?.pushViewController(oAuthSignUpViewController, animated: true)
     }
 }
@@ -179,11 +106,7 @@ extension SignInViewController {
                     response in
                     print("DeviceToken: \(response)")
                 }
-                
-    
-                
             }
-            
         }
     }
 }
