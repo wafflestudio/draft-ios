@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e4w-sG-jsP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e4w-sG-jsP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--Room Detail View Controller-->
         <scene sceneID="QcK-CC-ufO">
             <objects>
-                <viewController storyboardIdentifier="RoomDetai" hidesBottomBarWhenPushed="YES" id="e7d-G0-NnV" customClass="RoomDetailViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RoomDetai" hidesBottomBarWhenPushed="YES" id="e7d-G0-NnV" customClass="RoomDetailViewController" customModule="Draft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GSE-ee-V8V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,7 +231,7 @@
         <!--Game Date Picker View Controller-->
         <scene sceneID="WRS-Wa-v7k">
             <objects>
-                <viewController id="NhN-ao-5Ay" customClass="GameDatePickerViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NhN-ao-5Ay" customClass="GameDatePickerViewController" customModule="Draft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="REK-Ok-J2m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -364,14 +364,25 @@
         <!--Draft-->
         <scene sceneID="Y4c-a2-6s9">
             <objects>
-                <tableViewController id="nJY-x8-ffK" customClass="MatchingTableViewController" customModule="draft" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="nJY-x8-ffK" customClass="MatchingTableViewController" customModule="Draft" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="TVg-1d-0cA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="V0Z-6C-Kv8">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="가까운 위치부터"/>
+                                <segment title="가까운 시간부터"/>
+                            </segments>
+                            <connections>
+                                <action selector="sortRoomList:" destination="nJY-x8-ffK" eventType="valueChanged" id="CRo-fI-Sn1"/>
+                            </connections>
+                        </segmentedControl>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="room identifier" id="sGr-Wc-OC6">
-                                <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                <rect key="frame" x="20" y="86.5" width="374" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sGr-Wc-OC6" id="ghJ-io-wR2">
                                     <rect key="frame" x="0.0" y="0.0" width="330" height="43.5"/>

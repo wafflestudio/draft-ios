@@ -14,15 +14,22 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
     internal var jwtToken = User.shared.jwtToken
     
+
+    @IBAction func sortRoomList(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            sortByRegion()
+        case 1:
+            sortByDate()
+        default:
+            break
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addSearchController()
-        
         getRoomsByRegion()
-        // autoLoginForTest() contains allRoomsAPIRequest()
-//        autoLoginForTest()
-        
+        addSearchController()
     }
     
     // MARK: - Table view data source
@@ -77,6 +84,14 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         
         self.navigationItem.searchController = searchBarController
         self.navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
+    func sortByRegion() {
+        getRoomsByRegion()
+    }
+    
+    func sortByDate() {
+        #warning("TODO: Sort rooms by date")
     }
 }
 
