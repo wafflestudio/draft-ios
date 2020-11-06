@@ -21,6 +21,8 @@
 		386D72D0246311F40099C35E /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72CF246311F40099C35E /* Room.swift */; };
 		386D72D2246311FF0099C35E /* RoomsByDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72D1246311FF0099C35E /* RoomsByDate.swift */; };
 		386D72D4246312160099C35E /* RoomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72D3246312160099C35E /* RoomDetailViewController.swift */; };
+		3877004F25551513001CE522 /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3877004D25551513001CE522 /* RoomCell.swift */; };
+		3877005025551513001CE522 /* RoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3877004E25551513001CE522 /* RoomCell.xib */; };
 		388E1C2E24BC5BEB008DD24F /* MatchingTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388E1C2D24BC5BEB008DD24F /* MatchingTable.storyboard */; };
 		38969E0E24A6F7D70032F82C /* RoomRestAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38969E0D24A6F7D70032F82C /* RoomRestAPITest.swift */; };
 		38969E0F24A6F7F90032F82C /* MatchingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389703BC2455A81400FF5077 /* MatchingTableViewController.swift */; };
@@ -88,6 +90,8 @@
 		386D72CF246311F40099C35E /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = draft/Models/Room.swift; sourceTree = SOURCE_ROOT; };
 		386D72D1246311FF0099C35E /* RoomsByDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomsByDate.swift; path = draft/Models/RoomsByDate.swift; sourceTree = SOURCE_ROOT; };
 		386D72D3246312160099C35E /* RoomDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailViewController.swift; sourceTree = "<group>"; };
+		3877004D25551513001CE522 /* RoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
+		3877004E25551513001CE522 /* RoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomCell.xib; sourceTree = "<group>"; };
 		388E1C2D24BC5BEB008DD24F /* MatchingTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MatchingTable.storyboard; sourceTree = "<group>"; };
 		38969E0D24A6F7D70032F82C /* RoomRestAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRestAPITest.swift; sourceTree = "<group>"; };
 		3897038024559A4900FF5077 /* Draft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Draft.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +182,8 @@
 			children = (
 				389703BC2455A81400FF5077 /* MatchingTableViewController.swift */,
 				3837B51A24B5AF960085E821 /* MatchingTableVC+APIRequest.swift */,
+				3877004D25551513001CE522 /* RoomCell.swift */,
+				3877004E25551513001CE522 /* RoomCell.xib */,
 			);
 			path = RoomList;
 			sourceTree = "<group>";
@@ -420,6 +426,7 @@
 			files = (
 				3897039024559A4C00FF5077 /* Assets.xcassets in Resources */,
 				3897038B24559A4900FF5077 /* Main.storyboard in Resources */,
+				3877005025551513001CE522 /* RoomCell.xib in Resources */,
 				388E1C2E24BC5BEB008DD24F /* MatchingTable.storyboard in Resources */,
 				BF7287FB2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */,
 			);
@@ -511,6 +518,7 @@
 				BF97A7C525456373003597FB /* AppKeys.swift in Sources */,
 				3837B51B24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */,
 				BF5401C524C853EB00D73368 /* SignUpViewController.swift in Sources */,
+				3877004F25551513001CE522 /* RoomCell.swift in Sources */,
 				386D72D0246311F40099C35E /* Room.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

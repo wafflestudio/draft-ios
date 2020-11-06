@@ -14,7 +14,6 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
     internal var jwtToken = User.shared.jwtToken
     
-
     @IBAction func sortRoomList(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -30,6 +29,8 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         getRoomsByRegion()
         addSearchController()
+        
+        tableView.register(UINib(nibName: Draft.roomCellNibName, bundle: nil), forCellReuseIdentifier: Draft.roomCellIdentifier)
     }
     
     // MARK: - Table view data source
@@ -52,17 +53,20 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "room identifier", for: indexPath)
         
-        let index = indexPath.row
-        let section = indexPath.section
+        let cell = tableView.dequeueReusableCell(withIdentifier: Draft.roomCellIdentifier, for: indexPath)
         
-        if let values = roomGroup?.roomGroup.values {
-            
-            let roomsByDateArray = [RoomsByDate](values)
-            let name = roomsByDateArray[section][index]?.name
-            cell.textLabel?.text = name
+        if let roomCell = cell as? RoomCell {
+            if let values = roomGroup?.roomGroup.values {
+                let index = indexPath.row
+                let section = indexPath.section
+                
+                let roomsByDateArray = [RoomsByDate](values)
+                let name = roomsByDateArray[section][index]?.name
+                roomCell.title.text = name
+            }
         }
+        
         return cell
     }
     
