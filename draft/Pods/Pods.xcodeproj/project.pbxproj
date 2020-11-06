@@ -56,6 +56,8 @@
 		2257E70F8125FC555A61049596AD3A61 /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E576BDE077638E764A0F9DB5F38EA3F /* Protected.swift */; };
 		236E7F2B216E90EC6090DC918D8F3FDE /* OIDScopeUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CD239BF9F289ACE625BAB762105EAF7E /* OIDScopeUtilities.m */; };
 		2521EAB35390A194A9CC88B065B8C14D /* KakaoSDKUser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 347E424DA3D7C26BCD56D6017A78E588 /* KakaoSDKUser-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		26478A24185F858FED2817226660DCB3 /* Pods-Draft-DraftTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4552E2C3FD2345FA691EDBA9FF9AF248 /* Pods-Draft-DraftTests-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		267AD12A0D57F261F78F0026F0D2D9EA /* Pods-Draft-DraftTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18447503A9CA0D2488DD8479AE9B102D /* Pods-Draft-DraftTests-dummy.m */; };
 		277C64427D086ABACEA3A78BFA7B5FB2 /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0A1F7A6C6FFEC7448E65895DAA0310 /* GTMSessionFetcher.m */; };
 		2AC865A58D0B05F1CB19EE96AC65A053 /* UserShippingAddresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7014976F6CA3CDB8EBAF46C5C72DDF4 /* UserShippingAddresses.swift */; };
 		2B58A4ECE824BA3F68891E5412C4A97F /* URLEncodedFormEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5385282D33DDE9D2E693AF1EED113340 /* URLEncodedFormEncoder.swift */; };
@@ -66,7 +68,7 @@
 		30846928D515A31D381300E2B47412FC /* GTMSessionUploadFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 57DF6DE44FE5A3EDCE74EF48FEA0B42B /* GTMSessionUploadFetcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		369B03AE48C3DE968E85057E510E3475 /* OIDAuthorizationService.h in Headers */ = {isa = PBXBuildFile; fileRef = ED51005E0FCCAC4D65636BBA23702490 /* OIDAuthorizationService.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		37881D2D4EAA3A1B218BC4D819EE2451 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1416D1AEEF90D68AF6091C3B700FE000 /* ParameterEncoder.swift */; };
-		37D10A3AB30849224E26F56C90B7AE72 /* Pods-Draft-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8037F01CD4ECD21602F86C3E36C945FC /* Pods-Draft-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		37D10A3AB30849224E26F56C90B7AE72 /* Pods-Draft-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6619901CC728025181B50D320DA4A998 /* Pods-Draft-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3A3C7DD7DB8738573FB066023780FE0F /* SdkCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD7B245060730C8AA5C5237319B43FF /* SdkCrypto.swift */; };
 		3B70C2AD3AEBD202AB3737264810E7B5 /* OIDResponseTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3BD5AE7A66C30C0C8A6073C6D07462 /* OIDResponseTypes.m */; };
 		3BCC19E51809677B704560479FD7451C /* GTMSessionFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2DB6AD2B1EEA7901E43422986ECB2 /* GTMSessionFetcherLogging.m */; };
@@ -87,7 +89,7 @@
 		4F2F5139FD511381AC0C9DB9A1100842 /* CachedResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6E93E9BAFAF24A7A679A4C85C23F26 /* CachedResponseHandler.swift */; };
 		4F3FE96F15D915A01153C4974EA23085 /* ApiRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7523EC7CB2101867C5EFE2FC6FBA78 /* ApiRequestAdapter.swift */; };
 		50FBF532BFA3A51BC1E85D827ADDD5BE /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767CCE08BDFCD5A0DBB09E7D7D7DDF5F /* RetryPolicy.swift */; };
-		51BE38D41C3014605B92906EDA871568 /* Pods-Draft-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F124CAE48E71D50CDCE4EA4A099561C /* Pods-Draft-dummy.m */; };
+		51BE38D41C3014605B92906EDA871568 /* Pods-Draft-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E00043A8BB747FD09A50E2D32785F7 /* Pods-Draft-dummy.m */; };
 		525EEDE738EB2B98AFE5D91452397CB4 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA3489305F627F806FB4C698AD49B1D /* Alamofire-dummy.m */; };
 		53A2E561EBE4954AB400C91AAD979D66 /* KakaoSDKCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B356E62A513BFDB36A7AA85C3137273 /* KakaoSDKCommon.swift */; };
 		57100782F0660313E8470BE449A8CE49 /* EncodingContainer+AnyCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329D5D9CE48534321065C6304555D0C6 /* EncodingContainer+AnyCollection.swift */; };
@@ -135,6 +137,7 @@
 		91D7EAC885C2F906980495700238DA35 /* OIDRegistrationResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = BC7E40B1AB7EF37BF3C2ED261805C408 /* OIDRegistrationResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		932DFBE82888E3A89719BE2899D5A3EC /* GTMSessionFetcherService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6117BDBF68E550CE67CF06FC603E8EE6 /* GTMSessionFetcherService.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		933752F38D070BD138C35C48B9B68E90 /* OIDExternalUserAgentIOSCustomBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = A80F85BDDF4C3667E2FB44A4C61C30E0 /* OIDExternalUserAgentIOSCustomBrowser.m */; };
+		95BEDEF3FCCD70FF62DE09BC2C977D79 /* Pods-Draft-DraftUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0988F6808E1566175D147440F34AE14 /* Pods-Draft-DraftUITests-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		97A7416EA8428AC635E0E182F8EEFB6D /* KakaoSDKAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EBF0B8C7A14446EB6A51913C4EFEBB3 /* KakaoSDKAuth.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		97F5E3E258E920C6B5D2325F487BE6FC /* OIDAuthorizationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1425A751B0E06DEF25D9C61B2BFF2DFC /* OIDAuthorizationRequest.m */; };
 		9A8E4B489D1E914828C6E73811EAF6A7 /* DynamicCodable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E8D5AFB43E9F3E8E5AC99255562512 /* DynamicCodable-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -203,9 +206,17 @@
 		FBBA2435EA0C30174F07806BD2F59954 /* OIDServiceDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2DA3FF36E59F00B21AE040C1527B6 /* OIDServiceDiscovery.m */; };
 		FD7AEB4BA83C6A7513C8E92D661A0BA1 /* KeychainAccess-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9DD574CEDC18193E42C39A4101631D /* KeychainAccess-dummy.m */; };
 		FF00E3E2EC1A1160B3F8DC38EB219D20 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF339C97CAE2AAD6F1353A1A29C9B76 /* Response.swift */; };
+		FFFDF35E1D1B28425A91E1DD48C05D3E /* Pods-Draft-DraftUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DABC7430F7F8D161B9D759F36E43EB71 /* Pods-Draft-DraftUITests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		047CBA43E61281638C8C8B1D7339665C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D676E21115185671D7258A56944ABE98;
+			remoteInfo = GTMSessionFetcher;
+		};
 		081F692BFA303E1A12FC2280806BC59B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -220,12 +231,40 @@
 			remoteGlobalIDString = 205D6EF1B8DCC8419E2F53266F6ADCDC;
 			remoteInfo = KakaoSDKCommon;
 		};
+		1918296DF7B5AEACEC5F6FD6051158FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D676E21115185671D7258A56944ABE98;
+			remoteInfo = GTMSessionFetcher;
+		};
+		1CE426AFBF7FA99C2B62A70A32C086B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
 		255C113C5B8CEBDE5DFD4788BBC6FC4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D676E21115185671D7258A56944ABE98;
 			remoteInfo = GTMSessionFetcher;
+		};
+		26E2FA79E5B908D4A8FAA19BAD19D414 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C123093641D5304AC8B5BF40A3373AE;
+			remoteInfo = DynamicCodable;
+		};
+		2AE762A7B4C4B3E083DA3176D022F64E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83CA882AD877ED964BDF66235E416BC1;
+			remoteInfo = KakaoSDKAuth;
 		};
 		3024AFF6528D17F5E4D4F5BE2F08F20C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -241,12 +280,26 @@
 			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
 			remoteInfo = AppAuth;
 		};
+		3F4B07CBEAF95ABD77C6CA4B694E34A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F7BF367078951B6E8BC95B3DA89967A;
+			remoteInfo = KakaoSDKUser;
+		};
 		41595E0C2EE05A58FE54A80AF3C4C8F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D676E21115185671D7258A56944ABE98;
 			remoteInfo = GTMSessionFetcher;
+		};
+		44E5CACC5672254A38CFD0D4AD9C9115 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
+			remoteInfo = AppAuth;
 		};
 		457F22B75FED0E6B02E7C8D874C82023 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -255,12 +308,47 @@
 			remoteGlobalIDString = 8627999EF1D5E93E13DAFF580DA8CDCF;
 			remoteInfo = GTMAppAuth;
 		};
+		46D494760CA6D028E53AD45DBB094BE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAD3534FC55B0333104E5117C0A9A324;
+			remoteInfo = GoogleSignIn;
+		};
+		48B39DFCB669F1CA51B3A439FA675662 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 615C831BCE925ED486B225B87E44926D;
+			remoteInfo = KeychainAccess;
+		};
+		5338B3C519D2F9973AF19D36A93DA11A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83CA882AD877ED964BDF66235E416BC1;
+			remoteInfo = KakaoSDKAuth;
+		};
 		619380F3B2F5E9BE7439064D9CECB0C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CAD3534FC55B0333104E5117C0A9A324;
 			remoteInfo = GoogleSignIn;
+		};
+		63F5F6063A90FBA04F3F110EB6179A4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 205D6EF1B8DCC8419E2F53266F6ADCDC;
+			remoteInfo = KakaoSDKCommon;
+		};
+		726CEC98A0D70C1798CDB9BBF06515CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 205D6EF1B8DCC8419E2F53266F6ADCDC;
+			remoteInfo = KakaoSDKCommon;
 		};
 		78A205A11DC5E5BF7A093A27A2F83D5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -269,12 +357,40 @@
 			remoteGlobalIDString = 205D6EF1B8DCC8419E2F53266F6ADCDC;
 			remoteInfo = KakaoSDKCommon;
 		};
+		801B974753626777E65A7DDF09F8D69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8627999EF1D5E93E13DAFF580DA8CDCF;
+			remoteInfo = GTMAppAuth;
+		};
 		848C022ACA1A5BF4B149A0541ECA8D4A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D676E21115185671D7258A56944ABE98;
 			remoteInfo = GTMSessionFetcher;
+		};
+		8F161DD0D31A9617995E2C3BA0A8458C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F7BF367078951B6E8BC95B3DA89967A;
+			remoteInfo = KakaoSDKUser;
+		};
+		92A7824B3749723A31053A2AF93495D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C123093641D5304AC8B5BF40A3373AE;
+			remoteInfo = DynamicCodable;
+		};
+		937A3BCB70096F3A5F87DE7CD4188DE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
+			remoteInfo = AppAuth;
 		};
 		96C4B52CEBD25FE7612CDFAC4EBB56D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -296,6 +412,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
 			remoteInfo = Alamofire;
+		};
+		9FC0ADEECAF73D6F84024F16BC63D1E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAD3534FC55B0333104E5117C0A9A324;
+			remoteInfo = GoogleSignIn;
 		};
 		A35335C1CC102F974A40569AF4A6078F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -325,12 +448,33 @@
 			remoteGlobalIDString = 3F7BF367078951B6E8BC95B3DA89967A;
 			remoteInfo = KakaoSDKUser;
 		};
+		C17945B649462E89DFCBDBC548460AC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8627999EF1D5E93E13DAFF580DA8CDCF;
+			remoteInfo = GTMAppAuth;
+		};
 		CFBE3CB2F286EF0D95A2ACDEBE0C1014 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8627999EF1D5E93E13DAFF580DA8CDCF;
 			remoteInfo = GTMAppAuth;
+		};
+		D439BC09E0112904E9DF33D8DC78582C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 615C831BCE925ED486B225B87E44926D;
+			remoteInfo = KeychainAccess;
+		};
+		D80DED23B6723FD5CC88FDC74303A738 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
 		};
 		F0BDBB965AC1EFADA19D3B8EEA5A6E4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -346,9 +490,11 @@
 		025BBFC3EA7CABE043749BDE98394A59 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		028EBF8F870C1F6ED1AFE32BC9EAE69D /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		034CC0728BC64F56F5B00E5CCF37EF76 /* GTMSessionFetcherService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherService.m; path = Source/GTMSessionFetcherService.m; sourceTree = "<group>"; };
+		03E31A7C2C79F8212D59B347A4734221 /* Pods-Draft-DraftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Draft-DraftTests.release.xcconfig"; sourceTree = "<group>"; };
 		04BE9DA91641B399F54DF9C3F95515EE /* KeychainAccess-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-umbrella.h"; sourceTree = "<group>"; };
 		04C04E055B5E13DFA18C72079B8ECE5D /* SdkError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SdkError.swift; path = sources/KakaoSDKCommon/common/SdkError.swift; sourceTree = "<group>"; };
 		07B17911142A27F558F84FD5A8E7F1CF /* GTMAppAuthFetcherAuthorization+Keychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMAppAuthFetcherAuthorization+Keychain.m"; path = "Source/GTMAppAuthFetcherAuthorization+Keychain.m"; sourceTree = "<group>"; };
+		07F63A1ED0C6D0EC1EADDE9DAE7B6172 /* libPods-Draft-DraftUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Draft-DraftUITests.a"; path = "libPods-Draft-DraftUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		081E398C6E47598A6CF15E78198A1570 /* GTMMIMEDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMMIMEDocument.h; path = Source/GTMMIMEDocument.h; sourceTree = "<group>"; };
 		0A7581A8BCE928D3E0F11D849DBE4F21 /* OIDExternalUserAgentSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentSession.h; path = Source/AppAuthCore/OIDExternalUserAgentSession.h; sourceTree = "<group>"; };
 		0A842B031E94013FF6CCE5C561329721 /* GTMOAuth2KeychainCompatibility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMOAuth2KeychainCompatibility.m; path = Source/GTMOAuth2KeychainCompatibility/GTMOAuth2KeychainCompatibility.m; sourceTree = "<group>"; };
@@ -356,16 +502,16 @@
 		0BD76B8A491B3BFA19CD476FC03B3633 /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Source/RedirectHandler.swift; sourceTree = "<group>"; };
 		0CCFB4751C2E152D7660B1CC9536DBF3 /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Combine.swift; sourceTree = "<group>"; };
 		0D0353B8E95745C947D10997FB0EEA57 /* OIDIDToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDIDToken.h; path = Source/AppAuthCore/OIDIDToken.h; sourceTree = "<group>"; };
-		0EB650A91CCA39C31F588A9124D09289 /* Pods-Draft-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Draft-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0EDCB7B891BFD2DFE907FFD232FE2A36 /* KakaoSDKUser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KakaoSDKUser-dummy.m"; sourceTree = "<group>"; };
 		11F09A6D1123F1C01E999357D435B0D4 /* UserApi.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserApi.swift; path = sources/KakaoSDKUser/UserApi.swift; sourceTree = "<group>"; };
 		127581167A5E566BF97169451619BF4A /* Urls.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Urls.swift; path = sources/KakaoSDKCommon/common/Urls.swift; sourceTree = "<group>"; };
 		1353D6A467F43A6A3EA21D310BD35A31 /* libKakaoSDKUser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKakaoSDKUser.a; path = libKakaoSDKUser.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1416D1AEEF90D68AF6091C3B700FE000 /* ParameterEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoder.swift; path = Source/ParameterEncoder.swift; sourceTree = "<group>"; };
 		1425A751B0E06DEF25D9C61B2BFF2DFC /* OIDAuthorizationRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationRequest.m; path = Source/AppAuthCore/OIDAuthorizationRequest.m; sourceTree = "<group>"; };
+		14518EC096731C16AC5EBA00E2B3B98E /* Pods-Draft-DraftUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Draft-DraftUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		14FB08CFD80FBC39234B3AC652238D1A /* OIDAuthorizationService+IOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OIDAuthorizationService+IOS.h"; path = "Source/AppAuth/iOS/OIDAuthorizationService+IOS.h"; sourceTree = "<group>"; };
 		179A3612E75C51F7B8448F538186E5E1 /* GTMMIMEDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMMIMEDocument.m; path = Source/GTMMIMEDocument.m; sourceTree = "<group>"; };
-		1A1AF2ED28D656006DC570059E6C0F84 /* Pods-Draft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Draft.release.xcconfig"; sourceTree = "<group>"; };
+		18447503A9CA0D2488DD8479AE9B102D /* Pods-Draft-DraftTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Draft-DraftTests-dummy.m"; sourceTree = "<group>"; };
 		1A27D65F2451A4E34143BF7206FD9A87 /* TokenManagable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenManagable.swift; path = sources/KakaoSDKAuth/auth/TokenManagable.swift; sourceTree = "<group>"; };
 		1A4821E9CCAC2A8BA163C616337A12F8 /* OIDExternalUserAgentCatalyst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDExternalUserAgentCatalyst.m; path = Source/AppAuth/iOS/OIDExternalUserAgentCatalyst.m; sourceTree = "<group>"; };
 		1A896D8BCC805D27B1D18997F33C1538 /* GTMSessionFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcher.h; path = Source/GTMSessionFetcher.h; sourceTree = "<group>"; };
@@ -374,6 +520,7 @@
 		1E576BDE077638E764A0F9DB5F38EA3F /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Protected.swift; sourceTree = "<group>"; };
 		1F0D2977E3DF0F692364B1549AAD79AE /* OIDClientMetadataParameters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDClientMetadataParameters.m; path = Source/AppAuthCore/OIDClientMetadataParameters.m; sourceTree = "<group>"; };
 		1F274434ABB460BA8D8DA7A7581E63D0 /* AppAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppAuth.h; path = Source/AppAuth.h; sourceTree = "<group>"; };
+		1F7F88E8D99A44CB2D7EEA367A5DA356 /* Pods-Draft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Draft.debug.xcconfig"; sourceTree = "<group>"; };
 		200792C98DAD4279DD55145531B8C538 /* GTMSessionFetcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTMSessionFetcher.release.xcconfig; sourceTree = "<group>"; };
 		23076525E8A12394569F971694859FE2 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		2444174F1382D9BFF3E4C77286F5F893 /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Alamofire.swift"; path = "Source/URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
@@ -381,12 +528,10 @@
 		27B399121C14968017D9F076D25BB4A7 /* KakaoSDKAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDKAuth.debug.xcconfig; sourceTree = "<group>"; };
 		2AF151F7CB062B508E0F36C19CD7CE71 /* Auth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Auth.swift; path = sources/KakaoSDKAuth/auth/Auth.swift; sourceTree = "<group>"; };
 		2BA2DB6AD2B1EEA7901E43422986ECB2 /* GTMSessionFetcherLogging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherLogging.m; path = Source/GTMSessionFetcherLogging.m; sourceTree = "<group>"; };
-		2BD8F4EE40B3BCC19DA495048889035E /* Pods-Draft.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Draft.modulemap"; sourceTree = "<group>"; };
 		2BE3D7CCF580A717775E4AB5E60B3E78 /* OIDExternalUserAgentIOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentIOS.h; path = Source/AppAuth/iOS/OIDExternalUserAgentIOS.h; sourceTree = "<group>"; };
 		2D3904D991860FECE3E8AA45C33F07FE /* GTMAppAuthFetcherAuthorization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMAppAuthFetcherAuthorization.m; path = Source/GTMAppAuthFetcherAuthorization.m; sourceTree = "<group>"; };
 		2D409079ECF2A800C0006B1E9A3AA2E8 /* KakaoSDKAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KakaoSDKAuth-prefix.pch"; sourceTree = "<group>"; };
 		2E098DBC8ABF30857879819A1819C4BE /* OIDTokenUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDTokenUtilities.h; path = Source/AppAuthCore/OIDTokenUtilities.h; sourceTree = "<group>"; };
-		2F124CAE48E71D50CDCE4EA4A099561C /* Pods-Draft-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Draft-dummy.m"; sourceTree = "<group>"; };
 		2FDA146B982D7D283B68F43BA73E64B4 /* KakaoSDKUser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDKUser.debug.xcconfig; sourceTree = "<group>"; };
 		30D5F8B8C31FC7EA45B5C8DA7DC542B0 /* KeychainAccess.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainAccess.debug.xcconfig; sourceTree = "<group>"; };
 		31D18E232F7A31ACE8A995E2BA7F21F6 /* OIDScopes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDScopes.h; path = Source/AppAuthCore/OIDScopes.h; sourceTree = "<group>"; };
@@ -417,9 +562,11 @@
 		44CE8DF87361878EB5F3A748439B6ACB /* GTMSessionFetcherLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherLogging.h; path = Source/GTMSessionFetcherLogging.h; sourceTree = "<group>"; };
 		44F3D63E1B3E194F9C8C34F9B1419955 /* DecodingContainer+AnyCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DecodingContainer+AnyCollection.swift"; path = "sources/KakaoSDKCommon/extension/DecodingContainer+AnyCollection.swift"; sourceTree = "<group>"; };
 		4512EC15EF5F38BDB0D383414B904897 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		4552E2C3FD2345FA691EDBA9FF9AF248 /* Pods-Draft-DraftTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Draft-DraftTests-umbrella.h"; sourceTree = "<group>"; };
 		4A2FFD70277AD7DF1A9BB8F2602F19AE /* GTMKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMKeychain.h; path = Source/GTMKeychain.h; sourceTree = "<group>"; };
 		4A70E719AB853E74A12FDD6B05E2E9A0 /* OIDExternalUserAgentCatalyst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentCatalyst.h; path = Source/AppAuth/iOS/OIDExternalUserAgentCatalyst.h; sourceTree = "<group>"; };
 		4BF2DA3FF36E59F00B21AE040C1527B6 /* OIDServiceDiscovery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDServiceDiscovery.m; path = Source/AppAuthCore/OIDServiceDiscovery.m; sourceTree = "<group>"; };
+		4BFDE1919B91375C05E36A2B1DC97E3F /* Pods-Draft-DraftUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Draft-DraftUITests.modulemap"; sourceTree = "<group>"; };
 		4C534528D92FD865ED184C202C109804 /* KeychainAccess.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainAccess.modulemap; sourceTree = "<group>"; };
 		50707763248D3FD00D816096F507FFAE /* OIDAuthState+IOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OIDAuthState+IOS.m"; path = "Source/AppAuth/iOS/OIDAuthState+IOS.m"; sourceTree = "<group>"; };
 		523C9F43BC049915AF2C9488011766A1 /* OIDAuthorizationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationRequest.h; path = Source/AppAuthCore/OIDAuthorizationRequest.h; sourceTree = "<group>"; };
@@ -443,10 +590,12 @@
 		656D6C605B3494CB04B7DB1A07400C4D /* HTTPHeaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHeaders.swift; path = Source/HTTPHeaders.swift; sourceTree = "<group>"; };
 		6576FDE982B4E69911D956B58BB72743 /* AuthRequestAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthRequestAdapter.swift; path = sources/KakaoSDKAuth/auth/AuthRequestAdapter.swift; sourceTree = "<group>"; };
 		6577E61AC77B1B2CE874440F015051E5 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		6619901CC728025181B50D320DA4A998 /* Pods-Draft-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Draft-umbrella.h"; sourceTree = "<group>"; };
 		66ABCD615D5F134A0DE752D2BA3B97CA /* GTMAppAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMAppAuth.h; path = Source/GTMAppAuth.h; sourceTree = "<group>"; };
 		67F014FE7571B78A41BEF97F19C93080 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		68B1C08EB3C1A0F6DC10E56E8F8AE042 /* OIDAuthorizationResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationResponse.m; path = Source/AppAuthCore/OIDAuthorizationResponse.m; sourceTree = "<group>"; };
 		694246CEBEBC2AA53876F7199D8B8B8C /* User.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = User.swift; path = sources/KakaoSDKUser/model/User.swift; sourceTree = "<group>"; };
+		6AD36A9BFF56D159C46271671C156AD1 /* Pods-Draft-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Draft-acknowledgements.plist"; sourceTree = "<group>"; };
 		6BF9350BC3D9845B22D23440A4CE8806 /* SdkUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SdkUtils.swift; path = sources/KakaoSDKCommon/common/SdkUtils.swift; sourceTree = "<group>"; };
 		6CA2C8BF68AD913B4446696845FD6B81 /* AppAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AppAuth-prefix.pch"; sourceTree = "<group>"; };
 		6CF3E6CD6D5345689C7B26FE1C066A26 /* OIDAuthState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthState.h; path = Source/AppAuthCore/OIDAuthState.h; sourceTree = "<group>"; };
@@ -467,15 +616,16 @@
 		7FC246216946F9C79BE7683EAEE85717 /* AppAuthCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppAuthCore.h; path = Source/AppAuthCore.h; sourceTree = "<group>"; };
 		7FD7B245060730C8AA5C5237319B43FF /* SdkCrypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SdkCrypto.swift; path = sources/KakaoSDKCommon/common/SdkCrypto.swift; sourceTree = "<group>"; };
 		801D3B3453473BFCCA4708F87B9952B9 /* OIDAuthorizationService+IOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OIDAuthorizationService+IOS.m"; path = "Source/AppAuth/iOS/OIDAuthorizationService+IOS.m"; sourceTree = "<group>"; };
-		8037F01CD4ECD21602F86C3E36C945FC /* Pods-Draft-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Draft-umbrella.h"; sourceTree = "<group>"; };
+		80E9DBF8F6A7B134EDE10A1443850D3F /* libPods-Draft-DraftTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Draft-DraftTests.a"; path = "libPods-Draft-DraftTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E9FB6355CADB2EA5C8466BE0F7D514 /* EncodingContainer+AnyCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EncodingContainer+AnyCollection.swift"; path = "AnyCodable/EncodingContainer+AnyCollection.swift"; sourceTree = "<group>"; };
 		81953D6F9524981501E89337C3CEFA48 /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
 		81E6D67E3D133FB5A845F30730D2C550 /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
 		835DE647FCBB3D676A6F64B5A4C7AEE4 /* GTMAppAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTMAppAuth.debug.xcconfig; sourceTree = "<group>"; };
-		8428C134E9D07A9688DA025906DF4439 /* Pods-Draft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Draft.debug.xcconfig"; sourceTree = "<group>"; };
 		84704BBAB3F508AF6C1D989487F22C90 /* OIDAuthStateErrorDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthStateErrorDelegate.h; path = Source/AppAuthCore/OIDAuthStateErrorDelegate.h; sourceTree = "<group>"; };
 		858634C24C23FC354B893AC9A4E8D070 /* GTMSessionFetcher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMSessionFetcher-prefix.pch"; sourceTree = "<group>"; };
+		87DFEEC4383F21111201B2EC1B1B7838 /* Pods-Draft-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Draft-resources.sh"; sourceTree = "<group>"; };
 		892887589BFD705965DD6E1AE735CD0E /* KakaoSDKCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDKCommon.debug.xcconfig; sourceTree = "<group>"; };
+		896DB9AD232A6059B705D5706E436A13 /* Pods-Draft-DraftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Draft-DraftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		89E38E5E4ADFCCE9F5F705F98752F200 /* OIDServiceConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDServiceConfiguration.m; path = Source/AppAuthCore/OIDServiceConfiguration.m; sourceTree = "<group>"; };
 		8B356E62A513BFDB36A7AA85C3137273 /* KakaoSDKCommon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KakaoSDKCommon.swift; path = sources/KakaoSDKCommon/KakaoSDKCommon.swift; sourceTree = "<group>"; };
 		8D9155F4269F64E8AB2522B315198FE4 /* RequestTaskMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestTaskMap.swift; path = Source/RequestTaskMap.swift; sourceTree = "<group>"; };
@@ -486,24 +636,29 @@
 		91B36EF8D785B854E6A95DFCF6AFF3C8 /* OIDEndSessionRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDEndSessionRequest.h; path = Source/AppAuthCore/OIDEndSessionRequest.h; sourceTree = "<group>"; };
 		91D522B0FE8AD994757EBF04235541FE /* UserServiceTerms.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserServiceTerms.swift; path = sources/KakaoSDKUser/model/UserServiceTerms.swift; sourceTree = "<group>"; };
 		9268984DA0DBFDC42FEE8EE48936B9AE /* OIDScopes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDScopes.m; path = Source/AppAuthCore/OIDScopes.m; sourceTree = "<group>"; };
+		9416D2B03F0DC0D9CA936FC4DFF1A728 /* Pods-Draft-DraftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Draft-DraftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9598357C2D3C43770C79FD056C3AC3A2 /* OIDClientMetadataParameters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDClientMetadataParameters.h; path = Source/AppAuthCore/OIDClientMetadataParameters.h; sourceTree = "<group>"; };
 		964276B21BEDEE5BA35C47D481C80E37 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = sources/KakaoSDKCommon/common/Constants.swift; sourceTree = "<group>"; };
 		965790016AEEB028F305A35E78224026 /* Dictionary+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+Utils.swift"; path = "sources/KakaoSDKCommon/extension/Dictionary+Utils.swift"; sourceTree = "<group>"; };
 		98ACE9FA47C41A5ED64277488005177C /* OAuthToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthToken.swift; path = sources/KakaoSDKAuth/model/OAuthToken.swift; sourceTree = "<group>"; };
 		9A8417FEBB3FFCEAF9DED0A99B245A00 /* OIDGrantTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDGrantTypes.h; path = Source/AppAuthCore/OIDGrantTypes.h; sourceTree = "<group>"; };
+		9C7E850E4B10853DFA49A388B7542BE8 /* Pods-Draft.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Draft.modulemap"; sourceTree = "<group>"; };
 		9CAFA16EB5EBBF92467431B8CCFAA3BF /* KakaoSDKCommon-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KakaoSDKCommon-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EE8F2CDAA89419995C1C8471E3E8F8F /* OIDExternalUserAgentIOSCustomBrowser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentIOSCustomBrowser.h; path = Source/AppAuth/iOS/OIDExternalUserAgentIOSCustomBrowser.h; sourceTree = "<group>"; };
 		9F453801F27585052F413F613C847DB2 /* libKakaoSDKAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKakaoSDKAuth.a; path = libKakaoSDKAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A126B61240B682CE614C04E8505167F7 /* KakaoSDKUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KakaoSDKUser.h; path = sources/KakaoSDKUser/KakaoSDKUser.h; sourceTree = "<group>"; };
+		A2CC231C51E141F3D043DD5DB55FFCD2 /* Pods-Draft-DraftTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Draft-DraftTests-resources.sh"; sourceTree = "<group>"; };
+		A3E00043A8BB747FD09A50E2D32785F7 /* Pods-Draft-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Draft-dummy.m"; sourceTree = "<group>"; };
 		A4A95577CB1DD129B252BDABE93AEBF3 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		A5AC0057F799914F7527DCE62A63022E /* Pods-Draft-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Draft-resources.sh"; sourceTree = "<group>"; };
 		A6C6D388994B3F2B33A3EE14D4ADFE34 /* GTMAppAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMAppAuth-prefix.pch"; sourceTree = "<group>"; };
 		A6F812DA31ABEECE2E4EC55B898221C4 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Lib/KeychainAccess/Keychain.swift; sourceTree = "<group>"; };
+		A7FCB421A019317CDCA59F5983C976B1 /* Pods-Draft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Draft.release.xcconfig"; sourceTree = "<group>"; };
 		A80F85BDDF4C3667E2FB44A4C61C30E0 /* OIDExternalUserAgentIOSCustomBrowser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDExternalUserAgentIOSCustomBrowser.m; path = Source/AppAuth/iOS/OIDExternalUserAgentIOSCustomBrowser.m; sourceTree = "<group>"; };
 		A8589C77716F49408A48D0B1DBD070B6 /* MigrateManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MigrateManager.swift; path = sources/KakaoSDKAuth/auth/MigrateManager.swift; sourceTree = "<group>"; };
 		A96B1F3E4662F0B7900DD31F1B7009E3 /* OIDExternalUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgent.h; path = Source/AppAuthCore/OIDExternalUserAgent.h; sourceTree = "<group>"; };
 		ABF339C97CAE2AAD6F1353A1A29C9B76 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		AC305652A90B4F79A7F82EEC25CBF742 /* Pods-Draft-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Draft-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AC76A0D9AF7A4E61D00227C76B13F7B5 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = Frameworks/GoogleSignIn.framework; sourceTree = "<group>"; };
 		ACBAA35C281480B796F2427E88F9078C /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		ACE933673E57964C4E7B6056AB270E01 /* OIDIDToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDIDToken.m; path = Source/AppAuthCore/OIDIDToken.m; sourceTree = "<group>"; };
@@ -511,6 +666,7 @@
 		B0A1DF7B006D1AA1D5EE9FA1E658BA4B /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		B16E5AAFC4650328280C8FF442525F6C /* OIDResponseTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDResponseTypes.h; path = Source/AppAuthCore/OIDResponseTypes.h; sourceTree = "<group>"; };
 		B1EDF51190E91F157A3FA84018231EA5 /* GTMAppAuthFetcherAuthorization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMAppAuthFetcherAuthorization.h; path = Source/GTMAppAuthFetcherAuthorization.h; sourceTree = "<group>"; };
+		B239598B905499F338CC2EE66D5B47BC /* Pods-Draft-DraftUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Draft-DraftUITests-resources.sh"; sourceTree = "<group>"; };
 		B7ED5028A50E815A042A322CE6D6B46D /* Array+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Utils.swift"; path = "sources/KakaoSDKCommon/extension/Array+Utils.swift"; sourceTree = "<group>"; };
 		B942738761BFE2BFE46F6DF063AD55B6 /* GTMGatherInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMGatherInputStream.m; path = Source/GTMGatherInputStream.m; sourceTree = "<group>"; };
 		BA7523EC7CB2101867C5EFE2FC6FBA78 /* ApiRequestAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApiRequestAdapter.swift; path = sources/KakaoSDKCommon/network/ApiRequestAdapter.swift; sourceTree = "<group>"; };
@@ -533,6 +689,8 @@
 		C8C1521CA4FC93816DE5CAA6CEBA2C94 /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLConvertible+URLRequestConvertible.swift"; path = "Source/URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
 		C94DFC5553E77E86CDE95869E3A8C381 /* OIDURLSessionProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDURLSessionProvider.m; path = Source/AppAuthCore/OIDURLSessionProvider.m; sourceTree = "<group>"; };
 		CA23D1BBD1147889614C387B2D218DDC /* GTMSessionUploadFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionUploadFetcher.m; path = Source/GTMSessionUploadFetcher.m; sourceTree = "<group>"; };
+		CA773D8F7E6A0D66A008090CD6DDF09F /* Pods-Draft-DraftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Draft-DraftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CAF7CFF7866ABE86022376205547E981 /* Pods-Draft-DraftUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Draft-DraftUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CB01B5E21517E6F45E870EB90A5097D1 /* SdkLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SdkLog.swift; path = sources/KakaoSDKCommon/common/SdkLog.swift; sourceTree = "<group>"; };
 		CCA3489305F627F806FB4C698AD49B1D /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		CCFAB1D4742577CEDBEA53CAB85BFEA5 /* OIDExternalUserAgentRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentRequest.h; path = Source/AppAuthCore/OIDExternalUserAgentRequest.h; sourceTree = "<group>"; };
@@ -544,13 +702,15 @@
 		D1BA1DC1BDCB9C2966137262B673DDC2 /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/HTTPMethod.swift; sourceTree = "<group>"; };
 		D22E1C22DBCFE88B644EA396F92AE0B6 /* AppAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppAuth.release.xcconfig; sourceTree = "<group>"; };
 		D2E8D5AFB43E9F3E8E5AC99255562512 /* DynamicCodable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicCodable-umbrella.h"; sourceTree = "<group>"; };
-		D9D78F43DF9E8A5C0ADAF2F6E6063BB3 /* Pods-Draft-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Draft-acknowledgements.plist"; sourceTree = "<group>"; };
+		D3DB9493AE29D87C1FCC8AE8FF8B23FD /* Pods-Draft-DraftTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Draft-DraftTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		DA22756730D2891F0AA60DE6149E9DEE /* OIDAuthStateChangeDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthStateChangeDelegate.h; path = Source/AppAuthCore/OIDAuthStateChangeDelegate.h; sourceTree = "<group>"; };
+		DABC7430F7F8D161B9D759F36E43EB71 /* Pods-Draft-DraftUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Draft-DraftUITests-dummy.m"; sourceTree = "<group>"; };
 		DCCCD5A964E3E6C08E9DD720AC9B7F99 /* AuthErrorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthErrorInfo.swift; path = sources/KakaoSDKCommon/model/AuthErrorInfo.swift; sourceTree = "<group>"; };
 		DE3617319902E5F8CA12707CC3237526 /* KakaoSDKCommon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDKCommon.release.xcconfig; sourceTree = "<group>"; };
 		DE633002997432FC02B65CFF12460269 /* RequestInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestInterceptor.swift; path = Source/RequestInterceptor.swift; sourceTree = "<group>"; };
 		DE9AC9F277DBAE51E59C20B9DC67163B /* OIDRegistrationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDRegistrationRequest.h; path = Source/AppAuthCore/OIDRegistrationRequest.h; sourceTree = "<group>"; };
 		E0739B6ED82AB4DCBA014A1D2D5181B5 /* OIDGrantTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDGrantTypes.m; path = Source/AppAuthCore/OIDGrantTypes.m; sourceTree = "<group>"; };
+		E0988F6808E1566175D147440F34AE14 /* Pods-Draft-DraftUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Draft-DraftUITests-umbrella.h"; sourceTree = "<group>"; };
 		E191E8EDA39349C5CEF5E148CB753593 /* GTMAppAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTMAppAuth-dummy.m"; sourceTree = "<group>"; };
 		E4D744B1BB31919039411D17480C0EE2 /* OIDTokenRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDTokenRequest.m; path = Source/AppAuthCore/OIDTokenRequest.m; sourceTree = "<group>"; };
 		E52B91332552C62245B942B42D0CD2D0 /* OIDURLSessionProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDURLSessionProvider.h; path = Source/AppAuthCore/OIDURLSessionProvider.h; sourceTree = "<group>"; };
@@ -560,6 +720,7 @@
 		EA879934A486692C6F0302799C441DCF /* DynamicCodable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DynamicCodable.modulemap; sourceTree = "<group>"; };
 		EC0A1F7A6C6FFEC7448E65895DAA0310 /* GTMSessionFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcher.m; path = Source/GTMSessionFetcher.m; sourceTree = "<group>"; };
 		EC8D6FEDC6BA16406A785B3DA1CCA738 /* KakaoSDKCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KakaoSDKCommon.h; path = sources/KakaoSDKCommon/KakaoSDKCommon.h; sourceTree = "<group>"; };
+		ED4C21B46B8CBCB4D53260366E3CD8E6 /* Pods-Draft-DraftTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Draft-DraftTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		ED51005E0FCCAC4D65636BBA23702490 /* OIDAuthorizationService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationService.h; path = Source/AppAuthCore/OIDAuthorizationService.h; sourceTree = "<group>"; };
 		ED5720F662F19DB0185C709585886E0D /* DynamicCodable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicCodable-prefix.pch"; sourceTree = "<group>"; };
 		EE3BD5AE7A66C30C0C8A6073C6D07462 /* OIDResponseTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDResponseTypes.m; path = Source/AppAuthCore/OIDResponseTypes.m; sourceTree = "<group>"; };
@@ -569,6 +730,7 @@
 		F09617AD3A029DAAE1AACF025C91BE42 /* AuthApi.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthApi.swift; path = sources/KakaoSDKAuth/auth/AuthApi.swift; sourceTree = "<group>"; };
 		F0DA98F3347F71C8AA5BD86BAD7BA9E3 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		F20584E532E40BC07D4D09EBAFE51E10 /* TokenManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenManager.swift; path = sources/KakaoSDKAuth/auth/TokenManager.swift; sourceTree = "<group>"; };
+		F3C67D232839227685FC1BD1D8D3F04A /* Pods-Draft-DraftTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Draft-DraftTests.modulemap"; sourceTree = "<group>"; };
 		F5896F04F3ED56A27F1C74CAC9F3A81C /* Data+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Utils.swift"; path = "sources/KakaoSDKCommon/extension/Data+Utils.swift"; sourceTree = "<group>"; };
 		F604A53EB6025353A24DEFCE6436301F /* OIDEndSessionResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDEndSessionResponse.m; path = Source/AppAuthCore/OIDEndSessionResponse.m; sourceTree = "<group>"; };
 		F7014976F6CA3CDB8EBAF46C5C72DDF4 /* UserShippingAddresses.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserShippingAddresses.swift; path = sources/KakaoSDKUser/model/UserShippingAddresses.swift; sourceTree = "<group>"; };
@@ -622,6 +784,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		818A6DEA6D1099608612D6A42B9A5184 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2052CD1CB28525B7DF7A3BECE2C7948 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,6 +799,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C53FE01F03FB158F88E9CA88B68A0360 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB93BA8DFC631960889B2FB6C46C9B1F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -662,23 +838,6 @@
 			);
 			name = GoogleSignIn;
 			path = GoogleSignIn;
-			sourceTree = "<group>";
-		};
-		172EE025CDB4A3792CAC346FC6A34153 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5D797E9A5C5782CE845840781FA1CC81 /* libAlamofire.a */,
-				3FD1B4C1246D643E9476438C28048FA8 /* libAppAuth.a */,
-				55D05E49C217F97CF51ADB1B491599D1 /* libDynamicCodable.a */,
-				6FD122EA0AB9AB2A8FFA5F676C795DF0 /* libGTMAppAuth.a */,
-				C1998E0D8085221AD87F89B614C10E52 /* libGTMSessionFetcher.a */,
-				9F453801F27585052F413F613C847DB2 /* libKakaoSDKAuth.a */,
-				25BDA6E824AD6CBD857358A023C694AD /* libKakaoSDKCommon.a */,
-				1353D6A467F43A6A3EA21D310BD35A31 /* libKakaoSDKUser.a */,
-				E8EE7F078656FABB8F6821D10FF994BB /* libKeychainAccess.a */,
-				786ABBC34651E83DFB953835C3C80EE3 /* libPods-Draft.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		19940EED251E76BBF6D39519D4E3479F /* Alamofire */ = {
@@ -773,6 +932,22 @@
 			path = KeychainAccess;
 			sourceTree = "<group>";
 		};
+		52A238EC76D1B74592FB035749BCCFBC /* Pods-Draft */ = {
+			isa = PBXGroup;
+			children = (
+				9C7E850E4B10853DFA49A388B7542BE8 /* Pods-Draft.modulemap */,
+				AC305652A90B4F79A7F82EEC25CBF742 /* Pods-Draft-acknowledgements.markdown */,
+				6AD36A9BFF56D159C46271671C156AD1 /* Pods-Draft-acknowledgements.plist */,
+				A3E00043A8BB747FD09A50E2D32785F7 /* Pods-Draft-dummy.m */,
+				87DFEEC4383F21111201B2EC1B1B7838 /* Pods-Draft-resources.sh */,
+				6619901CC728025181B50D320DA4A998 /* Pods-Draft-umbrella.h */,
+				1F7F88E8D99A44CB2D7EEA367A5DA356 /* Pods-Draft.debug.xcconfig */,
+				A7FCB421A019317CDCA59F5983C976B1 /* Pods-Draft.release.xcconfig */,
+			);
+			name = "Pods-Draft";
+			path = "Target Support Files/Pods-Draft";
+			sourceTree = "<group>";
+		};
 		5681F4D286DB22B8C397038BAC231A3C /* GTMAppAuth */ = {
 			isa = PBXGroup;
 			children = (
@@ -789,14 +964,6 @@
 			);
 			name = GTMAppAuth;
 			path = GTMAppAuth;
-			sourceTree = "<group>";
-		};
-		57B71FDF263E997F54BA18A79581F8C6 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9E6D006380C3207FC07DF4A27FEBD481 /* Pods-Draft */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		71156F0BE79D3D1AE7373D77DA1F7F65 /* KakaoSDKUser */ = {
@@ -826,6 +993,22 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/KeychainAccess";
+			sourceTree = "<group>";
+		};
+		7799583D1A9740C2A2362F2644BFCD36 /* Pods-Draft-DraftTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3C67D232839227685FC1BD1D8D3F04A /* Pods-Draft-DraftTests.modulemap */,
+				ED4C21B46B8CBCB4D53260366E3CD8E6 /* Pods-Draft-DraftTests-acknowledgements.markdown */,
+				D3DB9493AE29D87C1FCC8AE8FF8B23FD /* Pods-Draft-DraftTests-acknowledgements.plist */,
+				18447503A9CA0D2488DD8479AE9B102D /* Pods-Draft-DraftTests-dummy.m */,
+				A2CC231C51E141F3D043DD5DB55FFCD2 /* Pods-Draft-DraftTests-resources.sh */,
+				4552E2C3FD2345FA691EDBA9FF9AF248 /* Pods-Draft-DraftTests-umbrella.h */,
+				CA773D8F7E6A0D66A008090CD6DDF09F /* Pods-Draft-DraftTests.debug.xcconfig */,
+				03E31A7C2C79F8212D59B347A4734221 /* Pods-Draft-DraftTests.release.xcconfig */,
+			);
+			name = "Pods-Draft-DraftTests";
+			path = "Target Support Files/Pods-Draft-DraftTests";
 			sourceTree = "<group>";
 		};
 		811CB65B840357FA3220FEE536B4AAFA /* DynamicCodable */ = {
@@ -960,22 +1143,6 @@
 			path = KakaoSDKCommon;
 			sourceTree = "<group>";
 		};
-		9E6D006380C3207FC07DF4A27FEBD481 /* Pods-Draft */ = {
-			isa = PBXGroup;
-			children = (
-				2BD8F4EE40B3BCC19DA495048889035E /* Pods-Draft.modulemap */,
-				0EB650A91CCA39C31F588A9124D09289 /* Pods-Draft-acknowledgements.markdown */,
-				D9D78F43DF9E8A5C0ADAF2F6E6063BB3 /* Pods-Draft-acknowledgements.plist */,
-				2F124CAE48E71D50CDCE4EA4A099561C /* Pods-Draft-dummy.m */,
-				A5AC0057F799914F7527DCE62A63022E /* Pods-Draft-resources.sh */,
-				8037F01CD4ECD21602F86C3E36C945FC /* Pods-Draft-umbrella.h */,
-				8428C134E9D07A9688DA025906DF4439 /* Pods-Draft.debug.xcconfig */,
-				1A1AF2ED28D656006DC570059E6C0F84 /* Pods-Draft.release.xcconfig */,
-			);
-			name = "Pods-Draft";
-			path = "Target Support Files/Pods-Draft";
-			sourceTree = "<group>";
-		};
 		9F7889AC19216104AA6718FC34C20020 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1002,6 +1169,35 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/DynamicCodable";
+			sourceTree = "<group>";
+		};
+		B09954FC6F22FAEB334AC9DE0F6D537C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D797E9A5C5782CE845840781FA1CC81 /* libAlamofire.a */,
+				3FD1B4C1246D643E9476438C28048FA8 /* libAppAuth.a */,
+				55D05E49C217F97CF51ADB1B491599D1 /* libDynamicCodable.a */,
+				6FD122EA0AB9AB2A8FFA5F676C795DF0 /* libGTMAppAuth.a */,
+				C1998E0D8085221AD87F89B614C10E52 /* libGTMSessionFetcher.a */,
+				9F453801F27585052F413F613C847DB2 /* libKakaoSDKAuth.a */,
+				25BDA6E824AD6CBD857358A023C694AD /* libKakaoSDKCommon.a */,
+				1353D6A467F43A6A3EA21D310BD35A31 /* libKakaoSDKUser.a */,
+				E8EE7F078656FABB8F6821D10FF994BB /* libKeychainAccess.a */,
+				786ABBC34651E83DFB953835C3C80EE3 /* libPods-Draft.a */,
+				80E9DBF8F6A7B134EDE10A1443850D3F /* libPods-Draft-DraftTests.a */,
+				07F63A1ED0C6D0EC1EADDE9DAE7B6172 /* libPods-Draft-DraftUITests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B21EE6EBCC65178AE1AA71C72C0E8F2B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				52A238EC76D1B74592FB035749BCCFBC /* Pods-Draft */,
+				7799583D1A9740C2A2362F2644BFCD36 /* Pods-Draft-DraftTests */,
+				DD78EA11F1946E720D531208F6795BA5 /* Pods-Draft-DraftUITests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		B49766FE20A33CB9A853D36234E89D82 /* Support Files */ = {
@@ -1049,8 +1245,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				849C07547240288561A9CF9428D661A0 /* Pods */,
-				172EE025CDB4A3792CAC346FC6A34153 /* Products */,
-				57B71FDF263E997F54BA18A79581F8C6 /* Targets Support Files */,
+				B09954FC6F22FAEB334AC9DE0F6D537C /* Products */,
+				B21EE6EBCC65178AE1AA71C72C0E8F2B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1123,6 +1319,22 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
+		DD78EA11F1946E720D531208F6795BA5 /* Pods-Draft-DraftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4BFDE1919B91375C05E36A2B1DC97E3F /* Pods-Draft-DraftUITests.modulemap */,
+				CAF7CFF7866ABE86022376205547E981 /* Pods-Draft-DraftUITests-acknowledgements.markdown */,
+				14518EC096731C16AC5EBA00E2B3B98E /* Pods-Draft-DraftUITests-acknowledgements.plist */,
+				DABC7430F7F8D161B9D759F36E43EB71 /* Pods-Draft-DraftUITests-dummy.m */,
+				B239598B905499F338CC2EE66D5B47BC /* Pods-Draft-DraftUITests-resources.sh */,
+				E0988F6808E1566175D147440F34AE14 /* Pods-Draft-DraftUITests-umbrella.h */,
+				9416D2B03F0DC0D9CA936FC4DFF1A728 /* Pods-Draft-DraftUITests.debug.xcconfig */,
+				896DB9AD232A6059B705D5706E436A13 /* Pods-Draft-DraftUITests.release.xcconfig */,
+			);
+			name = "Pods-Draft-DraftUITests";
+			path = "Target Support Files/Pods-Draft-DraftUITests";
+			sourceTree = "<group>";
+		};
 		DFE0D668015F72495DAC5CDBA9D377FE /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -1180,6 +1392,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D10A3AB30849224E26F56C90B7AE72 /* Pods-Draft-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15B12CD010385FB7CA532E0DD897FC1B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26478A24185F858FED2817226660DCB3 /* Pods-Draft-DraftTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1264,6 +1484,14 @@
 				03B7A4F856BB76F856C6CDCFC6EFDA80 /* OIDTokenUtilities.h in Headers */,
 				0879D59CAE9AFC8E9E839ED3CDCA3C0B /* OIDURLQueryComponent.h in Headers */,
 				0B2CBF5336CA0E6DFB0B3FE7C7FE0C50 /* OIDURLSessionProvider.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82720D8CE7AA86EB09D5B2CC90361245 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95BEDEF3FCCD70FF62DE09BC2C977D79 /* Pods-Draft-DraftUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1391,6 +1619,33 @@
 			productReference = E8EE7F078656FABB8F6821D10FF994BB /* libKeychainAccess.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		6A4BB5726BB29C8AD1081EC4EFC03E66 /* Pods-Draft-DraftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8C62F848783BA95A975D72E1D0FF792 /* Build configuration list for PBXNativeTarget "Pods-Draft-DraftTests" */;
+			buildPhases = (
+				15B12CD010385FB7CA532E0DD897FC1B /* Headers */,
+				92C22FBED7F0CC122C0BB3B8CEC31B00 /* Sources */,
+				CB93BA8DFC631960889B2FB6C46C9B1F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFB1F5BF1226F60FEF28FE592320D51C /* PBXTargetDependency */,
+				7AC1085329F925A9786D56329AF351F0 /* PBXTargetDependency */,
+				2C2D6380A77909A05706C89FDED45055 /* PBXTargetDependency */,
+				6B4C03D0C9E0CCECEA967FFCECBA871B /* PBXTargetDependency */,
+				6A58E0D522452D6267159C498846E60A /* PBXTargetDependency */,
+				E61639CD141933640CEF34237C01F80A /* PBXTargetDependency */,
+				FE9BBE30330FE8B6C398B4829CC326DC /* PBXTargetDependency */,
+				99F696A428685B8A959FA84840160AFC /* PBXTargetDependency */,
+				1DCB996CB32B20B8D01A3AA50E8C5C45 /* PBXTargetDependency */,
+				153884955755964BEF43BE314A670D87 /* PBXTargetDependency */,
+			);
+			name = "Pods-Draft-DraftTests";
+			productName = "Pods-Draft-DraftTests";
+			productReference = 80E9DBF8F6A7B134EDE10A1443850D3F /* libPods-Draft-DraftTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		83CA882AD877ED964BDF66235E416BC1 /* KakaoSDKAuth */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71169A848150B102F193C8E9EBD04768 /* Build configuration list for PBXNativeTarget "KakaoSDKAuth" */;
@@ -1456,6 +1711,33 @@
 			productReference = 786ABBC34651E83DFB953835C3C80EE3 /* libPods-Draft.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		B980EBC595ED2E7E26CA6B359B9F0B2D /* Pods-Draft-DraftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88C4B92734E52703795A4858A20170B3 /* Build configuration list for PBXNativeTarget "Pods-Draft-DraftUITests" */;
+			buildPhases = (
+				82720D8CE7AA86EB09D5B2CC90361245 /* Headers */,
+				93EEEFC3D7BFEB1CC2B1F0E18F6DFA94 /* Sources */,
+				818A6DEA6D1099608612D6A42B9A5184 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4BDE0F6F6056E048D2F0B1411F14FBF /* PBXTargetDependency */,
+				9BB413F9EBDAE3EFA288B389246B1EF3 /* PBXTargetDependency */,
+				5D0AAE70BF33B2AA5B79944D03ECE0DF /* PBXTargetDependency */,
+				F99ECEB14C59D37912F7E843C9E6FD5E /* PBXTargetDependency */,
+				EBBA5932F16159CFD86418D5308DE868 /* PBXTargetDependency */,
+				834F1926510A03BE326006579AA32677 /* PBXTargetDependency */,
+				720360BE4D74A4D2ED016978A7D27233 /* PBXTargetDependency */,
+				64550F140905B06A7B903BBEC16BA60E /* PBXTargetDependency */,
+				E84BE84E784B633E77B6A6ED6DF70ACE /* PBXTargetDependency */,
+				F990AC0CB059D194F7F6A4318A527503 /* PBXTargetDependency */,
+			);
+			name = "Pods-Draft-DraftUITests";
+			productName = "Pods-Draft-DraftUITests";
+			productReference = 07F63A1ED0C6D0EC1EADDE9DAE7B6172 /* libPods-Draft-DraftUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EF1993CF7086726E525D7DFE80C98DC /* Build configuration list for PBXNativeTarget "GTMSessionFetcher" */;
@@ -1509,7 +1791,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 172EE025CDB4A3792CAC346FC6A34153 /* Products */;
+			productRefGroup = B09954FC6F22FAEB334AC9DE0F6D537C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1524,6 +1806,8 @@
 				3F7BF367078951B6E8BC95B3DA89967A /* KakaoSDKUser */,
 				615C831BCE925ED486B225B87E44926D /* KeychainAccess */,
 				B59BAD892D3C52E1C87928E06E5E995B /* Pods-Draft */,
+				6A4BB5726BB29C8AD1081EC4EFC03E66 /* Pods-Draft-DraftTests */,
+				B980EBC595ED2E7E26CA6B359B9F0B2D /* Pods-Draft-DraftUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1759,6 +2043,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92C22FBED7F0CC122C0BB3B8CEC31B00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267AD12A0D57F261F78F0026F0D2D9EA /* Pods-Draft-DraftTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93EEEFC3D7BFEB1CC2B1F0E18F6DFA94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFFDF35E1D1B28425A91E1DD48C05D3E /* Pods-Draft-DraftUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		981A1B1D6D2951C456F780D481C7F28A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1882,17 +2182,35 @@
 			target = 8627999EF1D5E93E13DAFF580DA8CDCF /* GTMAppAuth */;
 			targetProxy = 457F22B75FED0E6B02E7C8D874C82023 /* PBXContainerItemProxy */;
 		};
+		153884955755964BEF43BE314A670D87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeychainAccess;
+			target = 615C831BCE925ED486B225B87E44926D /* KeychainAccess */;
+			targetProxy = D439BC09E0112904E9DF33D8DC78582C /* PBXContainerItemProxy */;
+		};
 		17F95C18E3EFF34AD53094C236880907 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AppAuth;
 			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
 			targetProxy = 081F692BFA303E1A12FC2280806BC59B /* PBXContainerItemProxy */;
 		};
+		1DCB996CB32B20B8D01A3AA50E8C5C45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KakaoSDKUser;
+			target = 3F7BF367078951B6E8BC95B3DA89967A /* KakaoSDKUser */;
+			targetProxy = 8F161DD0D31A9617995E2C3BA0A8458C /* PBXContainerItemProxy */;
+		};
 		2857566728641F74273DD7DA9E370771 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AppAuth;
 			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
 			targetProxy = 96C4B52CEBD25FE7612CDFAC4EBB56D6 /* PBXContainerItemProxy */;
+		};
+		2C2D6380A77909A05706C89FDED45055 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DynamicCodable;
+			target = 5C123093641D5304AC8B5BF40A3373AE /* DynamicCodable */;
+			targetProxy = 26E2FA79E5B908D4A8FAA19BAD19D414 /* PBXContainerItemProxy */;
 		};
 		311D506A15CE284BB804D7E6E88E10CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1906,6 +2224,36 @@
 			target = 8627999EF1D5E93E13DAFF580DA8CDCF /* GTMAppAuth */;
 			targetProxy = CFBE3CB2F286EF0D95A2ACDEBE0C1014 /* PBXContainerItemProxy */;
 		};
+		5D0AAE70BF33B2AA5B79944D03ECE0DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DynamicCodable;
+			target = 5C123093641D5304AC8B5BF40A3373AE /* DynamicCodable */;
+			targetProxy = 92A7824B3749723A31053A2AF93495D9 /* PBXContainerItemProxy */;
+		};
+		64550F140905B06A7B903BBEC16BA60E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KakaoSDKCommon;
+			target = 205D6EF1B8DCC8419E2F53266F6ADCDC /* KakaoSDKCommon */;
+			targetProxy = 726CEC98A0D70C1798CDB9BBF06515CD /* PBXContainerItemProxy */;
+		};
+		6A58E0D522452D6267159C498846E60A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMSessionFetcher;
+			target = D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */;
+			targetProxy = 047CBA43E61281638C8C8B1D7339665C /* PBXContainerItemProxy */;
+		};
+		6B4C03D0C9E0CCECEA967FFCECBA871B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMAppAuth;
+			target = 8627999EF1D5E93E13DAFF580DA8CDCF /* GTMAppAuth */;
+			targetProxy = 801B974753626777E65A7DDF09F8D69D /* PBXContainerItemProxy */;
+		};
+		720360BE4D74A4D2ED016978A7D27233 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KakaoSDKAuth;
+			target = 83CA882AD877ED964BDF66235E416BC1 /* KakaoSDKAuth */;
+			targetProxy = 5338B3C519D2F9973AF19D36A93DA11A /* PBXContainerItemProxy */;
+		};
 		74F3D34B7F14020AE0A57D83A7889F98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GTMSessionFetcher;
@@ -1918,11 +2266,23 @@
 			target = 205D6EF1B8DCC8419E2F53266F6ADCDC /* KakaoSDKCommon */;
 			targetProxy = 78A205A11DC5E5BF7A093A27A2F83D5C /* PBXContainerItemProxy */;
 		};
+		7AC1085329F925A9786D56329AF351F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppAuth;
+			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
+			targetProxy = 937A3BCB70096F3A5F87DE7CD4188DE4 /* PBXContainerItemProxy */;
+		};
 		834BA84AACBAD76C537BD60C1AA9427F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AppAuth;
 			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
 			targetProxy = 3115F3C006DD5BC189F6296043623FC6 /* PBXContainerItemProxy */;
+		};
+		834F1926510A03BE326006579AA32677 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleSignIn;
+			target = CAD3534FC55B0333104E5117C0A9A324 /* GoogleSignIn */;
+			targetProxy = 46D494760CA6D028E53AD45DBB094BE2 /* PBXContainerItemProxy */;
 		};
 		8676EE0D67D837FE19A565D2688345DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1930,11 +2290,29 @@
 			target = CAD3534FC55B0333104E5117C0A9A324 /* GoogleSignIn */;
 			targetProxy = 619380F3B2F5E9BE7439064D9CECB0C5 /* PBXContainerItemProxy */;
 		};
+		99F696A428685B8A959FA84840160AFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KakaoSDKCommon;
+			target = 205D6EF1B8DCC8419E2F53266F6ADCDC /* KakaoSDKCommon */;
+			targetProxy = 63F5F6063A90FBA04F3F110EB6179A4B /* PBXContainerItemProxy */;
+		};
+		9BB413F9EBDAE3EFA288B389246B1EF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppAuth;
+			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
+			targetProxy = 44E5CACC5672254A38CFD0D4AD9C9115 /* PBXContainerItemProxy */;
+		};
 		A0ACB95BCC3B91841FFDDAFE2810FB27 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KakaoSDKAuth;
 			target = 83CA882AD877ED964BDF66235E416BC1 /* KakaoSDKAuth */;
 			targetProxy = F0BDBB965AC1EFADA19D3B8EEA5A6E4B /* PBXContainerItemProxy */;
+		};
+		AFB1F5BF1226F60FEF28FE592320D51C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = D80DED23B6723FD5CC88FDC74303A738 /* PBXContainerItemProxy */;
 		};
 		B89582C8090B16D552921647D8828EFE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1966,11 +2344,29 @@
 			target = 615C831BCE925ED486B225B87E44926D /* KeychainAccess */;
 			targetProxy = A7A1B10039B03280B74677278DE24368 /* PBXContainerItemProxy */;
 		};
+		D4BDE0F6F6056E048D2F0B1411F14FBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = 1CE426AFBF7FA99C2B62A70A32C086B7 /* PBXContainerItemProxy */;
+		};
 		DE944CCA78D95A3825B39728FFB3B300 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KakaoSDKCommon;
 			target = 205D6EF1B8DCC8419E2F53266F6ADCDC /* KakaoSDKCommon */;
 			targetProxy = A35335C1CC102F974A40569AF4A6078F /* PBXContainerItemProxy */;
+		};
+		E61639CD141933640CEF34237C01F80A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleSignIn;
+			target = CAD3534FC55B0333104E5117C0A9A324 /* GoogleSignIn */;
+			targetProxy = 9FC0ADEECAF73D6F84024F16BC63D1E5 /* PBXContainerItemProxy */;
+		};
+		E84BE84E784B633E77B6A6ED6DF70ACE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KakaoSDKUser;
+			target = 3F7BF367078951B6E8BC95B3DA89967A /* KakaoSDKUser */;
+			targetProxy = 3F4B07CBEAF95ABD77C6CA4B694E34A3 /* PBXContainerItemProxy */;
 		};
 		E89E0382D716E97612D73AB1423F3C40 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1978,11 +2374,35 @@
 			target = D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */;
 			targetProxy = 41595E0C2EE05A58FE54A80AF3C4C8F4 /* PBXContainerItemProxy */;
 		};
+		EBBA5932F16159CFD86418D5308DE868 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMSessionFetcher;
+			target = D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */;
+			targetProxy = 1918296DF7B5AEACEC5F6FD6051158FE /* PBXContainerItemProxy */;
+		};
 		F044E55467C90858E4D3DB33727888E5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KakaoSDKAuth;
 			target = 83CA882AD877ED964BDF66235E416BC1 /* KakaoSDKAuth */;
 			targetProxy = 3024AFF6528D17F5E4D4F5BE2F08F20C /* PBXContainerItemProxy */;
+		};
+		F990AC0CB059D194F7F6A4318A527503 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeychainAccess;
+			target = 615C831BCE925ED486B225B87E44926D /* KeychainAccess */;
+			targetProxy = 48B39DFCB669F1CA51B3A439FA675662 /* PBXContainerItemProxy */;
+		};
+		F99ECEB14C59D37912F7E843C9E6FD5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMAppAuth;
+			target = 8627999EF1D5E93E13DAFF580DA8CDCF /* GTMAppAuth */;
+			targetProxy = C17945B649462E89DFCBDBC548460AC6 /* PBXContainerItemProxy */;
+		};
+		FE9BBE30330FE8B6C398B4829CC326DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KakaoSDKAuth;
+			target = 83CA882AD877ED964BDF66235E416BC1 /* KakaoSDKAuth */;
+			targetProxy = 2AE762A7B4C4B3E083DA3176D022F64E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2014,7 +2434,7 @@
 		};
 		142385210A4564D63C0457F5E6E6C30B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8428C134E9D07A9688DA025906DF4439 /* Pods-Draft.debug.xcconfig */;
+			baseConfigurationReference = 1F7F88E8D99A44CB2D7EEA367A5DA356 /* Pods-Draft.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2088,6 +2508,52 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		398135CFAABB2103507B399C44E216D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA773D8F7E6A0D66A008090CD6DDF09F /* Pods-Draft-DraftTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Draft-DraftTests/Pods-Draft-DraftTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4246626A65E8CBA47F0F3B25CA6171F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9416D2B03F0DC0D9CA936FC4DFF1A728 /* Pods-Draft-DraftUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Draft-DraftUITests/Pods-Draft-DraftUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		510B057D2E9F059C50D52DA5D90F3ACF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2203,6 +2669,30 @@
 					"@executable_path/Frameworks",
 				);
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		736857CDA88D0E5B8ED206CD2241D7AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03E31A7C2C79F8212D59B347A4734221 /* Pods-Draft-DraftTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Draft-DraftTests/Pods-Draft-DraftTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2375,7 +2865,7 @@
 		};
 		9EE44DB8DD51D7E126881F30128E9775 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A1AF2ED28D656006DC570059E6C0F84 /* Pods-Draft.release.xcconfig */;
+			baseConfigurationReference = A7FCB421A019317CDCA59F5983C976B1 /* Pods-Draft.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2442,6 +2932,30 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C59A89919F57F916856BCBC0D106BBEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 896DB9AD232A6059B705D5706E436A13 /* Pods-Draft-DraftUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Draft-DraftUITests/Pods-Draft-DraftUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2718,6 +3232,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		88C4B92734E52703795A4858A20170B3 /* Build configuration list for PBXNativeTarget "Pods-Draft-DraftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4246626A65E8CBA47F0F3B25CA6171F0 /* Debug */,
+				C59A89919F57F916856BCBC0D106BBEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9ACD53F0E09E91849384B7E9108582B6 /* Build configuration list for PBXNativeTarget "KeychainAccess" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2750,6 +3273,15 @@
 			buildConfigurations = (
 				67F8D4F8DD26D5EC07F205DCD12199FD /* Debug */,
 				725AF7BEC3A726CB2863C829AA3EFF70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8C62F848783BA95A975D72E1D0FF792 /* Build configuration list for PBXNativeTarget "Pods-Draft-DraftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				398135CFAABB2103507B399C44E216D2 /* Debug */,
+				736857CDA88D0E5B8ED206CD2241D7AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
