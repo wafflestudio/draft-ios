@@ -28,7 +28,6 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         getRoomsByRegion()
-        addSearchController()
         
         tableView.register(UINib(nibName: Draft.roomCellNibName, bundle: nil), forCellReuseIdentifier: Draft.roomCellIdentifier)
     }
@@ -61,15 +60,6 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         
         #warning("TODO: Region name 할당")
         return "Region"
-    }
-    
-    // MARK: - SearchBarController
-    func addSearchController(){
-        
-        let searchBarController = UISearchController(searchResultsController: nil)
-        
-        self.navigationItem.searchController = searchBarController
-        self.navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     func sortByRegion() {

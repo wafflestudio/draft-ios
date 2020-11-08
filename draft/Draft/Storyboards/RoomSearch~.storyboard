@@ -410,7 +410,7 @@
                             <barButtonItem title="Item" image="magnifyingglass" catalog="system" id="F0m-8D-eGX">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="5nE-VG-eKS" kind="show" id="73X-PG-fcp"/>
+                                    <segue destination="A6w-Bu-FeE" kind="show" id="73X-PG-fcp"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -419,6 +419,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INf-bd-l73" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3001.449275362319" y="143.97321428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qVC-lM-Ukc">
+            <objects>
+                <viewController id="A6w-Bu-FeE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wof-Fs-6hF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Q0h-Ad-pfg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tJu-gX-5hB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tys-aa-lBr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4055" y="-151"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qwO-io-Ged">
@@ -473,16 +489,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P95-Ft-oIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1751" y="144"/>
-        </scene>
-        <!--RoomSearch-->
-        <scene sceneID="6oF-8c-IfW">
-            <objects>
-                <viewControllerPlaceholder storyboardName="RoomSearch" id="5nE-VG-eKS" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="9l2-no-B8b"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RUx-7x-9DU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4055" y="-151"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
