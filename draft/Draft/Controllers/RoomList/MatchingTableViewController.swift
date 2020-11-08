@@ -10,73 +10,64 @@ import UIKit
 
 class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     
-    internal var roomGroup: RoomGroup?
+    internal var roomList = RoomList()
     
     internal var jwtToken = User.shared.jwtToken
     
+    @IBAction func sortRoomList(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            sortByRegion()
+        case 1:
+            sortByDate()
+        default:
+            break
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addSearchController()
-        
         getRoomsByRegion()
-        // autoLoginForTest() contains allRoomsAPIRequest()
-//        autoLoginForTest()
         
+        tableView.register(UINib(nibName: Draft.roomCellNibName, bundle: nil), forCellReuseIdentifier: Draft.roomCellIdentifier)
     }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return roomGroup?.getNumOfRoomDate() ?? 0
+        return 1
+        #warning("TODO: count에 맞게 section 수 할당")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if let values = roomGroup?.roomGroup.values {
-            
-            let roomsByDate = [RoomsByDate](values)
-            let numOfRooms = roomsByDate[section].count
-            
-            return numOfRooms
-            
-        } else {
-            return 0
-        }
+        #warning("TODO: region / date 분기")
+        return roomList.roomsByRegion.rooms.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "room identifier", for: indexPath)
         
-        let index = indexPath.row
-        let section = indexPath.section
+        let cell = tableView.dequeueReusableCell(withIdentifier: Draft.roomCellIdentifier, for: indexPath)
         
-        if let values = roomGroup?.roomGroup.values {
-            
-            let roomsByDateArray = [RoomsByDate](values)
-            let name = roomsByDateArray[section][index]?.name
-            cell.textLabel?.text = name
+        if let roomCell = cell as? RoomCell {
+            let room = roomList.roomsByRegion.rooms[indexPath.row]
+            roomCell.title.text = room.name
         }
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        if let keys = roomGroup?.roomGroup.keys {
-            let dates = [GameDateString](keys)
-            
-            let date = dates[section]
-            
-            return date
-        } else { return nil }
+        #warning("TODO: Region name 할당")
+        return "Region"
     }
     
-    // MARK: - SearchBarController
-    func addSearchController(){
-        
-        let searchBarController = UISearchController(searchResultsController: nil)
-        
-        self.navigationItem.searchController = searchBarController
-        self.navigationItem.hidesSearchBarWhenScrolling = false
+    func sortByRegion() {
+        getRoomsByRegion()
+    }
+    
+    func sortByDate() {
+        #warning("TODO: Sort rooms by date")
     }
 }
 

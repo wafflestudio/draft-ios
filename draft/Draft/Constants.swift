@@ -26,3 +26,8 @@ struct GrantType {
     static let PASSWORD = "PASSWORD"
     static let OAUTH = "OAUTH"
 }
+
+struct Draft {
+    static let roomCellIdentifier = "ReusableCell"
+    static let roomCellNibName = "RoomCell"
+}

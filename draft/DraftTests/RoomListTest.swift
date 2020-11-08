@@ -1,15 +1,14 @@
 //
-//  draftTests.swift
-//  draftTests
+//  RoomListTest.swift
+//  DraftTests
 //
-//  Created by JSKeum on 2020/04/26.
+//  Created by JSKeum on 2020/11/06.
 //  Copyright © 2020 JSKeum. All rights reserved.
 //
 
 import XCTest
-@testable import Draft
 
-class draftTests: XCTestCase {
+class RoomListTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
