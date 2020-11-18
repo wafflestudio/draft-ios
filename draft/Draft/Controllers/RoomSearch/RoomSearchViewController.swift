@@ -25,3 +25,7 @@ class RoomSearchViewController: UIViewController {
         searchResultTableView.layer.cornerRadius = 10
     }
 }
+
+extension RoomSearchViewController: UITableViewDelegate {
+    
+}

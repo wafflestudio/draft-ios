@@ -18,11 +18,74 @@
                         <subviews>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQn-TD-6jv">
                                 <rect key="frame" x="12" y="68" width="390" height="253"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBD-Bm-ovK">
+                                        <rect key="frame" x="18" y="39" width="31.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rt6-zK-wbz">
+                                        <rect key="frame" x="18" y="80" width="31.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Km2-ga-WYS">
+                                        <rect key="frame" x="18" y="121" width="31.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bCV-qt-PTN">
+                                        <rect key="frame" x="80.5" y="32.5" width="291.5" height="34"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsr-bM-0jU">
+                                        <rect key="frame" x="71.5" y="-17.5" width="161" height="216"/>
+                                    </pickerView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhl-C6-FEd">
+                                        <rect key="frame" x="220" y="-17.5" width="161" height="216"/>
+                                    </pickerView>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ztl-12-Xht">
+                                        <rect key="frame" x="80.5" y="23.5" width="142" height="216"/>
+                                    </datePicker>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mbe-AG-tWL">
+                                        <rect key="frame" x="230.5" y="23.5" width="141.5" height="216"/>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="wsr-bM-0jU" firstAttribute="leading" secondItem="rt6-zK-wbz" secondAttribute="trailing" constant="22" id="1Zi-NL-47O"/>
+                                    <constraint firstItem="wsr-bM-0jU" firstAttribute="centerY" secondItem="rt6-zK-wbz" secondAttribute="centerY" id="1g9-y6-CMK"/>
+                                    <constraint firstItem="mhl-C6-FEd" firstAttribute="leading" secondItem="wsr-bM-0jU" secondAttribute="trailing" multiplier="0.99" constant="-10" id="4LJ-s0-8EC"/>
+                                    <constraint firstItem="Ztl-12-Xht" firstAttribute="width" secondItem="Mbe-AG-tWL" secondAttribute="width" id="9RQ-hg-EWI"/>
+                                    <constraint firstItem="bCV-qt-PTN" firstAttribute="centerY" secondItem="rBD-Bm-ovK" secondAttribute="centerY" id="Aho-xi-pvP"/>
+                                    <constraint firstItem="Ztl-12-Xht" firstAttribute="centerY" secondItem="Km2-ga-WYS" secondAttribute="centerY" id="Dvo-0B-2gf"/>
+                                    <constraint firstItem="Mbe-AG-tWL" firstAttribute="leading" secondItem="Ztl-12-Xht" secondAttribute="trailing" constant="8" id="GD6-Kn-pHf"/>
+                                    <constraint firstItem="Mbe-AG-tWL" firstAttribute="centerY" secondItem="Km2-ga-WYS" secondAttribute="centerY" id="Ged-rw-CXe"/>
+                                    <constraint firstItem="rt6-zK-wbz" firstAttribute="width" secondItem="rBD-Bm-ovK" secondAttribute="width" id="IKD-Gv-HCZ"/>
+                                    <constraint firstItem="bCV-qt-PTN" firstAttribute="height" secondItem="rBD-Bm-ovK" secondAttribute="height" multiplier="1.61905" id="IKH-Bx-XGo"/>
+                                    <constraint firstItem="Km2-ga-WYS" firstAttribute="leading" secondItem="NQn-TD-6jv" secondAttribute="leading" constant="18" id="KR7-Sa-Psx"/>
+                                    <constraint firstItem="rBD-Bm-ovK" firstAttribute="leading" secondItem="NQn-TD-6jv" secondAttribute="leading" constant="18" id="Kwx-WX-IQV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mbe-AG-tWL" secondAttribute="trailing" constant="18" id="M6B-8D-V7D"/>
+                                    <constraint firstItem="Ztl-12-Xht" firstAttribute="leading" secondItem="Km2-ga-WYS" secondAttribute="trailing" constant="31" id="MJa-jz-Bwd"/>
+                                    <constraint firstItem="rBD-Bm-ovK" firstAttribute="top" secondItem="NQn-TD-6jv" secondAttribute="top" constant="39" id="XVp-tP-rgg"/>
+                                    <constraint firstItem="Km2-ga-WYS" firstAttribute="width" secondItem="rBD-Bm-ovK" secondAttribute="width" id="ZBb-sW-z66"/>
+                                    <constraint firstItem="wsr-bM-0jU" firstAttribute="width" secondItem="mhl-C6-FEd" secondAttribute="width" id="ZkN-Ea-EGi"/>
+                                    <constraint firstItem="Km2-ga-WYS" firstAttribute="top" secondItem="rt6-zK-wbz" secondAttribute="bottom" constant="20" id="fCj-Jl-rOj"/>
+                                    <constraint firstItem="rt6-zK-wbz" firstAttribute="top" secondItem="rBD-Bm-ovK" secondAttribute="bottom" constant="20" id="jhQ-HT-AzS"/>
+                                    <constraint firstItem="rt6-zK-wbz" firstAttribute="leading" secondItem="NQn-TD-6jv" secondAttribute="leading" constant="18" id="l3k-uo-6b2"/>
+                                    <constraint firstAttribute="trailing" secondItem="bCV-qt-PTN" secondAttribute="trailing" constant="18" id="rKc-8n-nje"/>
+                                    <constraint firstItem="mhl-C6-FEd" firstAttribute="centerY" secondItem="rt6-zK-wbz" secondAttribute="centerY" id="riR-XA-Z9C"/>
+                                    <constraint firstItem="bCV-qt-PTN" firstAttribute="leading" secondItem="rBD-Bm-ovK" secondAttribute="trailing" constant="31" id="uN4-Yy-zi0"/>
+                                    <constraint firstAttribute="trailing" secondItem="mhl-C6-FEd" secondAttribute="trailing" constant="9" id="vya-si-5qO"/>
+                                </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6mE-C9-Srn">
                                 <rect key="frame" x="12" y="360" width="390" height="502"/>
-                                <color key="sectionIndexBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필터링된 경기입니다" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbV-3W-TZj">
                                 <rect key="frame" x="12" y="331" width="137" height="21"/>
