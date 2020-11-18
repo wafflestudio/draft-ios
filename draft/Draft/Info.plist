@@ -52,7 +52,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>DraftLaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string>MatchingTable</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

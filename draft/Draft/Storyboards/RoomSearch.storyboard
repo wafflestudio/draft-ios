@@ -1,26 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A6w-Bu-FeE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A6w-Bu-FeE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Room Search View Controller-->
         <scene sceneID="qVC-lM-Ukc">
             <objects>
-                <viewController id="A6w-Bu-FeE" sceneMemberID="viewController">
+                <viewController id="A6w-Bu-FeE" customClass="RoomSearchViewController" customModule="Draft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wof-Fs-6hF">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQn-TD-6jv">
+                                <rect key="frame" x="12" y="68" width="390" height="253"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6mE-C9-Srn">
+                                <rect key="frame" x="12" y="360" width="390" height="502"/>
+                                <color key="sectionIndexBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필터링된 경기입니다" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbV-3W-TZj">
+                                <rect key="frame" x="12" y="331" width="137" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Q0h-Ad-pfg"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6mE-C9-Srn" firstAttribute="leading" secondItem="Q0h-Ad-pfg" secondAttribute="leading" constant="12" id="0PB-T3-6EC"/>
+                            <constraint firstItem="DbV-3W-TZj" firstAttribute="leading" secondItem="Q0h-Ad-pfg" secondAttribute="leading" constant="12" id="OMM-oy-f0f"/>
+                            <constraint firstItem="NQn-TD-6jv" firstAttribute="top" secondItem="Q0h-Ad-pfg" secondAttribute="top" constant="-20" id="OTF-Hp-dfY"/>
+                            <constraint firstItem="6mE-C9-Srn" firstAttribute="height" secondItem="Wof-Fs-6hF" secondAttribute="height" multiplier="0.56" id="Qob-en-pTW"/>
+                            <constraint firstItem="Q0h-Ad-pfg" firstAttribute="trailing" secondItem="6mE-C9-Srn" secondAttribute="trailing" constant="12" id="X2X-vn-QUe"/>
+                            <constraint firstItem="NQn-TD-6jv" firstAttribute="leading" secondItem="Q0h-Ad-pfg" secondAttribute="leading" constant="12" id="bqe-dk-OvA"/>
+                            <constraint firstItem="6mE-C9-Srn" firstAttribute="top" secondItem="DbV-3W-TZj" secondAttribute="bottom" constant="8" symbolic="YES" id="gch-Nc-B5W"/>
+                            <constraint firstItem="Q0h-Ad-pfg" firstAttribute="bottom" secondItem="6mE-C9-Srn" secondAttribute="bottom" id="mhY-mg-aCU"/>
+                            <constraint firstItem="Q0h-Ad-pfg" firstAttribute="trailing" secondItem="NQn-TD-6jv" secondAttribute="trailing" constant="12" id="stK-Gf-Af2"/>
+                            <constraint firstItem="DbV-3W-TZj" firstAttribute="top" secondItem="NQn-TD-6jv" secondAttribute="bottom" constant="10" id="xVa-iC-X6n"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tJu-gX-5hB"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="tJu-gX-5hB">
+                        <barButtonItem key="backBarButtonItem" title="방 검색" id="QP8-qt-Bro"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="filterBGView" destination="NQn-TD-6jv" id="V4a-nn-t9S"/>
+                        <outlet property="searchResultTableView" destination="6mE-C9-Srn" id="IrY-Bo-pkz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tys-aa-lBr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4055" y="-151"/>
+            <point key="canvasLocation" x="4053.6231884057975" y="-151.33928571428569"/>
         </scene>
     </scenes>
 </document>

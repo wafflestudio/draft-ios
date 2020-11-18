@@ -76,6 +76,7 @@
 		BF7287FB2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
 		BF7287FC2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
 		BF7287FD2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
+		BF754FFE25654C3C0003F649 /* RoomSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF754FFD25654C3C0003F649 /* RoomSearchViewController.swift */; };
 		BF97A7C525456373003597FB /* AppKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97A7C425456373003597FB /* AppKeys.swift */; };
 		BF97A7C625456373003597FB /* AppKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97A7C425456373003597FB /* AppKeys.swift */; };
 		BF97A7C725456373003597FB /* AppKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97A7C425456373003597FB /* AppKeys.swift */; };
@@ -149,6 +150,7 @@
 		A5A453026890355189FCA776 /* Pods-Draft-DraftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Draft-DraftTests.debug.xcconfig"; path = "Target Support Files/Pods-Draft-DraftTests/Pods-Draft-DraftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF5401C424C853EB00D73368 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DraftLaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF754FFD25654C3C0003F649 /* RoomSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSearchViewController.swift; sourceTree = "<group>"; };
 		BF97A7C425456373003597FB /* AppKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKeys.swift; sourceTree = "<group>"; };
 		BF9CF84624B7692500FEEC5E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		BFBE4D1A24C6F9B4005D2D32 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 		389703B624559C8C00FF5077 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF754FFC25654C250003F649 /* RoomSearch */,
 				384FA83A24BA084A00FB3CF4 /* RoomDetail */,
 				384FA83B24BA086100FB3CF4 /* RoomList */,
 				380ABC8E24F9714D00B212F0 /* SignIn */,
@@ -342,6 +345,14 @@
 				F541B9AFC8B9F3C2FE80C39F /* Pods-Draft-DraftUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BF754FFC25654C250003F649 /* RoomSearch */ = {
+			isa = PBXGroup;
+			children = (
+				BF754FFD25654C3C0003F649 /* RoomSearchViewController.swift */,
+			);
+			path = RoomSearch;
 			sourceTree = "<group>";
 		};
 		BF97A7C325456342003597FB /* Util */ = {
@@ -638,6 +649,7 @@
 				389703BD2455A81400FF5077 /* MatchingTableViewController.swift in Sources */,
 				380ABC8C24F9645B00B212F0 /* KeychainAccess.swift in Sources */,
 				38B0347D24F8F9F8005E759A /* Constants.swift in Sources */,
+				BF754FFE25654C3C0003F649 /* RoomSearchViewController.swift in Sources */,
 				38D00C35248B3E7400F50F9B /* Model-utilities.swift in Sources */,
 				38D00C32248B3D7500F50F9B /* RoomList.swift in Sources */,
 				380B77C624C214FB00CB1CB2 /* GameDatePickerViewController.swift in Sources */,
@@ -740,6 +752,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -800,6 +813,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -843,6 +857,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
