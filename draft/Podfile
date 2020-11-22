@@ -12,6 +12,8 @@ target 'Draft' do
   pod 'DynamicCodable' #, '1.0'
   pod 'GoogleSignIn'
   pod 'KeychainAccess', '~> 4.2'
+  
+  pod 'RxSwift'
 
 	target 'DraftTests' do
     inherit! :complete

@@ -43,16 +43,16 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsr-bM-0jU">
-                                        <rect key="frame" x="71.5" y="-17.5" width="161" height="216"/>
+                                        <rect key="frame" x="72" y="-17" width="161" height="216"/>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhl-C6-FEd">
-                                        <rect key="frame" x="220" y="-17.5" width="161" height="216"/>
+                                        <rect key="frame" x="220" y="-17" width="161" height="216"/>
                                     </pickerView>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ztl-12-Xht">
-                                        <rect key="frame" x="80.5" y="23.5" width="142" height="216"/>
+                                        <rect key="frame" x="81" y="24" width="142" height="216"/>
                                     </datePicker>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mbe-AG-tWL">
-                                        <rect key="frame" x="230.5" y="23.5" width="141.5" height="216"/>
+                                        <rect key="frame" x="231" y="24" width="141" height="216"/>
                                     </datePicker>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,7 +87,7 @@
                                 <rect key="frame" x="12" y="360" width="390" height="502"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="yLM-GG-yoe">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="yLM-GG-yoe" customClass="RoomSearchResultCell" customModule="Draft" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="390" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yLM-GG-yoe" id="EWF-ms-tu7">
@@ -138,6 +138,13 @@
                                                 <constraint firstAttribute="trailing" secondItem="kpO-Cm-7Gn" secondAttribute="trailing" constant="29" id="v85-u8-LDI"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="roomCourtLabel" destination="kpO-Cm-7Gn" id="XTz-xh-yyB"/>
+                                            <outlet property="roomNameLabel" destination="RLM-gC-LEd" id="TkW-aW-am4"/>
+                                            <outlet property="roomPeopleLabel" destination="1US-NS-0FZ" id="3aO-u5-FrI"/>
+                                            <outlet property="roomPlayTimeLabel" destination="ckX-Ao-exw" id="1zS-xD-Shm"/>
+                                            <outlet property="roomStatusLabel" destination="i0O-Hp-Eie" id="rVJ-ZL-zuA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

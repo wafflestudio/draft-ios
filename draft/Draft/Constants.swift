@@ -26,6 +26,7 @@ struct APIUrl {
     static let signupUrl = "https://draft.wafflestudio.com/api/v1/user/signup/"
     static let deviceRegisterUrl = "https://draft.wafflestudio.com/api/v1/user/device/"
     static let getRoomUrl = "https://draft.wafflestudio.com/api/v1/region/room/"
+    static let searchRoomUrl = "https://draft.wafflestudio.com/api/v1/room/"
     #endif
 }
     

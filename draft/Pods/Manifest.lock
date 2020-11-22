@@ -26,6 +26,7 @@ PODS:
     - KakaoSDKAuth (= 2.0.4)
     - KakaoSDKCommon (= 2.0.4)
   - KeychainAccess (4.2.0)
+  - RxSwift (5.1.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - KakaoSDKCommon
   - KakaoSDKUser
   - KeychainAccess (~> 4.2)
+  - RxSwift
 
 SPEC REPOS:
   trunk:
@@ -48,6 +50,7 @@ SPEC REPOS:
     - KakaoSDKCommon
     - KakaoSDKUser
     - KeychainAccess
+    - RxSwift
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
@@ -60,7 +63,8 @@ SPEC CHECKSUMS:
   KakaoSDKCommon: 070472d0638ea6b28684a23c195e47015349e51b
   KakaoSDKUser: 7951e09f9e6de3908ae2d7f8486290c8607c217a
   KeychainAccess: 3f760109aa99b05d0f231e28b22642da7153e38a
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: be2864c9d31c029a4114b923fcff96521529ea9d
+PODFILE CHECKSUM: c57b627e719b3a00ce70c114c7ed1ed1e0584649
 
 COCOAPODS: 1.9.3
