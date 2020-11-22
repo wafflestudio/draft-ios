@@ -86,6 +86,60 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6mE-C9-Srn">
                                 <rect key="frame" x="12" y="360" width="390" height="502"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="yLM-GG-yoe">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yLM-GG-yoe" id="EWF-ms-tu7">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLM-gC-LEd">
+                                                    <rect key="frame" x="13" y="10" width="90" height="19"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m/n" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1US-NS-0FZ">
+                                                    <rect key="frame" x="13" y="41" width="28" height="19"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="게임 중..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0O-Hp-Eie">
+                                                    <rect key="frame" x="309" y="10" width="52" height="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" red="0.34901960784313724" green="0.58823529411764708" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기숙사 삼거리 농구장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpO-Cm-7Gn">
+                                                    <rect key="frame" x="260.5" y="31" width="100.5" height="14"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21시 32분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckX-Ao-exw">
+                                                    <rect key="frame" x="310" y="45" width="51" height="14"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ckX-Ao-exw" firstAttribute="top" secondItem="kpO-Cm-7Gn" secondAttribute="bottom" id="3v5-FK-WuO"/>
+                                                <constraint firstAttribute="trailing" secondItem="ckX-Ao-exw" secondAttribute="trailing" constant="29" id="GmD-Fe-K4b"/>
+                                                <constraint firstAttribute="trailing" secondItem="i0O-Hp-Eie" secondAttribute="trailing" constant="29" id="HBK-Js-mTI"/>
+                                                <constraint firstItem="1US-NS-0FZ" firstAttribute="leading" secondItem="EWF-ms-tu7" secondAttribute="leading" constant="13" id="Im4-fw-UZf"/>
+                                                <constraint firstAttribute="bottom" secondItem="1US-NS-0FZ" secondAttribute="bottom" constant="10" id="ZB6-wI-s66"/>
+                                                <constraint firstItem="RLM-gC-LEd" firstAttribute="leading" secondItem="EWF-ms-tu7" secondAttribute="leading" constant="13" id="fZZ-qx-dbM"/>
+                                                <constraint firstItem="i0O-Hp-Eie" firstAttribute="top" secondItem="EWF-ms-tu7" secondAttribute="top" constant="10" id="i3h-qw-pos"/>
+                                                <constraint firstItem="kpO-Cm-7Gn" firstAttribute="top" secondItem="i0O-Hp-Eie" secondAttribute="bottom" constant="4" id="j9O-6x-U2q"/>
+                                                <constraint firstItem="RLM-gC-LEd" firstAttribute="top" secondItem="EWF-ms-tu7" secondAttribute="top" constant="10" id="qGF-4b-CXH"/>
+                                                <constraint firstAttribute="trailing" secondItem="kpO-Cm-7Gn" secondAttribute="trailing" constant="29" id="v85-u8-LDI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필터링된 경기입니다" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbV-3W-TZj">
                                 <rect key="frame" x="12" y="331" width="137" height="21"/>
