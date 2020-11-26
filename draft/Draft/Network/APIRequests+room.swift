@@ -12,6 +12,11 @@ import Alamofire
 enum RoomRequestType {
     case getRoomsByRegion
     case getSingleRoom
+    case getSearchedRooms
+}
+
+struct roomSearchQueryParameter: Encodable {
+    
 }
 
 struct GetRoomByRegionResponseData: Decodable {
@@ -23,13 +28,17 @@ struct GetRoomByRegionResponseData: Decodable {
     let rooms: [Room]
 }
 
+struct GetRoomBySearchResponseData: Decodable {
+    
+}
+
 enum RoomRequestError {
     case responseDataNotFound
     case responseError
 }
 
 extension APIRequests {
-    func requestRoom(requestType: RoomRequestType, completion: @escaping (_ data: GetRoomByRegionResponseData?, _ error: RoomRequestError?) -> Void) {
+    func requestRoom(requestType: RoomRequestType, parameter: [String:String]? = nil, completion: @escaping (_ data: GetRoomByRegionResponseData?, _ error: RoomRequestError?) -> Void) {
             switch requestType {
             case .getRoomsByRegion:
                 AF.request(APIUrl.getRoomUrl,
@@ -55,6 +64,28 @@ extension APIRequests {
                 }
             case .getSingleRoom:
                     #warning("TODO")
+            case .getSearchedRooms:
+                AF.request(APIUrl.searchRoomUrl,
+                           method: .post,
+                           headers: oauthTokenHeader)
+                    .validate().responseJSON() { res in
+                        switch res.result {
+                        case .success:
+                        if let data = res.data {
+                            do {
+                                let decodedData = try   JSONDecoder().decode(Array<GetRoomByRegionResponseData>.self, from: data)
+                                completion(decodedData[0], nil)
+                            } catch let error {
+                                debugPrint(error)
+                                completion(nil, .responseDataNotFound)
+                            }
+                        }
+                            
+                        case let .failure(error):
+                            debugPrint(error)
+                            completion(nil, .responseError)
+                        }
             }
         }
+    }
 }
