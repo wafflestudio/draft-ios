@@ -29,7 +29,18 @@ struct GetRoomByRegionResponseData: Decodable {
 }
 
 struct GetRoomBySearchResponseData: Decodable {
-    
+    let count: Int
+    let result: SearchedRoomData
+    let next: Int
+}
+
+struct SearchedRoomData: Decodable {
+    let id: Int
+    let name: String
+    let depth1: String
+    let depth2: String
+    let depth3: String
+    let rooms: [Room]
 }
 
 enum RoomRequestError {
@@ -38,7 +49,7 @@ enum RoomRequestError {
 }
 
 extension APIRequests {
-    func requestRoom(requestType: RoomRequestType, parameter: [String:String]? = nil, completion: @escaping (_ data: GetRoomByRegionResponseData?, _ error: RoomRequestError?) -> Void) {
+    func requestRoom(requestType: RoomRequestType, parameters: [String:Any]? = nil, completion: @escaping (_ data: Any?, _ error: RoomRequestError?) -> Void) {
             switch requestType {
             case .getRoomsByRegion:
                 AF.request(APIUrl.getRoomUrl,
@@ -49,8 +60,8 @@ extension APIRequests {
                         case .success:
                         if let data = res.data {
                             do {
-                                let decodedData = try   JSONDecoder().decode(Array<GetRoomByRegionResponseData>.self, from: data)
-                                completion(decodedData[0], nil)
+                                let decodedData = try   JSONDecoder().decode(GetRoomBySearchResponseData.self, from: data)
+                                completion(decodedData, nil)
                             } catch let error {
                                 debugPrint(error)
                                 completion(nil, .responseDataNotFound)
@@ -67,11 +78,12 @@ extension APIRequests {
             case .getSearchedRooms:
                 AF.request(APIUrl.searchRoomUrl,
                            method: .post,
+                           parameters: parameters,
                            headers: oauthTokenHeader)
-                    .validate().responseJSON() { res in
-                        switch res.result {
+                    .validate().responseJSON() { response in
+                        switch response.result {
                         case .success:
-                        if let data = res.data {
+                        if let data = response.data {
                             do {
                                 let decodedData = try   JSONDecoder().decode(Array<GetRoomByRegionResponseData>.self, from: data)
                                 completion(decodedData[0], nil)

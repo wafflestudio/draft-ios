@@ -13,7 +13,7 @@ extension MatchingTableViewController {
     func getRoomsByRegion() {
         APIRequests.shared.requestRoom(requestType: .getRoomsByRegion) { (data, error) in
             if let data = data {
-                self.roomList.sortByRegion(data: data)
+                self.roomList.sortByRegion(data: data as! GetRoomByRegionResponseData)
                 self.tableView.reloadData()
             }
             

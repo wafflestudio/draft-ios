@@ -23,6 +23,8 @@ class RoomSearchViewController: UIViewController {
     @IBOutlet weak var filterBGView: UIView!
     @IBOutlet weak var searchResultTableView: UITableView!
     
+    let viewModel = RoomSearchViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
