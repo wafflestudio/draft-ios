@@ -40,24 +40,8 @@ extension SignInViewController: ASAuthorizationControllerDelegate, ASAuthorizati
             
             KeychainAccess.shared.saveOAuthInKeychain(identifier: userIdentifier, accessToken: token, type: .appleOAuth)
             
-            let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: OAuthProvider.APPLE, accessToken: String(decoding: token, as: UTF8.self), username: "test name", email: email)
+            self.oAuthSignIn(oAuthProvider: OAuthProvider.APPLE, userName: nil, email: email, token: String(decoding: token, as: UTF8.self))
             
-            APIRequests.shared.requestUser(param: param, requestType: .signIn) { _ , error  in
-                if let error = error {
-                    switch error {
-                    case .noUserInDB:
-                        #warning("TODO: Go to signup view")
-                        print("error")
-                        return
-                        
-                    default:
-                        #warning("TODO: 에러 처리")
-                        print("Error")
-                        return
-                    }
-                }
-                self.goToDetailView()
-            }
         default:
             break
         }
@@ -95,9 +79,49 @@ extension SignInViewController: GIDSignInDelegate {
             return
         }
         
-        let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: OAuthProvider.GOOGLE, accessToken: token, username: nil, email: email)
+        self.oAuthSignIn(oAuthProvider: OAuthProvider.GOOGLE, userName: nil, email: email, token: token)
         
-        APIRequests.shared.requestUser(param: param, requestType: .signIn) { _ , error  in
+        KeychainAccess.shared.saveOAuthInKeychain(identifier: identifier, accessToken: Data(token.utf8), type: .googleOAuth)
+        
+    }
+}
+
+extension SignInViewController {
+    @IBAction func KakaologinButtonClicked() {
+        if (AuthApi.isKakaoTalkLoginAvailable()) {
+            
+            AuthApi.shared.loginWithKakaoAccount(authType: .Reauthenticate) {[weak self] (oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoTalk() success.")
+
+                    guard let strongSelf = self, let token = oauthToken?.accessToken else {
+                        print("No Kakao Access Token from oauthToken")
+                        return
+                    }
+
+                    UserApi.shared.me { (user, error) in
+                        if let error = error {
+                            print(error)
+                        }
+                        else {
+                            strongSelf.oAuthSignIn(oAuthProvider: OAuthProvider.KAKAO, userName: "test name", email: user?.kakaoAccount?.email, token: token)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// MARK: Sign In Logic
+extension SignInViewController {
+    private func oAuthSignIn(oAuthProvider: String, userName: String?, email: String?, token: String) {
+        let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: oAuthProvider, accessToken: token, username: userName, email: email)
+        
+        APIRequests.shared.requestUser(param: param, requestType: .signIn) { _, error in
             if let error = error {
                 switch error {
                 case .noUserInDB:
@@ -113,55 +137,6 @@ extension SignInViewController: GIDSignInDelegate {
             }
             self.goToDetailView()
         }
-        
-        KeychainAccess.shared.saveOAuthInKeychain(identifier: identifier, accessToken: Data(token.utf8), type: .googleOAuth)
-        
     }
 }
 
-extension SignInViewController {
-    @IBAction func KakaologinButtonClicked() {
-        if (AuthApi.isKakaoTalkLoginAvailable()) {
-            
-            AuthApi.shared.loginWithKakaoAccount(authType: .Reauthenticate) {(oauthToken, error) in
-                if let error = error {
-                    print(error)
-                }
-                else {
-                    print("loginWithKakaoTalk() success.")
-
-                    guard let token = oauthToken?.accessToken else {
-                        print("No Kakao Access Token from oauthToken")
-                        return
-                    }
-
-                    UserApi.shared.me { (user, error) in
-                        if let error = error {
-                            print(error)
-                        }
-                        else {
-                            let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: OAuthProvider.KAKAO, accessToken: token, username: "test name", email: user?.kakaoAccount?.email)
-                            
-                            APIRequests.shared.requestUser(param: param, requestType: .signIn) { _, error in
-                                if let error = error {
-                                    switch error {
-                                    case .noUserInDB:
-                                        #warning("TODO: Go to signup view")
-                                        print("error")
-                                        return
-                                        
-                                    default:
-                                        #warning("TODO: 에러 처리")
-                                        print("Error")
-                                        return
-                                    }
-                                }
-                                self.goToDetailView()
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
