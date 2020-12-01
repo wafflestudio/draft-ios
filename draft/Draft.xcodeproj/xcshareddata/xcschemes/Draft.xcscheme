@@ -17,7 +17,7 @@
                BlueprintIdentifier = "3897037F24559A4900FF5077"
                BuildableName = "Draft.app"
                BlueprintName = "Draft"
-               ReferencedContainer = "container:draft.xcodeproj">
+               ReferencedContainer = "container:Draft.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,7 +36,7 @@
                BlueprintIdentifier = "3897039824559A4C00FF5077"
                BuildableName = "DraftTests.xctest"
                BlueprintName = "DraftTests"
-               ReferencedContainer = "container:draft.xcodeproj">
+               ReferencedContainer = "container:Draft.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -46,13 +46,13 @@
                BlueprintIdentifier = "389703A324559A4C00FF5077"
                BuildableName = "DraftUITests.xctest"
                BlueprintName = "DraftUITests"
-               ReferencedContainer = "container:draft.xcodeproj">
+               ReferencedContainer = "container:Draft.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -68,7 +68,7 @@
             BlueprintIdentifier = "3897037F24559A4900FF5077"
             BuildableName = "Draft.app"
             BlueprintName = "Draft"
-            ReferencedContainer = "container:draft.xcodeproj">
+            ReferencedContainer = "container:Draft.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -85,7 +85,7 @@
             BlueprintIdentifier = "3897037F24559A4900FF5077"
             BuildableName = "Draft.app"
             BlueprintName = "Draft"
-            ReferencedContainer = "container:draft.xcodeproj">
+            ReferencedContainer = "container:Draft.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

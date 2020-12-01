@@ -121,12 +121,18 @@ extension SignInViewController {
     private func oAuthSignIn(oAuthProvider: String, userName: String?, email: String?, token: String) {
         let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: oAuthProvider, accessToken: token, username: userName, email: email)
         
-        APIRequests.shared.requestUser(param: param, requestType: .signIn) { _, error in
+        APIRequests.shared.requestUser(param: param, requestType: .signIn) { [weak self] _, error in
+            guard let strongSelf = self else {
+                return
+            }
+            
             if let error = error {
                 switch error {
                 case .noUserInDB:
-                    #warning("TODO: Go to signup view")
-                    print("error")
+                    print("SignIn Failed : \(error)")
+                    
+                    strongSelf.oAuthSignUp(oAuthProvider: oAuthProvider, userName: userName, email: email, token: token)
+                    
                     return
                     
                 default:
@@ -135,7 +141,35 @@ extension SignInViewController {
                     return
                 }
             }
-            self.goToDetailView()
+            
+            strongSelf.goToDetailView()
+        }
+    }
+}
+
+// MARK: Sign Up Logic
+extension SignInViewController {
+    private func oAuthSignUp(oAuthProvider: String, userName: String?, email: String?, token: String) {
+        let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: oAuthProvider, accessToken: token, username: userName, email: email)
+        
+        APIRequests.shared.requestUser(param: param, requestType: .signUp) { [weak self] _, error in
+            guard let strongSelf = self else {
+                return
+            }
+            
+            if let error = error {
+                print("SignUp Error : \(error)")
+                
+                let alert = UIAlertController(title: "회원가입 실패", message: "다시 시도해주세요", preferredStyle: .alert)
+                let confirm = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+                
+                alert.addAction(confirm)
+                strongSelf.present(alert, animated: true, completion: nil)
+                
+                return
+            }
+            
+            strongSelf.oAuthSignIn(oAuthProvider: oAuthProvider, userName: userName, email: email, token: token)
         }
     }
 }
