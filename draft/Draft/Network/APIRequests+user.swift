@@ -19,7 +19,6 @@ struct UserParam : Encodable {
     let authProvider : String?
     let accessToken : String?
     let username: String?
-    let email: String?
 }
 
 struct UserResponseData: Decodable {
@@ -75,15 +74,15 @@ extension APIRequests {
                     
                     switch res.result {
                     case .success:
-                        if let data = res.data, let decodedData = try? JSONDecoder().decode(Array<UserResponseData>.self, from: data) {
+                        if let data = res.data, let decodedData = try? JSONDecoder().decode(UserResponseData.self, from: data) {
                             
-                            completion(decodedData[0], nil)
+                            completion(decodedData, nil)
                         } else {
                             completion(nil, .responseError)
                         }
                         
                     case let .failure(error):
-                        debugPrint(error)
+                        print("SIGN UP ERROR: \(error.underlyingError.debugDescription)")
                         completion(nil, .responseError)
                         
                     }
@@ -92,6 +91,7 @@ extension APIRequests {
     }
 }
 
-func userQueryBuild(grantType: String, authProvider: String?, accessToken: String?, username: String?, email: String?) -> UserParam {
-    return UserParam(grantType: grantType, authProvider: authProvider, accessToken: accessToken, username: username, email: email)
+func userQueryBuild(grantType: String, authProvider: String?, accessToken: String?, username: String?) -> UserParam {
+    return UserParam(grantType: grantType, authProvider: authProvider, accessToken: accessToken, username: username)
 }
+

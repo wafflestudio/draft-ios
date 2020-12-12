@@ -40,7 +40,7 @@ extension SignInViewController: ASAuthorizationControllerDelegate, ASAuthorizati
             
             KeychainAccess.shared.saveOAuthInKeychain(identifier: userIdentifier, accessToken: token, type: .appleOAuth)
             
-            self.oAuthSignIn(oAuthProvider: OAuthProvider.APPLE, userName: nil, email: email, token: String(decoding: token, as: UTF8.self))
+            self.oAuthSignIn(oAuthProvider: OAuthProvider.APPLE, userName: nil, token: String(decoding: token, as: UTF8.self))
             
         default:
             break
@@ -79,7 +79,7 @@ extension SignInViewController: GIDSignInDelegate {
             return
         }
         
-        self.oAuthSignIn(oAuthProvider: OAuthProvider.GOOGLE, userName: nil, email: email, token: token)
+        self.oAuthSignIn(oAuthProvider: OAuthProvider.GOOGLE, userName: nil, token: token)
         
         KeychainAccess.shared.saveOAuthInKeychain(identifier: identifier, accessToken: Data(token.utf8), type: .googleOAuth)
         
@@ -107,7 +107,7 @@ extension SignInViewController {
                             print(error)
                         }
                         else {
-                            strongSelf.oAuthSignIn(oAuthProvider: OAuthProvider.KAKAO, userName: "test name", email: user?.kakaoAccount?.email, token: token)
+                            strongSelf.oAuthSignIn(oAuthProvider: OAuthProvider.KAKAO, userName: "test name", token: token)
                         }
                     }
                 }
@@ -117,59 +117,39 @@ extension SignInViewController {
 }
 
 // MARK: Sign In Logic
+
 extension SignInViewController {
-    private func oAuthSignIn(oAuthProvider: String, userName: String?, email: String?, token: String) {
-        let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: oAuthProvider, accessToken: token, username: userName, email: email)
+    
+    private func oAuthSignIn(oAuthProvider: String, userName: String?, token: String) {
+        self.userparam = userQueryBuild(grantType: GrantType.OAUTH, authProvider: oAuthProvider, accessToken: token, username: userName)
         
-        APIRequests.shared.requestUser(param: param, requestType: .signIn) { [weak self] _, error in
+        APIRequests.shared.requestUser(param: self.userparam, requestType: .signIn) { [weak self] _, error in
             guard let strongSelf = self else {
                 return
             }
+            print("PARAM: \(strongSelf.userparam)")
             
             if let error = error {
                 switch error {
                 case .noUserInDB:
                     print("SignIn Failed : \(error)")
                     
-                    strongSelf.oAuthSignUp(oAuthProvider: oAuthProvider, userName: userName, email: email, token: token)
                     
+                    guard let param = strongSelf.userparam else {
+                        return
+                    }
+                    
+                    strongSelf.goToOAuthSignUpView(param: param)
                     return
                     
                 default:
                     #warning("TODO: 에러 처리")
-                    print("Error")
+                    print("Error: \(error)")
                     return
                 }
             }
             
             strongSelf.goToDetailView()
-        }
-    }
-}
-
-// MARK: Sign Up Logic
-extension SignInViewController {
-    private func oAuthSignUp(oAuthProvider: String, userName: String?, email: String?, token: String) {
-        let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: oAuthProvider, accessToken: token, username: userName, email: email)
-        
-        APIRequests.shared.requestUser(param: param, requestType: .signUp) { [weak self] _, error in
-            guard let strongSelf = self else {
-                return
-            }
-            
-            if let error = error {
-                print("SignUp Error : \(error)")
-                
-                let alert = UIAlertController(title: "회원가입 실패", message: "다시 시도해주세요", preferredStyle: .alert)
-                let confirm = UIAlertAction(title: "확인", style: .cancel, handler: nil)
-                
-                alert.addAction(confirm)
-                strongSelf.present(alert, animated: true, completion: nil)
-                
-                return
-            }
-            
-            strongSelf.oAuthSignIn(oAuthProvider: oAuthProvider, userName: userName, email: email, token: token)
         }
     }
 }

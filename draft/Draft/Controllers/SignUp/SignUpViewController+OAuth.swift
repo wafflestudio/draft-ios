@@ -18,22 +18,17 @@ class OAuthSignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    private(set) var accessToken: String?
-    private(set) var provider: String?
+    private(set) var param: UserParam? = nil
     
-    func setAccessToken(_ accessToken: String) {
-        self.accessToken = accessToken
-    }
-    
-    func setProvider(_ provider: String) {
-        self.provider = provider
+    func setParam(_ param: UserParam) {
+        self.param = param
     }
     
     @IBOutlet weak var usernameTextField: UITextField!
     
     @IBAction func oAuthSignUp(_ sender: UIButton) {
         if let username = usernameTextField.text {
-            oAuthSignUpRequest(username: username, token: self.accessToken!, provider: self.provider!)
+            oAuthSignUpRequest(username: username)
         }
     }
 }
@@ -58,36 +53,57 @@ extension OAuthSignUpViewController: UITextFieldDelegate {
 
 // MARK: - OAuth SignUp Request
 extension OAuthSignUpViewController {
-    func oAuthSignUpRequest(username: String, token: String, provider: String) {
-        struct Param : Encodable {
-            let grantType : String
-            let authProvider : String
-            let accessToken : String
-            let username: String
+    func oAuthSignUpRequest(username: String) {
+        guard let param = self.param else {
+            //TODO: param 부재 예외 처리
+            return
         }
         
-        let param = Param(grantType: GrantType.OAUTH, authProvider: provider, accessToken: token, username: username)
-        
-        AF.request(APIUrl.signupUrl,
-                   method: .post,
-                   parameters: param,
-                   encoder: JSONParameterEncoder.default)
-            .validate().responseJSON() {
-                    response in
-                    
-                    if (response.response?.statusCode == 201) {
+        self.param = userQueryBuild(grantType: param.grantType, authProvider: param.authProvider, accessToken: param.accessToken, username: username)
+       
+        APIRequests.shared.requestUser(param: self.param, requestType: .signUp) { [weak self] _, error in
+            guard let strongSelf = self else {
+                return
+            }
+            
+            if let error = error {
+                print("SignUp Error : \(error)")
+                
+                let alert = UIAlertController(title: "회원가입 실패", message: "다시 시도해주세요", preferredStyle: .alert)
+                let confirm = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+                
+                alert.addAction(confirm)
+                strongSelf.present(alert, animated: true, completion: nil)
+                
+                return
+            }
+            
+            
+            guard let signInParam = strongSelf.param else {
+                return
+            }
+            
+            APIRequests.shared.requestUser(param: signInParam, requestType: .signIn) { [weak self] _, error in
+                guard let strongSelf = self else {
+                    return
+                }
+                
+                if let error = error {
+                    switch error {
+                    case .noUserInDB:
+                        print("SignIn Failed : \(error)")
+                        strongSelf.navigationController?.popViewController(animated: true)
                         
-                        if let jwtToken = response.response?.headers.dictionary["Authentication"] {
-                            
-                            User.shared.setJwtToken(jwtToken)
-                            self.goToDetailView()
-                        }
+                    default:
+                        #warning("TODO: 에러 처리")
+                        print("Error: \(error)")
+                        strongSelf.navigationController?.popViewController(animated: true)
+                        return
                     }
-                    
-                    if (response.response?.statusCode == 400) {
-                        print("error: statusCode == 400 when signUp request")
-                        print(response.response!)
-                    }
+                }
+                
+                strongSelf.goToDetailView()
+            }
         }
     }
 }
