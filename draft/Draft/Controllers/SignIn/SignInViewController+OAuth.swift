@@ -40,24 +40,8 @@ extension SignInViewController: ASAuthorizationControllerDelegate, ASAuthorizati
             
             KeychainAccess.shared.saveOAuthInKeychain(identifier: userIdentifier, accessToken: token, type: .appleOAuth)
             
-            let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: OAuthProvider.APPLE, accessToken: String(decoding: token, as: UTF8.self), username: "test name", email: email)
+            self.oAuthSignIn(oAuthProvider: OAuthProvider.APPLE, userName: nil, token: String(decoding: token, as: UTF8.self))
             
-            APIRequests.shared.requestUser(param: param, requestType: .signIn) { _ , error  in
-                if let error = error {
-                    switch error {
-                    case .noUserInDB:
-                        #warning("TODO: Go to signup view")
-                        print("error")
-                        return
-                        
-                    default:
-                        #warning("TODO: 에러 처리")
-                        print("Error")
-                        return
-                    }
-                }
-                self.goToDetailView()
-            }
         default:
             break
         }
@@ -95,24 +79,7 @@ extension SignInViewController: GIDSignInDelegate {
             return
         }
         
-        let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: OAuthProvider.GOOGLE, accessToken: token, username: nil, email: email)
-        
-        APIRequests.shared.requestUser(param: param, requestType: .signIn) { _ , error  in
-            if let error = error {
-                switch error {
-                case .noUserInDB:
-                    #warning("TODO: Go to signup view")
-                    print("error")
-                    return
-                    
-                default:
-                    #warning("TODO: 에러 처리")
-                    print("Error")
-                    return
-                }
-            }
-            self.goToDetailView()
-        }
+        self.oAuthSignIn(oAuthProvider: OAuthProvider.GOOGLE, userName: nil, token: token)
         
         KeychainAccess.shared.saveOAuthInKeychain(identifier: identifier, accessToken: Data(token.utf8), type: .googleOAuth)
         
@@ -123,14 +90,14 @@ extension SignInViewController {
     @IBAction func KakaologinButtonClicked() {
         if (AuthApi.isKakaoTalkLoginAvailable()) {
             
-            AuthApi.shared.loginWithKakaoAccount(authType: .Reauthenticate) {(oauthToken, error) in
+            AuthApi.shared.loginWithKakaoAccount(authType: .Reauthenticate) {[weak self] (oauthToken, error) in
                 if let error = error {
                     print(error)
                 }
                 else {
                     print("loginWithKakaoTalk() success.")
 
-                    guard let token = oauthToken?.accessToken else {
+                    guard let strongSelf = self, let token = oauthToken?.accessToken else {
                         print("No Kakao Access Token from oauthToken")
                         return
                     }
@@ -140,24 +107,7 @@ extension SignInViewController {
                             print(error)
                         }
                         else {
-                            let param = userQueryBuild(grantType: GrantType.OAUTH, authProvider: OAuthProvider.KAKAO, accessToken: token, username: "test name", email: user?.kakaoAccount?.email)
-                            
-                            APIRequests.shared.requestUser(param: param, requestType: .signIn) { _, error in
-                                if let error = error {
-                                    switch error {
-                                    case .noUserInDB:
-                                        #warning("TODO: Go to signup view")
-                                        print("error")
-                                        return
-                                        
-                                    default:
-                                        #warning("TODO: 에러 처리")
-                                        print("Error")
-                                        return
-                                    }
-                                }
-                                self.goToDetailView()
-                            }
+                            strongSelf.oAuthSignIn(oAuthProvider: OAuthProvider.KAKAO, userName: "test name", token: token)
                         }
                     }
                 }
@@ -165,3 +115,42 @@ extension SignInViewController {
         }
     }
 }
+
+// MARK: Sign In Logic
+
+extension SignInViewController {
+    
+    private func oAuthSignIn(oAuthProvider: String, userName: String?, token: String) {
+        self.userparam = userQueryBuild(grantType: GrantType.OAUTH, authProvider: oAuthProvider, accessToken: token, username: userName)
+        
+        APIRequests.shared.requestUser(param: self.userparam, requestType: .signIn) { [weak self] _, error in
+            guard let strongSelf = self else {
+                return
+            }
+            print("PARAM: \(strongSelf.userparam)")
+            
+            if let error = error {
+                switch error {
+                case .noUserInDB:
+                    print("SignIn Failed : \(error)")
+                    
+                    
+                    guard let param = strongSelf.userparam else {
+                        return
+                    }
+                    
+                    strongSelf.goToOAuthSignUpView(param: param)
+                    return
+                    
+                default:
+                    #warning("TODO: 에러 처리")
+                    print("Error: \(error)")
+                    return
+                }
+            }
+            
+            strongSelf.goToDetailView()
+        }
+    }
+}
+

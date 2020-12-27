@@ -30,6 +30,9 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    // MARK: for authLogin
+    var userparam: UserParam? = nil
+    
     @IBAction func PasswordLogin() {
         let url = APIUrl.signinUrl
         
@@ -69,16 +72,15 @@ extension SignInViewController {
 
 // MARK: - OAuth SignUp View로 연결
 extension SignInViewController {
-    func goToOAuthSignUpView(token: String, provider: String) {
+    func goToOAuthSignUpView(param: UserParam) {
         
         guard let oAuthSignUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "OAuthSignUp") as? OAuthSignUpViewController
             else {
                 return
         }
         
-        oAuthSignUpViewController.setAccessToken(token)
-        oAuthSignUpViewController.setProvider(provider)
-        navigationController?.pushViewController(oAuthSignUpViewController, animated: true)
+        oAuthSignUpViewController.setParam(param)
+        self.navigationController?.pushViewController(oAuthSignUpViewController, animated: true)
     }
 }
 
