@@ -26,33 +26,9 @@ class SignInViewController: UIViewController {
         appleSignIn()
     }
     
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
     
     // MARK: for authLogin
     var userparam: UserParam? = nil
-    
-    @IBAction func PasswordLogin() {
-        let url = APIUrl.signinUrl
-        
-        struct Param : Encodable {
-            let grantType : String
-            let email : String
-            let password : String
-        }
-        
-        let param = Param(grantType: GrantType.PASSWORD ,email: emailTextField.text! , password: passwordTextField.text!)
-        
-        AF.request(url,
-                   method: .post,
-                   parameters: param,
-                   encoder: JSONParameterEncoder.default).validate().responseJSON()
-                    {
-                        response in
-                        print(response.response?.headers.sorted())
-        }
-    }
 }
 
 // MARK: - Go To MatchingTable View
