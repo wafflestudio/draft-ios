@@ -17,83 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUp-uk-yWq">
-                                <rect key="frame" x="30" y="70" width="334" height="60"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White Logo Square" translatesAutoresizingMaskIntoConstraints="NO" id="cSA-1M-TQF">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="pqc-DD-072"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4U6-o3-j5A">
-                                        <rect key="frame" x="60" y="0.0" width="274" height="60"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="25"/>
-                                        <state key="normal" title="Sign in with Apple  ">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="appleSignIn:" destination="7e7-9z-7uu" eventType="touchUpInside" id="SSs-Bm-3FM"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="4U6-o3-j5A" secondAttribute="bottom" id="FhL-5u-7Vj"/>
-                                    <constraint firstItem="cSA-1M-TQF" firstAttribute="top" secondItem="AUp-uk-yWq" secondAttribute="top" id="GTZ-Iw-RSS"/>
-                                    <constraint firstItem="4U6-o3-j5A" firstAttribute="leading" secondItem="cSA-1M-TQF" secondAttribute="trailing" id="NpL-4O-1mc"/>
-                                    <constraint firstAttribute="trailing" secondItem="4U6-o3-j5A" secondAttribute="trailing" id="VGD-sD-xcW"/>
-                                    <constraint firstItem="4U6-o3-j5A" firstAttribute="top" secondItem="AUp-uk-yWq" secondAttribute="top" id="W0j-f9-qGH"/>
-                                    <constraint firstAttribute="height" constant="60" id="fnO-eX-FPF"/>
-                                    <constraint firstItem="cSA-1M-TQF" firstAttribute="leading" secondItem="AUp-uk-yWq" secondAttribute="leading" id="jjx-vn-AOg"/>
-                                    <constraint firstAttribute="bottom" secondItem="cSA-1M-TQF" secondAttribute="bottom" id="pqQ-ST-wKM"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZj-Jg-fmm">
-                                <rect key="frame" x="31" y="805" width="333" height="50"/>
-                                <state key="normal" backgroundImage="kakao_login_medium_wide"/>
-                                <connections>
-                                    <action selector="KakaologinButtonClicked" destination="7e7-9z-7uu" eventType="touchUpInside" id="LZG-BR-gdA"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KlL-Vy-DUW">
-                                <rect key="frame" x="30" y="138" width="334" height="60"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WX-8z-M1g">
-                                        <rect key="frame" x="60" y="0.0" width="274" height="60"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="25"/>
-                                        <state key="normal" title="Sign in with Google">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="googleSignIn:" destination="7e7-9z-7uu" eventType="touchUpInside" id="XYl-5t-Not"/>
-                                        </connections>
-                                    </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_google_light_normal_ios" translatesAutoresizingMaskIntoConstraints="NO" id="Cep-Hg-2OP">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="HBG-fY-zGQ"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="2WX-8z-M1g" secondAttribute="bottom" id="1Ga-Vn-of2"/>
-                                    <constraint firstItem="2WX-8z-M1g" firstAttribute="leading" secondItem="Cep-Hg-2OP" secondAttribute="trailing" id="9FN-yi-e7K"/>
-                                    <constraint firstAttribute="height" constant="60" id="KDg-hd-wrh"/>
-                                    <constraint firstAttribute="bottom" secondItem="Cep-Hg-2OP" secondAttribute="bottom" id="ULp-NT-jH3"/>
-                                    <constraint firstAttribute="trailing" secondItem="2WX-8z-M1g" secondAttribute="trailing" id="fWD-g6-fne"/>
-                                    <constraint firstItem="Cep-Hg-2OP" firstAttribute="leading" secondItem="KlL-Vy-DUW" secondAttribute="leading" id="r3x-d6-tkI"/>
-                                    <constraint firstItem="Cep-Hg-2OP" firstAttribute="top" secondItem="KlL-Vy-DUW" secondAttribute="top" id="tOm-Yj-BYU"/>
-                                    <constraint firstItem="2WX-8z-M1g" firstAttribute="top" secondItem="KlL-Vy-DUW" secondAttribute="top" id="yCa-Gj-IQH"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mac-ZI-m7a">
-                                <rect key="frame" x="65" y="565" width="284" height="59"/>
+                                <rect key="frame" x="65" y="465" width="284" height="59"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="free-icon-kakao-talk-2111466 1" translatesAutoresizingMaskIntoConstraints="NO" id="xfg-ap-28c">
                                         <rect key="frame" x="40" y="19" width="22" height="21"/>
@@ -110,15 +35,19 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99607843137254903" green="0.89803921568627454" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="g5I-Ui-bwG" firstAttribute="centerY" secondItem="Mac-ZI-m7a" secondAttribute="centerY" id="14Z-J9-sfk"/>
                                     <constraint firstAttribute="trailing" secondItem="g5I-Ui-bwG" secondAttribute="trailing" constant="40" id="5C2-SH-j4X"/>
                                     <constraint firstItem="xfg-ap-28c" firstAttribute="centerY" secondItem="Mac-ZI-m7a" secondAttribute="centerY" id="bHo-1a-Jao"/>
                                     <constraint firstItem="xfg-ap-28c" firstAttribute="leading" secondItem="Mac-ZI-m7a" secondAttribute="leading" constant="40" id="dY0-bw-p0y"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="u1F-8M-r3J" appends="YES" id="Whi-87-iuT"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mjr-Rn-Ucu">
-                                <rect key="frame" x="65" y="634" width="284" height="59"/>
+                                <rect key="frame" x="65" y="534" width="284" height="59"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="g-logo 1" translatesAutoresizingMaskIntoConstraints="NO" id="hEM-IZ-fj3">
                                         <rect key="frame" x="40" y="19" width="22" height="21"/>
@@ -135,14 +64,18 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="dmr-gR-6GG" firstAttribute="centerY" secondItem="Mjr-Rn-Ucu" secondAttribute="centerY" id="JlY-Db-T2j"/>
                                     <constraint firstItem="hEM-IZ-fj3" firstAttribute="centerY" secondItem="Mjr-Rn-Ucu" secondAttribute="centerY" id="fvD-6K-vGA"/>
                                     <constraint firstItem="hEM-IZ-fj3" firstAttribute="leading" secondItem="Mjr-Rn-Ucu" secondAttribute="leading" constant="40" id="yNg-AA-1Xy"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="I23-bs-oDH" appends="YES" id="JS9-nq-EPT"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2yl-7a-JFq">
-                                <rect key="frame" x="65" y="703" width="284" height="59"/>
+                                <rect key="frame" x="65" y="603" width="284" height="59"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple-64 1" translatesAutoresizingMaskIntoConstraints="NO" id="uCx-jP-6t6">
                                         <rect key="frame" x="40" y="19" width="22" height="21"/>
@@ -151,53 +84,84 @@
                                             <constraint firstAttribute="height" constant="21" id="4S9-rr-oYx"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple로 계속하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeP-As-RK5">
-                                        <rect key="frame" x="106.5" y="19.5" width="123" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Apple로 계속하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeP-As-RK5">
+                                        <rect key="frame" x="107" y="20" width="2181" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="uCx-jP-6t6" firstAttribute="centerY" secondItem="2yl-7a-JFq" secondAttribute="centerY" id="Vxb-U4-Dd8"/>
                                     <constraint firstItem="uCx-jP-6t6" firstAttribute="leading" secondItem="2yl-7a-JFq" secondAttribute="leading" constant="40" id="jff-2f-C29"/>
                                     <constraint firstItem="eeP-As-RK5" firstAttribute="centerY" secondItem="2yl-7a-JFq" secondAttribute="centerY" id="rzA-Lk-qcE"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="v3f-nQ-8Ds" appends="YES" id="J3q-HT-9gN"/>
+                                </connections>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darft_logo" translatesAutoresizingMaskIntoConstraints="NO" id="XZs-Vd-Iwi">
+                                <rect key="frame" x="107" y="144" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Dji-U2-PG1"/>
+                                    <constraint firstAttribute="width" constant="200" id="RI5-7q-VZq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wafflestudio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRV-Tj-EJG">
+                                <rect key="frame" x="161" y="792" width="92" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SPi-hN-qM5"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="SPi-hN-qM5" firstAttribute="bottom" secondItem="VRV-Tj-EJG" secondAttribute="bottom" constant="50" id="1QB-JA-Puc"/>
                             <constraint firstItem="Mjr-Rn-Ucu" firstAttribute="leading" secondItem="SPi-hN-qM5" secondAttribute="leading" constant="65" id="4XY-1t-ZAf"/>
                             <constraint firstItem="2yl-7a-JFq" firstAttribute="height" secondItem="ZBe-dy-b3O" secondAttribute="height" multiplier="0.0658482" id="6Mv-G0-Rkd"/>
                             <constraint firstItem="Mjr-Rn-Ucu" firstAttribute="top" secondItem="Mac-ZI-m7a" secondAttribute="bottom" constant="10" id="7ax-VI-Qgp"/>
-                            <constraint firstItem="KlL-Vy-DUW" firstAttribute="top" secondItem="gZj-Jg-fmm" secondAttribute="bottom" constant="31" id="8pq-J4-0j3"/>
-                            <constraint firstItem="SPi-hN-qM5" firstAttribute="bottom" secondItem="AUp-uk-yWq" secondAttribute="bottom" constant="100" id="AXZ-9C-vK4"/>
-                            <constraint firstItem="AUp-uk-yWq" firstAttribute="top" secondItem="KlL-Vy-DUW" secondAttribute="bottom" constant="30" id="Ehe-1S-vlJ"/>
                             <constraint firstItem="SPi-hN-qM5" firstAttribute="trailing" secondItem="2yl-7a-JFq" secondAttribute="trailing" constant="65" id="EtU-qG-P05"/>
                             <constraint firstItem="Mac-ZI-m7a" firstAttribute="leading" secondItem="SPi-hN-qM5" secondAttribute="leading" constant="65" id="GVS-VY-wpI"/>
                             <constraint firstItem="dmr-gR-6GG" firstAttribute="centerX" secondItem="g5I-Ui-bwG" secondAttribute="centerX" id="JJe-zk-afQ"/>
-                            <constraint firstItem="gZj-Jg-fmm" firstAttribute="centerX" secondItem="SPi-hN-qM5" secondAttribute="centerX" id="M2M-LM-NYZ"/>
+                            <constraint firstItem="VRV-Tj-EJG" firstAttribute="centerX" secondItem="SPi-hN-qM5" secondAttribute="centerX" id="OwL-Mx-kgm"/>
                             <constraint firstItem="SPi-hN-qM5" firstAttribute="trailing" secondItem="Mac-ZI-m7a" secondAttribute="trailing" constant="65" id="QLe-6X-q8o"/>
                             <constraint firstItem="2yl-7a-JFq" firstAttribute="top" secondItem="Mjr-Rn-Ucu" secondAttribute="bottom" constant="10" id="QYp-lM-CaL"/>
                             <constraint firstItem="SPi-hN-qM5" firstAttribute="trailing" secondItem="Mjr-Rn-Ucu" secondAttribute="trailing" constant="65" id="T20-OS-WAa"/>
-                            <constraint firstItem="AUp-uk-yWq" firstAttribute="leading" secondItem="SPi-hN-qM5" secondAttribute="leading" constant="40" id="VqT-gZ-T12"/>
+                            <constraint firstItem="XZs-Vd-Iwi" firstAttribute="centerX" secondItem="SPi-hN-qM5" secondAttribute="centerX" id="WJt-WM-j8u"/>
+                            <constraint firstItem="XZs-Vd-Iwi" firstAttribute="top" secondItem="SPi-hN-qM5" secondAttribute="top" constant="100" id="dgf-by-bsR"/>
                             <constraint firstItem="Mac-ZI-m7a" firstAttribute="height" secondItem="ZBe-dy-b3O" secondAttribute="height" multiplier="0.0658482" id="f9D-Gy-XIq"/>
                             <constraint firstItem="Mjr-Rn-Ucu" firstAttribute="height" secondItem="ZBe-dy-b3O" secondAttribute="height" multiplier="0.0658482" id="gNJ-e8-Itq"/>
                             <constraint firstItem="eeP-As-RK5" firstAttribute="centerX" secondItem="g5I-Ui-bwG" secondAttribute="centerX" id="k8V-Qi-cok"/>
-                            <constraint firstItem="KlL-Vy-DUW" firstAttribute="leading" secondItem="SPi-hN-qM5" secondAttribute="leading" constant="40" id="pkK-sh-Hp3"/>
-                            <constraint firstItem="gZj-Jg-fmm" firstAttribute="width" secondItem="ZBe-dy-b3O" secondAttribute="width" multiplier="0.804348" id="qbk-sc-xSH"/>
-                            <constraint firstItem="SPi-hN-qM5" firstAttribute="trailing" secondItem="KlL-Vy-DUW" secondAttribute="trailing" constant="40" id="so1-fR-NKs"/>
                             <constraint firstItem="2yl-7a-JFq" firstAttribute="leading" secondItem="SPi-hN-qM5" secondAttribute="leading" constant="65" id="uwT-PW-O0C"/>
-                            <constraint firstItem="SPi-hN-qM5" firstAttribute="trailing" secondItem="AUp-uk-yWq" secondAttribute="trailing" constant="40" id="xJP-36-dwH"/>
-                            <constraint firstItem="gZj-Jg-fmm" firstAttribute="height" secondItem="ZBe-dy-b3O" secondAttribute="height" multiplier="0.0558036" id="y9m-KM-698"/>
-                            <constraint firstItem="SPi-hN-qM5" firstAttribute="bottom" secondItem="2yl-7a-JFq" secondAttribute="bottom" constant="100" id="zrz-dV-U1S"/>
+                            <constraint firstItem="SPi-hN-qM5" firstAttribute="bottom" secondItem="2yl-7a-JFq" secondAttribute="bottom" constant="200" id="zrz-dV-U1S"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YUl-te-uqn"/>
+                    <connections>
+                        <outlet property="appleLoginButton" destination="2yl-7a-JFq" id="zln-8e-OHE"/>
+                        <outlet property="googleLoginButton" destination="Mjr-Rn-Ucu" id="lIr-E1-EXO"/>
+                        <outlet property="kakaoLoginButton" destination="Mac-ZI-m7a" id="a96-5V-U32"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yiA-7e-A0f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="u1F-8M-r3J" userLabel="Kakao Tap">
+                    <connections>
+                        <action selector="kakaoSignInRecognizer:" destination="7e7-9z-7uu" id="eUK-QF-VYY"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="I23-bs-oDH" userLabel="Google Tap">
+                    <connections>
+                        <action selector="googleSignInRecognizer:" destination="7e7-9z-7uu" id="2Bm-Qa-97a"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="v3f-nQ-8Ds" userLabel="Apple Tap">
+                    <connections>
+                        <action selector="appleSignInRecognizer:" destination="7e7-9z-7uu" id="Uko-fc-Geg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1431.8840579710145" y="676.33928571428567"/>
         </scene>
@@ -355,12 +319,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="White Logo Square" width="56" height="56"/>
         <image name="apple-64 1" width="20" height="20"/>
-        <image name="btn_google_light_normal_ios" width="48" height="48"/>
+        <image name="darft_logo" width="140" height="140"/>
         <image name="free-icon-kakao-talk-2111466 1" width="22" height="21"/>
         <image name="g-logo 1" width="22" height="22"/>
-        <image name="kakao_login_medium_wide" width="300" height="45"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

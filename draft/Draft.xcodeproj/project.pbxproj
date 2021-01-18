@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14BF6543191A0CE5D6812A4F /* libPods-Draft-DraftTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF3936A2113CDAA3546C593 /* libPods-Draft-DraftTests.a */; };
-		380ABC8A24F9621400B212F0 /* SignInViewController+OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8924F9621400B212F0 /* SignInViewController+OAuth.swift */; };
+		380ABC8A24F9621400B212F0 /* SignInViewController+SignInAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8924F9621400B212F0 /* SignInViewController+SignInAPI.swift */; };
 		380ABC8C24F9645B00B212F0 /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8B24F9645B00B212F0 /* KeychainAccess.swift */; };
 		380B77C624C214FB00CB1CB2 /* GameDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380B77C524C214FB00CB1CB2 /* GameDatePickerViewController.swift */; };
 		381F86FF25553A9C0006AF46 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72CF246311F40099C35E /* Room.swift */; };
@@ -26,8 +26,8 @@
 		381F870B25553AB40006AF46 /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3877004D25551513001CE522 /* RoomCell.swift */; };
 		381F870C25553ABC0006AF46 /* RoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3877004E25551513001CE522 /* RoomCell.xib */; };
 		381F870D25553ABC0006AF46 /* RoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3877004E25551513001CE522 /* RoomCell.xib */; };
-		381F870E25553AC10006AF46 /* SignInViewController+OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8924F9621400B212F0 /* SignInViewController+OAuth.swift */; };
-		381F870F25553AC20006AF46 /* SignInViewController+OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8924F9621400B212F0 /* SignInViewController+OAuth.swift */; };
+		381F870E25553AC10006AF46 /* SignInViewController+SignInAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8924F9621400B212F0 /* SignInViewController+SignInAPI.swift */; };
+		381F870F25553AC20006AF46 /* SignInViewController+SignInAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8924F9621400B212F0 /* SignInViewController+SignInAPI.swift */; };
 		381F871025553AC80006AF46 /* SignUpViewController+OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B0347E24F946EE005E759A /* SignUpViewController+OAuth.swift */; };
 		381F871125553AC80006AF46 /* SignUpViewController+OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B0347E24F946EE005E759A /* SignUpViewController+OAuth.swift */; };
 		381F871225553AD40006AF46 /* APIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383D384C25455AB400AA3E74 /* APIRequests.swift */; };
@@ -112,7 +112,7 @@
 		231252D2B1B9A2E0A0F90C73 /* Pods-Draft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Draft.debug.xcconfig"; path = "Target Support Files/Pods-Draft/Pods-Draft.debug.xcconfig"; sourceTree = "<group>"; };
 		28529632F5164166E5C2D20E /* Pods-Draft-DraftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Draft-DraftTests.release.xcconfig"; path = "Target Support Files/Pods-Draft-DraftTests/Pods-Draft-DraftTests.release.xcconfig"; sourceTree = "<group>"; };
 		2AF3936A2113CDAA3546C593 /* libPods-Draft-DraftTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Draft-DraftTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		380ABC8924F9621400B212F0 /* SignInViewController+OAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewController+OAuth.swift"; sourceTree = "<group>"; };
+		380ABC8924F9621400B212F0 /* SignInViewController+SignInAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewController+SignInAPI.swift"; sourceTree = "<group>"; };
 		380ABC8B24F9645B00B212F0 /* KeychainAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
 		380ABC8D24F96E6300B212F0 /* Draft.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Draft.entitlements; sourceTree = "<group>"; };
 		380B77C524C214FB00CB1CB2 /* GameDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDatePickerViewController.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9CF84624B7692500FEEC5E /* SignInViewController.swift */,
-				380ABC8924F9621400B212F0 /* SignInViewController+OAuth.swift */,
+				380ABC8924F9621400B212F0 /* SignInViewController+SignInAPI.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -645,7 +645,7 @@
 				3897038424559A4900FF5077 /* AppDelegate.swift in Sources */,
 				386D72D4246312160099C35E /* RoomDetailViewController.swift in Sources */,
 				BF9CF84724B7692500FEEC5E /* SignInViewController.swift in Sources */,
-				380ABC8A24F9621400B212F0 /* SignInViewController+OAuth.swift in Sources */,
+				380ABC8A24F9621400B212F0 /* SignInViewController+SignInAPI.swift in Sources */,
 				389703BD2455A81400FF5077 /* MatchingTableViewController.swift in Sources */,
 				380ABC8C24F9645B00B212F0 /* KeychainAccess.swift in Sources */,
 				38B0347D24F8F9F8005E759A /* Constants.swift in Sources */,
@@ -667,7 +667,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				381F870E25553AC10006AF46 /* SignInViewController+OAuth.swift in Sources */,
+				381F870E25553AC10006AF46 /* SignInViewController+SignInAPI.swift in Sources */,
 				381F871425553AD60006AF46 /* APIRequests+user.swift in Sources */,
 				3837B51C24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */,
 				381F871625553AD80006AF46 /* APIRequests+room.swift in Sources */,
@@ -714,7 +714,7 @@
 				381F870325553AA60006AF46 /* RoomDetailViewController.swift in Sources */,
 				381F870725553AAC0006AF46 /* GameDatePickerViewController.swift in Sources */,
 				381F870825553AAF0006AF46 /* MatchingTableViewController.swift in Sources */,
-				381F870F25553AC20006AF46 /* SignInViewController+OAuth.swift in Sources */,
+				381F870F25553AC20006AF46 /* SignInViewController+SignInAPI.swift in Sources */,
 				381F870925553AB10006AF46 /* MatchingTableVC+APIRequest.swift in Sources */,
 				381F870B25553AB40006AF46 /* RoomCell.swift in Sources */,
 				BFBE4D1D24C6F9B4005D2D32 /* User.swift in Sources */,
