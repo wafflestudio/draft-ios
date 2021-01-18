@@ -70,13 +70,13 @@ extension SignInViewController {
 extension SignInViewController {
     func goToOAuthSignUpView(param: UserParam) {
         
-        guard let oAuthSignUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "OAuthSignUp") as? OAuthSignUpViewController
+        guard let signUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "OAuthSignUp") as? SignUpViewController
             else {
                 return
         }
         
-        oAuthSignUpViewController.setParam(param)
-        self.navigationController?.pushViewController(oAuthSignUpViewController, animated: true)
+        signUpViewController.setParam(param)
+        self.navigationController?.pushViewController(signUpViewController, animated: true)
     }
 }
 
