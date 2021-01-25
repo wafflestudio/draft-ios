@@ -26,6 +26,7 @@
       "size" : "40x40"
     },
     {
+      "filename" : "logo120.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
@@ -76,16 +77,19 @@
       "size" : "76x76"
     },
     {
+      "filename" : "logo152.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
+      "filename" : "logo167.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
     },
     {
+      "filename" : "logoAppstore.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
