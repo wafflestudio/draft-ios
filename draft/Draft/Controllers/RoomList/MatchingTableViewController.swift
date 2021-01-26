@@ -41,7 +41,7 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         #warning("TODO: region / date 분기")
-        return roomList.roomsByRegion.rooms.count
+        return roomList.roomsByRegion.rooms.count == 0 ? 1 : roomList.roomsByRegion.rooms.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,8 +49,9 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: Draft.roomCellIdentifier, for: indexPath)
         
         if let roomCell = cell as? RoomCell {
-            let room = roomList.roomsByRegion.rooms[indexPath.row]
-            roomCell.title.text = room.name
+//            let room = roomList.roomsByRegion.rooms[indexPath.row]
+//            roomCell.title.text = room?.name ?? "방 이름 없음"
+            roomCell.title.text = "방 이름 없음"
         }
         
         return cell
@@ -59,7 +60,7 @@ class MatchingTableViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         #warning("TODO: Region name 할당")
-        return "Region"
+        return roomList.roomsByRegion.region
     }
     
     func sortByRegion() {

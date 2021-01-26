@@ -15,8 +15,13 @@ enum RoomRequestType {
 }
 
 struct GetRoomByRegionResponseData: Decodable {
+    let results: [RoomResults]
+    let count: Int
+}
+
+struct RoomResults: Decodable {
     let id: Int
-    let name: String
+    let name: String?
     let depth1: String?
     let depth2: String?
     let depth3: String?
@@ -40,8 +45,9 @@ extension APIRequests {
                         case .success:
                         if let data = res.data {
                             do {
-                                let decodedData = try   JSONDecoder().decode(Array<GetRoomByRegionResponseData>.self, from: data)
-                                completion(decodedData[0], nil)
+                                let decodedData = try JSONDecoder().decode(GetRoomByRegionResponseData.self, from: data)
+                                debugPrint(decodedData)
+                                completion(decodedData, nil)
                             } catch let error {
                                 debugPrint(error)
                                 completion(nil, .responseDataNotFound)

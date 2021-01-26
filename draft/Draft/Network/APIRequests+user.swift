@@ -31,6 +31,8 @@ struct UserResponseData: Decodable {
     let rooms: String?
     let devices: String?
     let region: String?
+    let profileImage: String?
+    let id: Int
 }
 
 enum UserRequestError {

@@ -13,14 +13,14 @@ struct RoomList {
     var roomsByDate = RoomsByDate()
  
     mutating func sortByRegion(data: GetRoomByRegionResponseData) {
-        roomsByRegion.region = data.depth1 ?? ""
-        roomsByRegion.rooms = data.rooms
+        roomsByRegion.region = data.results[0].depth3 ?? ""
+        roomsByRegion.rooms = data.results[0].rooms
     }
 }
 
 struct RoomsByRegion {
     var region = ""
-    var rooms = [Room]()
+    var rooms = [Room?]()
 }
 
 struct RoomsByDate {
