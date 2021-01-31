@@ -5,7 +5,7 @@ gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_CRYPT_PASSWORD" 
 	--output .provisioning/draft-jskeum.mobileprovision .provisioning/jskeum-draft.mobileprovision.gpg
 
 gpg --quiet --batch --yes --decrypt --passphrase="$CERTIFICATE_CRYPT_PASSWORD" \
-	--output .provisioning/draft-jskeum.p12 .provisioning/jskeum-draft.p12.gpg
+	--output .provisioning/draft-jskeum.p12 .provisioning/draft-jskeum.p12.gpg
 
 # set provisioning
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
@@ -26,6 +26,3 @@ security list-keychains -s ~/Library/Keychains/build.keychain
 security default-keychain -s ~/Library/Keychains/build.keychain
 security unlock-keychain -p "" ~/Library/Keychains/build.keychain
 security set-keychain-settings
-
-#security set-key-partition-list -S apple-tool:,apple: -s \
-#	-k "" ~/Library/Keychains/build.keychain

@@ -31,7 +31,7 @@ jobs:
       run: ls -R
     - name: Deploy to Apple
       run: xcrun altool --upload-app --type ios --file DerivedData/ipa/Draft.ipa \
-          --username "${{ secrets.appstore_connect_username }}" --password "${{ secrets.appstore_connect_password }}" --verbose
+          --username "${{ secrets.APPSTORE_CONNECT_USERNAME }}" --password "${{ secrets.APPSTORE_CONNECT_PASSWORD }}" --verbose
       
 #    runs-on: macos-latest
 #    steps:
