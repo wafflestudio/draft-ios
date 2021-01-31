@@ -2,10 +2,10 @@
 
 # decrypt files
 gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_CRYPT_PASSWORD" \
-	--output .provisioning/draft-jskeum.mobileprovision .provisioning/Jinsup.mobileprovision.gpg
+	--output .provisioning/draft-jskeum.mobileprovision .provisioning/jskeum-draft.mobileprovision.gpg
 
 gpg --quiet --batch --yes --decrypt --passphrase="$CERTIFICATE_CRYPT_PASSWORD" \
-	--output .provisioning/draft-jskeum.p12 .provisioning/draft-certificate.p12.gpg
+	--output .provisioning/draft-jskeum.p12 .provisioning/jskeum-draft.p12.gpg
 
 # set provisioning
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
