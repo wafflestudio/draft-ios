@@ -2,28 +2,47 @@ name: Swift
 
 on:
   push:
-    branches: [ master ]
+    branches: [ ci ]
   pull_request:
     branches: [ master ]
 
 jobs:
   build:
-
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Add secret_login.json
-      run: |
-          cat << EOF > ./draft/draft/Controllers/secret_login.json
-          ${{ secrets.secret_login }}
-          EOF
-    - name: Build Workspace (Xcode 11.5 & iOS 13.5 & iPhone 11)
-      run: xcodebuild clean build -workspace draft/draft.xcworkspace -destination "platform=iOS Simulator,name=iPhone 11,OS=13.5" -scheme Draft IPHONEOS_DEPLOYMENT_TARGET=13.5
-
+    - name: Install GnuPG
+      run: brew install GnuPG
+    - name: Decrypt secrets
+      run: .provisioning/provisioning.sh
       env:
-          DEVELOPER_DIR: /Applications/Xcode_11.5.app/Contents/Developer
-#     - name: Run tests
-#       run: xcodebuild clean test -project draft/draft.xcodeproj -destination "platform=iOS Simulator,name=iPhone 11,OS=13.3" -scheme draft IPHONEOS_DEPLOYMENT_TARGET=13.2
-
-#       env:
-#           DEVELOPER_DIR: /Applications/Xcode_11.5.app/Contents/Developer
+        PROVISIONING_CRYPT_PASSWORD: ${{ secrets.PROVISIONING_CRYPT_PASSWORD }}
+        CERTIFICATE_CRYPT_PASSWORD: ${{ secrets.CERTIFICATE_CRYPT_PASSWORD }}
+        CERT_PASSWORD: ${{ secrets.CERT_PASSWORD }}
+    - name: List available Xcode versions
+      run: ls /Applications | grep Xcode
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_11.3.app && xcodebuild -version
+    - name: Build archive
+      run: xcodebuild -sdk iphoneos -workspace draft/draft.xcworkspace -configuration Release -scheme Draft -derivedDataPath DerivedData -archivePath DerivedData/Archive/Draft -allowProvisioningUpdates archive
+    - name: Export archive
+      run: xcodebuild -exportArchive -archivePath DerivedData/Archive/Draft.xcarchive -exportOptionPlist .provisioning/App-Store.plist -exportPath DerivedData/ipa
+    - name: Show file hierarchy
+      run: ls -R
+    - name: Deploy to Apple
+      run: xcrun altool --upload-app --type ios --file DerivedData/ipa/Draft.ipa \
+          --username "${{ secrets.appstore_connect_username }}" --password "${{ secrets.appstore_connect_password }}" --verbose
+      
+#    runs-on: macos-latest
+#    steps:
+#    - uses: actions/checkout@v2
+#    - name: Add secret_login.json
+#      run: |
+#          cat << EOF > ./draft/draft/Controllers/secret_login.json
+#          ${{ secrets.secret_login }}
+#          EOF
+#    - name: Build Workspace (Xcode 11.5 & iOS 13.5 & iPhone 11)
+#      run: xcodebuild clean build -workspace draft/draft.xcworkspace -destination "platform=iOS Simulator,name=iPhone 11,OS=13.5" -scheme Draft IPHONEOS_DEPLOYMENT_TARGET=13.5
+#
+#      env:
+#          DEVELOPER_DIR: /Applications/Xcode_11.5.app/Contents/Developer
