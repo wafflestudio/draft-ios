@@ -29,6 +29,16 @@ class SignInViewController: UIViewController {
         googleSignInSetup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated);
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     func setupView(){
         kakaoLoginButton.layer.cornerRadius = 5
         googleLoginButton.layer.cornerRadius = 5

@@ -10,9 +10,19 @@ import UIKit
 import Alamofire
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
+    struct Constant {
+        static let profileUploadButtonViewCornerRadius = CGFloat(30)
+        static let textFieldContainerViewCornerRadius = CGFloat(30)
+        static let signupButtonViewCornerRadius = CGFloat(25)
+    }
     
-    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var profileUploadButton: UIButton!
+    @IBOutlet weak var nicknameContainerView: UIView!
+    @IBOutlet weak var regionContainerView: UIView!
+    @IBOutlet weak var genderContainerView: UIView!
+    @IBOutlet weak var birthyearContainerView: UIView!
     
+    @IBOutlet weak var signupButton: UIButton!
     private(set) var param: UserParam? = nil
     
     func setParam(_ param: UserParam) {
@@ -22,12 +32,31 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        usernameTextField.delegate = self
+        //let backButton = UIBarButtonItem(title: "회원가입", style: UIBarButtonItem.Style.done, target: self, action: "back")
+        
+        //navigationItem.leftBarButtonItem = backButton
+
+        setupView()
+        
         // Do any additional setup after loading the view.
+    }
+
+    func setupView() {
+        self.navigationController?.navigationBar.tintColor = UIColor(ciColor: .black)
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "회원가입"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backItem
+        
+        profileUploadButton.layer.cornerRadius = Constant.profileUploadButtonViewCornerRadius
+        nicknameContainerView.layer.cornerRadius = Constant.textFieldContainerViewCornerRadius
+        regionContainerView.layer.cornerRadius = Constant.textFieldContainerViewCornerRadius
+        regionContainerView.layer.cornerRadius = Constant.textFieldContainerViewCornerRadius
+        birthyearContainerView.layer.cornerRadius = Constant.textFieldContainerViewCornerRadius
+        signupButton.layer.cornerRadius = Constant.signupButtonViewCornerRadius
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        usernameTextField.resignFirstResponder()
         return false
     }
     
@@ -41,11 +70,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         return newLength <= 10
     }
     
-    @IBAction func oAuthSignUp(_ sender: UIButton) {
-        if let username = usernameTextField.text {
-            oAuthSignUpRequest(username: username)
-        }
-    }
+//    @IBAction func oAuthSignUp(_ sender: UIButton) {
+//        if let username = usernameTextField.text {
+//            oAuthSignUpRequest(username: username)
+//        }
+//    }
 }
 
 // MARK: - OAuth SignUp Request
