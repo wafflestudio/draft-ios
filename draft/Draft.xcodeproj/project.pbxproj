@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14BF6543191A0CE5D6812A4F /* libPods-Draft-DraftTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF3936A2113CDAA3546C593 /* libPods-Draft-DraftTests.a */; };
-		380ABC8A24F9621400B212F0 /* SignInViewController+OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8924F9621400B212F0 /* SignInViewController+OAuth.swift */; };
+		380ABC8A24F9621400B212F0 /* SignInViewController+SignInAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8924F9621400B212F0 /* SignInViewController+SignInAPI.swift */; };
 		380ABC8C24F9645B00B212F0 /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8B24F9645B00B212F0 /* KeychainAccess.swift */; };
 		380B77C624C214FB00CB1CB2 /* GameDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380B77C524C214FB00CB1CB2 /* GameDatePickerViewController.swift */; };
 		381F86FF25553A9C0006AF46 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D72CF246311F40099C35E /* Room.swift */; };
@@ -26,10 +26,8 @@
 		381F870B25553AB40006AF46 /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3877004D25551513001CE522 /* RoomCell.swift */; };
 		381F870C25553ABC0006AF46 /* RoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3877004E25551513001CE522 /* RoomCell.xib */; };
 		381F870D25553ABC0006AF46 /* RoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3877004E25551513001CE522 /* RoomCell.xib */; };
-		381F870E25553AC10006AF46 /* SignInViewController+OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8924F9621400B212F0 /* SignInViewController+OAuth.swift */; };
-		381F870F25553AC20006AF46 /* SignInViewController+OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8924F9621400B212F0 /* SignInViewController+OAuth.swift */; };
-		381F871025553AC80006AF46 /* SignUpViewController+OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B0347E24F946EE005E759A /* SignUpViewController+OAuth.swift */; };
-		381F871125553AC80006AF46 /* SignUpViewController+OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B0347E24F946EE005E759A /* SignUpViewController+OAuth.swift */; };
+		381F870E25553AC10006AF46 /* SignInViewController+SignInAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8924F9621400B212F0 /* SignInViewController+SignInAPI.swift */; };
+		381F870F25553AC20006AF46 /* SignInViewController+SignInAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380ABC8924F9621400B212F0 /* SignInViewController+SignInAPI.swift */; };
 		381F871225553AD40006AF46 /* APIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383D384C25455AB400AA3E74 /* APIRequests.swift */; };
 		381F871325553AD40006AF46 /* APIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383D384C25455AB400AA3E74 /* APIRequests.swift */; };
 		381F871425553AD60006AF46 /* APIRequests+user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5CE6D254BEB8800702A91 /* APIRequests+user.swift */; };
@@ -63,20 +61,19 @@
 		389703A924559A4C00FF5077 /* DraftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389703A824559A4C00FF5077 /* DraftUITests.swift */; };
 		389703BD2455A81400FF5077 /* MatchingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389703BC2455A81400FF5077 /* MatchingTableViewController.swift */; };
 		38B0347D24F8F9F8005E759A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B0347C24F8F9F8005E759A /* Constants.swift */; };
-		38B0347F24F946EE005E759A /* SignUpViewController+OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B0347E24F946EE005E759A /* SignUpViewController+OAuth.swift */; };
 		38D00C32248B3D7500F50F9B /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00C31248B3D7500F50F9B /* RoomList.swift */; };
 		38D00C33248B3D7500F50F9B /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00C31248B3D7500F50F9B /* RoomList.swift */; };
 		38D00C35248B3E7400F50F9B /* Model-utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00C34248B3E7400F50F9B /* Model-utilities.swift */; };
 		38D5CE6E254BEB8800702A91 /* APIRequests+user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5CE6D254BEB8800702A91 /* APIRequests+user.swift */; };
 		38D5CE70254BECA800702A91 /* APIRequests+room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5CE6F254BECA800702A91 /* APIRequests+room.swift */; };
 		4FF07F0491F328E53BF8E674 /* libPods-Draft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E1FA4F66D337435B6B90C6 /* libPods-Draft.a */; };
-		BF5401C524C853EB00D73368 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5401C424C853EB00D73368 /* SignUpViewController.swift */; };
-		BF5401C624C853EB00D73368 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5401C424C853EB00D73368 /* SignUpViewController.swift */; };
-		BF5401C724C853EB00D73368 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5401C424C853EB00D73368 /* SignUpViewController.swift */; };
 		BF7287FB2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
 		BF7287FC2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
 		BF7287FD2478D077009132B7 /* DraftLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */; };
 		BF754FFE25654C3C0003F649 /* RoomSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF754FFD25654C3C0003F649 /* RoomSearchViewController.swift */; };
+		BF8F88E125B5C27400CC24F8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F88E025B5C27400CC24F8 /* SignUpViewController.swift */; };
+		BF8F88E225B5C27400CC24F8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F88E025B5C27400CC24F8 /* SignUpViewController.swift */; };
+		BF8F88E325B5C27400CC24F8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F88E025B5C27400CC24F8 /* SignUpViewController.swift */; };
 		BF97A7C525456373003597FB /* AppKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97A7C425456373003597FB /* AppKeys.swift */; };
 		BF97A7C625456373003597FB /* AppKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97A7C425456373003597FB /* AppKeys.swift */; };
 		BF97A7C725456373003597FB /* AppKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97A7C425456373003597FB /* AppKeys.swift */; };
@@ -112,7 +109,7 @@
 		231252D2B1B9A2E0A0F90C73 /* Pods-Draft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Draft.debug.xcconfig"; path = "Target Support Files/Pods-Draft/Pods-Draft.debug.xcconfig"; sourceTree = "<group>"; };
 		28529632F5164166E5C2D20E /* Pods-Draft-DraftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Draft-DraftTests.release.xcconfig"; path = "Target Support Files/Pods-Draft-DraftTests/Pods-Draft-DraftTests.release.xcconfig"; sourceTree = "<group>"; };
 		2AF3936A2113CDAA3546C593 /* libPods-Draft-DraftTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Draft-DraftTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		380ABC8924F9621400B212F0 /* SignInViewController+OAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewController+OAuth.swift"; sourceTree = "<group>"; };
+		380ABC8924F9621400B212F0 /* SignInViewController+SignInAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewController+SignInAPI.swift"; sourceTree = "<group>"; };
 		380ABC8B24F9645B00B212F0 /* KeychainAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
 		380ABC8D24F96E6300B212F0 /* Draft.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Draft.entitlements; sourceTree = "<group>"; };
 		380B77C524C214FB00CB1CB2 /* GameDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDatePickerViewController.swift; sourceTree = "<group>"; };
@@ -141,16 +138,15 @@
 		389703AA24559A4C00FF5077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		389703BC2455A81400FF5077 /* MatchingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingTableViewController.swift; sourceTree = "<group>"; };
 		38B0347C24F8F9F8005E759A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		38B0347E24F946EE005E759A /* SignUpViewController+OAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+OAuth.swift"; sourceTree = "<group>"; };
 		38D00C31248B3D7500F50F9B /* RoomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomList.swift; sourceTree = "<group>"; };
 		38D00C34248B3E7400F50F9B /* Model-utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model-utilities.swift"; sourceTree = "<group>"; };
 		38D5CE6D254BEB8800702A91 /* APIRequests+user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRequests+user.swift"; sourceTree = "<group>"; };
 		38D5CE6F254BECA800702A91 /* APIRequests+room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRequests+room.swift"; sourceTree = "<group>"; };
 		8B7800C9C857FA11D7764495 /* Pods-Draft-DraftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Draft-DraftUITests.debug.xcconfig"; path = "Target Support Files/Pods-Draft-DraftUITests/Pods-Draft-DraftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5A453026890355189FCA776 /* Pods-Draft-DraftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Draft-DraftTests.debug.xcconfig"; path = "Target Support Files/Pods-Draft-DraftTests/Pods-Draft-DraftTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BF5401C424C853EB00D73368 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BF7287FA2478D077009132B7 /* DraftLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DraftLaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF754FFD25654C3C0003F649 /* RoomSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSearchViewController.swift; sourceTree = "<group>"; };
+		BF8F88E025B5C27400CC24F8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BF97A7C425456373003597FB /* AppKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKeys.swift; sourceTree = "<group>"; };
 		BF9CF84624B7692500FEEC5E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		BFBE4D1A24C6F9B4005D2D32 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -192,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9CF84624B7692500FEEC5E /* SignInViewController.swift */,
-				380ABC8924F9621400B212F0 /* SignInViewController+OAuth.swift */,
+				380ABC8924F9621400B212F0 /* SignInViewController+SignInAPI.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -326,8 +322,7 @@
 		38D5CE71254BFA0400702A91 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				BF5401C424C853EB00D73368 /* SignUpViewController.swift */,
-				38B0347E24F946EE005E759A /* SignUpViewController+OAuth.swift */,
+				BF8F88E025B5C27400CC24F8 /* SignUpViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -637,15 +632,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38B0347F24F946EE005E759A /* SignUpViewController+OAuth.swift in Sources */,
 				38D5CE6E254BEB8800702A91 /* APIRequests+user.swift in Sources */,
 				384FA83924B9FC6600FB3CF4 /* RoomDetailVC+APIRequest.swift in Sources */,
 				38D5CE70254BECA800702A91 /* APIRequests+room.swift in Sources */,
 				383D384D25455AB400AA3E74 /* APIRequests.swift in Sources */,
 				3897038424559A4900FF5077 /* AppDelegate.swift in Sources */,
+				BF8F88E125B5C27400CC24F8 /* SignUpViewController.swift in Sources */,
 				386D72D4246312160099C35E /* RoomDetailViewController.swift in Sources */,
 				BF9CF84724B7692500FEEC5E /* SignInViewController.swift in Sources */,
-				380ABC8A24F9621400B212F0 /* SignInViewController+OAuth.swift in Sources */,
+				380ABC8A24F9621400B212F0 /* SignInViewController+SignInAPI.swift in Sources */,
 				389703BD2455A81400FF5077 /* MatchingTableViewController.swift in Sources */,
 				380ABC8C24F9645B00B212F0 /* KeychainAccess.swift in Sources */,
 				38B0347D24F8F9F8005E759A /* Constants.swift in Sources */,
@@ -657,7 +652,6 @@
 				BFBE4D1B24C6F9B4005D2D32 /* User.swift in Sources */,
 				BF97A7C525456373003597FB /* AppKeys.swift in Sources */,
 				3837B51B24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */,
-				BF5401C524C853EB00D73368 /* SignUpViewController.swift in Sources */,
 				3877004F25551513001CE522 /* RoomCell.swift in Sources */,
 				386D72D0246311F40099C35E /* Room.swift in Sources */,
 			);
@@ -667,22 +661,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				381F870E25553AC10006AF46 /* SignInViewController+OAuth.swift in Sources */,
+				381F870E25553AC10006AF46 /* SignInViewController+SignInAPI.swift in Sources */,
 				381F871425553AD60006AF46 /* APIRequests+user.swift in Sources */,
 				3837B51C24B5AF960085E821 /* MatchingTableVC+APIRequest.swift in Sources */,
 				381F871625553AD80006AF46 /* APIRequests+room.swift in Sources */,
 				381F871225553AD40006AF46 /* APIRequests.swift in Sources */,
 				38969E0E24A6F7D70032F82C /* RoomRestAPITest.swift in Sources */,
+				BF8F88E225B5C27400CC24F8 /* SignUpViewController.swift in Sources */,
 				381F871825553AE60006AF46 /* Constants.swift in Sources */,
 				BF97A7C625456373003597FB /* AppKeys.swift in Sources */,
 				38495BF8249DC22F0077C570 /* Model-utilities.swift in Sources */,
 				381F870425553AA80006AF46 /* RoomDetailVC+APIRequest.swift in Sources */,
 				38969E0F24A6F7F90032F82C /* MatchingTableViewController.swift in Sources */,
 				381F871A25553AEA0006AF46 /* KeychainAccess.swift in Sources */,
-				BF5401C624C853EB00D73368 /* SignUpViewController.swift in Sources */,
 				381F870225553AA60006AF46 /* RoomDetailViewController.swift in Sources */,
 				381F870A25553AB40006AF46 /* RoomCell.swift in Sources */,
-				381F871025553AC80006AF46 /* SignUpViewController+OAuth.swift in Sources */,
 				381F870625553AAC0006AF46 /* GameDatePickerViewController.swift in Sources */,
 				BF9CF84824B7692500FEEC5E /* SignInViewController.swift in Sources */,
 				381F8721255541510006AF46 /* RoomListTest.swift in Sources */,
@@ -698,7 +691,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				381F870525553AA90006AF46 /* RoomDetailVC+APIRequest.swift in Sources */,
-				381F871125553AC80006AF46 /* SignUpViewController+OAuth.swift in Sources */,
 				BF9CF84924B7692500FEEC5E /* SignInViewController.swift in Sources */,
 				381F871725553AD80006AF46 /* APIRequests+room.swift in Sources */,
 				381F871B25553AEA0006AF46 /* KeychainAccess.swift in Sources */,
@@ -709,12 +701,12 @@
 				389703A924559A4C00FF5077 /* DraftUITests.swift in Sources */,
 				381F870025553A9E0006AF46 /* RoomList.swift in Sources */,
 				381F871925553AE70006AF46 /* Constants.swift in Sources */,
-				BF5401C724C853EB00D73368 /* SignUpViewController.swift in Sources */,
 				BF97A7C725456373003597FB /* AppKeys.swift in Sources */,
 				381F870325553AA60006AF46 /* RoomDetailViewController.swift in Sources */,
 				381F870725553AAC0006AF46 /* GameDatePickerViewController.swift in Sources */,
+				BF8F88E325B5C27400CC24F8 /* SignUpViewController.swift in Sources */,
 				381F870825553AAF0006AF46 /* MatchingTableViewController.swift in Sources */,
-				381F870F25553AC20006AF46 /* SignInViewController+OAuth.swift in Sources */,
+				381F870F25553AC20006AF46 /* SignInViewController+SignInAPI.swift in Sources */,
 				381F870925553AB10006AF46 /* MatchingTableVC+APIRequest.swift in Sources */,
 				381F870B25553AB40006AF46 /* RoomCell.swift in Sources */,
 				BFBE4D1D24C6F9B4005D2D32 /* User.swift in Sources */,
