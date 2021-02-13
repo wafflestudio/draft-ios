@@ -2,7 +2,7 @@
 
 # decrypt files
 gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_CRYPT_PASSWORD" \
-	--output .provisioning/draft-jskeum.mobileprovision .provisioning/jskeum-draft.mobileprovision.gpg
+	--output .provisioning/draft-jskeum.mobileprovision .provisioning/draft-jskeum.mobileprovision.gpg
 
 gpg --quiet --batch --yes --decrypt --passphrase="$CERTIFICATE_CRYPT_PASSWORD" \
 	--output .provisioning/draft-jskeum.p12 .provisioning/draft-jskeum.p12.gpg
