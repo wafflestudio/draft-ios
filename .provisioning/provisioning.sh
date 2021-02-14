@@ -2,7 +2,7 @@
 
 # decrypt files
 gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_CRYPT_PASSWORD" \
-	--output .provisioning/draft-jskeum.mobileprovision .provisioning/draft-jskeum.mobileprovision.gpg
+	--output .provisioning/draft.mobileprovision .provisioning/draft.mobileprovision.gpg
 
 gpg --quiet --batch --yes --decrypt --passphrase="$CERTIFICATE_CRYPT_PASSWORD" \
 	--output .provisioning/draft-jskeum.p12 .provisioning/draft-jskeum.p12.gpg
@@ -13,7 +13,7 @@ mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 echo "list profiles"
 ls ~/Library/MobileDevice/Provisioning\ profiles/
 echo "move profiles"
-cp .provisioning/draft-jskeum.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
+cp .provisioning/draft.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
 echo "list profiles"
 ls ~/Library/MobileDevice/Provisioning\ profiles/
 
