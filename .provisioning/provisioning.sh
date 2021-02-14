@@ -5,7 +5,7 @@ gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_CRYPT_PASSWORD" 
 	--output .provisioning/draft.mobileprovision .provisioning/draft.mobileprovision.gpg
 
 gpg --quiet --batch --yes --decrypt --passphrase="$CERTIFICATE_CRYPT_PASSWORD" \
-	--output .provisioning/draft-jskeum.p12 .provisioning/draft-jskeum.p12.gpg
+	--output .provisioning/draft.p12 .provisioning/draft.p12.gpg
 
 # set provisioning
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
@@ -19,7 +19,7 @@ ls ~/Library/MobileDevice/Provisioning\ profiles/
 
 # make keychain
 security create-keychain -p "$KEYCHAIN_PASSWORD" build.keychain
-security import .provisioning/draft-jskeum.p12 -t agg \
+security import .provisioning/draft.p12 -t agg \
 	-k ~/Library/Keychains/build.keychain -P "$CERT_PASSWORD" -A
 
 security list-keychains -s ~/Library/Keychains/build.keychain
