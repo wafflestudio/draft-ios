@@ -19,6 +19,7 @@ jobs:
         PROVISIONING_CRYPT_PASSWORD: ${{ secrets.PROVISIONING_CRYPT_PASSWORD }}
         CERTIFICATE_CRYPT_PASSWORD: ${{ secrets.CERTIFICATE_CRYPT_PASSWORD }}
         CERT_PASSWORD: ${{ secrets.CERT_PASSWORD }}
+        KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
     - name: List available Xcode versions
       run: ls /Applications | grep Xcode
     - name: Select Xcode
