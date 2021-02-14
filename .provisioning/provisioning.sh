@@ -20,11 +20,10 @@ ls ~/Library/MobileDevice/Provisioning\ profiles/
 # make keychain
 security create-keychain -p "$KEYCHAIN_PASSWORD" build.keychain
 security import .provisioning/draft-jskeum.p12 -t agg \
-	-k ~/Library/Keychains/build.keychain -P "$CERT_PASSWORD" - A
+	-k ~/Library/Keychains/build.keychain -P "$CERT_PASSWORD" -A
 
 security list-keychains -s ~/Library/Keychains/build.keychain
 security default-keychain -s ~/Library/Keychains/build.keychain
 security unlock-keychain -p "$KEYCHAIN_PASSWORD" ~/Library/Keychains/build.keychain
-security set-key-partition-list -S apple-tool: ,apple: -s \
+security set-key-partition-list -S apple-tool:,apple: -s \
 	-k "$KEYCHAIN_PASSWORD" ~/Library/Keychains/build.keychain
-security set-keychain-settings

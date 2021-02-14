@@ -27,7 +27,7 @@ jobs:
     - name: Build archive
       run: xcodebuild -sdk iphoneos -workspace draft/draft.xcworkspace -configuration Release -scheme Draft -derivedDataPath DerivedData -archivePath DerivedData/Archive/Draft -allowProvisioningUpdates archive
     - name: Export archive
-      run: xcodebuild -exportArchive -archivePath DerivedData/Archive/Draft.xcarchive -exportOptionPlist .provisioning/App-Store.plist -exportPath DerivedData/ipa
+      run: xcodebuild -exportArchive -archivePath DerivedData/Archive/Draft.xcarchive -exportOptionsPlist .provisioning/App-Store.plist -exportPath DerivedData/ipa
     - name: Show file hierarchy
       run: ls -R
     - name: Deploy to Apple
